@@ -1,0 +1,6 @@
+D:\programacion\C#\GestionDeUsuarios\Datos\bin\Debug\Datos.dll
+D:\programacion\C#\GestionDeUsuarios\Datos\bin\Debug\Datos.pdb
+D:\programacion\C#\GestionDeUsuarios\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+D:\programacion\C#\GestionDeUsuarios\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\programacion\C#\GestionDeUsuarios\Datos\obj\Debug\Datos.dll
+D:\programacion\C#\GestionDeUsuarios\Datos\obj\Debug\Datos.pdb

@@ -1,0 +1,13 @@
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Logica.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Logica.pdb
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Datos.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Servicios.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Sesion.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Datos.pdb
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Servicios.pdb
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\Sesion.pdb
+D:\programacion\C#\GestionDeUsuarios\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+D:\programacion\C#\GestionDeUsuarios\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+D:\programacion\C#\GestionDeUsuarios\Logica\obj\Debug\Logica.csproj.Up2Date
+D:\programacion\C#\GestionDeUsuarios\Logica\obj\Debug\Logica.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\obj\Debug\Logica.pdb

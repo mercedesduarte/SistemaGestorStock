@@ -1,0 +1,6 @@
+D:\programacion\C#\GestionDeUsuarios\Sesion\bin\Debug\Sesion.dll
+D:\programacion\C#\GestionDeUsuarios\Sesion\bin\Debug\Sesion.pdb
+D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.dll
+D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.pdb

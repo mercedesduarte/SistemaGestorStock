@@ -1,0 +1,10 @@
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Vista.exe.config
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Vista.exe
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Vista.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.Properties.Resources.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.exe
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.Form1.resources
