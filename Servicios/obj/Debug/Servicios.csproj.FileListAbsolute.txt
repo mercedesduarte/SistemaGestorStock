@@ -7,3 +7,12 @@ D:\programacion\C#\GestionDeUsuarios\Servicios\obj\Debug\Servicios.csproj.CoreCo
 D:\programacion\C#\GestionDeUsuarios\Servicios\obj\Debug\Servicios.csproj.Up2Date
 D:\programacion\C#\GestionDeUsuarios\Servicios\obj\Debug\Servicios.dll
 D:\programacion\C#\GestionDeUsuarios\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Gero\SistemaGestion\Servicios\bin\Debug\Servicios.dll
+C:\Users\Gero\SistemaGestion\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Gero\SistemaGestion\Servicios\bin\Debug\Sesion.dll
+C:\Users\Gero\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
+C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
+C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.dll
+C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.pdb

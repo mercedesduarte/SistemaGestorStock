@@ -4,3 +4,9 @@ D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.csproj.AssemblyRefe
 D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
 D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.dll
 D:\programacion\C#\GestionDeUsuarios\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Gero\SistemaGestion\Sesion\bin\Debug\Sesion.dll
+C:\Users\Gero\SistemaGestion\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.dll
+C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
