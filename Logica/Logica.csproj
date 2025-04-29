@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica.cs" />
+    <Compile Include="L_Conexion.cs" />
+    <Compile Include="L_Login.cs" />
+    <Compile Include="L_Registro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

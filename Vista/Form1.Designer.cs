@@ -120,6 +120,7 @@ namespace Vista
             this.btniniciar.TabIndex = 5;
             this.btniniciar.Text = "Iniciar sesion";
             this.btniniciar.UseVisualStyleBackColor = true;
+            this.btniniciar.Click += new System.EventHandler(this.btniniciar_Click);
             // 
             // label3
             // 

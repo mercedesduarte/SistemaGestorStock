@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 //Capas
 using Logica;
 using Servicios;
 using Sesion;
+
 
 namespace Vista
 {
@@ -26,7 +28,7 @@ namespace Vista
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            L_Conexion.Conexiones();
         }
 
        
@@ -45,6 +47,28 @@ namespace Vista
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btniniciar_Click(object sender, EventArgs e)
+        {
+            string usuario = txtuser.Text;
+            string contrasena = txtcontra.Text;
+
+        
+
+           
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasena);
+
+            if (loginValido)
+            {
+                MessageBox.Show("¡Login exitoso!");
+               
+            }
+            else
+            {
+
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
     }
 }

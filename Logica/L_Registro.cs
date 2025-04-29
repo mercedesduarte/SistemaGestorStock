@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Datos.Conecction;
+
+namespace Logica
+{
+    public class L_Registro : ConnectionBD
+    {
+        public bool RegistrarUsuario(string usuario, string contrasena)
+        {
+            try
+            {
+                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_RegistrarUsuario", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                    int result = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return (result == 1);
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false);
+                
+            }
+        }
+    }
+}
