@@ -26,14 +26,17 @@ namespace Logica
                     cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 
                     int result = Convert.ToInt32(cmd.ExecuteScalar());
+                    Console.WriteLine(usuario);
+                    Console.WriteLine(contrasena);
 
                     return (result == 1);
                 }
             }
             catch (Exception ex)
             {
+                Console.WriteLine(usuario);
+                Console.WriteLine(contrasena);
                 return (false);
-
             }
         }
     }

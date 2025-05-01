@@ -24,6 +24,7 @@ namespace Logica
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine("Fallo la conexion:");
                     Console.WriteLine(ex.Message);
                 }
             }

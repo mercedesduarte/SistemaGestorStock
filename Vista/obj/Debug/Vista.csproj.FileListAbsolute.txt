@@ -28,3 +28,13 @@ C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cach
 C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.exe
 C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Logica.dll
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Servicios.dll
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Sesion.dll
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Datos.dll
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Logica.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Servicios.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Sesion.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Datos.pdb
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.Form2.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.Up2Date

@@ -13,3 +13,6 @@ C:\Users\Gero\SistemaGestion\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cach
 C:\Users\Gero\SistemaGestion\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Datos\obj\Debug\Datos.dll
 C:\Users\Gero\SistemaGestion\Datos\obj\Debug\Datos.pdb
+D:\programacion\C#\GestionDeUsuarios\Datos\bin\Debug\System.Data.SqlClient.dll
+D:\programacion\C#\GestionDeUsuarios\Datos\bin\Debug\System.Data.SqlClient.xml
+D:\programacion\C#\GestionDeUsuarios\Datos\obj\Debug\Datos.csproj.Up2Date
