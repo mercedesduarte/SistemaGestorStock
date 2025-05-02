@@ -48,7 +48,7 @@ namespace Vista
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 179);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,15 +58,15 @@ namespace Vista
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(206, 9);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 37);
+            this.label1.Size = new System.Drawing.Size(754, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "Iniciar sesion";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
@@ -80,9 +80,9 @@ namespace Vista
             this.groupBox1.Controls.Add(this.txtuser);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 62);
+            this.groupBox1.Location = new System.Drawing.Point(12, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(726, 342);
+            this.groupBox1.Size = new System.Drawing.Size(754, 342);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese sus datos para iniciar sesion";
@@ -90,66 +90,78 @@ namespace Vista
             // 
             // btnsalir
             // 
+            this.btnsalir.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnsalir.Location = new System.Drawing.Point(539, 261);
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsalir.Location = new System.Drawing.Point(593, 261);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(147, 35);
+            this.btnsalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnsalir.Size = new System.Drawing.Size(122, 35);
             this.btnsalir.TabIndex = 7;
             this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.UseVisualStyleBackColor = false;
             // 
             // btncrear
             // 
+            this.btncrear.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btncrear.ForeColor = System.Drawing.SystemColors.Control;
             this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btncrear.Location = new System.Drawing.Point(271, 261);
+            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncrear.Location = new System.Drawing.Point(328, 261);
             this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(231, 35);
+            this.btncrear.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btncrear.Size = new System.Drawing.Size(208, 35);
             this.btncrear.TabIndex = 6;
             this.btncrear.Text = "Crear cuenta";
-            this.btncrear.UseVisualStyleBackColor = true;
+            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncrear.UseVisualStyleBackColor = false;
             // 
             // btniniciar
             // 
+            this.btniniciar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btniniciar.ForeColor = System.Drawing.SystemColors.Control;
             this.btniniciar.Image = ((System.Drawing.Image)(resources.GetObject("btniniciar.Image")));
-            this.btniniciar.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btniniciar.Location = new System.Drawing.Point(7, 261);
+            this.btniniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btniniciar.Location = new System.Drawing.Point(54, 261);
             this.btniniciar.Name = "btniniciar";
+            this.btniniciar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btniniciar.Size = new System.Drawing.Size(231, 35);
             this.btniniciar.TabIndex = 5;
             this.btniniciar.Text = "Iniciar sesion";
-            this.btniniciar.UseVisualStyleBackColor = true;
+            this.btniniciar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btniniciar.UseVisualStyleBackColor = false;
             this.btniniciar.Click += new System.EventHandler(this.btniniciar_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(227, 184);
+            this.label3.Location = new System.Drawing.Point(288, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
+            this.label3.Size = new System.Drawing.Size(142, 24);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Contraseña";
+            this.label3.Text = "Contraseña:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 104);
+            this.label2.Location = new System.Drawing.Point(288, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 24);
+            this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario";
+            this.label2.Text = "Usuario:";
             // 
             // txtcontra
             // 
-            this.txtcontra.Location = new System.Drawing.Point(363, 176);
+            this.txtcontra.Location = new System.Drawing.Point(452, 181);
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(263, 32);
             this.txtcontra.TabIndex = 2;
             // 
             // txtuser
             // 
-            this.txtuser.Location = new System.Drawing.Point(363, 96);
+            this.txtuser.Location = new System.Drawing.Point(452, 96);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(263, 32);
             this.txtuser.TabIndex = 1;
@@ -159,7 +171,7 @@ namespace Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(715, 409);
+            this.ClientSize = new System.Drawing.Size(778, 458);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -169,7 +181,6 @@ namespace Vista
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

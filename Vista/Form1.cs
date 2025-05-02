@@ -54,19 +54,16 @@ namespace Vista
             string usuario = txtuser.Text;
             string contrasena = txtcontra.Text;
 
-        
-
-           
             bool loginValido = L_Login.LoginUsuario(usuario, contrasena);
 
             if (loginValido)
             {
                 MessageBox.Show("¡Login exitoso!");
-               
+                Form3 form3 = new Form3(); 
+                form3.Show();
             }
             else
             {
-
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }

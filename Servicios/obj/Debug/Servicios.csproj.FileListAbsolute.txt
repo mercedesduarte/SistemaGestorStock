@@ -16,3 +16,12 @@ C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInp
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.dll
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\Servicios.dll
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\Servicios.pdb
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\Sesion.dll
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.dll
+C:\Users\alexi\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
