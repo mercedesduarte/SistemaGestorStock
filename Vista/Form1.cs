@@ -16,6 +16,7 @@ using Servicios;
 using Sesion;
 
 
+
 namespace Vista
 {
     public partial class Form1 : Form
@@ -30,9 +31,6 @@ namespace Vista
         {
             L_Conexion.Conexiones();
         }
-
-       
-
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
@@ -40,7 +38,7 @@ namespace Vista
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -53,13 +51,20 @@ namespace Vista
         {
             string usuario = txtuser.Text;
             string contrasena = txtcontra.Text;
+            string rol; 
+            bool esAdmin;
 
-            bool loginValido = L_Login.LoginUsuario(usuario, contrasena);
+     
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out esAdmin, out rol);
 
             if (loginValido)
             {
                 MessageBox.Show("¡Login exitoso!");
-                Form3 form3 = new Form3(); 
+
+                Console.WriteLine($"Login exitoso. Rol: {rol}");
+
+   
+                Form3 form3 = new Form3(rol);
                 form3.Show();
             }
             else

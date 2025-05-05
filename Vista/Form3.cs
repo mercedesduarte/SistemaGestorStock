@@ -12,15 +12,23 @@ namespace Vista
 {
     public partial class Form3 : Form
     {
-        public Form3()
-        {
+        private string rol;
 
-            InitializeComponent();
+        public Form3(string rol)
+        {
+            InitializeComponent(); // Esta función no lleva parámetros
+            this.rol = rol;
+
+            label1.Text = $"Rol: {rol}";
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            if (rol == "")
+            {
+                Console.WriteLine("No se trae nada pa");
+            }
         }
     }
 }
+

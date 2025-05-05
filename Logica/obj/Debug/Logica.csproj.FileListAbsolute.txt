@@ -24,3 +24,5 @@ C:\Users\Gero\SistemaGestion\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.ca
 C:\Users\Gero\SistemaGestion\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Logica\obj\Debug\Logica.dll
 C:\Users\Gero\SistemaGestion\Logica\obj\Debug\Logica.pdb
+C:\Users\Gero\SistemaGestion\Logica\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Gero\SistemaGestion\Logica\bin\Debug\System.Data.SqlClient.xml
