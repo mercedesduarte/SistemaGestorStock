@@ -32,15 +32,16 @@ namespace Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btncrear = new System.Windows.Forms.Button();
-            this.btniniciar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcontra = new System.Windows.Forms.TextBox();
-            this.txtuser = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,30 +55,31 @@ namespace Vista
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // label1
+            // lblIniciarSesion
             // 
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(754, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Iniciar sesion";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIniciarSesion.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblIniciarSesion.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciarSesion.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblIniciarSesion.Location = new System.Drawing.Point(11, 9);
+            this.lblIniciarSesion.Name = "lblIniciarSesion";
+            this.lblIniciarSesion.Size = new System.Drawing.Size(754, 54);
+            this.lblIniciarSesion.TabIndex = 1;
+            this.lblIniciarSesion.Text = "INICIAR SESION";
+            this.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnsalir);
-            this.groupBox1.Controls.Add(this.btncrear);
-            this.groupBox1.Controls.Add(this.btniniciar);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtcontra);
-            this.groupBox1.Controls.Add(this.txtuser);
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnSalir);
+            this.groupBox1.Controls.Add(this.btnIniciarSesion);
+            this.groupBox1.Controls.Add(this.lblContraseña);
+            this.groupBox1.Controls.Add(this.lblUsuario);
+            this.groupBox1.Controls.Add(this.txtContrasena);
+            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 104);
@@ -85,86 +87,90 @@ namespace Vista
             this.groupBox1.Size = new System.Drawing.Size(754, 342);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ingrese sus datos para iniciar sesion";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.Text = "INGRESE LOS DATOS PARA INICAR SESION";
             // 
-            // btnsalir
+            // button2
             // 
-            this.btnsalir.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnsalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsalir.Location = new System.Drawing.Point(593, 261);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnsalir.Size = new System.Drawing.Size(122, 35);
-            this.btnsalir.TabIndex = 7;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.UseVisualStyleBackColor = false;
+            this.button2.Location = new System.Drawing.Point(592, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 34);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "form3";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btncrear
+            // button1
             // 
-            this.btncrear.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btncrear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncrear.Location = new System.Drawing.Point(328, 261);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btncrear.Size = new System.Drawing.Size(208, 35);
-            this.btncrear.TabIndex = 6;
-            this.btncrear.Text = "Crear cuenta";
-            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.UseVisualStyleBackColor = false;
+            this.button1.Location = new System.Drawing.Point(452, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 35);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "form2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btniniciar
+            // btnSalir
             // 
-            this.btniniciar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btniniciar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btniniciar.Image = ((System.Drawing.Image)(resources.GetObject("btniniciar.Image")));
-            this.btniniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btniniciar.Location = new System.Drawing.Point(54, 261);
-            this.btniniciar.Name = "btniniciar";
-            this.btniniciar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btniniciar.Size = new System.Drawing.Size(231, 35);
-            this.btniniciar.TabIndex = 5;
-            this.btniniciar.Text = "Iniciar sesion";
-            this.btniniciar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btniniciar.UseVisualStyleBackColor = false;
-            this.btniniciar.Click += new System.EventHandler(this.btniniciar_Click);
+            this.btnSalir.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.Location = new System.Drawing.Point(593, 261);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnSalir.Size = new System.Drawing.Size(122, 35);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // btnIniciarSesion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Contraseña:";
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciarSesion.Image")));
+            this.btnIniciarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(54, 261);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(231, 35);
+            this.btnIniciarSesion.TabIndex = 5;
+            this.btnIniciarSesion.Text = "INICIAR SESION";
+            this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // label2
+            // lblContraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(288, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario:";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(288, 184);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(142, 24);
+            this.lblContraseña.TabIndex = 4;
+            this.lblContraseña.Text = "CONTRASEÑA:";
             // 
-            // txtcontra
+            // lblUsuario
             // 
-            this.txtcontra.Location = new System.Drawing.Point(452, 181);
-            this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(263, 32);
-            this.txtcontra.TabIndex = 2;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(288, 99);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(106, 24);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "USUARIO:";
             // 
-            // txtuser
+            // txtContrasena
             // 
-            this.txtuser.Location = new System.Drawing.Point(452, 96);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(263, 32);
-            this.txtuser.TabIndex = 1;
+            this.txtContrasena.Location = new System.Drawing.Point(452, 181);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(263, 32);
+            this.txtContrasena.TabIndex = 2;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(452, 96);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(263, 32);
+            this.txtUsuario.TabIndex = 1;
             // 
             // Form1
             // 
@@ -173,7 +179,7 @@ namespace Vista
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(778, 458);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblIniciarSesion);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -187,15 +193,16 @@ namespace Vista
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIniciarSesion;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcontra;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Button btnsalir;
-        private System.Windows.Forms.Button btncrear;
-        private System.Windows.Forms.Button btniniciar;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

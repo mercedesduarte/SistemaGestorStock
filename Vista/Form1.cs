@@ -31,26 +31,13 @@ namespace Vista
         {
             L_Conexion.Conexiones();
         }
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+    
+
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btniniciar_Click(object sender, EventArgs e)
-        {
-            string usuario = txtuser.Text;
-            string contrasena = txtcontra.Text;
+            string usuario = txtUsuario.Text;
+            string contrasena = txtContrasena.Text;
             string rol; 
             bool esAdmin;
 
@@ -72,5 +59,18 @@ namespace Vista
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3("Admin");
+            form3.Show();
+        }
+
     }
 }

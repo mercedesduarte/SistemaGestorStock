@@ -29,6 +29,18 @@ namespace Vista
                 Console.WriteLine("No se trae nada pa");
             }
         }
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHoras.Text = DateTime.Now.ToString("HH:mm:ss");
+            lblFecha.Text = DateTime.Now.ToString("ddd/dd/MM/yyyy");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }
 
