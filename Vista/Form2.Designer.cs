@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtcontra = new System.Windows.Forms.TextBox();
-            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -49,16 +49,16 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtConfirmarContrasena);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbRol);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnRegresar);
             this.groupBox1.Controls.Add(this.btnCrearUsuario);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtcontra);
-            this.groupBox1.Controls.Add(this.txtuser);
+            this.groupBox1.Controls.Add(this.txtContrasena);
+            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 76);
@@ -68,12 +68,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PARA CREAR USUARIOS";
             // 
-            // textBox1
+            // txtConfirmarContrasena
             // 
-            this.textBox1.Location = new System.Drawing.Point(443, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 32);
-            this.textBox1.TabIndex = 19;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(443, 155);
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(263, 32);
+            this.txtConfirmarContrasena.TabIndex = 19;
             // 
             // label5
             // 
@@ -85,16 +85,16 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "CONFIRMAR\r\nCONTRASEÑA:";
             // 
-            // comboBox1
+            // cbRol
             // 
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbRol.Items.AddRange(new object[] {
             "ROL 1",
             "ROL 2",
             "ROL 3"});
-            this.comboBox1.Location = new System.Drawing.Point(443, 211);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 32);
-            this.comboBox1.TabIndex = 17;
+            this.cbRol.Location = new System.Drawing.Point(443, 211);
+            this.cbRol.Name = "cbRol";
+            this.cbRol.Size = new System.Drawing.Size(263, 32);
+            this.cbRol.TabIndex = 17;
             // 
             // label4
             // 
@@ -156,19 +156,19 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "USUARIO:";
             // 
-            // txtcontra
+            // txtContrasena
             // 
-            this.txtcontra.Location = new System.Drawing.Point(443, 99);
-            this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(263, 32);
-            this.txtcontra.TabIndex = 10;
+            this.txtContrasena.Location = new System.Drawing.Point(443, 99);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(263, 32);
+            this.txtContrasena.TabIndex = 10;
             // 
-            // txtuser
+            // txtUsuario
             // 
-            this.txtuser.Location = new System.Drawing.Point(443, 45);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(263, 32);
-            this.txtuser.TabIndex = 9;
+            this.txtUsuario.Location = new System.Drawing.Point(443, 45);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(263, 32);
+            this.txtUsuario.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -218,12 +218,12 @@
         private System.Windows.Forms.Button btnCrearUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcontra;
-        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbRol;
+        private System.Windows.Forms.TextBox txtConfirmarContrasena;
         private System.Windows.Forms.Label label5;
     }
 }

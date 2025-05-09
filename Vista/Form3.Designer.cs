@@ -31,94 +31,96 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoras = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnPersonas = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPersonas);
+            this.groupBox1.Controls.Add(this.btnCerrarSesion);
+            this.groupBox1.Controls.Add(this.btnConfiguracion);
+            this.groupBox1.Controls.Add(this.btnReportes);
+            this.groupBox1.Controls.Add(this.btnUsuarios);
+            this.groupBox1.Controls.Add(this.btnInicio);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 426);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // button5
+            // btnCerrarSesion
             // 
-            this.button5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button5.Location = new System.Drawing.Point(6, 379);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(164, 32);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Cerrar Sesión";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(6, 281);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(164, 32);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "CERRAR SESION";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnConfiguracion
             // 
-            this.button4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(6, 289);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 32);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Configuración";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(6, 243);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(164, 32);
+            this.btnConfiguracion.TabIndex = 3;
+            this.btnConfiguracion.Text = "CONFIGURACION";
+            this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnReportes
             // 
-            this.button3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(6, 197);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 32);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Reportes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReportes.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(6, 205);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(164, 32);
+            this.btnReportes.TabIndex = 2;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUsuarios
             // 
-            this.button2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(6, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 32);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Usuarios";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnUsuarios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(6, 129);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(164, 32);
+            this.btnUsuarios.TabIndex = 1;
+            this.btnUsuarios.Text = "USUARIOS";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnInicio
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Inicio";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInicio.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(6, 91);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(164, 32);
+            this.btnInicio.TabIndex = 0;
+            this.btnInicio.Text = "INICIO";
+            this.btnInicio.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -156,6 +158,19 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnPersonas
+            // 
+            this.btnPersonas.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonas.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonas.Image")));
+            this.btnPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonas.Location = new System.Drawing.Point(6, 167);
+            this.btnPersonas.Name = "btnPersonas";
+            this.btnPersonas.Size = new System.Drawing.Size(164, 32);
+            this.btnPersonas.TabIndex = 5;
+            this.btnPersonas.Text = "PERSONAS";
+            this.btnPersonas.UseVisualStyleBackColor = true;
+            this.btnPersonas.Click += new System.EventHandler(this.btnPersonas_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,14 +192,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnConfiguracion;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHoras;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnPersonas;
     }
 }
