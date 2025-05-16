@@ -14,6 +14,7 @@ namespace Vista
     {
         private int childFormNumber = 0;
 
+
         public MDIParent1()
         {
             InitializeComponent();
@@ -100,6 +101,34 @@ namespace Vista
         {
             lblHoras.Text = DateTime.Now.ToString("HH:mm:ss");
             lblFecha.Text = DateTime.Now.ToString("ddd/dd/MM/yyyy");
+
+        }
+
+        private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pERSONASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();  
+            form4.Show();
+        }
+
+        private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
 
         }
     }

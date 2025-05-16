@@ -47,6 +47,11 @@ namespace Vista
             Form4 form4 = new Form4();
             form4.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
