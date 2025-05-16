@@ -61,3 +61,4 @@ C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.exe
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.pdb
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Form4.resources
+C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.MDIParent1.resources

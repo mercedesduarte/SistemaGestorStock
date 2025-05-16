@@ -72,5 +72,10 @@ namespace Vista
             form3.Show();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MDIParent1 mDIParent1 = new MDIParent1();
+            mDIParent1.Show();
+        }
     }
 }
