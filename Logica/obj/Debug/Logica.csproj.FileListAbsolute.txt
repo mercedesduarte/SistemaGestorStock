@@ -56,3 +56,5 @@ C:\Repositorio\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
 C:\Repositorio\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Repositorio\Logica\obj\Debug\Logica.dll
 C:\Repositorio\Logica\obj\Debug\Logica.pdb
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\System.Data.SqlClient.dll
+D:\programacion\C#\GestionDeUsuarios\Logica\bin\Debug\System.Data.SqlClient.xml

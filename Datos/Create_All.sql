@@ -1,21 +1,21 @@
-CREATE TABLE Provincia(
+CREATE TABLE Provincias(
     Id_Provincia INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Provincia NVARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Partido(
+CREATE TABLE Partidos(
     Id_Partido INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Partido NVARCHAR(50) NOT NULL,
     Id_Provincia INT NOT NULL,
-    FOREIGN KEY (Id_Provincia) REFERENCES Provincia(Id_Provincia)
+    FOREIGN KEY (Id_Provincia) REFERENCES Provincias(Id_Provincia)
 );
 
-CREATE TABLE Localidad(
+CREATE TABLE Localidades(
     Id_Localidad INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Localidad NVARCHAR(50) NOT NULL,
     Codigo_Telefonico NVARCHAR(10) NOT NULL,
     Id_Partido INT NOT NULL,
-    FOREIGN KEY (Id_Partido) REFERENCES Partido(Id_Partido)
+    FOREIGN KEY (Id_Partido) REFERENCES Partidos(Id_Partido)
 );
 
 CREATE TABLE Ubicacion(
@@ -23,23 +23,23 @@ CREATE TABLE Ubicacion(
     Id_Provincia INT NOT NULL,
     Id_Partido INT NOT NULL,
     Id_Localidad INT NOT NULL,
-    FOREIGN KEY (Id_Provincia) REFERENCES Provincia(Id_Provincia),
-    FOREIGN KEY (Id_Partido) REFERENCES Partido(Id_Partido),
-    FOREIGN KEY (Id_Localidad) REFERENCES Localidad(Id_Localidad)
+    FOREIGN KEY (Id_Provincia) REFERENCES Provincias(Id_Provincia),
+    FOREIGN KEY (Id_Partido) REFERENCES Partidos(Id_Partido),
+    FOREIGN KEY (Id_Localidad) REFERENCES Localidades(Id_Localidad)
 );
 
 
 
 --DATOS PERSONALES
 
-CREATE TABLE Genero(
+CREATE TABLE Generos(
     Id_Genero INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Genero NVARCHAR(10) NOT NULL
 );
 
 CREATE TABLE Personas(
     Id_Persona INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    Nro_legajo AS 'LEG' + RIGHT('0000' + CAST(Id_Persona AS VARCHAR(4)), 4),
+    Nro_legajo INT,
     Nombre NVARCHAR(50) NOT NULL,
     Apellido NVARCHAR(50) NOT NULL,
     Tipo_Documento NVARCHAR(8) NOT NULL,
@@ -50,14 +50,18 @@ CREATE TABLE Personas(
 	Piso NVARCHAR(10),
 	Departamento NVARCHAR(10),
     Codigo_Postal NVARCHAR(6) NOT NULL,
-    Id_Ubicacion INT NOT NULL,
+    Id_Provincia INT NOT NULL,
+	Id_Partido INT NOT NULL,
+	Id_Localidad INT NOT NULL,
     Id_Genero INT NOT NULL,
     Sexo BIT,
     Email NVARCHAR(50) UNIQUE,
 	FechaAlta DATETIME,
 
-    FOREIGN KEY (Id_Ubicacion) REFERENCES Ubicacion(Id_Ubicacion),
-    FOREIGN KEY (Id_Genero) REFERENCES Genero(Id_Genero)
+	FOREIGN KEY (Id_Provincia) REFERENCES Provincias(Id_Provincia),
+	FOREIGN KEY (Id_Partido) REFERENCES Partidos(Id_Partido),
+	FOREIGN KEY (Id_Localidad) REFERENCES Localidades(Id_Localidad),
+	FOREIGN KEY (Id_Genero) REFERENCES Generos(Id_Genero)
 );
  
 
@@ -80,7 +84,7 @@ CREATE TABLE Usuarios(
     Id_Usuario INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Id_Persona INT,
     Usuario NVARCHAR(12) NOT NULL UNIQUE,
-    Contraseña NVARCHAR(20) NOT NULL,
+    Contrasena NVARCHAR(20) NOT NULL,
     Bloqueado BIT,
     Fecha_Bloqueo DATETIME,
     CambioContra INT,
@@ -90,11 +94,11 @@ CREATE TABLE Usuarios(
 	FOREIGN KEY(Id_Persona) REFERENCES Personas(Id_Persona)
 );
 
-CREATE TABLE HistorialContraseñas(
+CREATE TABLE HistorialContrasenas(
     Id_Historial INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Id_Usuario INT NOT NULL,
     FechaCambio DATETIME,
-    Contraseña NVARCHAR(MAX),
+    Contrasena NVARCHAR(MAX),
     FOREIGN KEY(Id_Usuario) REFERENCES Usuarios(Id_Usuario)
 );
 
@@ -116,3 +120,37 @@ CREATE TABLE Permisos_Usuarios(
 );
 
 
+
+--Seguridad
+
+
+CREATE TABLE Tipo_Restriccion(
+Id_Tipo INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Tipo NVARCHAR(20)
+);
+
+
+CREATE TABLE Restricciones(
+Id_Restriccion INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Restriccion NVARCHAR(25),
+Caracteres_Min NVARCHAR(10),
+Activo BIT,
+Id_Tipo INT,
+
+FOREIGN KEY(Id_Tipo) REFERENCES Tipo_Restriccion(Id_Tipo)
+);
+
+CREATE TABLE Preguntas(
+Id_Pregunta INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Pregunta NVARCHAR(25) NOT NULL 
+);
+
+CREATE TABLE Respuestas(
+Id_Respuestas INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Id_Pregunta INT,
+Id_Usuario INT,
+Respuesta NVARCHAR(50) NOT NULL,
+
+FOREIGN KEY(Id_Pregunta) REFERENCES Preguntas(Id_Pregunta),
+FOREIGN KEY(Id_Usuario) REFERENCES Usuarios(Id_Usuario),
+);

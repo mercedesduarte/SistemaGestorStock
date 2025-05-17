@@ -7,7 +7,6 @@ D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.GenerateResour
 D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.exe
 D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.pdb
-D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.Form1.resources
 C:\Users\Gero\SistemaGestion\Vista\bin\Debug\Vista.exe.config
 C:\Users\Gero\SistemaGestion\Vista\bin\Debug\Vista.exe
 C:\Users\Gero\SistemaGestion\Vista\bin\Debug\Vista.pdb
@@ -36,7 +35,6 @@ D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Logica.pdb
 D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Servicios.pdb
 D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Sesion.pdb
 D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\Datos.pdb
-D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.Form2.resources
 D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.Form3.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\Vista.exe.config
@@ -84,3 +82,7 @@ C:\Repositorio\Vista\obj\Debug\Vista.pdb
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmIniciarSesion.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmRegistrarUsuarios.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmRegistrarPersonas.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.frmIniciarSesion.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.frmRegistrarUsuarios.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.frmRegistrarPersonas.resources
+D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.MDIParent1.resources
