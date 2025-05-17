@@ -16,7 +16,25 @@ namespace Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Mostrar Form1 como ventana de login
+            frmIniciarSesion form1 = new frmIniciarSesion();
+            DialogResult result = form1.ShowDialog();
+
+            // Si el login fue exitoso
+            if (result == DialogResult.OK)
+            {
+                // Obtener el rol desde la propiedad Tag
+                string rol = form1.Tag?.ToString();
+
+                // Iniciar la aplicación con el formulario MDI
+                Application.Run(new MDIParent1(rol));
+            }
+            else
+            {
+                // Si se canceló el login o fue incorrecto, salir de la aplicación
+                Application.Exit();
+            }
         }
     }
 }

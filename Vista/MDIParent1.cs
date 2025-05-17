@@ -15,10 +15,53 @@ namespace Vista
         private int childFormNumber = 0;
 
 
-        public MDIParent1()
+        private string rolUsuario;
+
+        public MDIParent1(string rol)
         {
             InitializeComponent();
+
+            rolUsuario = rol;
+
+            // Mostrar el rol en el Label
+            lblRol.Text = $"CARGO: {rolUsuario}";
+
+            Console.WriteLine($"Rol del usuario: {rolUsuario}");
+
+            AplicarPermisosPorRol(rol);
+
         }
+
+
+
+        private void AplicarPermisosPorRol(string rol)
+        {
+            switch (rol.ToLower())
+            {
+                case "administrador":
+                    // El admin puede ver todo
+                    break;
+
+                case "usuario normal":
+                    // El usuario común no ve opciones de administración
+                    UsuariosToolStripMenuItem.Enabled = false;
+                    UsuariosToolStripMenuItem.Visible = false;
+
+                    PersonasToolStripMenuItem.Enabled = false;
+                    PersonasToolStripMenuItem.Visible = false;
+                    break;
+
+                case "invitado":
+                    // Invitado ve lo mínimo
+                    break;
+
+                default:
+                    // Por defecto, ocultar todo por seguridad
+                    menuStrip.Enabled = false;
+                    break;
+            }
+        }
+
 
         private void ShowNewForm(object sender, EventArgs e)
         {
@@ -28,75 +71,6 @@ namespace Vista
             childForm.Show();
         }
 
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-     
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHoras.Text = DateTime.Now.ToString("HH:mm:ss");
@@ -104,32 +78,44 @@ namespace Vista
 
         }
 
-        private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UsuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            // Verifica si ya hay una instancia del formulario de usuarios abierta dentro del MDI
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarUsuarios)
+                {
+                    form.BringToFront(); // Traer la instancia al frente
+                    form.Focus();        // Darle el foco
+                    return;              // Salir sin crear una nueva instancia
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmRegistrarUsuarios formularioUsuarios = new frmRegistrarUsuarios();
+            formularioUsuarios.MdiParent = this; // Asignar el formulario MDI padre
+            formularioUsuarios.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
+            formularioUsuarios.Show(); // Mostrar el formulario
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        private void PersonasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            // Verifica si ya hay una instancia del formulario de personas abierta dentro del MDI
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarPersonas)
+                {
+                    form.BringToFront(); // Traer al frente si ya está abierto
+                    form.Focus();        // Darle el foco
+                    return;              // Salir sin crear una nueva instancia
+                }
+            }
 
-        }
-
-        private void pERSONASToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form4 form4 = new Form4();  
-            form4.Show();
-        }
-
-        private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-        }
-
-        private void MDIParent1_Load(object sender, EventArgs e)
-        {
-
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmRegistrarPersonas formularioPersonas = new frmRegistrarPersonas();
+            formularioPersonas.MdiParent = this; // Asignar el formulario MDI padre
+            formularioPersonas.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
+            formularioPersonas.Show(); // Mostrar el formulario
         }
     }
 }

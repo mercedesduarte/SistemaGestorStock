@@ -51,16 +51,12 @@ C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\Servicios.pdb
 C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\Sesion.pdb
 C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\Datos.pdb
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
-C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Form1.resources
-C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Form2.resources
-C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Form3.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.exe
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.pdb
-C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.Form4.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.MDIParent1.resources
 C:\Repositorio\Vista\bin\Debug\Vista.exe.config
 C:\Repositorio\Vista\bin\Debug\Vista.exe
@@ -85,3 +81,6 @@ C:\Repositorio\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Repositorio\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Repositorio\Vista\obj\Debug\Vista.exe
 C:\Repositorio\Vista\obj\Debug\Vista.pdb
+C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmIniciarSesion.resources
+C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmRegistrarUsuarios.resources
+C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmRegistrarPersonas.resources

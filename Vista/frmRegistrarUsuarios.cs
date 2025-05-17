@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
+using System.Data.SqlClient;
+
 
 namespace Vista
 {
-    public partial class Form4 : Form
+    public partial class frmRegistrarUsuarios : Form
     {
-        public Form4()
+        public frmRegistrarUsuarios()
         {
             InitializeComponent();
         }
