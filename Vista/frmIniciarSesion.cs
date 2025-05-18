@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 
-//Capas
 using Logica;
 using Servicios;
 using Sesion;
@@ -49,13 +48,10 @@ namespace Vista
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-                // Opcional: podrías guardar el rol en una propiedad pública si lo querés pasar  
                 this.Tag = rol;
 
-                // Este resultado lo va a ver Program.cs  
                 this.DialogResult = DialogResult.OK;
 
-                // Cerramos el login para que se abra el MDI principal  
                 this.Close();
             }
             else
@@ -80,9 +76,14 @@ namespace Vista
 
             if (result == DialogResult.Yes)
             {
-                this.Close(); // Cierra el formulario actual
+                this.Close(); 
             }
-            // Si elige No, no hace nada
+          
+        }
+
+        private void lblIniciarSesion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

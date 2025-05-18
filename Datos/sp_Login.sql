@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[Login_Verificado_Nuevo2]
+CREATE PROCEDURE [dbo].[sp_Login]
     @Usuario NVARCHAR(MAX),
     @Contrasena NVARCHAR(MAX),
     @EsAdmin BIT OUTPUT,
@@ -13,12 +13,12 @@ BEGIN
     IF EXISTS (
         SELECT 1 
         FROM dbo.Usuarios
-        WHERE Usuario = @Usuario AND Contraseña = @Contrasena
+        WHERE Usuario = @Usuario AND Contrasena = @Contrasena
     )
     BEGIN
         SELECT @Id_Rol = Id_Rol
         FROM dbo.Usuarios
-        WHERE Usuario = @Usuario AND Contraseña = @Contrasena;
+        WHERE Usuario = @Usuario AND Contrasena = @Contrasena;
 
         SELECT @Rol = Rol
         FROM dbo.Roles

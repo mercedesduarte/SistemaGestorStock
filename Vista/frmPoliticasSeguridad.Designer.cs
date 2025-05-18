@@ -122,6 +122,7 @@
             this.chkNumerosLetras.TabIndex = 5;
             this.chkNumerosLetras.Text = "CONTENER NÚMEROS Y LETRAS";
             this.chkNumerosLetras.UseVisualStyleBackColor = true;
+            this.chkNumerosLetras.CheckedChanged += new System.EventHandler(this.chkNumerosLetras_CheckedChanged);
             // 
             // chkMayusMinus
             // 
@@ -226,6 +227,7 @@
             this.btnIniciarSesion.Text = "GUARDAR";
             this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnCerrar
             // 
@@ -265,6 +267,7 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPoliticasSeguridad";
+            this.Load += new System.EventHandler(this.frmPoliticasSeguridad_Load);
             this.groupBoxPoliticas.ResumeLayout(false);
             this.groupBoxPoliticas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinCaracteres)).EndInit();

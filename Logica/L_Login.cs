@@ -23,7 +23,7 @@ namespace Logica
                 {
                     conexion.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("Login_Verificado_Nuevo2", conexion)) // Asegurate del nombre este bien
+                    using (SqlCommand cmd = new SqlCommand("sp_Login", conexion)) // Asegurate del nombre este bien
 
                     {
                         cmd.CommandType = CommandType.StoredProcedure;

@@ -414,6 +414,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRegistrarPersonas";
             this.Text = "frmRegistrarPersonas";
+            this.Load += new System.EventHandler(this.frmRegistrarPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

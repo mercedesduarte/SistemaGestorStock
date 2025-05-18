@@ -205,6 +205,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRegistrarUsuarios";
             this.Text = "frmRegistrarUsuarios";
+            this.Load += new System.EventHandler(this.frmRegistrarUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

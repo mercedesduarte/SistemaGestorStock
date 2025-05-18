@@ -66,6 +66,7 @@ namespace Vista
             this.lblIniciarSesion.TabIndex = 1;
             this.lblIniciarSesion.Text = "INICIAR SESION";
             this.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIniciarSesion.Click += new System.EventHandler(this.lblIniciarSesion_Click);
             // 
             // groupBox1
             // 

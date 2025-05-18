@@ -24,5 +24,10 @@ namespace Vista
         {
             this.Close();
         }
+
+        private void frmRegistrarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
