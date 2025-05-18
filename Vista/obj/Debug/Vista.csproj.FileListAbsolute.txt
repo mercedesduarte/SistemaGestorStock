@@ -85,3 +85,4 @@ D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.MDIParent1.resources
 C:\Repositorio\Vista\obj\Debug\Vista.frmIniciarSesion.resources
 C:\Repositorio\Vista\obj\Debug\Vista.frmRegistrarUsuarios.resources
 C:\Repositorio\Vista\obj\Debug\Vista.frmRegistrarPersonas.resources
+C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmPoliticasSeguridad.resources

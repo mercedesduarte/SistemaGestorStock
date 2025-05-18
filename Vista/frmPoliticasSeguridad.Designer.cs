@@ -1,6 +1,6 @@
 ﻿namespace Vista
 {
-    partial class frmPreferencias
+    partial class frmPoliticasSeguridad
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPoliticasSeguridad));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxPoliticas = new System.Windows.Forms.GroupBox();
             this.chkDatosPersonales = new System.Windows.Forms.CheckBox();
@@ -35,14 +36,14 @@
             this.chkCaracterEspecial = new System.Windows.Forms.CheckBox();
             this.chkNumerosLetras = new System.Windows.Forms.CheckBox();
             this.chkMayusMinus = new System.Windows.Forms.CheckBox();
-            this.cmbPreguntas = new System.Windows.Forms.ComboBox();
+            this.cbPreguntas = new System.Windows.Forms.ComboBox();
             this.lblPreguntas = new System.Windows.Forms.Label();
             this.nudMinCaracteres = new System.Windows.Forms.NumericUpDown();
             this.lblMinCaracteres = new System.Windows.Forms.Label();
             this.groupBoxAutenticacion = new System.Windows.Forms.GroupBox();
             this.chkAutenticacionDoble = new System.Windows.Forms.CheckBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBoxPoliticas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinCaracteres)).BeginInit();
             this.groupBoxAutenticacion.SuspendLayout();
@@ -50,111 +51,113 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 10);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
-            this.label1.Size = new System.Drawing.Size(336, 51);
+            this.label1.Size = new System.Drawing.Size(634, 54);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Configuración de Políticas de Seguridad";
+            this.label1.Text = "POLITICAS DE SEGURIDAD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBoxPoliticas
             // 
+            this.groupBoxPoliticas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxPoliticas.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxPoliticas.Controls.Add(this.chkDatosPersonales);
             this.groupBoxPoliticas.Controls.Add(this.chkEvitarRepetir);
             this.groupBoxPoliticas.Controls.Add(this.chkCaracterEspecial);
             this.groupBoxPoliticas.Controls.Add(this.chkNumerosLetras);
             this.groupBoxPoliticas.Controls.Add(this.chkMayusMinus);
-            this.groupBoxPoliticas.Controls.Add(this.cmbPreguntas);
+            this.groupBoxPoliticas.Controls.Add(this.cbPreguntas);
             this.groupBoxPoliticas.Controls.Add(this.lblPreguntas);
             this.groupBoxPoliticas.Controls.Add(this.nudMinCaracteres);
             this.groupBoxPoliticas.Controls.Add(this.lblMinCaracteres);
-            this.groupBoxPoliticas.Location = new System.Drawing.Point(20, 60);
+            this.groupBoxPoliticas.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxPoliticas.Location = new System.Drawing.Point(13, 95);
             this.groupBoxPoliticas.Name = "groupBoxPoliticas";
-            this.groupBoxPoliticas.Size = new System.Drawing.Size(600, 340);
+            this.groupBoxPoliticas.Size = new System.Drawing.Size(634, 336);
             this.groupBoxPoliticas.TabIndex = 1;
             this.groupBoxPoliticas.TabStop = false;
-            this.groupBoxPoliticas.Text = "Políticas de Contraseña";
+            this.groupBoxPoliticas.Text = "POLITICAS DE CONTRASEÑA";
             // 
             // chkDatosPersonales
             // 
             this.chkDatosPersonales.AutoSize = true;
-            this.chkDatosPersonales.Location = new System.Drawing.Point(98, 294);
+            this.chkDatosPersonales.Location = new System.Drawing.Point(24, 284);
             this.chkDatosPersonales.Name = "chkDatosPersonales";
-            this.chkDatosPersonales.Size = new System.Drawing.Size(286, 21);
+            this.chkDatosPersonales.Size = new System.Drawing.Size(365, 28);
             this.chkDatosPersonales.TabIndex = 8;
-            this.chkDatosPersonales.Text = "No permitir datos personales en contraseña";
+            this.chkDatosPersonales.Text = "NO PERMITIR DATOS PERSONALES";
             this.chkDatosPersonales.UseVisualStyleBackColor = true;
             // 
             // chkEvitarRepetir
             // 
             this.chkEvitarRepetir.AutoSize = true;
-            this.chkEvitarRepetir.Location = new System.Drawing.Point(98, 252);
+            this.chkEvitarRepetir.Location = new System.Drawing.Point(24, 250);
             this.chkEvitarRepetir.Name = "chkEvitarRepetir";
-            this.chkEvitarRepetir.Size = new System.Drawing.Size(275, 21);
+            this.chkEvitarRepetir.Size = new System.Drawing.Size(425, 28);
             this.chkEvitarRepetir.TabIndex = 7;
-            this.chkEvitarRepetir.Text = "No permitir repetir contraseñas anteriores";
+            this.chkEvitarRepetir.Text = "NO REPETIR CONTRASEÑAS ANTERIORES";
             this.chkEvitarRepetir.UseVisualStyleBackColor = true;
             // 
             // chkCaracterEspecial
             // 
             this.chkCaracterEspecial.AutoSize = true;
-            this.chkCaracterEspecial.Location = new System.Drawing.Point(98, 212);
+            this.chkCaracterEspecial.Location = new System.Drawing.Point(24, 216);
             this.chkCaracterEspecial.Name = "chkCaracterEspecial";
-            this.chkCaracterEspecial.Size = new System.Drawing.Size(248, 21);
+            this.chkCaracterEspecial.Size = new System.Drawing.Size(377, 28);
             this.chkCaracterEspecial.TabIndex = 6;
-            this.chkCaracterEspecial.Text = "Obligar al menos un carácter especial";
+            this.chkCaracterEspecial.Text = "CONTENER UN CARACTER ESPECIAL";
             this.chkCaracterEspecial.UseVisualStyleBackColor = true;
             // 
             // chkNumerosLetras
             // 
             this.chkNumerosLetras.AutoSize = true;
-            this.chkNumerosLetras.Location = new System.Drawing.Point(98, 175);
+            this.chkNumerosLetras.Location = new System.Drawing.Point(24, 182);
             this.chkNumerosLetras.Name = "chkNumerosLetras";
-            this.chkNumerosLetras.Size = new System.Drawing.Size(256, 21);
+            this.chkNumerosLetras.Size = new System.Drawing.Size(329, 28);
             this.chkNumerosLetras.TabIndex = 5;
-            this.chkNumerosLetras.Text = "Obligar que contenga números y letras";
+            this.chkNumerosLetras.Text = "CONTENER NÚMEROS Y LETRAS";
             this.chkNumerosLetras.UseVisualStyleBackColor = true;
             // 
             // chkMayusMinus
             // 
             this.chkMayusMinus.AutoSize = true;
-            this.chkMayusMinus.Location = new System.Drawing.Point(98, 126);
+            this.chkMayusMinus.Location = new System.Drawing.Point(24, 148);
             this.chkMayusMinus.Name = "chkMayusMinus";
-            this.chkMayusMinus.Size = new System.Drawing.Size(315, 21);
+            this.chkMayusMinus.Size = new System.Drawing.Size(413, 28);
             this.chkMayusMinus.TabIndex = 4;
-            this.chkMayusMinus.Text = "Obligar combinación de mayúsculas y minúsculas";
+            this.chkMayusMinus.Text = "COMBINAR MAYÚSCULAS Y MINÚSCULAS";
             this.chkMayusMinus.UseVisualStyleBackColor = true;
             // 
-            // cmbPreguntas
+            // cbPreguntas
             // 
-            this.cmbPreguntas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPreguntas.FormattingEnabled = true;
-            this.cmbPreguntas.Items.AddRange(new object[] {
+            this.cbPreguntas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPreguntas.FormattingEnabled = true;
+            this.cbPreguntas.Items.AddRange(new object[] {
             "2",
             "3",
             "5"});
-            this.cmbPreguntas.Location = new System.Drawing.Point(300, 70);
-            this.cmbPreguntas.Name = "cmbPreguntas";
-            this.cmbPreguntas.Size = new System.Drawing.Size(60, 25);
-            this.cmbPreguntas.TabIndex = 3;
+            this.cbPreguntas.Location = new System.Drawing.Point(304, 95);
+            this.cbPreguntas.Name = "cbPreguntas";
+            this.cbPreguntas.Size = new System.Drawing.Size(60, 32);
+            this.cbPreguntas.TabIndex = 3;
             // 
             // lblPreguntas
             // 
             this.lblPreguntas.AutoSize = true;
-            this.lblPreguntas.Location = new System.Drawing.Point(20, 70);
+            this.lblPreguntas.Location = new System.Drawing.Point(20, 98);
             this.lblPreguntas.Name = "lblPreguntas";
-            this.lblPreguntas.Size = new System.Drawing.Size(227, 17);
+            this.lblPreguntas.Size = new System.Drawing.Size(274, 24);
             this.lblPreguntas.TabIndex = 2;
-            this.lblPreguntas.Text = "Cantidad de preguntas de seguridad:";
+            this.lblPreguntas.Text = "PREGUNTAS DE SEGURIDAD";
             // 
             // nudMinCaracteres
             // 
-            this.nudMinCaracteres.Location = new System.Drawing.Point(300, 30);
+            this.nudMinCaracteres.Location = new System.Drawing.Point(304, 55);
             this.nudMinCaracteres.Maximum = new decimal(new int[] {
             20,
             0,
@@ -166,9 +169,9 @@
             0,
             0});
             this.nudMinCaracteres.Name = "nudMinCaracteres";
-            this.nudMinCaracteres.Size = new System.Drawing.Size(60, 25);
+            this.nudMinCaracteres.Size = new System.Drawing.Size(60, 32);
             this.nudMinCaracteres.TabIndex = 1;
-            this.nudMinCaracteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMinCaracteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudMinCaracteres.Value = new decimal(new int[] {
             6,
             0,
@@ -178,81 +181,96 @@
             // lblMinCaracteres
             // 
             this.lblMinCaracteres.AutoSize = true;
-            this.lblMinCaracteres.Location = new System.Drawing.Point(20, 30);
+            this.lblMinCaracteres.Location = new System.Drawing.Point(20, 57);
             this.lblMinCaracteres.Name = "lblMinCaracteres";
-            this.lblMinCaracteres.Size = new System.Drawing.Size(238, 17);
+            this.lblMinCaracteres.Size = new System.Drawing.Size(250, 24);
             this.lblMinCaracteres.TabIndex = 0;
-            this.lblMinCaracteres.Text = "Mínimo de caracteres en la contraseña:";
+            this.lblMinCaracteres.Text = "MINIMO DE CARACTERES";
             // 
             // groupBoxAutenticacion
             // 
+            this.groupBoxAutenticacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxAutenticacion.Controls.Add(this.chkAutenticacionDoble);
-            this.groupBoxAutenticacion.Location = new System.Drawing.Point(20, 410);
+            this.groupBoxAutenticacion.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAutenticacion.Location = new System.Drawing.Point(13, 437);
             this.groupBoxAutenticacion.Name = "groupBoxAutenticacion";
-            this.groupBoxAutenticacion.Size = new System.Drawing.Size(600, 100);
+            this.groupBoxAutenticacion.Size = new System.Drawing.Size(634, 100);
             this.groupBoxAutenticacion.TabIndex = 2;
             this.groupBoxAutenticacion.TabStop = false;
-            this.groupBoxAutenticacion.Text = "Autenticación";
+            this.groupBoxAutenticacion.Text = "AUTENTICACIÓN";
             // 
             // chkAutenticacionDoble
             // 
             this.chkAutenticacionDoble.AutoSize = true;
-            this.chkAutenticacionDoble.Location = new System.Drawing.Point(62, 45);
+            this.chkAutenticacionDoble.Location = new System.Drawing.Point(81, 31);
             this.chkAutenticacionDoble.Name = "chkAutenticacionDoble";
-            this.chkAutenticacionDoble.Size = new System.Drawing.Size(340, 21);
+            this.chkAutenticacionDoble.Size = new System.Drawing.Size(449, 52);
             this.chkAutenticacionDoble.TabIndex = 9;
-            this.chkAutenticacionDoble.Text = "Requerir autenticación en dos pasos (2FA) por correo";
+            this.chkAutenticacionDoble.Text = "REQUERIR AUTENTICACIÓN EN DOS PASOS\r\n(2FA) POR CORREO ELECTRONICO";
             this.chkAutenticacionDoble.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // btnIniciarSesion
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(265, 530);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 40);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciarSesion.Image")));
+            this.btnIniciarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(13, 555);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(150, 45);
+            this.btnIniciarSesion.TabIndex = 6;
+            this.btnIniciarSesion.Text = "GUARDAR";
+            this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
             // 
-            // btnGuardar
+            // btnCerrar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(379, 530);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 40);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(506, 555);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(141, 45);
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // frmPreferencias
+            // frmPoliticasSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(660, 600);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCancelar);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(660, 631);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.groupBoxAutenticacion);
             this.Controls.Add(this.groupBoxPoliticas);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmPreferencias";
+            this.Name = "frmPoliticasSeguridad";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Configuración de Seguridad";
+            this.Text = "frmPoliticasSeguridad";
             this.groupBoxPoliticas.ResumeLayout(false);
             this.groupBoxPoliticas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinCaracteres)).EndInit();
             this.groupBoxAutenticacion.ResumeLayout(false);
             this.groupBoxAutenticacion.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -265,13 +283,13 @@
         private System.Windows.Forms.CheckBox chkCaracterEspecial;
         private System.Windows.Forms.CheckBox chkNumerosLetras;
         private System.Windows.Forms.CheckBox chkMayusMinus;
-        private System.Windows.Forms.ComboBox cmbPreguntas;
+        private System.Windows.Forms.ComboBox cbPreguntas;
         private System.Windows.Forms.NumericUpDown nudMinCaracteres;
         private System.Windows.Forms.Label lblPreguntas;
         private System.Windows.Forms.Label lblMinCaracteres;
         private System.Windows.Forms.GroupBox groupBoxAutenticacion;
         private System.Windows.Forms.CheckBox chkAutenticacionDoble;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

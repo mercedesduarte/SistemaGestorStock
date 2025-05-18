@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class frmPreferencias : Form
+    public partial class frmPoliticasSeguridad : Form
     {
-        public frmPreferencias()
+        public frmPoliticasSeguridad()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

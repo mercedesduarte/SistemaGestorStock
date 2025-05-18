@@ -35,6 +35,7 @@
             this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConfiguracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PoliticasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
@@ -43,7 +44,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contrasenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +99,7 @@
             // ConfiguracionToolStripMenuItem
             // 
             this.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contrasenaToolStripMenuItem});
+            this.PoliticasSeguridadToolStripMenuItem});
             this.ConfiguracionToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfiguracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConfiguracionToolStripMenuItem.Image")));
             this.ConfiguracionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -107,6 +107,15 @@
             this.ConfiguracionToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.ConfiguracionToolStripMenuItem.Size = new System.Drawing.Size(184, 48);
             this.ConfiguracionToolStripMenuItem.Text = "CONFIGURACION";
+            // 
+            // PoliticasSeguridadToolStripMenuItem
+            // 
+            this.PoliticasSeguridadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PoliticasSeguridadToolStripMenuItem.Image")));
+            this.PoliticasSeguridadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PoliticasSeguridadToolStripMenuItem.Name = "PoliticasSeguridadToolStripMenuItem";
+            this.PoliticasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
+            this.PoliticasSeguridadToolStripMenuItem.Text = "POLITICAS SEGURIDAD";
+            this.PoliticasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.PoliticasSeguridadToolStripMenuItem_Click);
             // 
             // ReportesToolStripMenuItem
             // 
@@ -170,23 +179,18 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(812, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(820, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 52);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // contrasenaToolStripMenuItem
-            // 
-            this.contrasenaToolStripMenuItem.Name = "contrasenaToolStripMenuItem";
-            this.contrasenaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.contrasenaToolStripMenuItem.Text = "CONTRASEÑA";
             // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1016, 453);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblFecha);
@@ -223,7 +227,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ToolStripStatusLabel lblRol;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem contrasenaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PoliticasSeguridadToolStripMenuItem;
     }
 }
 

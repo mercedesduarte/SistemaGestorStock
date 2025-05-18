@@ -88,13 +88,14 @@ namespace Vista
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(593, 261);
+            this.btnSalir.Location = new System.Drawing.Point(593, 269);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnSalir.Size = new System.Drawing.Size(122, 35);
+            this.btnSalir.Size = new System.Drawing.Size(122, 45);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,13 +105,14 @@ namespace Vista
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.Control;
             this.btnIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciarSesion.Image")));
             this.btnIniciarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(54, 261);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(54, 269);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnIniciarSesion.Size = new System.Drawing.Size(231, 35);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(231, 45);
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "INICIAR SESION";
             this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -35,7 +35,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.ComboBox();
+            this.cbGenero = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cbUbicacion = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCrearPersona = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.cbSexo);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.txtGenero);
+            this.groupBox1.Controls.Add(this.cbGenero);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.cbUbicacion);
             this.groupBox1.Controls.Add(this.label12);
@@ -104,7 +104,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbTipoDocumento);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnRegresar);
+            this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnCrearPersona);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -156,16 +156,16 @@
             this.label14.TabIndex = 36;
             this.label14.Text = "SEXO:";
             // 
-            // txtGenero
+            // cbGenero
             // 
-            this.txtGenero.Items.AddRange(new object[] {
+            this.cbGenero.Items.AddRange(new object[] {
             "ROL 1",
             "ROL 2",
             "ROL 3"});
-            this.txtGenero.Location = new System.Drawing.Point(545, 323);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(225, 32);
-            this.txtGenero.TabIndex = 35;
+            this.cbGenero.Location = new System.Drawing.Point(545, 323);
+            this.cbGenero.Name = "cbGenero";
+            this.cbGenero.Size = new System.Drawing.Size(225, 32);
+            this.cbGenero.TabIndex = 35;
             // 
             // label13
             // 
@@ -338,21 +338,22 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "TIPO DOCUMENTO:";
             // 
-            // btnRegresar
+            // btnCerrar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegresar.Location = new System.Drawing.Point(333, 495);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnRegresar.Size = new System.Drawing.Size(163, 35);
-            this.btnRegresar.TabIndex = 14;
-            this.btnRegresar.Text = "REGRESAR";
-            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(629, 485);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(141, 45);
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnCrearPersona
             // 
@@ -361,10 +362,10 @@
             this.btnCrearPersona.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrearPersona.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearPersona.Image")));
             this.btnCrearPersona.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCrearPersona.Location = new System.Drawing.Point(7, 495);
+            this.btnCrearPersona.Location = new System.Drawing.Point(7, 485);
             this.btnCrearPersona.Name = "btnCrearPersona";
             this.btnCrearPersona.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCrearPersona.Size = new System.Drawing.Size(275, 35);
+            this.btnCrearPersona.Size = new System.Drawing.Size(275, 45);
             this.btnCrearPersona.TabIndex = 13;
             this.btnCrearPersona.Text = "REGISTRAR PERSONA";
             this.btnCrearPersona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -427,7 +428,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbTipoDocumento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnCrearPersona;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -445,7 +446,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCodigoPostal;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox txtGenero;
+        private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbUbicacion;
         private System.Windows.Forms.Label label12;

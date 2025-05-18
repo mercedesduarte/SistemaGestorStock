@@ -34,7 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbRol);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnRegresar);
+            this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnCrearUsuario);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -106,21 +106,22 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "ROL USUARIO:";
             // 
-            // btnRegresar
+            // btnCerrar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegresar.Location = new System.Drawing.Point(543, 279);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnRegresar.Size = new System.Drawing.Size(163, 35);
-            this.btnRegresar.TabIndex = 14;
-            this.btnRegresar.Text = "REGRESAR";
-            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(565, 269);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(141, 45);
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnCrearUsuario
             // 
@@ -129,10 +130,10 @@
             this.btnCrearUsuario.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrearUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearUsuario.Image")));
             this.btnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCrearUsuario.Location = new System.Drawing.Point(45, 279);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(45, 269);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
             this.btnCrearUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCrearUsuario.Size = new System.Drawing.Size(222, 35);
+            this.btnCrearUsuario.Size = new System.Drawing.Size(222, 45);
             this.btnCrearUsuario.TabIndex = 13;
             this.btnCrearUsuario.Text = "CREAR USUARIO";
             this.btnCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +215,7 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnCrearUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

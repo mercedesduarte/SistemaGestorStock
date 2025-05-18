@@ -73,11 +73,11 @@
     <Compile Include="frmIniciarSesion.Designer.cs">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPreferencias.cs">
+    <Compile Include="frmPoliticasSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPreferencias.Designer.cs">
-      <DependentUpon>frmPreferencias.cs</DependentUpon>
+    <Compile Include="frmPoliticasSeguridad.Designer.cs">
+      <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarUsuarios.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPreferencias.resx">
-      <DependentUpon>frmPreferencias.cs</DependentUpon>
+    <EmbeddedResource Include="frmPoliticasSeguridad.resx">
+      <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarUsuarios.resx">
       <DependentUpon>frmRegistrarUsuarios.cs</DependentUpon>

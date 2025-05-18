@@ -49,6 +49,9 @@ namespace Vista
 
                     PersonasToolStripMenuItem.Enabled = false;
                     PersonasToolStripMenuItem.Visible = false;
+
+                    PoliticasSeguridadToolStripMenuItem.Enabled = false;
+                    PoliticasSeguridadToolStripMenuItem.Visible = false;
                     break;
 
                 case "invitado":
@@ -116,6 +119,27 @@ namespace Vista
             formularioPersonas.MdiParent = this; // Asignar el formulario MDI padre
             formularioPersonas.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
             formularioPersonas.Show(); // Mostrar el formulario
+        }
+
+        private void PoliticasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario de Políticas de Seguridad abierta dentro del MDI
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmPoliticasSeguridad)
+                {
+                    form.BringToFront(); // Traer al frente si ya está abierto
+                    form.Focus();        // Darle el foco
+                    return;              // Salir sin crear una nueva instancia
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmPoliticasSeguridad formularioPoliticas = new frmPoliticasSeguridad();
+            formularioPoliticas.MdiParent = this; // Asignar el formulario MDI padre
+            formularioPoliticas.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
+            formularioPoliticas.Show(); // Mostrar el formulario
+
         }
     }
 }
