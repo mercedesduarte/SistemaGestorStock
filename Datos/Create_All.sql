@@ -132,8 +132,8 @@ Tipo NVARCHAR(20)
 
 CREATE TABLE Restricciones(
 Id_Restriccion INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-Restriccion NVARCHAR(25),
-Caracteres_Min NVARCHAR(10),
+Restriccion VARCHAR(100),
+Caracteres_Min INT,
 Activo BIT,
 Id_Tipo INT,
 

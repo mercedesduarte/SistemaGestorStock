@@ -14,10 +14,12 @@ using System.Data.SqlClient;
 using Logica;
 using Servicios;
 using Sesion;
+using static L_Restriccion;
 
 
 namespace Vista
 {
+
     public partial class frmPoliticasSeguridad : Form
     {
         public frmPoliticasSeguridad()
@@ -49,7 +51,17 @@ namespace Vista
 
         private void frmPoliticasSeguridad_Load(object sender, EventArgs e)
         {
-          
+            L_Restriccion Restriccion = new L_Restriccion();
+
+            EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
+
+            chkMayusMinus.Checked = estado.MayusMinus == 1;
+            chkNumerosLetras.Checked = estado.NumeroLetras == 1;
+            chkCaracterEspecial.Checked = estado.CaracterEsp == 1;
+            chkEvitarRepetir.Checked = estado.CaracterEsp == 1;
+            chkDatosPersonales.Checked = estado.DatosPersonales == 1;
+            chkAutenticacionDoble.Checked = estado.DosFA == 1;
+
         }
 
         private void chkNumerosLetras_CheckedChanged(object sender, EventArgs e)
