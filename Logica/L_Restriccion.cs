@@ -20,6 +20,9 @@ public class L_Restriccion
         public int ContrasenaAnterior { get; set; }
         public int DatosPersonales { get; set; }
         public int DosFA { get; set; }
+
+        //Vamos a almacenar los caracteres que me dice la bd
+        public int CaracteresUtilizados { get; set; }
     }
 
     public EstadoRestricciones ConseguirRestricciones()
@@ -76,11 +79,12 @@ public class L_Restriccion
 
                     if (!activo)
                         continue;
-
+                    
                     switch (restriccion)
                     {
                         case "Mínimo de caracteres":
                             estado.MinimoCar = 1;
+                            estado.CaracteresUtilizados = Convert.ToInt32(reader["Caracteres_Min"]);
                             break;
                         case "Combinar mayúsculas y minúsculas":
                             estado.MayusMinus = 1;
