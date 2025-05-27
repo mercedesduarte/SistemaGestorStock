@@ -1,6 +1,6 @@
 -- Restricción de mínimo de caracteres
 INSERT INTO Restricciones (Restriccion, Caracteres_Min, Activo, Id_Tipo)
-VALUES ('Mínimo de caracteres', 0, 0, 1);
+VALUES ('Mínimo de caracteres', 6, 0, 1);
 
 -- Combinar mayúsculas y minúsculas
 INSERT INTO Restricciones (Restriccion, Caracteres_Min, Activo, Id_Tipo)
