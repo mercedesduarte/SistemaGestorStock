@@ -31,17 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarUsuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblConfirmarContrasena = new System.Windows.Forms.Label();
+            this.cbRolUsuario = new System.Windows.Forms.ComboBox();
+            this.lblRolUsuario = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblContrasena = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbPersona = new System.Windows.Forms.ComboBox();
+            this.lblPersona = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,62 +51,64 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.cbPersona);
+            this.groupBox1.Controls.Add(this.lblPersona);
             this.groupBox1.Controls.Add(this.txtConfirmarContrasena);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cbRol);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblConfirmarContrasena);
+            this.groupBox1.Controls.Add(this.cbRolUsuario);
+            this.groupBox1.Controls.Add(this.lblRolUsuario);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnCrearUsuario);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblContrasena);
+            this.groupBox1.Controls.Add(this.lblUsuario);
             this.groupBox1.Controls.Add(this.txtContrasena);
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 76);
+            this.groupBox1.Location = new System.Drawing.Point(12, 148);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(751, 355);
+            this.groupBox1.Size = new System.Drawing.Size(751, 403);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PARA CREAR USUARIOS";
             // 
             // txtConfirmarContrasena
             // 
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(443, 155);
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(443, 212);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(263, 32);
             this.txtConfirmarContrasena.TabIndex = 19;
             // 
-            // label5
+            // lblConfirmarContrasena
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(279, 143);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(142, 48);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "CONFIRMAR\r\nCONTRASEÑA:";
+            this.lblConfirmarContrasena.AutoSize = true;
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(279, 200);
+            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
+            this.lblConfirmarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(142, 48);
+            this.lblConfirmarContrasena.TabIndex = 18;
+            this.lblConfirmarContrasena.Text = "CONFIRMAR\r\nCONTRASEÑA:";
             // 
-            // cbRol
+            // cbRolUsuario
             // 
-            this.cbRol.Items.AddRange(new object[] {
+            this.cbRolUsuario.Items.AddRange(new object[] {
             "ROL 1",
             "ROL 2",
             "ROL 3"});
-            this.cbRol.Location = new System.Drawing.Point(443, 211);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(263, 32);
-            this.cbRol.TabIndex = 17;
+            this.cbRolUsuario.Location = new System.Drawing.Point(443, 268);
+            this.cbRolUsuario.Name = "cbRolUsuario";
+            this.cbRolUsuario.Size = new System.Drawing.Size(263, 32);
+            this.cbRolUsuario.TabIndex = 17;
             // 
-            // label4
+            // lblRolUsuario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(279, 214);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(154, 24);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "ROL USUARIO:";
+            this.lblRolUsuario.AutoSize = true;
+            this.lblRolUsuario.Location = new System.Drawing.Point(279, 271);
+            this.lblRolUsuario.Name = "lblRolUsuario";
+            this.lblRolUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblRolUsuario.Size = new System.Drawing.Size(154, 24);
+            this.lblRolUsuario.TabIndex = 16;
+            this.lblRolUsuario.Text = "ROL USUARIO:";
             // 
             // btnCerrar
             // 
@@ -113,7 +117,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(565, 269);
+            this.btnCerrar.Location = new System.Drawing.Point(565, 323);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCerrar.Size = new System.Drawing.Size(141, 45);
@@ -130,7 +134,7 @@
             this.btnCrearUsuario.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrearUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearUsuario.Image")));
             this.btnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCrearUsuario.Location = new System.Drawing.Point(45, 269);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(45, 323);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
             this.btnCrearUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCrearUsuario.Size = new System.Drawing.Size(222, 45);
@@ -139,34 +143,34 @@
             this.btnCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearUsuario.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lblContrasena
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(279, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 24);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "CONTRASEÑA:";
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Location = new System.Drawing.Point(279, 159);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(142, 24);
+            this.lblContrasena.TabIndex = 12;
+            this.lblContrasena.Text = "CONTRASEÑA:";
             // 
-            // label2
+            // lblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 24);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "USUARIO:";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(279, 105);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(106, 24);
+            this.lblUsuario.TabIndex = 11;
+            this.lblUsuario.Text = "USUARIO:";
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(443, 99);
+            this.txtContrasena.Location = new System.Drawing.Point(443, 156);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(263, 32);
             this.txtContrasena.TabIndex = 10;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(443, 45);
+            this.txtUsuario.Location = new System.Drawing.Point(443, 102);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(263, 32);
             this.txtUsuario.TabIndex = 9;
@@ -174,7 +178,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,19 +191,40 @@
             this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(751, 54);
             this.label1.TabIndex = 3;
             this.label1.Text = "REGISTRAR USUARIOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbPersona
+            // 
+            this.cbPersona.Items.AddRange(new object[] {
+            "ROL 1",
+            "ROL 2",
+            "ROL 3"});
+            this.cbPersona.Location = new System.Drawing.Point(443, 48);
+            this.cbPersona.Name = "cbPersona";
+            this.cbPersona.Size = new System.Drawing.Size(263, 32);
+            this.cbPersona.TabIndex = 21;
+            // 
+            // lblPersona
+            // 
+            this.lblPersona.AutoSize = true;
+            this.lblPersona.Location = new System.Drawing.Point(279, 51);
+            this.lblPersona.Name = "lblPersona";
+            this.lblPersona.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPersona.Size = new System.Drawing.Size(106, 24);
+            this.lblPersona.TabIndex = 20;
+            this.lblPersona.Text = "PERSONA:";
+            // 
             // frmRegistrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(775, 443);
+            this.ClientSize = new System.Drawing.Size(775, 586);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -218,14 +243,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnCrearUsuario;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblContrasena;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbRol;
+        private System.Windows.Forms.Label lblRolUsuario;
+        private System.Windows.Forms.ComboBox cbRolUsuario;
         private System.Windows.Forms.TextBox txtConfirmarContrasena;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblConfirmarContrasena;
+        private System.Windows.Forms.ComboBox cbPersona;
+        private System.Windows.Forms.Label lblPersona;
     }
 }

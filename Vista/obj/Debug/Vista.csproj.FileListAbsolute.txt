@@ -93,3 +93,5 @@ C:\Users\Gero\SistemaGestion\Vista\obj\Debug\Vista.pdb
 D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\System.Data.SqlClient.dll
 D:\programacion\C#\GestionDeUsuarios\Vista\bin\Debug\System.Data.SqlClient.xml
 D:\programacion\C#\GestionDeUsuarios\Vista\obj\Debug\Vista.frmPoliticasSeguridad.resources
+C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\System.Data.SqlClient.dll
+C:\Users\alexi\Desktop\SistemaGestion\Vista\bin\Debug\System.Data.SqlClient.xml

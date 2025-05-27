@@ -80,10 +80,5 @@ namespace Vista
             }
           
         }
-
-        private void lblIniciarSesion_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
