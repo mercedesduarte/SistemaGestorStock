@@ -45,7 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conecction\ConnectionBD.cs" />
+    <Compile Include="DTOs\CodigoPostalDTO.cs" />
+    <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_Login.cs" />
+    <Compile Include="D_Registro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

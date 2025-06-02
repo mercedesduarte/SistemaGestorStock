@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace Vista
 {
@@ -26,5 +27,38 @@ namespace Vista
         {
 
         }
+
+        private void txtCodigoPostal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchImg_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtCodigoPostal.Text, out int cp))
+            {
+                bool encontrado = L_EjecutarBusquedaCP.BuscarCP(cp);
+
+                if (encontrado)
+                {
+                    txtLocalidad.Text = L_EjecutarBusquedaCP.Localidad;
+                    txtPartido.Text = L_EjecutarBusquedaCP.Partido;
+                    txtProvincia.Text = L_EjecutarBusquedaCP.Provincia;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron datos para ese código postal.");
+                    txtLocalidad.Text = "";
+                    txtPartido.Text = "";
+                    txtProvincia.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un código postal válido.");
+            }
+        }
+
+
     }
 }

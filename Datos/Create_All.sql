@@ -15,7 +15,8 @@ CREATE TABLE Localidades(
     Localidad NVARCHAR(50) NOT NULL,
     Codigo_Telefonico NVARCHAR(10) NOT NULL,
     Id_Partido INT NOT NULL,
-    FOREIGN KEY (Id_Partido) REFERENCES Partidos(Id_Partido)
+    FOREIGN KEY (Id_Partido) REFERENCES Partidos(Id_Partido),
+	Codigo_postal varchar(50)
 );
 
 CREATE TABLE Ubicacion(

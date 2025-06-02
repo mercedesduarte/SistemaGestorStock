@@ -11,10 +11,10 @@ INSERT INTO Partidos (Partido, Id_Provincia) VALUES
 ('Rosario', 3);
 
 -- Insertar Localidades
-INSERT INTO Localidades (Localidad, Codigo_Telefonico, Id_Partido) VALUES 
-('Tolosa', '221', 1),
-('Nueva Córdoba', '351', 2),
-('Zona Centro', '341', 3);
+INSERT INTO Localidades (Localidad, Codigo_Telefonico, Id_Partido, Codigo_postal) VALUES 
+('Tolosa', '221', 1, 1104),
+('Nueva Córdoba', '351', 2, 5016),
+('Zona Centro', '341', 3, 1901);
 
 -- Insertar Ubicaciones
 INSERT INTO Ubicacion (Id_Provincia, Id_Partido, Id_Localidad) VALUES 

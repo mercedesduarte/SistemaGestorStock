@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPersonas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbLocalidad = new System.Windows.Forms.ComboBox();
+            this.searchImg = new System.Windows.Forms.PictureBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtPartido = new System.Windows.Forms.TextBox();
+            this.txtProvincia = new System.Windows.Forms.TextBox();
             this.lblLocalidad = new System.Windows.Forms.Label();
-            this.cbPartido = new System.Windows.Forms.ComboBox();
             this.lblPartido = new System.Windows.Forms.Label();
-            this.cbProvincia = new System.Windows.Forms.ComboBox();
             this.lblProvincia = new System.Windows.Forms.Label();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.lblCorreoElectronico = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,11 +86,12 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.cbLocalidad);
+            this.groupBox1.Controls.Add(this.searchImg);
+            this.groupBox1.Controls.Add(this.txtLocalidad);
+            this.groupBox1.Controls.Add(this.txtPartido);
+            this.groupBox1.Controls.Add(this.txtProvincia);
             this.groupBox1.Controls.Add(this.lblLocalidad);
-            this.groupBox1.Controls.Add(this.cbPartido);
             this.groupBox1.Controls.Add(this.lblPartido);
-            this.groupBox1.Controls.Add(this.cbProvincia);
             this.groupBox1.Controls.Add(this.lblProvincia);
             this.groupBox1.Controls.Add(this.txtCorreoElectronico);
             this.groupBox1.Controls.Add(this.lblCorreoElectronico);
@@ -126,16 +129,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PERSONALES";
             // 
-            // cbLocalidad
+            // searchImg
             // 
-            this.cbLocalidad.Items.AddRange(new object[] {
-            "ROL 1",
-            "ROL 2",
-            "ROL 3"});
-            this.cbLocalidad.Location = new System.Drawing.Point(28, 496);
-            this.cbLocalidad.Name = "cbLocalidad";
-            this.cbLocalidad.Size = new System.Drawing.Size(263, 32);
-            this.cbLocalidad.TabIndex = 45;
+            this.searchImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchImg.Image = global::Vista.Properties.Resources.lupita;
+            this.searchImg.Location = new System.Drawing.Point(263, 305);
+            this.searchImg.Name = "searchImg";
+            this.searchImg.Size = new System.Drawing.Size(24, 23);
+            this.searchImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchImg.TabIndex = 49;
+            this.searchImg.TabStop = false;
+            this.searchImg.Click += new System.EventHandler(this.searchImg_Click);
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(28, 496);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(263, 32);
+            this.txtLocalidad.TabIndex = 48;
+            this.txtLocalidad.Enabled = false;
+            // 
+            // txtPartido
+            // 
+            this.txtPartido.Location = new System.Drawing.Point(566, 413);
+            this.txtPartido.Name = "txtPartido";
+            this.txtPartido.Size = new System.Drawing.Size(225, 32);
+            this.txtPartido.TabIndex = 47;
+            this.txtPartido.Enabled = false;
+            // 
+            // txtProvincia
+            // 
+            this.txtProvincia.Location = new System.Drawing.Point(297, 413);
+            this.txtProvincia.Name = "txtProvincia";
+            this.txtProvincia.Size = new System.Drawing.Size(263, 32);
+            this.txtProvincia.TabIndex = 46;
+            this.txtProvincia.Enabled = false;
             // 
             // lblLocalidad
             // 
@@ -147,17 +175,6 @@
             this.lblLocalidad.TabIndex = 44;
             this.lblLocalidad.Text = "LOCALIDAD:";
             // 
-            // cbPartido
-            // 
-            this.cbPartido.Items.AddRange(new object[] {
-            "ROL 1",
-            "ROL 2",
-            "ROL 3"});
-            this.cbPartido.Location = new System.Drawing.Point(566, 413);
-            this.cbPartido.Name = "cbPartido";
-            this.cbPartido.Size = new System.Drawing.Size(225, 32);
-            this.cbPartido.TabIndex = 43;
-            // 
             // lblPartido
             // 
             this.lblPartido.AutoSize = true;
@@ -167,17 +184,6 @@
             this.lblPartido.Size = new System.Drawing.Size(106, 24);
             this.lblPartido.TabIndex = 42;
             this.lblPartido.Text = "PARTIDO:";
-            // 
-            // cbProvincia
-            // 
-            this.cbProvincia.Items.AddRange(new object[] {
-            "ROL 1",
-            "ROL 2",
-            "ROL 3"});
-            this.cbProvincia.Location = new System.Drawing.Point(297, 413);
-            this.cbProvincia.Name = "cbProvincia";
-            this.cbProvincia.Size = new System.Drawing.Size(263, 32);
-            this.cbProvincia.TabIndex = 41;
             // 
             // lblProvincia
             // 
@@ -254,6 +260,7 @@
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(263, 32);
             this.txtCodigoPostal.TabIndex = 31;
+            this.txtCodigoPostal.TextChanged += new System.EventHandler(this.txtCodigoPostal_TextChanged);
             // 
             // lblCodigoPostal
             // 
@@ -467,6 +474,7 @@
             this.Load += new System.EventHandler(this.frmRegistrarPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,11 +511,12 @@
         private System.Windows.Forms.Label lblCorreoElectronico;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.ComboBox cbProvincia;
         private System.Windows.Forms.Label lblProvincia;
-        private System.Windows.Forms.ComboBox cbPartido;
         private System.Windows.Forms.Label lblPartido;
-        private System.Windows.Forms.ComboBox cbLocalidad;
         private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.TextBox txtPartido;
+        private System.Windows.Forms.TextBox txtProvincia;
+        private System.Windows.Forms.PictureBox searchImg;
     }
 }

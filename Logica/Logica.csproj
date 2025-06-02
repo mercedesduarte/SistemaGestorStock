@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="L_Conexion.cs" />
+    <Compile Include="L_EjecutarBusquedaCP.cs" />
     <Compile Include="L_Login.cs" />
     <Compile Include="L_Registro.cs" />
     <Compile Include="L_Restriccion.cs" />
