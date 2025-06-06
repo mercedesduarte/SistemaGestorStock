@@ -44,6 +44,8 @@ namespace Vista
                     txtLocalidad.Text = L_EjecutarBusquedaCP.Localidad;
                     txtPartido.Text = L_EjecutarBusquedaCP.Partido;
                     txtProvincia.Text = L_EjecutarBusquedaCP.Provincia;
+
+                    Console.WriteLine(L_EjecutarBusquedaCP.idLocalidad);
                 }
                 else
                 {

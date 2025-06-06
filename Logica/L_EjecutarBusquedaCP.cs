@@ -8,6 +8,9 @@ namespace Logica
         public static string Localidad { get; private set; }
         public static string Partido { get; private set; }
         public static string Provincia { get; private set; }
+        public static int idLocalidad { get; private set; }
+        public static int idPartido { get; private set; }
+        public static int idProvincia { get; private set; }
 
         public static bool BuscarCP(int CP)
         {
@@ -19,6 +22,10 @@ namespace Logica
                 Localidad = datos_cp.Localidad;
                 Partido = datos_cp.Partido;
                 Provincia = datos_cp.Provincia;
+
+                idLocalidad = datos_cp.ÏdLocalidad;
+                idPartido = datos_cp.IdPartido;
+                idProvincia = datos_cp.IdProvincia;
 
                 return true;
             }

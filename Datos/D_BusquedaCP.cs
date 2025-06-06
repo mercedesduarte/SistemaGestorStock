@@ -26,9 +26,12 @@ namespace Datos
                         {
                             return new CodigoPostalDTO
                             {
-                                Localidad = reader["Localidad"].ToString(),
-                                Partido = reader["Partido"].ToString(),
-                                Provincia = reader["Provincia"].ToString()
+                                Localidad = reader["Localidades"].ToString(),
+                                Partido = reader["Partidos"].ToString(),
+                                Provincia = reader["Provincias"].ToString(),
+                                ÏdLocalidad = reader.GetInt32(reader.GetOrdinal("Id_Localidad")),
+                                IdPartido = reader.GetInt32(reader.GetOrdinal("Id_Partido")),
+                                IdProvincia = reader.GetInt32(reader.GetOrdinal("Id_Provincia"))
                             };
                         }
                         else
