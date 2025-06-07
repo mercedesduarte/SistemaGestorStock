@@ -46,10 +46,12 @@
   <ItemGroup>
     <Compile Include="Conecction\ConnectionBD.cs" />
     <Compile Include="DTOs\CodigoPostalDTO.cs" />
+    <Compile Include="DTOs\GeneroDTO.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_Login.cs" />
     <Compile Include="D_Registro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="D_Traer_Genero.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

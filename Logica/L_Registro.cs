@@ -1,20 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Datos.Conecction;
 using Datos;
 
 namespace Logica
 {
-    public class L_Registro : ConnectionBD
+    public class L_Registro
     {
-        public bool RegistrarUsuario(string usuario, string contrasena)
+        public bool RegistrarPersona(
+            string nombre,
+            string apellido,
+            string tipoDocumento,
+            string numDocumento,
+            string cuil,
+            string calle,
+            string altura,
+            string piso,
+            string departamento,
+            string codigoPostal,
+            int idProvincia,
+            int idPartido,
+            int idLocalidad,
+            int idGenero,
+            bool sexo,
+            string email,
+            DateTime fechaAlta
+        )
         {
-            return D_Registro.RegistrarUsuario(usuario, contrasena);
+            return D_Registro.RegistrarPersona(
+                nombre,
+                apellido,
+                tipoDocumento,
+                numDocumento,
+                cuil,
+                calle,
+                altura,
+                piso,
+                departamento,
+                codigoPostal,
+                idProvincia,
+                idPartido,
+                idLocalidad,
+                idGenero,
+                sexo,
+                email,
+                fechaAlta
+            );
         }
     }
 }

@@ -34,3 +34,12 @@ C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInp
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.dll
 C:\Users\Gero\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\Servicios.dll
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\Sesion.dll
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
+C:\Users\Gerof\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\Gerof\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Gerof\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
+C:\Users\Gerof\SistemaGestion\Servicios\obj\Debug\Servicios.dll
+C:\Users\Gerof\SistemaGestion\Servicios\obj\Debug\Servicios.pdb

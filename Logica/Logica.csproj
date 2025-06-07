@@ -49,6 +49,7 @@
     <Compile Include="L_Login.cs" />
     <Compile Include="L_Registro.cs" />
     <Compile Include="L_Restriccion.cs" />
+    <Compile Include="L_Traer_Genero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
