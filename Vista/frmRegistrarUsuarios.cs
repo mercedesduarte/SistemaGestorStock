@@ -27,7 +27,16 @@ namespace Vista
 
         private void frmRegistrarUsuarios_Load(object sender, EventArgs e)
         {
+            L_Lista logica = new L_Lista();
+            var personas = logica.ObtenerPersonasParaCombo();
 
+            cbPersona.DataSource = personas;
+            cbPersona.DisplayMember = "Value";
+            cbPersona.ValueMember = "Key";
+        }
+
+        private void btnCrearUsuario_Click(object sender, EventArgs e)
+        {
         }
     }
 }
