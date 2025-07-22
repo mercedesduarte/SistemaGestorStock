@@ -48,11 +48,11 @@ namespace Servicios.obligatorias
             public Dictionary<string, string> PreguntasSeguridad { get; set; }
         }
 
-        // Crear usuario con contraseña aleatoria y preguntas de seguridad
+
         public static NuevoUsuario CrearNuevoUsuario(string username, Dictionary<string, string> respuestas)
         {
             string passwordGenerada = Generarcontrarandom();
-            string hash = HashconUsu.HashWithUsername(username, passwordGenerada);
+            string hash = HashconUsu.Hashconusu(username, passwordGenerada);
 
             return new NuevoUsuario
             {
