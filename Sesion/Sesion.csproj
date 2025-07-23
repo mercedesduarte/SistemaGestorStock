@@ -41,8 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArmarMail.cs" />
+    <Compile Include="EnviarMail.cs" />
+    <Compile Include="GestionarUsuario.cs" />
+    <Compile Include="HashconUsu.cs" />
+    <Compile Include="Hashing.cs" />
+    <Compile Include="GeneradorContra.cs" />
+    <Compile Include="GestorRecuperacion.cs" />
+    <Compile Include="PrimerContra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sesiones.cs" />
+    <Compile Include="ValidaMail.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

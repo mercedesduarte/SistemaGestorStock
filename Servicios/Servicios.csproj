@@ -41,11 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="obligatorias\HashconUsu.cs" />
-    <Compile Include="obligatorias\Hashing.cs" />
-    <Compile Include="obligatorias\PrimerContra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicios_Externos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sesion\Sesion.csproj">
