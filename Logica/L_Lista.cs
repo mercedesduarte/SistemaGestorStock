@@ -14,7 +14,7 @@ namespace Logica
 
         public List<KeyValuePair<int, string>> ObtenerPersonasParaCombo()
         {
-            var personasDTO = datos.ListarPersonas(); // Esto devuelve List<PersonaDTO>
+            var personasDTO = datos.ListarPersonas(); 
 
             var listaCombo = new List<KeyValuePair<int, string>>();
             foreach (var persona in personasDTO)
