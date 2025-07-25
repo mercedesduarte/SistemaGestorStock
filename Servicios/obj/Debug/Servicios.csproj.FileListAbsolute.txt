@@ -52,3 +52,12 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCo
 C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.dll
 C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+D:\programacion\SistemaGestion\Servicios\bin\Debug\Servicios.dll
+D:\programacion\SistemaGestion\Servicios\bin\Debug\Servicios.pdb
+D:\programacion\SistemaGestion\Servicios\bin\Debug\Sesion.dll
+D:\programacion\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
+D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
+D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.dll
+D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.pdb

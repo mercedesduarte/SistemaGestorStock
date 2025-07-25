@@ -2,7 +2,22 @@
 ## user-specific files
 
 # Build results
-bin/
+Datos/bin/
+Logica/bin/
+Servicios/bin/
+Sesion/bin/
+Sistema/bin/
+Vista/bin/
+
+
+Datos/obj/
+Logica/obj/
+Servicios/obj/
+Sesion/obj/
+Sistema/obj/
+Vista/obj/
+
+
 obj/
 .vs/
 

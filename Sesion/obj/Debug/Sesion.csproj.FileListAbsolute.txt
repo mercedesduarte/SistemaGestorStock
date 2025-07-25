@@ -10,3 +10,7 @@ C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.ca
 C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
 C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.dll
 C:\Users\Gero\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
+D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.dll
+D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
