@@ -38,5 +38,10 @@ namespace Vista
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
         }
+
+        private void cbPersona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

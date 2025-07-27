@@ -74,6 +74,7 @@
             this.cbPersona.Name = "cbPersona";
             this.cbPersona.Size = new System.Drawing.Size(263, 32);
             this.cbPersona.TabIndex = 21;
+            this.cbPersona.SelectedIndexChanged += new System.EventHandler(this.cbPersona_SelectedIndexChanged);
             // 
             // lblPersona
             // 

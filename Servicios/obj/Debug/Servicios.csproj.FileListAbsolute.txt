@@ -61,3 +61,12 @@ D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileI
 D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.dll
 D:\programacion\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.dll
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\bin\Debug\Servicios.dll
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\bin\Debug\Sesion.dll
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
+C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date

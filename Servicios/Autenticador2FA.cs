@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Servicios
-{
+//namespace Servicios
+//{
 //    public class Autenticador2FA
 //    {
 //        private string codigoActual;
