@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 namespace Sesion
 {
-    public static class ValidaMail
+    public static class ValidaMail 
     {
         public static bool Valid(string Correo)
         {

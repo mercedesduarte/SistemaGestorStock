@@ -14,3 +14,9 @@ D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.
 D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
 D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.dll
 D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.dll
+C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\Sesion.dll
+C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\Sesion.pdb

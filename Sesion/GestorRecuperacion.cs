@@ -1,4 +1,4 @@
-﻿using Servicios.obligatorias;
+﻿
 using System;
 using System.Collections.Generic;
 
@@ -6,7 +6,7 @@ namespace Sesion {
 
     public static class GestorRecuperacion
     {
-        // Simula base de datos
+
         private static Dictionary<string, Usuario> usuarios = new Dictionary<string, Usuario>();
 
         public static void RegistrarUsuario(Usuario user)
