@@ -72,3 +72,5 @@ C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\bin\Debug\Sesion.pdb
 C:\Users\Casa\Source\Repos\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 D:\programacion\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.dll
 D:\programacion\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.xml

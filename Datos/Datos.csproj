@@ -48,9 +48,11 @@
     <Compile Include="DTOs\CodigoPostalDTO.cs" />
     <Compile Include="DTOs\GeneroDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
+    <Compile Include="DTOs\RolDTO.cs" />
     <Compile Include="DTOs\UsuarioDTO.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_Lista.cs" />
+    <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_Login.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />

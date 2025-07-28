@@ -11,6 +11,7 @@ namespace Logica
     public class L_Lista
     {
         private D_Lista datos = new D_Lista();
+        private D_ListaRol datosRol = new D_ListaRol();
 
         public List<KeyValuePair<int, string>> ObtenerPersonasParaCombo()
         {
@@ -23,6 +24,19 @@ namespace Logica
             }
 
             return listaCombo;
+        }
+
+        public List<KeyValuePair<int, string>> ObtenerRolesParaCombo()
+        {
+            var rolesDTO = datosRol.ListarRoles();
+
+            var listarolCombo = new List<KeyValuePair<int, string>>();
+            foreach (var rol in rolesDTO)
+            {
+                listarolCombo.Add(new KeyValuePair<int, string>(rol.Id_Rol, rol.Rol));
+            }
+
+            return listarolCombo;
         }
 
     }

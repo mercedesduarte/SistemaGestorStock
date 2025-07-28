@@ -29,14 +29,24 @@ namespace Vista
         {
             L_Lista logica = new L_Lista();
             var personas = logica.ObtenerPersonasParaCombo();
+            var roles = logica.ObtenerRolesParaCombo();
 
             cbPersona.DataSource = personas;
+            cbRolUsuario.DataSource = roles;
             cbPersona.DisplayMember = "Value";
             cbPersona.ValueMember = "Key";
+            cbRolUsuario.DisplayMember = "Value";
+            cbRolUsuario.ValueMember = "Key";
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+            int id_persona = (int)cbPersona.SelectedValue;
+            string usuario = txtUsuario.Text.Trim();
+            int id_rol = (int)cbRolUsuario.SelectedValue;
+
+            L_RegistrarUsuario logica = new L_RegistrarUsuario();
+            var usuarios = logica.RegistrarUsuario(id_persona, usuario, id_rol);
         }
 
         private void cbPersona_SelectedIndexChanged(object sender, EventArgs e)

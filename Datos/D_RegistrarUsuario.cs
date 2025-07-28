@@ -24,7 +24,7 @@ namespace Datos
                 {
                     conexion.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("sp_RegistroUsuario", conexion))
+                    using (SqlCommand cmd = new SqlCommand("sp_RegistrarUsuario", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -33,6 +33,8 @@ namespace Datos
                         cmd.Parameters.AddWithValue("@Usuario", usuario);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
                         cmd.Parameters.AddWithValue("@Id_Rol", idrol);
+
+                        cmd.ExecuteNonQuery();
 
                         Console.WriteLine("Usuario registrado correctamente.");
 
