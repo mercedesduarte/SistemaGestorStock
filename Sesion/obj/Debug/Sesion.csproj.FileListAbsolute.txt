@@ -20,3 +20,8 @@ C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.dll
 C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
 C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\Sesion.dll
 C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\Sesion.pdb
+D:\programacion\SistemaGestion\Sesion\bin\Debug\Sesion.dll
+D:\programacion\SistemaGestion\Sesion\bin\Debug\Sesion.pdb
+D:\programacion\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.dll
+D:\programacion\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.xml
+D:\programacion\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.Up2Date

@@ -61,7 +61,7 @@ namespace Vista
             chkEvitarRepetir.Checked = estado.CaracterEsp == 1;
             chkDatosPersonales.Checked = estado.DatosPersonales == 1;
             chkAutenticacionDoble.Checked = estado.DosFA == 1;
-            nudMinCaracteres.Value = estado.CaracteresUtilizados;
+            nudMinCaracteres.Minimum = estado.CaracteresUtilizados;
 
         }
 

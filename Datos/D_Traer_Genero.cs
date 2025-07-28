@@ -18,7 +18,7 @@ namespace Datos
 
             using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
             {
-                using (SqlCommand comando = new SqlCommand("Traer_Genero", conexion))
+                using (SqlCommand comando = new SqlCommand("sp_Traer_Genero", conexion))
                 {
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.Parameters.AddWithValue("@Genero", genero);
