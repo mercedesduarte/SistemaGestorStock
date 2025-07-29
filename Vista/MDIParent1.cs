@@ -198,7 +198,23 @@ namespace Vista
 
         private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoUsuarios)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
 
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmListadoUsuarios formularioListado = new frmListadoUsuarios();
+            formularioListado.MdiParent = this; // Asignar el formulario MDI padre
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
         }
+
     }
 }
