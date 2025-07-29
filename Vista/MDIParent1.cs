@@ -81,46 +81,6 @@ namespace Vista
 
         }
 
-        private void UsuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            // Verifica si ya hay una instancia del formulario de usuarios abierta dentro del MDI
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmRegistrarUsuarios)
-                {
-                    form.BringToFront(); // Traer la instancia al frente
-                    form.Focus();        // Darle el foco
-                    return;              // Salir sin crear una nueva instancia
-                }
-            }
-
-            // Si no existe una instancia, crear y mostrar una nueva
-            frmRegistrarUsuarios formularioUsuarios = new frmRegistrarUsuarios();
-            formularioUsuarios.MdiParent = this; // Asignar el formulario MDI padre
-            formularioUsuarios.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
-            formularioUsuarios.Show(); // Mostrar el formulario
-        }
-
-        private void PersonasToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            // Verifica si ya hay una instancia del formulario de personas abierta dentro del MDI
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmRegistrarPersonas)
-                {
-                    form.BringToFront(); // Traer al frente si ya está abierto
-                    form.Focus();        // Darle el foco
-                    return;              // Salir sin crear una nueva instancia
-                }
-            }
-
-            // Si no existe una instancia, crear y mostrar una nueva
-            frmRegistrarPersonas formularioPersonas = new frmRegistrarPersonas();
-            formularioPersonas.MdiParent = this; // Asignar el formulario MDI padre
-            formularioPersonas.WindowState = FormWindowState.Maximized; // Abrirlo maximizado
-            formularioPersonas.Show(); // Mostrar el formulario
-        }
-
         private void PoliticasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Verifica si ya hay una instancia del formulario de Políticas de Seguridad abierta dentro del MDI
@@ -141,5 +101,106 @@ namespace Vista
             formularioPoliticas.Show(); // Mostrar el formulario
 
         }
+
+        private void CrearPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmPreguntasDeSeguridad)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmPreguntasDeSeguridad formularioPreguntas = new frmPreguntasDeSeguridad();
+            formularioPreguntas.MdiParent = this; // Asignar el formulario MDI padre
+            formularioPreguntas.WindowState = FormWindowState.Maximized;
+            formularioPreguntas.Show();
+        }
+
+        private void ListarPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoPreguntasDeSeguridad)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmListadoPreguntasDeSeguridad formularioListado = new frmListadoPreguntasDeSeguridad();
+            formularioListado.MdiParent = this; // Asignar el formulario MDI padre
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
+
+        private void CrearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarUsuarios)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmRegistrarUsuarios formularioRegistrar = new frmRegistrarUsuarios();
+            formularioRegistrar.MdiParent = this; // Asignar el formulario MDI padre
+            formularioRegistrar.WindowState = FormWindowState.Maximized;
+            formularioRegistrar.Show();
+        }
+
+        private void AgregarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarPersonas)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmRegistrarPersonas formularioPersona = new frmRegistrarPersonas();
+            formularioPersona.MdiParent = this; // Asignar el formulario MDI padre
+            formularioPersona.WindowState = FormWindowState.Maximized;
+            formularioPersona.Show();
+        }
+
+        private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay una instancia del formulario abierta
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoPersonas)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            // Si no existe una instancia, crear y mostrar una nueva
+            frmListadoPersonas formularioListado = new frmListadoPersonas();
+            formularioListado.MdiParent = this; // Asignar el formulario MDI padre
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
+
     }
 }

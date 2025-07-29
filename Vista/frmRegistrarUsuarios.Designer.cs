@@ -70,7 +70,7 @@
             "ROL 1",
             "ROL 2",
             "ROL 3"});
-            this.cbPersona.Location = new System.Drawing.Point(443, 67);
+            this.cbPersona.Location = new System.Drawing.Point(442, 108);
             this.cbPersona.Name = "cbPersona";
             this.cbPersona.Size = new System.Drawing.Size(263, 32);
             this.cbPersona.TabIndex = 21;
@@ -79,7 +79,7 @@
             // lblPersona
             // 
             this.lblPersona.AutoSize = true;
-            this.lblPersona.Location = new System.Drawing.Point(279, 72);
+            this.lblPersona.Location = new System.Drawing.Point(278, 113);
             this.lblPersona.Name = "lblPersona";
             this.lblPersona.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPersona.Size = new System.Drawing.Size(106, 24);
@@ -91,7 +91,7 @@
             this.cbRolUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Usuario Normal"});
-            this.cbRolUsuario.Location = new System.Drawing.Point(444, 176);
+            this.cbRolUsuario.Location = new System.Drawing.Point(443, 217);
             this.cbRolUsuario.Name = "cbRolUsuario";
             this.cbRolUsuario.Size = new System.Drawing.Size(263, 32);
             this.cbRolUsuario.TabIndex = 17;
@@ -99,7 +99,7 @@
             // lblRolUsuario
             // 
             this.lblRolUsuario.AutoSize = true;
-            this.lblRolUsuario.Location = new System.Drawing.Point(279, 182);
+            this.lblRolUsuario.Location = new System.Drawing.Point(278, 223);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblRolUsuario.Size = new System.Drawing.Size(154, 24);
@@ -143,7 +143,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(279, 130);
+            this.lblUsuario.Location = new System.Drawing.Point(278, 171);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(106, 24);
             this.lblUsuario.TabIndex = 11;
@@ -151,7 +151,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(443, 125);
+            this.txtUsuario.Location = new System.Drawing.Point(442, 166);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(263, 32);
             this.txtUsuario.TabIndex = 9;

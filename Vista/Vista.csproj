@@ -76,11 +76,35 @@
     <Compile Include="frmIniciarSesion.Designer.cs">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoPersonas.Designer.cs">
+      <DependentUpon>frmListadoPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoPreguntasDeSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoPreguntasDeSeguridad.Designer.cs">
+      <DependentUpon>frmListadoPreguntasDeSeguridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoUsuarios.Designer.cs">
+      <DependentUpon>frmListadoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPoliticasSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPoliticasSeguridad.Designer.cs">
       <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreguntasDeSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreguntasDeSeguridad.Designer.cs">
+      <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarUsuarios.cs">
       <SubType>Form</SubType>
@@ -105,8 +129,20 @@
     <EmbeddedResource Include="frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoPersonas.resx">
+      <DependentUpon>frmListadoPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoPreguntasDeSeguridad.resx">
+      <DependentUpon>frmListadoPreguntasDeSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoUsuarios.resx">
+      <DependentUpon>frmListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPoliticasSeguridad.resx">
       <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreguntasDeSeguridad.resx">
+      <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarUsuarios.resx">
       <DependentUpon>frmRegistrarUsuarios.cs</DependentUpon>

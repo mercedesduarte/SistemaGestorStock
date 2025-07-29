@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIParent1));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConfiguracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PoliticasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -44,6 +38,18 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CrearUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AgregarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConfiguracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PoliticasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CrearPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListarPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,69 +69,6 @@
             this.menuStrip.Size = new System.Drawing.Size(1016, 52);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // InicioToolStripMenuItem
-            // 
-            this.InicioToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InicioToolStripMenuItem.Image")));
-            this.InicioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
-            this.InicioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(121, 48);
-            this.InicioToolStripMenuItem.Text = "INICIO";
-            // 
-            // UsuariosToolStripMenuItem
-            // 
-            this.UsuariosToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("UsuariosToolStripMenuItem.Image")));
-            this.UsuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem";
-            this.UsuariosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.UsuariosToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
-            this.UsuariosToolStripMenuItem.Text = "USUARIOS";
-            this.UsuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click_1);
-            // 
-            // PersonasToolStripMenuItem
-            // 
-            this.PersonasToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PersonasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PersonasToolStripMenuItem.Image")));
-            this.PersonasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PersonasToolStripMenuItem.Name = "PersonasToolStripMenuItem";
-            this.PersonasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.PersonasToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
-            this.PersonasToolStripMenuItem.Text = "PERSONAS";
-            this.PersonasToolStripMenuItem.Click += new System.EventHandler(this.PersonasToolStripMenuItem_Click_1);
-            // 
-            // ConfiguracionToolStripMenuItem
-            // 
-            this.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PoliticasSeguridadToolStripMenuItem});
-            this.ConfiguracionToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfiguracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConfiguracionToolStripMenuItem.Image")));
-            this.ConfiguracionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem";
-            this.ConfiguracionToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.ConfiguracionToolStripMenuItem.Size = new System.Drawing.Size(184, 48);
-            this.ConfiguracionToolStripMenuItem.Text = "CONFIGURACION";
-            // 
-            // PoliticasSeguridadToolStripMenuItem
-            // 
-            this.PoliticasSeguridadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PoliticasSeguridadToolStripMenuItem.Image")));
-            this.PoliticasSeguridadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PoliticasSeguridadToolStripMenuItem.Name = "PoliticasSeguridadToolStripMenuItem";
-            this.PoliticasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.PoliticasSeguridadToolStripMenuItem.Text = "POLITICAS SEGURIDAD";
-            this.PoliticasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.PoliticasSeguridadToolStripMenuItem_Click);
-            // 
-            // ReportesToolStripMenuItem
-            // 
-            this.ReportesToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ReportesToolStripMenuItem.Image")));
-            this.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem";
-            this.ReportesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.ReportesToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
-            this.ReportesToolStripMenuItem.Text = "REPORTES";
             // 
             // statusStrip
             // 
@@ -186,6 +129,128 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // InicioToolStripMenuItem
+            // 
+            this.InicioToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InicioToolStripMenuItem.Image")));
+            this.InicioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
+            this.InicioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(121, 48);
+            this.InicioToolStripMenuItem.Text = "INICIO";
+            // 
+            // UsuariosToolStripMenuItem
+            // 
+            this.UsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CrearUsuarioToolStripMenuItem,
+            this.ListarUsuariosToolStripMenuItem});
+            this.UsuariosToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("UsuariosToolStripMenuItem.Image")));
+            this.UsuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem";
+            this.UsuariosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.UsuariosToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
+            this.UsuariosToolStripMenuItem.Text = "USUARIOS";
+            // 
+            // CrearUsuarioToolStripMenuItem
+            // 
+            this.CrearUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CrearUsuarioToolStripMenuItem.Image")));
+            this.CrearUsuarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CrearUsuarioToolStripMenuItem.Name = "CrearUsuarioToolStripMenuItem";
+            this.CrearUsuarioToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.CrearUsuarioToolStripMenuItem.Text = "CREAR USUARIO";
+            this.CrearUsuarioToolStripMenuItem.Click += new System.EventHandler(this.CrearUsuarioToolStripMenuItem_Click);
+            // 
+            // ListarUsuariosToolStripMenuItem
+            // 
+            this.ListarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ListarUsuariosToolStripMenuItem.Image")));
+            this.ListarUsuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ListarUsuariosToolStripMenuItem.Name = "ListarUsuariosToolStripMenuItem";
+            this.ListarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ListarUsuariosToolStripMenuItem.Text = "LISTAR USUARIOS";
+            // 
+            // PersonasToolStripMenuItem
+            // 
+            this.PersonasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AgregarPersonaToolStripMenuItem,
+            this.ListarPersonasToolStripMenuItem});
+            this.PersonasToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PersonasToolStripMenuItem.Image")));
+            this.PersonasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PersonasToolStripMenuItem.Name = "PersonasToolStripMenuItem";
+            this.PersonasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.PersonasToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
+            this.PersonasToolStripMenuItem.Text = "PERSONAS";
+            // 
+            // AgregarPersonaToolStripMenuItem
+            // 
+            this.AgregarPersonaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AgregarPersonaToolStripMenuItem.Image")));
+            this.AgregarPersonaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AgregarPersonaToolStripMenuItem.Name = "AgregarPersonaToolStripMenuItem";
+            this.AgregarPersonaToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.AgregarPersonaToolStripMenuItem.Text = "AGREGAR PERSONA";
+            this.AgregarPersonaToolStripMenuItem.Click += new System.EventHandler(this.AgregarPersonaToolStripMenuItem_Click);
+            // 
+            // ListarPersonasToolStripMenuItem
+            // 
+            this.ListarPersonasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ListarPersonasToolStripMenuItem.Image")));
+            this.ListarPersonasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ListarPersonasToolStripMenuItem.Name = "ListarPersonasToolStripMenuItem";
+            this.ListarPersonasToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ListarPersonasToolStripMenuItem.Text = "LISTAR PERSONAS";
+            this.ListarPersonasToolStripMenuItem.Click += new System.EventHandler(this.ListarPersonasToolStripMenuItem_Click);
+            // 
+            // ConfiguracionToolStripMenuItem
+            // 
+            this.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PoliticasSeguridadToolStripMenuItem,
+            this.CrearPreguntasSeguridadToolStripMenuItem,
+            this.ListarPreguntasSeguridadToolStripMenuItem});
+            this.ConfiguracionToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfiguracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConfiguracionToolStripMenuItem.Image")));
+            this.ConfiguracionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem";
+            this.ConfiguracionToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.ConfiguracionToolStripMenuItem.Size = new System.Drawing.Size(184, 48);
+            this.ConfiguracionToolStripMenuItem.Text = "CONFIGURACION";
+            // 
+            // PoliticasSeguridadToolStripMenuItem
+            // 
+            this.PoliticasSeguridadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PoliticasSeguridadToolStripMenuItem.Image")));
+            this.PoliticasSeguridadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PoliticasSeguridadToolStripMenuItem.Name = "PoliticasSeguridadToolStripMenuItem";
+            this.PoliticasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(346, 30);
+            this.PoliticasSeguridadToolStripMenuItem.Text = "POLITICAS SEGURIDAD";
+            this.PoliticasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.PoliticasSeguridadToolStripMenuItem_Click);
+            // 
+            // CrearPreguntasSeguridadToolStripMenuItem
+            // 
+            this.CrearPreguntasSeguridadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CrearPreguntasSeguridadToolStripMenuItem.Image")));
+            this.CrearPreguntasSeguridadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CrearPreguntasSeguridadToolStripMenuItem.Name = "CrearPreguntasSeguridadToolStripMenuItem";
+            this.CrearPreguntasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(346, 30);
+            this.CrearPreguntasSeguridadToolStripMenuItem.Text = "CREAR PREGUNTAS DE SEGURIDAD";
+            this.CrearPreguntasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.CrearPreguntasSeguridadToolStripMenuItem_Click);
+            // 
+            // ListarPreguntasSeguridadToolStripMenuItem
+            // 
+            this.ListarPreguntasSeguridadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ListarPreguntasSeguridadToolStripMenuItem.Image")));
+            this.ListarPreguntasSeguridadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ListarPreguntasSeguridadToolStripMenuItem.Name = "ListarPreguntasSeguridadToolStripMenuItem";
+            this.ListarPreguntasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(346, 30);
+            this.ListarPreguntasSeguridadToolStripMenuItem.Text = "LISTAR PREGUNTAS DE SEGURIDAD";
+            this.ListarPreguntasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.ListarPreguntasSeguridadToolStripMenuItem_Click);
+            // 
+            // ReportesToolStripMenuItem
+            // 
+            this.ReportesToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ReportesToolStripMenuItem.Image")));
+            this.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem";
+            this.ReportesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.ReportesToolStripMenuItem.Size = new System.Drawing.Size(139, 48);
+            this.ReportesToolStripMenuItem.Text = "REPORTES";
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +293,12 @@
         private System.Windows.Forms.ToolStripStatusLabel lblRol;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem PoliticasSeguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CrearPreguntasSeguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListarPreguntasSeguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CrearUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AgregarPersonaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListarPersonasToolStripMenuItem;
     }
 }
 
