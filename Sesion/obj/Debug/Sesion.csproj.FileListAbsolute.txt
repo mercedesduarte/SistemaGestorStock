@@ -43,3 +43,6 @@ C:\Users\alexi\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompile
 C:\Users\alexi\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.Up2Date
 C:\Users\alexi\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.dll
 C:\Users\alexi\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.Up2Date

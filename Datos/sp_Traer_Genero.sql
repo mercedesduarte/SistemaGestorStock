@@ -1,4 +1,4 @@
-CREATE PROCEDURE Traer_Genero
+CREATE PROCEDURE sp_Traer_Genero
     @Genero NVARCHAR(10) 
 AS
 BEGIN

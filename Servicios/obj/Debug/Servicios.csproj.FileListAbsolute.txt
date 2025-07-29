@@ -76,3 +76,5 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.d
 C:\Users\Gtsv\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.xml
 C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.dll
 C:\Users\alexi\Desktop\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Gerof\SistemaGestion\Servicios\bin\Debug\System.Data.SqlClient.xml

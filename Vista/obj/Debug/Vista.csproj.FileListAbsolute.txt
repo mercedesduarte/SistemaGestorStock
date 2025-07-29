@@ -202,3 +202,7 @@ C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPreguntasD
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPersonas.resources
 C:\Users\alexi\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPersonas.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPreguntasDeSeguridad.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources

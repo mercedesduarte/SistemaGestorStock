@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,33 @@ namespace Vista
         }
 
         private void btnCrearPregunta_Click(object sender, EventArgs e)
+        {
+            string pregunta = txtPregunta.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(pregunta))
+            {
+                MessageBox.Show("Por favor, ingrese una pregunta válida.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            L_Pregunta logica = new L_Pregunta();
+            string mensaje;
+
+            bool resultado = logica.CrearPregunta(pregunta, out mensaje);
+
+            if (resultado)
+            {
+                MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPregunta.Clear();
+                txtPregunta.Focus();
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmPreguntasDeSeguridad_Load(object sender, EventArgs e)
         {
 
         }

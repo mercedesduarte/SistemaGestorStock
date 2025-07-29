@@ -120,19 +120,18 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAI9JREFUSEtj
-        GAVUAf/f6zVAmbQB/z/o/Qfi+//fGyhAhagLoBZQZsn/D7r7kQzCh4GWIIIMizxYDVQaAbAowo3f6yZA
-        teHUB5VGAJwSQICkERREDlBhrACnOTglgAAip7sfysULyLPgo/58KJMgIMsCUsCoBQTBCLCAWhhqLAKA
-        0jo2heRh4jLlKBgWgIEBAMCthLoDHKCVAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKRJREFUSEvt
+        k9ENgyAQQB3FBaCO0FE6SjdxFEdxBOgE12DUnBde22v5anzJ/fDgkRDtupMWSIp3u9YUyVEkx1nS0FvX
+        hPWC3y6RHCYVejWzfrKKX/Yc67yxPinc3p071tVGu15QB8sTXa3XYAfF7sJk12tgB0Vxj8to1wjsoHCC
+        HRROsIPCCXZQOMEOCifYQeEEO5toNba/fOt20/fz2U958ic8AcCthLrkjuAXAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnCrearPregunta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAKlJREFUSEvl
-        lN0NgCAMhFlA4wiO4iiO4iaO4iiOgnA9jT+Y2vqmX3IxQnulQAgfIzatWSqx6kOso1Nz0kinAhKwBlrF
-        Ik1Htx1oj8Ye8qqRn7q/oJnL3nb4lnhnvp1HeV9/ZA7DVVvydBzn7TCZ4/Dwr2mQeLt5TqDyijl/GPes
-        /Ay2APO/vy17ZH4oJydemWs8NpdAq/gy3nTGoFzAK6VrdJCqe/QRQlgAgKyOq1FWmI8AAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAKZJREFUSEvl
+        lMENgCAMRVlA4giOwiiMwiaO4iiOUkOpCARTC17En/yDlD5KQZQaSzAvYrOCySrQ0OhdgV5L5KUw4Zwo
+        NS0ymxJLrSBwi3zVmD/ZMsTDQ2/NbX/74PE86n39ERyBp2Pylo/T7RDB8fDwm7ML8+Vwn0D2FVM8G2+p
+        vNTrPU/1YTjGXT25F87pMTy7DY9NL2MN7hVXbzaza9xB+gcKPIwOgKyOq6AOlZ0AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

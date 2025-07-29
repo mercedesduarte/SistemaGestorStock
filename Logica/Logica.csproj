@@ -45,8 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="L_Conexion.cs" />
+    <Compile Include="L_CrearPregunta.cs" />
     <Compile Include="L_EjecutarBusquedaCP.cs" />
     <Compile Include="L_Lista.cs" />
+    <Compile Include="L_ListarPreguntas.cs" />
+    <Compile Include="L_ListarUsuarios.cs" />
     <Compile Include="L_Login.cs" />
     <Compile Include="L_RegistrarUsuario.cs" />
     <Compile Include="L_Registro.cs" />
