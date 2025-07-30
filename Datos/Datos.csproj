@@ -50,10 +50,12 @@
     <Compile Include="DTOs\GeneroDTO.cs" />
     <Compile Include="DTOs\HistorialContrasDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
+    <Compile Include="DTOs\PreguntaDTO.cs" />
     <Compile Include="DTOs\RolDTO.cs" />
     <Compile Include="DTOs\UsuarioDTO.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_CambioObligatorio.cs" />
+    <Compile Include="D_CrearRespuesta.cs" />
     <Compile Include="D_HistorialContras.cs" />
     <Compile Include="D_CrearPregunta.cs" />
     <Compile Include="D_Lista.cs" />

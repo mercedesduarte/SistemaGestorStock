@@ -1,4 +1,5 @@
 ﻿using Datos.Conecction;
+using Datos.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,11 +7,11 @@ using System.Data.SqlClient;
 
 namespace Datos
 {
-    public class D_Pregunta
+    public class D_ListarPreguntas
     {
-        public static DataTable ListarPreguntas()
+        public List<PreguntaDTO> ListarPreguntas()
         {
-            DataTable tabla = new DataTable();
+            List<PreguntaDTO> lista = new List<PreguntaDTO>();
 
             try
             {
@@ -22,20 +23,30 @@ namespace Datos
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            da.Fill(tabla);
+                            while (reader.Read())
+                            {
+                                PreguntaDTO pregunta = new PreguntaDTO
+                                {
+                                    IdPregunta = Convert.ToInt32(reader["IdPregunta"]),
+                                    Pregunta = reader["Pregunta"].ToString(),
+                                    Respuesta = reader["Respuesta"].ToString(),
+                                    IdPersona = Convert.ToInt32(reader["IdPersona"]),
+                                };
+
+                                lista.Add(pregunta);
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al listar preguntas: " + ex.Message);
-                tabla = null;
+                throw new Exception("Error al buscar las preguntas: ", ex);
             }
 
-            return tabla;
+            return lista;
         }
     }
 }
