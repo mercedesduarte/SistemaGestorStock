@@ -9,10 +9,8 @@ namespace Logica
 {
     public class L_RegistrarUsuario
     {
-        public bool RegistrarUsuario(int idpersona, string usuario, int idrol)
+        public bool RegistrarUsuario(int idpersona, string usuario, int idrol, string contrasena)
         {
-
-            string contrasena = GeneradorContraseña.Generar(6); 
 
             return Datos.D_RegistrarUsuario.RegistrarUsuario(
                 idpersona,

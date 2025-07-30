@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Logica;
+using Sesion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
-using System.Data.SqlClient;
 
 
 namespace Vista
@@ -41,13 +42,27 @@ namespace Vista
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+            L_Lista lcorreo = new L_Lista(); // Lógica para obtener el correo
             int id_persona = (int)cbPersona.SelectedValue;
             string usuario = txtUsuario.Text.Trim();
             int id_rol = (int)cbRolUsuario.SelectedValue;
 
+            string correo = lcorreo.ObtenerCorreoPorId(id_persona);
+
+            string contrasena = GeneradorContraseña.Generar(6);
+
             L_RegistrarUsuario logica = new L_RegistrarUsuario();
-            var usuarios = logica.RegistrarUsuario(id_persona, usuario, id_rol);
+            var usuarios = logica.RegistrarUsuario(id_persona, usuario, id_rol, contrasena);
+
+            Sesion.ArmarMail.DireccionCorreo = correo;
+            Sesion.ArmarMail.Asunto = "Credenciales de acceso - Sistema de Gestión";
+            Sesion.ArmarMail.ContrasenaSistema = contrasena;
+
+            Sesion.ArmarMail.Preparar();
+
+            MessageBox.Show("Usuario creado y correo enviado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         private void cbPersona_SelectedIndexChanged(object sender, EventArgs e)
         {

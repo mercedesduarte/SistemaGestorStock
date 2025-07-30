@@ -12,5 +12,7 @@ namespace Datos.DTOs
         public string NombreCompleto { get; set; }
         public string Num_Documento { get; set; }
         public string CUIL { get; set; }
+
+        public string email { get; set; }
     }
 }

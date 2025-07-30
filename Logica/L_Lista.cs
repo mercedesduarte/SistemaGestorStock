@@ -38,6 +38,14 @@ namespace Logica
 
             return listarolCombo;
         }
-
+        public string ObtenerCorreoPorId(int idPersona)
+        {
+            var persona = datos.ListarPersonas().FirstOrDefault(p => p.Id_Persona == idPersona);
+            if (persona != null)
+            {
+                return persona.email;
+            }
+            return string.Empty;
+        }
     }
 }

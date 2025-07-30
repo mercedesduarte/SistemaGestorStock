@@ -45,12 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conecction\ConnectionBD.cs" />
+    <Compile Include="DTOs\CambioObligatorioDTO.cs" />
     <Compile Include="DTOs\CodigoPostalDTO.cs" />
     <Compile Include="DTOs\GeneroDTO.cs" />
+    <Compile Include="DTOs\HistorialContrasDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
     <Compile Include="DTOs\RolDTO.cs" />
     <Compile Include="DTOs\UsuarioDTO.cs" />
     <Compile Include="D_BusquedaCP.cs" />
+    <Compile Include="D_CambioObligatorio.cs" />
+    <Compile Include="D_HistorialContras.cs" />
     <Compile Include="D_CrearPregunta.cs" />
     <Compile Include="D_Lista.cs" />
     <Compile Include="D_ListarPreguntas.cs" />

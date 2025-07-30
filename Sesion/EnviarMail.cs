@@ -4,12 +4,12 @@ using System.Net.Mail;
 
 namespace Sesion
 {
-    class EnviarMail
+    public class EnviarMail
     {
         public static void SendCustomMail(string toEmail, string subject, string htmlBody)
         {
-            string fromEmail = "skywayturismos@gmail.com";
-            string displayName = "Recuperación de Cuenta";
+            string fromEmail = "sistemadegestiongrupoa2025@gmail.com";
+            string displayName = "Primer Ingreso";
 
             try
             {
@@ -24,7 +24,7 @@ namespace Sesion
 
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
-                    Credentials = new NetworkCredential(fromEmail, "nonl aqot gdjz vzdr"),
+                    Credentials = new NetworkCredential(fromEmail, "bppl tqjt sxgu udie"),
                     EnableSsl = true
                 };
 

@@ -34,7 +34,8 @@ namespace Datos
                                     Id_Persona = Convert.ToInt32(reader["Id_Persona"]),
                                     NombreCompleto = reader["NombreCompleto"].ToString(),
                                     Num_Documento = reader["Num_Documento"].ToString(),
-                                    CUIL = reader["CUIL"].ToString()
+                                    CUIL = reader["CUIL"].ToString(),
+                                    email = reader["Email"].ToString(),
                                 };
 
                                 lista.Add(persona);
