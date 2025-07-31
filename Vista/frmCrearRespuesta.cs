@@ -28,6 +28,12 @@ namespace Vista
             L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
             DataTable dt = logicaPreguntas.ListarPreguntas();
 
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay preguntas disponibles en la base de datos.");
+                return;
+            }
+
             cmbPreguntas.DataSource = dt;
             cmbPreguntas.DisplayMember = "Pregunta";
             cmbPreguntas.ValueMember = "Id_Pregunta";
@@ -38,7 +44,7 @@ namespace Vista
 
         }
 
-        private void btnGuardarRespuesta_Click(object sender, EventArgs e)
+        private void btnCrearRespuesta_Click(object sender, EventArgs e)
         {
             string respuesta = txtRespuesta.Text.Trim();
 
@@ -48,7 +54,7 @@ namespace Vista
                 return;
             }
 
-            int idusuario = 1;
+            int idusuario = 1; //cambiar a el id de usuario que ingreso
             int idpregunta = Convert.ToInt32(cmbPreguntas.SelectedValue);
 
             string mensaje;

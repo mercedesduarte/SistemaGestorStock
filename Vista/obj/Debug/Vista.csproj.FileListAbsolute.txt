@@ -211,5 +211,4 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPreguntasDe
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resources
-C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmCrearPregunta.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmCrearRespuesta.resources

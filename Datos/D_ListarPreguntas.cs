@@ -29,11 +29,12 @@ namespace Datos
                             {
                                 PreguntaDTO pregunta = new PreguntaDTO
                                 {
-                                    IdPregunta = Convert.ToInt32(reader["IdPregunta"]),
+                                    IdPregunta = reader["Id_Pregunta"] != DBNull.Value ? Convert.ToInt32(reader["Id_Pregunta"]) : 0,
                                     Pregunta = reader["Pregunta"].ToString(),
-                                    Respuesta = reader["Respuesta"].ToString(),
-                                    IdPersona = Convert.ToInt32(reader["IdPersona"]),
+                                    Respuesta = reader["Respuesta"] != DBNull.Value ? reader["Respuesta"].ToString() : "",
+                                    IdUsuario = reader["Id_Usuario"] != DBNull.Value ? Convert.ToInt32(reader["Id_Usuario"]) : 0,
                                 };
+
 
                                 lista.Add(pregunta);
                             }

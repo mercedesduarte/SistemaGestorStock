@@ -26,8 +26,8 @@ namespace Datos
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("@idusuario", idusuario);
-                        cmd.Parameters.AddWithValue("@idpregunta", idpregunta);
                         cmd.Parameters.AddWithValue("@respuesta", respuesta);
+                        cmd.Parameters.AddWithValue("@idpregunta", idpregunta);
 
                         cmd.ExecuteNonQuery();
 

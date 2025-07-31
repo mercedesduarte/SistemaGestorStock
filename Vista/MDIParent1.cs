@@ -136,25 +136,6 @@ namespace Vista
             formularioListado.Show();
         }
 
-        //private void CrearRespuestaToolStripMenuItem1_Click(object sender, EventArgs e)
-        //{
-        //    foreach (Form form in this.MdiChildren)
-        //    {
-        //        if (form is frmCrearRespuesta)
-        //        {
-        //            form.BringToFront();
-        //            form.Focus();
-        //            return;
-        //        }
-        //    }
-
-
-        //    frmCrearRespuesta formulariocreres = new frmCrearRespuesta();
-        //    formulariocreres.MdiParent = this;
-        //    formulariocreres.WindowState = FormWindowState.Maximized;
-        //    formulariocreres.Show();
-        //}
-
         private void CrearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -240,9 +221,23 @@ namespace Vista
 
         }
 
-        private void cREARRESPUESTAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cREARPREGUNTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmCrearRespuesta)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
 
+
+            frmCrearRespuesta formulariocreres = new frmCrearRespuesta();
+            formulariocreres.MdiParent = this;
+            formulariocreres.WindowState = FormWindowState.Maximized;
+            formulariocreres.Show();
         }
     }
 }

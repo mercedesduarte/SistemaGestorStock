@@ -30,14 +30,19 @@ namespace Vista
 
         private void CargarPreguntas()
         {
+
             L_ListarPreguntas logica = new L_ListarPreguntas();
             DataTable preguntas = logica.ListarPreguntas();
 
             if (preguntas != null)
             {
                 dgvPreguntas.DataSource = preguntas;
+
                 dgvPreguntas.Columns["Id_Pregunta"].HeaderText = "ID";
                 dgvPreguntas.Columns["Pregunta"].HeaderText = "Pregunta";
+
+                dgvPreguntas.Columns["Respuesta"].Visible = false;
+                dgvPreguntas.Columns["Id_Usuario"].Visible = false;
             }
             else
             {

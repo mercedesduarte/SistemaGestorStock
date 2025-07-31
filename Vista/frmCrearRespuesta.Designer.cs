@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearRespuesta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPreguntas = new System.Windows.Forms.ComboBox();
             this.lblPreguntaLista = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCrearRespuesta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbPreguntas = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LA RESPUESTA";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmbPreguntas
+            // 
+            this.cmbPreguntas.Items.AddRange(new object[] {
+            "DNI",
+            "CUIL"});
+            this.cmbPreguntas.Location = new System.Drawing.Point(272, 83);
+            this.cmbPreguntas.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPreguntas.Name = "cmbPreguntas";
+            this.cmbPreguntas.Size = new System.Drawing.Size(299, 39);
+            this.cmbPreguntas.TabIndex = 18;
             // 
             // lblPreguntaLista
             // 
@@ -103,6 +114,7 @@
             this.btnCrearRespuesta.Text = "CREAR RESPUESTA";
             this.btnCrearRespuesta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearRespuesta.UseVisualStyleBackColor = false;
+            this.btnCrearRespuesta.Click += new System.EventHandler(this.btnCrearRespuesta_Click);
             // 
             // lblUsuario
             // 
@@ -135,17 +147,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "CREAR  RESPUESTAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbPreguntas
-            // 
-            this.cmbPreguntas.Items.AddRange(new object[] {
-            "DNI",
-            "CUIL"});
-            this.cmbPreguntas.Location = new System.Drawing.Point(272, 83);
-            this.cmbPreguntas.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbPreguntas.Name = "cmbPreguntas";
-            this.cmbPreguntas.Size = new System.Drawing.Size(299, 39);
-            this.cmbPreguntas.TabIndex = 18;
             // 
             // frmCrearRespuesta
             // 
