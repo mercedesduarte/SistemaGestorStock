@@ -10,7 +10,6 @@ namespace Datos.DTOs
     {
         public int IdPregunta { get; set; }
         public string Pregunta { get; set; }
-        public string Respuesta { get; set; }
-        public int IdUsuario { get; set; }
+
     }
 }

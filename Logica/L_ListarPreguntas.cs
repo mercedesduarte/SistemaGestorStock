@@ -11,23 +11,18 @@ namespace Logica
 {
     public class L_ListarPreguntas
     {
-        public DataTable ListarPreguntas()
+        public List<PreguntaVista> ListarPreguntas()
         {
             D_ListarPreguntas datos = new D_ListarPreguntas();
-            List<PreguntaDTO> lista = datos.ListarPreguntas();
+            List<PreguntaDTO> listaDTO = datos.ListarPreguntas();
 
-            DataTable tabla = new DataTable();
-            tabla.Columns.Add("Id_Pregunta", typeof(int));
-            tabla.Columns.Add("Pregunta", typeof(string));
-            tabla.Columns.Add("Respuesta", typeof(string));
-            tabla.Columns.Add("Id_Usuario", typeof(int));
-
-            foreach (var item in lista)
+            List<PreguntaVista> listaVista = listaDTO.Select(dto => new PreguntaVista
             {
-                tabla.Rows.Add(item.IdPregunta, item.Pregunta, item.Respuesta, item.IdUsuario);
-            }
+                Id = dto.IdPregunta,
+                Pregunta = dto.Pregunta
+            }).ToList();
 
-            return tabla;
+            return listaVista;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Datos
 {
     public class D_HistorialContras
     {
-        public List<HistorialContrasDTO> ContrasenasAnteriores()
+        public List<HistorialContrasDTO> ContrasenasAnteriores(string usuario)
         {
             List<HistorialContrasDTO> lista = new List<HistorialContrasDTO>();
 
@@ -24,28 +24,24 @@ namespace Datos
                 using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
                 {
                     conexion.Open();
-                    using (SqlCommand cmd = new SqlCommand("sp_BuscarContraseñas", conexion))
+                    using (SqlCommand cmd = new SqlCommand("sp_BuscarContrasenas", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
+                        cmd.Parameters.AddWithValue("@usuario", usuario);
+
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            if (!reader.Read())
-                            {
-                                lista = null;
-                            }
-                            else
-                            {
-                                while (reader.Read())
-                                {
-                                    HistorialContrasDTO historial = new HistorialContrasDTO
-                                    {
-                                        id_Contrasena = Convert.ToInt32(reader["Id_Historial"]),
-                                        contrasena = reader["Contrasena"].ToString()
-                                    };
 
-                                    lista.Add(historial);
-                                }
+                            while (reader.Read())
+                            {
+                                HistorialContrasDTO historial = new HistorialContrasDTO
+                                {
+                                    id_Contrasena = Convert.ToInt32(reader["Id_Historial"]),
+                                    contrasena = reader["Contrasena"].ToString()
+                                };
+
+                                lista.Add(historial);
                             }
                         }
                     }
@@ -56,7 +52,8 @@ namespace Datos
                 throw new Exception("Error al buscar las contraseñas del usuario: ", ex);
             }
 
-            return lista;
+            if (lista.Count > 0) return lista;
+            else return null;
         }
     }
 }

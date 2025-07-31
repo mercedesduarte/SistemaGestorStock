@@ -42,7 +42,6 @@
             this.PoliticasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CrearPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cREARPREGUNTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
@@ -149,8 +148,7 @@
             this.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PoliticasSeguridadToolStripMenuItem,
             this.CrearPreguntasSeguridadToolStripMenuItem,
-            this.ListarPreguntasSeguridadToolStripMenuItem,
-            this.cREARPREGUNTAToolStripMenuItem});
+            this.ListarPreguntasSeguridadToolStripMenuItem});
             this.ConfiguracionToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfiguracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConfiguracionToolStripMenuItem.Image")));
             this.ConfiguracionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -158,6 +156,7 @@
             this.ConfiguracionToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.ConfiguracionToolStripMenuItem.Size = new System.Drawing.Size(211, 48);
             this.ConfiguracionToolStripMenuItem.Text = "CONFIGURACION";
+            this.ConfiguracionToolStripMenuItem.Click += new System.EventHandler(this.ConfiguracionToolStripMenuItem_Click);
             // 
             // PoliticasSeguridadToolStripMenuItem
             // 
@@ -185,13 +184,6 @@
             this.ListarPreguntasSeguridadToolStripMenuItem.Size = new System.Drawing.Size(416, 30);
             this.ListarPreguntasSeguridadToolStripMenuItem.Text = "LISTAR PREGUNTAS DE SEGURIDAD";
             this.ListarPreguntasSeguridadToolStripMenuItem.Click += new System.EventHandler(this.ListarPreguntasSeguridadToolStripMenuItem_Click);
-            // 
-            // cREARPREGUNTAToolStripMenuItem
-            // 
-            this.cREARPREGUNTAToolStripMenuItem.Name = "cREARPREGUNTAToolStripMenuItem";
-            this.cREARPREGUNTAToolStripMenuItem.Size = new System.Drawing.Size(416, 30);
-            this.cREARPREGUNTAToolStripMenuItem.Text = "CREAR PREGUNTA";
-            this.cREARPREGUNTAToolStripMenuItem.Click += new System.EventHandler(this.cREARPREGUNTAToolStripMenuItem_Click);
             // 
             // ReportesToolStripMenuItem
             // 
@@ -316,7 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem ListarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AgregarPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListarPersonasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cREARPREGUNTAToolStripMenuItem;
     }
 }
 

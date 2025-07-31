@@ -31,17 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResponderPreguntas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPreguntaLista = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnResponderPregunta = new System.Windows.Forms.Button();
+            this.lblProgreso = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lblProgreso);
             this.groupBox1.Controls.Add(this.lblPreguntaLista);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnResponderPregunta);
@@ -66,38 +68,6 @@
             this.lblPreguntaLista.Size = new System.Drawing.Size(29, 32);
             this.lblPreguntaLista.TabIndex = 15;
             this.lblPreguntaLista.Text = " ";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(115, 86);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(149, 32);
-            this.lblUsuario.TabIndex = 11;
-            this.lblUsuario.Text = "PREGUNTA:";
-            // 
-            // txtRespuesta
-            // 
-            this.txtRespuesta.Location = new System.Drawing.Point(120, 154);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(571, 38);
-            this.txtRespuesta.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(823, 66);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCerrar
             // 
@@ -134,6 +104,47 @@
             this.btnResponderPregunta.UseVisualStyleBackColor = false;
             this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(115, 86);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(149, 32);
+            this.lblUsuario.TabIndex = 11;
+            this.lblUsuario.Text = "PREGUNTA:";
+            // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(120, 154);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.Size = new System.Drawing.Size(571, 38);
+            this.txtRespuesta.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(823, 66);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblProgreso
+            // 
+            this.lblProgreso.AutoSize = true;
+            this.lblProgreso.Location = new System.Drawing.Point(662, 86);
+            this.lblProgreso.Name = "lblProgreso";
+            this.lblProgreso.Size = new System.Drawing.Size(29, 32);
+            this.lblProgreso.TabIndex = 16;
+            this.lblProgreso.Text = " ";
+            // 
             // frmResponderPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,5 +170,6 @@
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPreguntaLista;
+        private System.Windows.Forms.Label lblProgreso;
     }
 }

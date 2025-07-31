@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using static Logica.L_ResponderPreguntas;
 
 namespace Vista
 {
     public partial class frmResponderPreguntas : Form
     {
-        private List<PreguntaVista> preguntasAleatorias;
-        private int indicePreguntaActual = 0;
-        private L_ResponderPreguntas lpreguntas = new L_ResponderPreguntas();
+        private List<PreguntaVista> preguntas = new List<PreguntaVista>();
+        private int indiceActual = 0;
+        private L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
+
         public frmResponderPreguntas()
         {
             InitializeComponent();
@@ -23,15 +25,16 @@ namespace Vista
 
         private void frmResponderPreguntas_Load(object sender, EventArgs e)
         {
-            preguntasAleatorias = lpreguntas.ObtenerPreguntaAleatoria(3); // o el número que quieras
+            preguntas = logicaPreguntas.ListarPreguntas();
 
-            if (preguntasAleatorias.Count > 0)
+            if (preguntas.Count > 0)
             {
                 MostrarPreguntaActual();
             }
             else
             {
                 MessageBox.Show("No hay preguntas disponibles.");
+                btnResponderPregunta.Enabled = false;
             }
         }
 
@@ -42,38 +45,48 @@ namespace Vista
 
         private void btnResponderPregunta_Click(object sender, EventArgs e)
         {
+            if (indiceActual >= preguntas.Count)
             {
-                string respuestaUsuario = txtRespuesta.Text.Trim().ToLower();
-                string respuestaCorrecta = preguntasAleatorias[indicePreguntaActual].Respuesta.ToLower();
+                MessageBox.Show("No hay más preguntas.");
+                return;
+            }
 
-                if (lpreguntas.ResponderPregunta(respuestaUsuario, respuestaCorrecta))
-                {
-                    MessageBox.Show("¡Respuesta correcta!");
+            string respuestaUsuario = txtRespuesta.Text.Trim();
+            int idUsuario = 1; // cambiar esto por el ID del usuario actual, si se tiene un sistema de autenticación
+            int idPregunta = preguntas[indiceActual].Id;
 
-                    indicePreguntaActual++;
+            L_ResponderPregunta logica = new L_ResponderPregunta();
+            string mensaje;
 
-                    if (indicePreguntaActual < preguntasAleatorias.Count)
-                    {
-                        MostrarPreguntaActual();
-                        txtRespuesta.Clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("¡Has respondido todas las preguntas!");
-                        btnResponderPregunta.Enabled = false;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Respuesta incorrecta. Intenta nuevamente.");
-                }
+            bool resultado = logica.ResponderPregunta(idUsuario, idPregunta, respuestaUsuario, out mensaje);
+
+            if (resultado)
+            {
+                MessageBox.Show("Respuesta guardada correctamente.");
+                indiceActual++;
+                MostrarPreguntaActual();
+                txtRespuesta.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar: " + mensaje);
             }
         }
 
 
         private void MostrarPreguntaActual()
         {
-            lblPreguntaLista.Text = preguntasAleatorias[indicePreguntaActual].Pregunta;
+            if (indiceActual < preguntas.Count)
+            {
+                lblPreguntaLista.Text = preguntas[indiceActual].Pregunta;
+                lblProgreso.Text = $"{indiceActual + 1} de {preguntas.Count}";
+                txtRespuesta.Clear();
+            }
+            else
+            {
+                MessageBox.Show("¡Felicitaciones! Has respondido todas las preguntas.");
+                btnResponderPregunta.Enabled = false;
+            }
         }
     }
 }

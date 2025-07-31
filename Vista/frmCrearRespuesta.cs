@@ -26,17 +26,17 @@ namespace Vista
         private void CargarPreguntas()
         {
             L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
-            DataTable dt = logicaPreguntas.ListarPreguntas();
+            List<PreguntaVista> listaPreguntas = logicaPreguntas.ListarPreguntas();
 
-            if (dt.Rows.Count == 0)
+            if (listaPreguntas.Count == 0)
             {
                 MessageBox.Show("No hay preguntas disponibles en la base de datos.");
                 return;
             }
 
-            cmbPreguntas.DataSource = dt;
+            cmbPreguntas.DataSource = listaPreguntas;
             cmbPreguntas.DisplayMember = "Pregunta";
-            cmbPreguntas.ValueMember = "Id_Pregunta";
+            cmbPreguntas.ValueMember = "Id";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

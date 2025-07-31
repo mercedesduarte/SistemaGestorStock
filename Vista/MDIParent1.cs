@@ -221,23 +221,9 @@ namespace Vista
 
         }
 
-        private void cREARPREGUNTAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ConfiguracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmCrearRespuesta)
-                {
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
 
-
-            frmCrearRespuesta formulariocreres = new frmCrearRespuesta();
-            formulariocreres.MdiParent = this;
-            formulariocreres.WindowState = FormWindowState.Maximized;
-            formulariocreres.Show();
         }
     }
 }

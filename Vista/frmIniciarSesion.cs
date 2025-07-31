@@ -52,6 +52,20 @@ namespace Vista
 
                 this.DialogResult = DialogResult.OK;
 
+                Logica.L_HistorialContras l = new Logica.L_HistorialContras();
+                var historial = l.HistorialDeContrasenas(usuario);
+
+                if (historial == null)
+                {
+                    frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
+                    cambiarContrasenaForm.ShowDialog();
+                }
+                else
+                {
+                    MDIParent1 menuPrincipal = new MDIParent1(rol);
+                    menuPrincipal.ShowDialog();
+                }
+
                 this.Close();
             }
             else
