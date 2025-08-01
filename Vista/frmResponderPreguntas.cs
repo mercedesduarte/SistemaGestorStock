@@ -86,6 +86,9 @@ namespace Vista
             {
                 MessageBox.Show("¡Felicitaciones! Has respondido todas las preguntas.");
                 btnResponderPregunta.Enabled = false;
+                frmCambiarContra cambiarContrasenaForm = new frmCambiarContra();
+                cambiarContrasenaForm.Show();
+                this.Close();
             }
         }
     }

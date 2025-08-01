@@ -9,15 +9,16 @@ namespace Logica
 {
     public class L_CambioObligatorio
     {
-        public bool CambiaContra(int idPersona, string contrasena, string confcontra, DateTime fechaCambio)
+        public bool CambiaContra(string usuario, string contrasena, string confcontra)
         {
+            DateTime fechaCambio = DateTime.Now;
             if (contrasena != confcontra)
             {
                 throw new ArgumentException("Las contraseñas no coinciden.");
             }
             else
             {
-                return D_CambioObligatorio.ActualizarContra(idPersona, contrasena, fechaCambio);
+                return D_CambioObligatorio.ActualizarContra(usuario, contrasena, fechaCambio);
             }
         }
     }

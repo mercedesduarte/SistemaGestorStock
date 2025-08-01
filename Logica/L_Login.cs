@@ -15,6 +15,7 @@ namespace Logica
     {
         public static bool LoginUsuario(string usuario, string contrasena, out bool esAdmin, out string nombreRol)
         {
+
             return D_Login.LoginBD(usuario, contrasena, out esAdmin, out nombreRol);
         }
     }

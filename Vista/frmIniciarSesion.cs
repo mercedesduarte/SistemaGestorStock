@@ -40,8 +40,12 @@ namespace Vista
 
             bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out esAdmin, out rol);
 
-            if (loginValido)
+                if (loginValido)
             {
+                SesionUsuario.Usuario = usuario;
+                SesionUsuario.EsAdmin = esAdmin;
+                SesionUsuario.Rol = rol;
+
                 MessageBox.Show(
                         "¡Login exitoso!",
                         "Bienvenido",

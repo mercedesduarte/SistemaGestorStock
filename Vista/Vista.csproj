@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCrearRespuesta.cs">
+    <Compile Include="frmCambiarContra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearRespuesta.Designer.cs">
-      <DependentUpon>frmCrearRespuesta.cs</DependentUpon>
+    <Compile Include="frmCambiarContra.Designer.cs">
+      <DependentUpon>frmCambiarContra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmResponderPreguntas.cs">
       <SubType>Form</SubType>
@@ -138,8 +138,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCrearRespuesta.resx">
-      <DependentUpon>frmCrearRespuesta.cs</DependentUpon>
+    <EmbeddedResource Include="frmCambiarContra.resx">
+      <DependentUpon>frmCambiarContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>

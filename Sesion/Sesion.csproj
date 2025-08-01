@@ -54,7 +54,7 @@
     <Compile Include="PrimerContra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidaMail.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="SesionUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

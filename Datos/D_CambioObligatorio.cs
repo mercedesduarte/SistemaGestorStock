@@ -11,7 +11,7 @@ namespace Datos
 {
     public class D_CambioObligatorio
     {
-            public static bool ActualizarContra(int idpersona, string contrasena, DateTime fechacambio)
+            public static bool ActualizarContra(string usuario, string contrasena, DateTime fechacambio)
             {
                 try
                 {
@@ -24,7 +24,7 @@ namespace Datos
                             cmd.CommandType = CommandType.StoredProcedure;
 
 
-                            cmd.Parameters.AddWithValue("@Id_Persona", idpersona);
+                            cmd.Parameters.AddWithValue("@Usuario", usuario);
                             cmd.Parameters.AddWithValue("@Contrasena", contrasena);
                             cmd.Parameters.AddWithValue("@FechaCambio", fechacambio);
 
