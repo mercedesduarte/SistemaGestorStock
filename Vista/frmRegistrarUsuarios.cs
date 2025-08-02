@@ -48,20 +48,27 @@ namespace Vista
             int id_rol = (int)cbRolUsuario.SelectedValue;
 
             string correo = lcorreo.ObtenerCorreoPorId(id_persona);
-
             string contrasena = GeneradorContraseña.Generar(6);
 
             L_RegistrarUsuario logica = new L_RegistrarUsuario();
-            var usuarios = logica.RegistrarUsuario(id_persona, usuario, id_rol, contrasena);
+            bool registrado = logica.RegistrarUsuario(id_persona, usuario, id_rol, contrasena);
 
-            Sesion.ArmarMail.DireccionCorreo = correo;
-            Sesion.ArmarMail.Asunto = "Credenciales de acceso - Sistema de Gestión";
-            Sesion.ArmarMail.ContrasenaSistema = contrasena;
+            if (registrado)
+            {
+                Sesion.ArmarMail.DireccionCorreo = correo;
+                Sesion.ArmarMail.Asunto = "Credenciales de acceso - Sistema de Gestión";
+                Sesion.ArmarMail.ContrasenaSistema = contrasena;
 
-            Sesion.ArmarMail.Preparar();
+                Sesion.ArmarMail.Preparar();
 
-            MessageBox.Show("Usuario creado y correo enviado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario creado y correo enviado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error al registrar el usuario. Revisá la consola para más detalles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
 
         private void cbPersona_SelectedIndexChanged(object sender, EventArgs e)

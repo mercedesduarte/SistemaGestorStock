@@ -212,3 +212,10 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.re
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmCambiarContra.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmCambiarContra.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPersonas.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmListadoPreguntasDeSeguridad.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources

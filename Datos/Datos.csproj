@@ -47,7 +47,6 @@
     <Compile Include="Conecction\ConnectionBD.cs" />
     <Compile Include="DTOs\CambioObligatorioDTO.cs" />
     <Compile Include="DTOs\CodigoPostalDTO.cs" />
-    <Compile Include="DTOs\GeneroDTO.cs" />
     <Compile Include="DTOs\HistorialContrasDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
     <Compile Include="DTOs\PreguntaDTO.cs" />
@@ -63,6 +62,7 @@
     <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_ListarUsuarios.cs" />
     <Compile Include="D_Login.cs" />
+    <Compile Include="D_ModificarUsuario.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
     <Compile Include="D_Verificacion2FA.cs" />

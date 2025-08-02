@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using Datos.Conecction;
 
 namespace Datos
@@ -16,7 +12,7 @@ namespace Datos
            string usuario,
            string contrasena,
            int idrol
-       )
+        )
         {
             try
             {
@@ -28,7 +24,6 @@ namespace Datos
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-
                         cmd.Parameters.AddWithValue("@Id_Persona", idpersona);
                         cmd.Parameters.AddWithValue("@Usuario", usuario);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
@@ -37,15 +32,14 @@ namespace Datos
                         cmd.ExecuteNonQuery();
 
                         Console.WriteLine("Usuario registrado correctamente.");
-
-                     return true;
-                    
+                        return true;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error en registrar persona", ex);
+                // Mostrar mensaje completo del error en consola
+                Console.WriteLine("Error en registrar persona: " + ex.ToString());
                 return false;
             }
         }

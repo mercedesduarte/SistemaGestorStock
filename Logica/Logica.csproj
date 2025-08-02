@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="L_ModificarUsuario.cs" />
     <Compile Include="L_CambioObligatorio.cs" />
     <Compile Include="L_CrearRespuesta.cs" />
     <Compile Include="L_HistorialContras.cs" />
