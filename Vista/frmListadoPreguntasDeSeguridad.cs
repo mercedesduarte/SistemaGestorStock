@@ -58,5 +58,10 @@ namespace Vista
             // Aca pone para que se pueda eliminar y modificar alexis o aguas
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -194,6 +194,7 @@
             this.ReportesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.ReportesToolStripMenuItem.Size = new System.Drawing.Size(156, 48);
             this.ReportesToolStripMenuItem.Text = "REPORTES";
+            this.ReportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
             // statusStrip
             // 

@@ -40,21 +40,23 @@ namespace Vista
 
             bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out esAdmin, out rol);
 
-                if (loginValido)
+            if (loginValido)
             {
                 SesionUsuario.Usuario = usuario;
                 SesionUsuario.EsAdmin = esAdmin;
                 SesionUsuario.Rol = rol;
 
-                MessageBox.Show(
-                        "¡Login exitoso!",
-                        "Bienvenido",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
                 this.Tag = rol;
 
-                this.DialogResult = DialogResult.OK;
+                try
+                {
+                    Logica.L_Logs logicaLogs = new Logica.L_Logs();
+                    logicaLogs.InsertarLog(usuario, "Inicio de sesión");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar log: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 Logica.L_HistorialContras l = new Logica.L_HistorialContras();
                 var historial = l.HistorialDeContrasenas(usuario);
@@ -63,14 +65,14 @@ namespace Vista
                 {
                     frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
                     cambiarContrasenaForm.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MDIParent1 menuPrincipal = new MDIParent1(rol);
-                    menuPrincipal.ShowDialog();
+                    this.Tag = rol;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
-
-                this.Close();
             }
             else
             {
@@ -82,6 +84,7 @@ namespace Vista
                 );
             }
         }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {

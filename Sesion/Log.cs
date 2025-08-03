@@ -1,32 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sesion
 {
-    internal class Log
+    public class Log
     {
-        public int IdLog { get; set; }
-        public int IdUsuario { get; set; }
         public string Usuario { get; set; }
         public string Accion { get; set; }
+        public DateTime Fecha { get; set; }
 
-        public Log(int idLog, int idUsuario, string usuario, string accion)
+        public Log() { }
+
+        public Log(string usuario, string accion, DateTime fecha)
         {
-            IdLog = idLog;
-            IdUsuario = idUsuario;
             Usuario = usuario;
             Accion = accion;
+            Fecha = fecha;
         }
 
         public string ObtenerMensaje()
         {
-            if (IdUsuario > 0)
+            if (!string.IsNullOrEmpty(Usuario))
                 return $"El usuario {Usuario} realizó la acción: {Accion}";
             else
-                throw new Exception("El ID del usuario no puede ser encontrado");
+                throw new Exception("El nombre de usuario no puede ser vacío.");
         }
     }
 }

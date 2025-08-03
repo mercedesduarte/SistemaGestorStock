@@ -58,6 +58,7 @@
     <Compile Include="D_HistorialContras.cs" />
     <Compile Include="D_CrearPregunta.cs" />
     <Compile Include="D_Lista.cs" />
+    <Compile Include="D_ListarLogs.cs" />
     <Compile Include="D_ListarPreguntas.cs" />
     <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_ListarUsuarios.cs" />
@@ -71,6 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sesion\Sesion.csproj">
+      <Project>{46cf0bc2-a4c6-4fe7-a4c0-71253337da3e}</Project>
+      <Name>Sesion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

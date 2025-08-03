@@ -2,6 +2,7 @@
 using Sesion;
 using System;
 using System.Data;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Vista
@@ -25,12 +26,12 @@ namespace Vista
             dgvUsuarios.EditMode = DataGridViewEditMode.EditProgrammatically;
 
             label2.Visible = false; // Ocultamos el label que muestra el ID del usuario
-            button2.Enabled = false; 
-            button1.Text = "Editar usuario";
-            button2.Text = "Eliminar usuario";
-            button1.Enabled = false; // Deshabilitamos el botón de editar al inicio
-            button1.BackColor = System.Drawing.Color.LightGray; // Cambiamos el color del botón para indicar que está deshabilitado
-            button2.BackColor = System.Drawing.Color.LightGray; // Cambiamos el color del botón de eliminar para indicar que está deshabilitado
+            btnEliminar.Enabled = false; 
+            btnModificar.Text = "Editar usuario";
+            btnEliminar.Text = "Eliminar usuario";
+            btnModificar.Enabled = false; // Deshabilitamos el botón de editar al inicio
+            btnModificar.BackColor = System.Drawing.Color.LightGray; // Cambiamos el color del botón para indicar que está deshabilitado
+            btnEliminar.BackColor = System.Drawing.Color.LightGray; // Cambiamos el color del botón de eliminar para indicar que está deshabilitado
         }
 
         private void CargarUsuarios()
@@ -70,13 +71,13 @@ namespace Vista
 
                 label2.Text = idUsuario.ToString();
 
-                button1.Enabled = true; // Habilitamos el botón para editar
-                button1.Text = $"Editar usuario";
-                button1.ForeColor = System.Drawing.Color.White; // Cambiamos el color del texto del botón
-                button1.BackColor = System.Drawing.Color.RoyalBlue; // Cambiamos el color del botón para indicar que está habilitado
-                button2.BackColor = System.Drawing.Color.Red; // Cambiamos el color del botón de eliminar para indicar que está habilitado
-                button2.ForeColor = System.Drawing.Color.White; // Cambiamos el color del texto del botón de eliminar
-                button2.Enabled = true; // Habilitamos el botón para eliminar
+                btnModificar.Enabled = true; // Habilitamos el botón para editar
+                btnModificar.Text = $"Editar usuario";
+                btnModificar.ForeColor = System.Drawing.Color.White; // Cambiamos el color del texto del botón
+                btnModificar.BackColor = System.Drawing.Color.RoyalBlue; // Cambiamos el color del botón para indicar que está habilitado
+                btnEliminar.BackColor = System.Drawing.Color.Red; // Cambiamos el color del botón de eliminar para indicar que está habilitado
+                btnEliminar.ForeColor = System.Drawing.Color.White; // Cambiamos el color del texto del botón de eliminar
+                btnEliminar.Enabled = true; // Habilitamos el botón para eliminar
             }
         }
 
@@ -91,11 +92,47 @@ namespace Vista
             // Cuando se cierra, recargar los usuarios
             CargarUsuarios();
 
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button1.BackColor = System.Drawing.Color.LightGray;
-            button2.BackColor = System.Drawing.Color.LightGray;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnModificar.BackColor = System.Drawing.Color.LightGray;
+            btnEliminar.BackColor = System.Drawing.Color.LightGray;
         }
 
+        private void txtPregunta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(label2.Text);
+            frmEditarUsuario frmEditar = new frmEditarUsuario();
+            frmEditar.IdUsuario = id;
+
+            var resultado = frmEditar.ShowDialog(); // Espera hasta que se cierre
+
+            // Cuando se cierra, recargar los usuarios
+            CargarUsuarios();
+
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.BackColor = System.Drawing.Color.LightGray;
+            btnModificar.BackColor = System.Drawing.Color.LightGray;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

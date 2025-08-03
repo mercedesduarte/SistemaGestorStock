@@ -62,9 +62,9 @@
             this.groupBox1.Controls.Add(this.txtPregunta);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 112);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(823, 354);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -78,7 +78,7 @@
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.Location = new System.Drawing.Point(504, 235);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnCerrar.Size = new System.Drawing.Size(188, 55);
@@ -86,6 +86,7 @@
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnCrearPregunta
             // 
@@ -95,7 +96,7 @@
             this.btnCrearPregunta.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearPregunta.Image")));
             this.btnCrearPregunta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrearPregunta.Location = new System.Drawing.Point(120, 235);
-            this.btnCrearPregunta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCrearPregunta.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearPregunta.Name = "btnCrearPregunta";
             this.btnCrearPregunta.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnCrearPregunta.Size = new System.Drawing.Size(312, 55);
@@ -118,7 +119,7 @@
             // txtPregunta
             // 
             this.txtPregunta.Location = new System.Drawing.Point(120, 132);
-            this.txtPregunta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPregunta.Margin = new System.Windows.Forms.Padding(4);
             this.txtPregunta.Name = "txtPregunta";
             this.txtPregunta.Size = new System.Drawing.Size(571, 38);
             this.txtPregunta.TabIndex = 9;
@@ -132,7 +133,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPreguntasDeSeguridad";
             this.Text = "frmPreguntasDeSeguridad";
             this.Load += new System.EventHandler(this.frmPreguntasDeSeguridad_Load);

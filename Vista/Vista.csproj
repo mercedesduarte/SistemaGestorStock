@@ -82,6 +82,12 @@
     <Compile Include="frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogs.Designer.cs">
+      <DependentUpon>frmLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResponderPreguntas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoUsuarios.resx">
       <DependentUpon>frmListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogs.resx">
+      <DependentUpon>frmLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPoliticasSeguridad.resx">
       <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>

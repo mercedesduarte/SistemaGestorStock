@@ -225,5 +225,23 @@ namespace Vista
         {
 
         }
+
+        private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmLogs)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            frmLogs formularioListado = new frmLogs();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
     }
 }

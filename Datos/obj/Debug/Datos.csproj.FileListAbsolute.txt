@@ -70,3 +70,5 @@ D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.ca
 D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.csproj.Up2Date
 D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.dll
 D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.pdb
+C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.dll
+C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.pdb

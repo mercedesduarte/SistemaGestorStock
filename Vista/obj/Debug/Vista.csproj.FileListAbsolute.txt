@@ -219,3 +219,5 @@ D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmListadoUsuarios.resource
 D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
 D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resources
 D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources
+C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources
+C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources
