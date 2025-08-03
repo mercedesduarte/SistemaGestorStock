@@ -51,6 +51,7 @@
     <Compile Include="Hashing.cs" />
     <Compile Include="GeneradorContra.cs" />
     <Compile Include="GestorRecuperacion.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="PrimerContra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidaMail.cs" />
