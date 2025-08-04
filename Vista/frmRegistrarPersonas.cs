@@ -23,16 +23,6 @@ namespace Vista
             this.Close();
         }
 
-        private void frmRegistrarPersonas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigoPostal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchImg_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtCodigoPostal.Text, out int cp))

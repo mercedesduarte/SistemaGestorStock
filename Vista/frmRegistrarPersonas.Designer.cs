@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPersonas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCUIL = new System.Windows.Forms.MaskedTextBox();
             this.searchImg = new System.Windows.Forms.PictureBox();
             this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.txtPartido = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.lblAltura = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.lblCalle = new System.Windows.Forms.Label();
-            this.txtCUIL = new System.Windows.Forms.TextBox();
             this.lblCUIL = new System.Windows.Forms.Label();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
@@ -87,6 +87,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.txtCUIL);
             this.groupBox1.Controls.Add(this.searchImg);
             this.groupBox1.Controls.Add(this.txtLocalidad);
             this.groupBox1.Controls.Add(this.txtPartido);
@@ -110,7 +111,6 @@
             this.groupBox1.Controls.Add(this.lblAltura);
             this.groupBox1.Controls.Add(this.txtCalle);
             this.groupBox1.Controls.Add(this.lblCalle);
-            this.groupBox1.Controls.Add(this.txtCUIL);
             this.groupBox1.Controls.Add(this.lblCUIL);
             this.groupBox1.Controls.Add(this.txtNumeroDocumento);
             this.groupBox1.Controls.Add(this.lblNumeroDocumento);
@@ -131,6 +131,14 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PERSONALES";
+            // 
+            // txtCUIL
+            // 
+            this.txtCUIL.Location = new System.Drawing.Point(397, 197);
+            this.txtCUIL.Mask = "00/00000000/0";
+            this.txtCUIL.Name = "txtCUIL";
+            this.txtCUIL.Size = new System.Drawing.Size(348, 38);
+            this.txtCUIL.TabIndex = 50;
             // 
             // searchImg
             // 
@@ -276,7 +284,6 @@
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(349, 38);
             this.txtCodigoPostal.TabIndex = 31;
-            this.txtCodigoPostal.TextChanged += new System.EventHandler(this.txtCodigoPostal_TextChanged);
             // 
             // lblCodigoPostal
             // 
@@ -365,14 +372,6 @@
             this.lblCalle.TabIndex = 22;
             this.lblCalle.Text = "CALLE:";
             // 
-            // txtCUIL
-            // 
-            this.txtCUIL.Location = new System.Drawing.Point(396, 197);
-            this.txtCUIL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCUIL.Name = "txtCUIL";
-            this.txtCUIL.Size = new System.Drawing.Size(349, 38);
-            this.txtCUIL.TabIndex = 21;
-            // 
             // lblCUIL
             // 
             this.lblCUIL.AutoSize = true;
@@ -388,6 +387,7 @@
             // 
             this.txtNumeroDocumento.Location = new System.Drawing.Point(37, 197);
             this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumeroDocumento.MaxLength = 8;
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(349, 38);
             this.txtNumeroDocumento.TabIndex = 19;
@@ -509,7 +509,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarPersonas";
             this.Text = "frmRegistrarPersonas";
-            this.Load += new System.EventHandler(this.frmRegistrarPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchImg)).EndInit();
@@ -531,7 +530,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtCUIL;
         private System.Windows.Forms.Label lblCUIL;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Label lblAltura;
@@ -556,5 +554,6 @@
         private System.Windows.Forms.TextBox txtPartido;
         private System.Windows.Forms.TextBox txtProvincia;
         private System.Windows.Forms.PictureBox searchImg;
+        private System.Windows.Forms.MaskedTextBox txtCUIL;
     }
 }

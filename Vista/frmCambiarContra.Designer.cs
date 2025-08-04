@@ -77,6 +77,7 @@ namespace Vista
             this.txtConfContra.Location = new System.Drawing.Point(67, 252);
             this.txtConfContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfContra.Name = "txtConfContra";
+            this.txtConfContra.PasswordChar = '*';
             this.txtConfContra.Size = new System.Drawing.Size(703, 38);
             this.txtConfContra.TabIndex = 15;
             // 
@@ -131,6 +132,7 @@ namespace Vista
             this.txtContra.Location = new System.Drawing.Point(67, 112);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(703, 38);
             this.txtContra.TabIndex = 9;
             // 
