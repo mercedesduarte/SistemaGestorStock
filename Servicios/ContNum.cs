@@ -1,38 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Servicios
 {
-    internal class ContNum
+    public class ContNum
     {
-        public string ContieneNumeros(string contra, int cantidad)
+        public string ContieneNumeros(string contra)
         {
-            if (cantidad >= 0)
+            foreach (char c in contra)
             {
-                int numeros = 0;
-                for (int i = 0; i < contra.Length; i++)
-                {
-                    if (char.IsDigit(contra[i]))
-                    {
-                        numeros++;
-                    }
-                }
-                if (numeros < cantidad)
-                {
-                    return $"La contraseña debe contener al menos {cantidad} números.";
-                }
-                else
+                if (char.IsDigit(c))
                 {
                     return contra;
                 }
             }
-            else
-            {
-                return contra;
-            }
+
+            return "La contraseña debe contener al menos un número.";
         }
     }
 }

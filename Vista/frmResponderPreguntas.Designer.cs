@@ -52,20 +52,20 @@ namespace Vista
             this.groupBox1.Controls.Add(this.lblUsuario);
             this.groupBox1.Controls.Add(this.txtRespuesta);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(-1, 101);
+            this.groupBox1.Location = new System.Drawing.Point(13, 117);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(823, 348);
+            this.groupBox1.Size = new System.Drawing.Size(1063, 357);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Responde las preguntas";
+            this.groupBox1.Text = "RESPONDE LAS PREGUNTAS DE SEGURIDAD";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblProgreso
             // 
             this.lblProgreso.AutoSize = true;
-            this.lblProgreso.Location = new System.Drawing.Point(662, 86);
+            this.lblProgreso.Location = new System.Drawing.Point(928, 35);
             this.lblProgreso.Name = "lblProgreso";
             this.lblProgreso.Size = new System.Drawing.Size(29, 32);
             this.lblProgreso.TabIndex = 16;
@@ -87,7 +87,7 @@ namespace Vista
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(506, 235);
+            this.btnCerrar.Location = new System.Drawing.Point(772, 235);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
@@ -109,9 +109,9 @@ namespace Vista
             this.btnResponderPregunta.Margin = new System.Windows.Forms.Padding(4);
             this.btnResponderPregunta.Name = "btnResponderPregunta";
             this.btnResponderPregunta.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
-            this.btnResponderPregunta.Size = new System.Drawing.Size(336, 55);
+            this.btnResponderPregunta.Size = new System.Drawing.Size(251, 55);
             this.btnResponderPregunta.TabIndex = 13;
-            this.btnResponderPregunta.Text = "RESPONDER PREGUNTA";
+            this.btnResponderPregunta.Text = "RESPONDER";
             this.btnResponderPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResponderPregunta.UseVisualStyleBackColor = false;
             this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
@@ -128,10 +128,10 @@ namespace Vista
             // 
             // txtRespuesta
             // 
-            this.txtRespuesta.Location = new System.Drawing.Point(120, 154);
+            this.txtRespuesta.Location = new System.Drawing.Point(121, 150);
             this.txtRespuesta.Margin = new System.Windows.Forms.Padding(4);
             this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(571, 38);
+            this.txtRespuesta.Size = new System.Drawing.Size(836, 38);
             this.txtRespuesta.TabIndex = 9;
             // 
             // label1
@@ -140,10 +140,10 @@ namespace Vista
             this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(823, 66);
+            this.label1.Size = new System.Drawing.Size(1063, 66);
             this.label1.TabIndex = 4;
             this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,9 +153,10 @@ namespace Vista
             this.AcceptButton = this.btnResponderPregunta;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 455);
+            this.ClientSize = new System.Drawing.Size(1089, 487);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmResponderPreguntas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmResponderPreguntas";
@@ -164,10 +165,7 @@ namespace Vista
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.FormBorderStyle = FormBorderStyle.Sizable; // o FixedSingle, FixedDialog, etc., pero NO None
-            this.WindowState = FormWindowState.Maximized;
-            this.MinimizeBox = true;
-            this.MaximizeBox = true;
+
         }
 
         #endregion

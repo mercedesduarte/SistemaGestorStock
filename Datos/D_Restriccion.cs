@@ -52,6 +52,7 @@ namespace Datos
                                         break;
                                     case "No permitir datos personales":
                                         estado.DatosPersonales = 1;
+                                        
                                         break;
                                     case "Requerir autenticación en dos pasos (2FA) por correo electrónico":
                                         estado.DosFA = 1;
@@ -70,6 +71,29 @@ namespace Datos
             return estado;
         }
 
+        public string VerificarContrasena(int idUsuario, string nuevaContrasena)
+        {
+            using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+            {
+                using (SqlCommand comando = new SqlCommand("sp_VerificarContrasenas", conexion))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                    comando.Parameters.AddWithValue("@NuevaContrasena", nuevaContrasena);
+
+                    try
+                    {
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        return "OK";
+                    }
+                    catch (SqlException ex)
+                    {
+                        return ex.Message;
+                    }
+                }
+            }
+        }
         public void GuardarRestricciones(
             decimal minCaracteres,
             bool mayusMinus,

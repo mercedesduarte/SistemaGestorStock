@@ -21,11 +21,12 @@ namespace Vista
             label4.Visible = false;
             label4.Text = IdUsuario.ToString();
 
-            label1.Text = "Nombre de usuario";
-            label2.Text = "Fecha Bloqueo";
-            label3.Text = "Cambios de contraseña";
-            button1.Text = "Bloquear";
-            button2.Text = "Guardar Cambios";
+            label1.Text = "NOMBRE DE USUARIO";
+            label2.Text = "FECHA BLOQUEO";
+            label3.Text = "CAMBIOS DE CONTRASEÑA";
+            label6.Text = "ROL DE USUARIO";
+            button1.Text = "BLOQUEAR";
+            button2.Text = "GUARDAR";
 
             textBox2.Enabled = false;
             textBox3.Enabled = false;
@@ -60,7 +61,7 @@ namespace Vista
             label4.Text = usuario.Id_Usuario.ToString();
             label4.Visible = false;
 
-            button1.Text = usuario.Bloqueado ? "Desbloquear" : "Bloquear";
+            button1.Text = usuario.Bloqueado ? "Desbloquear" : "BLOQUEAR";
 
         }
 
@@ -140,6 +141,5 @@ namespace Vista
                 MessageBox.Show("Error al actualizar estado del usuario: " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

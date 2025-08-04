@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-    internal class CantPreguntas
+    public class CantPreguntas
     {
         public List<string> TraerPreguntas(List<string> preguntas, int cantidad)
         {

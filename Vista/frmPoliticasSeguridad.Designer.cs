@@ -88,7 +88,7 @@
             this.chkDatosPersonales.AutoSize = true;
             this.chkDatosPersonales.Location = new System.Drawing.Point(24, 284);
             this.chkDatosPersonales.Name = "chkDatosPersonales";
-            this.chkDatosPersonales.Size = new System.Drawing.Size(365, 28);
+            this.chkDatosPersonales.Size = new System.Drawing.Size(456, 36);
             this.chkDatosPersonales.TabIndex = 8;
             this.chkDatosPersonales.Text = "NO PERMITIR DATOS PERSONALES";
             this.chkDatosPersonales.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.chkEvitarRepetir.AutoSize = true;
             this.chkEvitarRepetir.Location = new System.Drawing.Point(24, 250);
             this.chkEvitarRepetir.Name = "chkEvitarRepetir";
-            this.chkEvitarRepetir.Size = new System.Drawing.Size(425, 28);
+            this.chkEvitarRepetir.Size = new System.Drawing.Size(531, 36);
             this.chkEvitarRepetir.TabIndex = 7;
             this.chkEvitarRepetir.Text = "NO REPETIR CONTRASEÑAS ANTERIORES";
             this.chkEvitarRepetir.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.chkCaracterEspecial.AutoSize = true;
             this.chkCaracterEspecial.Location = new System.Drawing.Point(24, 216);
             this.chkCaracterEspecial.Name = "chkCaracterEspecial";
-            this.chkCaracterEspecial.Size = new System.Drawing.Size(377, 28);
+            this.chkCaracterEspecial.Size = new System.Drawing.Size(471, 36);
             this.chkCaracterEspecial.TabIndex = 6;
             this.chkCaracterEspecial.Text = "CONTENER UN CARACTER ESPECIAL";
             this.chkCaracterEspecial.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.chkNumerosLetras.AutoSize = true;
             this.chkNumerosLetras.Location = new System.Drawing.Point(24, 182);
             this.chkNumerosLetras.Name = "chkNumerosLetras";
-            this.chkNumerosLetras.Size = new System.Drawing.Size(329, 28);
+            this.chkNumerosLetras.Size = new System.Drawing.Size(411, 36);
             this.chkNumerosLetras.TabIndex = 5;
             this.chkNumerosLetras.Text = "CONTENER NÚMEROS Y LETRAS";
             this.chkNumerosLetras.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.chkMayusMinus.AutoSize = true;
             this.chkMayusMinus.Location = new System.Drawing.Point(24, 148);
             this.chkMayusMinus.Name = "chkMayusMinus";
-            this.chkMayusMinus.Size = new System.Drawing.Size(413, 28);
+            this.chkMayusMinus.Size = new System.Drawing.Size(516, 36);
             this.chkMayusMinus.TabIndex = 4;
             this.chkMayusMinus.Text = "COMBINAR MAYÚSCULAS Y MINÚSCULAS";
             this.chkMayusMinus.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             "2",
             "3",
             "5"});
-            this.cbPreguntas.Location = new System.Drawing.Point(304, 95);
+            this.cbPreguntas.Location = new System.Drawing.Point(402, 95);
             this.cbPreguntas.Name = "cbPreguntas";
-            this.cbPreguntas.Size = new System.Drawing.Size(60, 32);
+            this.cbPreguntas.Size = new System.Drawing.Size(60, 39);
             this.cbPreguntas.TabIndex = 3;
             // 
             // lblPreguntas
@@ -152,13 +152,13 @@
             this.lblPreguntas.AutoSize = true;
             this.lblPreguntas.Location = new System.Drawing.Point(20, 98);
             this.lblPreguntas.Name = "lblPreguntas";
-            this.lblPreguntas.Size = new System.Drawing.Size(274, 24);
+            this.lblPreguntas.Size = new System.Drawing.Size(344, 32);
             this.lblPreguntas.TabIndex = 2;
             this.lblPreguntas.Text = "PREGUNTAS DE SEGURIDAD";
             // 
             // nudMinCaracteres
             // 
-            this.nudMinCaracteres.Location = new System.Drawing.Point(304, 55);
+            this.nudMinCaracteres.Location = new System.Drawing.Point(402, 51);
             this.nudMinCaracteres.Maximum = new decimal(new int[] {
             20,
             0,
@@ -170,7 +170,7 @@
             0,
             0});
             this.nudMinCaracteres.Name = "nudMinCaracteres";
-            this.nudMinCaracteres.Size = new System.Drawing.Size(60, 32);
+            this.nudMinCaracteres.Size = new System.Drawing.Size(60, 38);
             this.nudMinCaracteres.TabIndex = 1;
             this.nudMinCaracteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudMinCaracteres.Value = new decimal(new int[] {
@@ -184,7 +184,7 @@
             this.lblMinCaracteres.AutoSize = true;
             this.lblMinCaracteres.Location = new System.Drawing.Point(20, 57);
             this.lblMinCaracteres.Name = "lblMinCaracteres";
-            this.lblMinCaracteres.Size = new System.Drawing.Size(250, 24);
+            this.lblMinCaracteres.Size = new System.Drawing.Size(314, 32);
             this.lblMinCaracteres.TabIndex = 0;
             this.lblMinCaracteres.Text = "MINIMO DE CARACTERES";
             // 
@@ -205,7 +205,7 @@
             this.chkAutenticacionDoble.AutoSize = true;
             this.chkAutenticacionDoble.Location = new System.Drawing.Point(81, 31);
             this.chkAutenticacionDoble.Name = "chkAutenticacionDoble";
-            this.chkAutenticacionDoble.Size = new System.Drawing.Size(449, 52);
+            this.chkAutenticacionDoble.Size = new System.Drawing.Size(561, 68);
             this.chkAutenticacionDoble.TabIndex = 9;
             this.chkAutenticacionDoble.Text = "REQUERIR AUTENTICACIÓN EN DOS PASOS\r\n(2FA) POR CORREO ELECTRONICO";
             this.chkAutenticacionDoble.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             // 
             // frmPoliticasSeguridad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(660, 631);

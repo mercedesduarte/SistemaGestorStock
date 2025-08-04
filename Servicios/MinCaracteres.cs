@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-    internal class MinCaracteres
+    public class MinCaracteres
     {
         public static string ValidarMinimoCaracteres(string input, int minLength)
         {

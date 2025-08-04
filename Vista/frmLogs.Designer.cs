@@ -134,6 +134,7 @@
             this.ClientSize = new System.Drawing.Size(1129, 795);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogs";
             this.Text = "frmLogs";
             this.Load += new System.EventHandler(this.frmLogs_Load);
