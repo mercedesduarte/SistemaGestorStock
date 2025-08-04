@@ -25,7 +25,7 @@ namespace Vista
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
-        { 
+        {
 
         }
 
@@ -44,6 +44,10 @@ namespace Vista
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+
         }
     }
 }

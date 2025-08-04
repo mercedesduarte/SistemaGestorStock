@@ -7,16 +7,18 @@ using System.Data;
 using System.Data.SqlClient;
 using Datos.Conecction;
 using Datos;
+using Sesion;
 
 
 namespace Logica
 {
     public class L_Login
     {
-        public static bool LoginUsuario(string usuario, string contrasena, out bool esAdmin, out string nombreRol)
+        public static bool LoginUsuario(string usuario, string contrasena, out int idUsuario, out bool esAdmin, out string nombreRol)
         {
-
-            return D_Login.LoginBD(usuario, contrasena, out esAdmin, out nombreRol);
+            idUsuario = D_Login.LoginBD(usuario, contrasena, out esAdmin, out nombreRol);
+            SesionUsuario.IdUsuario = idUsuario;
+            return idUsuario > 0;
         }
     }
 }

@@ -49,7 +49,6 @@
     <Compile Include="L_CambioObligatorio.cs" />
     <Compile Include="L_CrearRespuesta.cs" />
     <Compile Include="L_HistorialContras.cs" />
-    <Compile Include="L_Conexion.cs" />
     <Compile Include="L_CrearPregunta.cs" />
     <Compile Include="L_EjecutarBusquedaCP.cs" />
     <Compile Include="L_Lista.cs" />

@@ -1,4 +1,6 @@
-﻿namespace Vista
+﻿using System.Windows.Forms;
+
+namespace Vista
 {
     partial class frmCambiarContra
     {
@@ -157,7 +159,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-
+            this.FormBorderStyle = FormBorderStyle.Sizable; // o FixedSingle, FixedDialog, etc., pero NO None
+            this.WindowState = FormWindowState.Maximized;
+            this.MinimizeBox = true;
+            this.MaximizeBox = true;
         }
 
         #endregion

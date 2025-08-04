@@ -28,7 +28,7 @@ namespace Vista
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            L_Conexion.Conexiones();
+
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -37,8 +37,9 @@ namespace Vista
             string contrasena = txtContrasena.Text;
             string rol;
             bool esAdmin;
+            int idUsuario;
 
-            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out esAdmin, out rol);
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out idUsuario, out esAdmin, out rol);
 
             if (loginValido)
             {
@@ -63,9 +64,17 @@ namespace Vista
 
                 if (historial == null)
                 {
+                    this.Hide();
                     frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
-                    cambiarContrasenaForm.ShowDialog();
-                    this.Close();
+                    DialogResult res = cambiarContrasenaForm.ShowDialog();
+                    if (res == DialogResult.OK)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        this.Show();
+                    }
                 }
                 else
                 {
@@ -84,6 +93,7 @@ namespace Vista
                 );
             }
         }
+
 
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -1,4 +1,6 @@
-﻿namespace Vista
+﻿using System.Windows.Forms;
+
+namespace Vista
 {
     partial class frmResponderPreguntas
     {
@@ -30,13 +32,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResponderPreguntas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblProgreso = new System.Windows.Forms.Label();
             this.lblPreguntaLista = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblProgreso = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Responde las preguntas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblProgreso
+            // 
+            this.lblProgreso.AutoSize = true;
+            this.lblProgreso.Location = new System.Drawing.Point(662, 86);
+            this.lblProgreso.Name = "lblProgreso";
+            this.lblProgreso.Size = new System.Drawing.Size(29, 32);
+            this.lblProgreso.TabIndex = 16;
+            this.lblProgreso.Text = " ";
             // 
             // lblPreguntaLista
             // 
@@ -85,6 +96,7 @@
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnResponderPregunta
             // 
@@ -136,29 +148,26 @@
             this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProgreso
-            // 
-            this.lblProgreso.AutoSize = true;
-            this.lblProgreso.Location = new System.Drawing.Point(662, 86);
-            this.lblProgreso.Name = "lblProgreso";
-            this.lblProgreso.Size = new System.Drawing.Size(29, 32);
-            this.lblProgreso.TabIndex = 16;
-            this.lblProgreso.Text = " ";
-            // 
             // frmResponderPreguntas
             // 
+            this.AcceptButton = this.btnResponderPregunta;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 455);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmResponderPreguntas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmResponderPreguntas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmResponderPreguntas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-
+            this.FormBorderStyle = FormBorderStyle.Sizable; // o FixedSingle, FixedDialog, etc., pero NO None
+            this.WindowState = FormWindowState.Maximized;
+            this.MinimizeBox = true;
+            this.MaximizeBox = true;
         }
 
         #endregion

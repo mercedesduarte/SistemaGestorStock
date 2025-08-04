@@ -66,6 +66,7 @@
     <Compile Include="D_ModificarUsuario.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
+    <Compile Include="D_Restriccion.cs" />
     <Compile Include="D_Verificacion2FA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="D_Traer_Genero.cs" />

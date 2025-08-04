@@ -14,7 +14,6 @@ using System.Data.SqlClient;
 using Logica;
 using Servicios;
 using Sesion;
-using static L_Restriccion;
 
 
 namespace Vista
@@ -46,6 +45,13 @@ namespace Vista
                 chkEvitarRepetir.Checked,
                 chkDatosPersonales.Checked,
                chkAutenticacionDoble.Checked
+            );
+
+            MessageBox.Show(
+            "Las restricciones se guardaron correctamente.",
+            "Éxito",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information
             );
         }
 

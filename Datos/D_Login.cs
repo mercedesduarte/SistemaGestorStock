@@ -11,56 +11,45 @@ namespace Datos
 {
     public class D_Login
     {
-        public static bool LoginBD(string usuario, string contrasena, out bool esAdmin, out string nombreRol)
+        public static int LoginBD(string usuario, string contrasena, out bool esAdmin, out string nombreRol)
         {
+            int idUsuario = -1;
             esAdmin = false;
             nombreRol = null;
-            try
+
+            using (SqlConnection conn = ConnectionBD.ObtenerConexion())
             {
-                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                SqlCommand cmd = new SqlCommand("sp_Login", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                SqlParameter adminParam = new SqlParameter("@EsAdmin", SqlDbType.Bit)
                 {
-                    conexion.Open();
+                    Direction = ParameterDirection.Output
+                };
+                SqlParameter rolParam = new SqlParameter("@NombreRol", SqlDbType.NVarChar, 50)
+                {
+                    Direction = ParameterDirection.Output
+                };
 
-                    using (SqlCommand cmd = new SqlCommand("sp_Login", conexion)) // Asegurate del nombre este bien
+                cmd.Parameters.Add(adminParam);
+                cmd.Parameters.Add(rolParam);
 
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                var result = cmd.ExecuteScalar();
 
-                        cmd.Parameters.AddWithValue("@Usuario", usuario);
-                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
-
-                        SqlParameter esAdminParam = new SqlParameter("@EsAdmin", SqlDbType.Bit)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        cmd.Parameters.Add(esAdminParam);
-
-                        SqlParameter nombreRolParam = new SqlParameter("@NombreRol", SqlDbType.NVarChar, 50)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        cmd.Parameters.Add(nombreRolParam);
-
-                        cmd.ExecuteNonQuery();
-
-                        if (esAdminParam.Value != DBNull.Value)
-                        {
-                            esAdmin = Convert.ToBoolean(esAdminParam.Value);
-                            nombreRol = nombreRolParam.Value?.ToString();
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
+                if (result != null && int.TryParse(result.ToString(), out int id))
+                {
+                    idUsuario = id;
                 }
+
+                esAdmin = (bool)adminParam.Value;
+                nombreRol = rolParam.Value.ToString();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al intentar iniciar sesión: " + ex.Message);
-                return false;
-            }
+
+            return idUsuario;
         }
     }
 }

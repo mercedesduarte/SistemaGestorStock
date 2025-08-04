@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Logica.L_ResponderPreguntas;
+using Sesion;
 
 namespace Vista
 {
@@ -52,7 +53,7 @@ namespace Vista
             }
 
             string respuestaUsuario = txtRespuesta.Text.Trim();
-            int idUsuario = 1; // cambiar esto por el ID del usuario actual, si se tiene un sistema de autenticación
+            int idUsuario = SesionUsuario.IdUsuario;
             int idPregunta = preguntas[indiceActual].Id;
 
             L_ResponderPregunta logica = new L_ResponderPregunta();
@@ -66,6 +67,7 @@ namespace Vista
                 indiceActual++;
                 MostrarPreguntaActual();
                 txtRespuesta.Clear();
+
             }
             else
             {
@@ -86,10 +88,24 @@ namespace Vista
             {
                 MessageBox.Show("¡Felicitaciones! Has respondido todas las preguntas.");
                 btnResponderPregunta.Enabled = false;
+                this.Hide();
+
                 frmCambiarContra cambiarContrasenaForm = new frmCambiarContra();
-                cambiarContrasenaForm.Show();
-                this.Close();
+                DialogResult res = cambiarContrasenaForm.ShowDialog();
+
+                if (res == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+
+
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
