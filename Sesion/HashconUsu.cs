@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Sesion
 {
-    internal class HashconUsu
+    public class HashconUsu
     {
-        public static string Hashconusu(string username, string password)
+        public static string Hashconusu(string usuario, string contrasena)
         {
-            string combinacion = username + password;
+            string combinacion = usuario + contrasena;
             using (var sha256 = SHA256.Create())
             {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(combinacion));

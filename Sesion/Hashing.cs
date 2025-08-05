@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace Sesion
 {
-    internal class Hashing
+    public class Hashing
     {
         public static string HashPassword(string password)
         {

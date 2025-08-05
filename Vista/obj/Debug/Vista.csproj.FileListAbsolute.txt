@@ -221,3 +221,4 @@ D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resou
 D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources
+D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources

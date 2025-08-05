@@ -39,7 +39,9 @@ namespace Vista
             bool esAdmin;
             int idUsuario;
 
-            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out idUsuario, out esAdmin, out rol);
+            string contrasenaHasheada = HashconUsu.Hashconusu(usuario, contrasena);
+
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
 
             if (loginValido)
             {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sesion;
 
 namespace Logica
 {
@@ -12,13 +13,18 @@ namespace Logica
         public bool CambiaContra(string usuario, string contrasena, string confcontra)
         {
             DateTime fechaCambio = DateTime.Now;
+
             if (contrasena != confcontra)
             {
                 throw new ArgumentException("Las contraseñas no coinciden.");
             }
             else
             {
-                return D_CambioObligatorio.ActualizarContra(usuario, contrasena, fechaCambio);
+
+                string hash = Sesion.HashconUsu.Hashconusu(usuario, contrasena);
+
+
+                return D_CambioObligatorio.ActualizarContra(usuario, hash, fechaCambio);
             }
         }
     }

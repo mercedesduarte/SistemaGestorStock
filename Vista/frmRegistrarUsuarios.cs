@@ -49,9 +49,11 @@ namespace Vista
 
             string correo = lcorreo.ObtenerCorreoPorId(id_persona);
             string contrasena = GeneradorContraseña.Generar(6);
+            string contra_enctriptada = Sesion.Hashing.HashPassword(contrasena);
+            contra_enctriptada = HashconUsu.Hashconusu(usuario, contra_enctriptada);
 
             L_RegistrarUsuario logica = new L_RegistrarUsuario();
-            bool registrado = logica.RegistrarUsuario(id_persona, usuario, id_rol, contrasena);
+            bool registrado = logica.RegistrarUsuario(id_persona, usuario, id_rol, contra_enctriptada);
 
             if (registrado)
             {

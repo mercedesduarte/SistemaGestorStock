@@ -72,3 +72,5 @@ D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.dll
 D:\programacion\SistemaGestion\Datos\obj\Debug\Datos.pdb
 C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.dll
 C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.pdb
+D:\programacion\SistemaGestion\Datos\bin\Debug\Sesion.dll
+D:\programacion\SistemaGestion\Datos\bin\Debug\Sesion.pdb

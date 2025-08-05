@@ -39,8 +39,8 @@ namespace Datos
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error al cambiar contraseña: ", ex);
-                    return false;
+                Console.WriteLine("Error al cambiar contraseña: " + ex.Message);
+                return false;
                 }
             }
     }
