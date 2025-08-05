@@ -41,6 +41,8 @@ namespace Vista
 
             string contrasenaHasheada = HashconUsu.Hashconusu(usuario, contrasena);
 
+
+
             bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
 
             if (loginValido)
@@ -93,6 +95,8 @@ namespace Vista
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
+
+                Console.WriteLine("Intento fallido de inicio de sesión para el usuario: " + contrasenaHasheada);
             }
         }
 

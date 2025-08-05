@@ -21,7 +21,7 @@ namespace Logica
             else
             {
 
-                string hash = Sesion.HashconUsu.Hashconusu(usuario, contrasena);
+                string hash = HashconUsu.Hashconusu(usuario, contrasena);
 
 
                 return D_CambioObligatorio.ActualizarContra(usuario, hash, fechaCambio);
