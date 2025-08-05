@@ -43,7 +43,7 @@ namespace Vista
 
 
 
-            bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out idUsuario, out esAdmin, out rol);
 
             if (loginValido)
             {
@@ -116,6 +116,15 @@ namespace Vista
                 this.Close(); 
             }
           
+        }
+
+        private void btnMostrarContra_Click(object sender, EventArgs e)
+        {
+            txtContrasena.UseSystemPasswordChar = !txtContrasena.UseSystemPasswordChar;
+
+            btnMostrarContra.Image = txtContrasena.UseSystemPasswordChar
+                ? Properties.Resources.nomoscon
+                : Properties.Resources.moscon;
         }
     }
 }

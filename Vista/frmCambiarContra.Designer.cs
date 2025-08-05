@@ -32,6 +32,8 @@ namespace Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarContra));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMostrarContraC = new System.Windows.Forms.Button();
+            this.btnMostrarContra = new System.Windows.Forms.Button();
             this.lblConfContra = new System.Windows.Forms.Label();
             this.txtConfContra = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -45,6 +47,8 @@ namespace Vista
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnMostrarContraC);
+            this.groupBox1.Controls.Add(this.btnMostrarContra);
             this.groupBox1.Controls.Add(this.lblConfContra);
             this.groupBox1.Controls.Add(this.txtConfContra);
             this.groupBox1.Controls.Add(this.btnCerrar);
@@ -60,6 +64,26 @@ namespace Vista
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnMostrarContraC
+            // 
+            this.btnMostrarContraC.Image = global::Vista.Properties.Resources.moscon;
+            this.btnMostrarContraC.Location = new System.Drawing.Point(780, 250);
+            this.btnMostrarContraC.Name = "btnMostrarContraC";
+            this.btnMostrarContraC.Size = new System.Drawing.Size(40, 40);
+            this.btnMostrarContraC.TabIndex = 18;
+            this.btnMostrarContraC.UseVisualStyleBackColor = true;
+            this.btnMostrarContraC.Click += new System.EventHandler(this.btnMostrarContraC_Click);
+            // 
+            // btnMostrarContra
+            // 
+            this.btnMostrarContra.Image = global::Vista.Properties.Resources.moscon;
+            this.btnMostrarContra.Location = new System.Drawing.Point(780, 112);
+            this.btnMostrarContra.Name = "btnMostrarContra";
+            this.btnMostrarContra.Size = new System.Drawing.Size(40, 40);
+            this.btnMostrarContra.TabIndex = 17;
+            this.btnMostrarContra.UseVisualStyleBackColor = true;
+            this.btnMostrarContra.Click += new System.EventHandler(this.btnMostrarContra_Click);
             // 
             // lblConfContra
             // 
@@ -77,7 +101,6 @@ namespace Vista
             this.txtConfContra.Location = new System.Drawing.Point(67, 252);
             this.txtConfContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfContra.Name = "txtConfContra";
-            this.txtConfContra.PasswordChar = '*';
             this.txtConfContra.Size = new System.Drawing.Size(703, 38);
             this.txtConfContra.TabIndex = 15;
             // 
@@ -132,7 +155,6 @@ namespace Vista
             this.txtContra.Location = new System.Drawing.Point(67, 112);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(703, 38);
             this.txtContra.TabIndex = 9;
             // 
@@ -178,5 +200,7 @@ namespace Vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblConfContra;
         private System.Windows.Forms.TextBox txtConfContra;
+        private Button btnMostrarContra;
+        private Button btnMostrarContraC;
     }
 }

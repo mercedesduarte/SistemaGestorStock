@@ -50,6 +50,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +65,8 @@
             this.UsuariosToolStripMenuItem,
             this.PersonasToolStripMenuItem,
             this.ConfiguracionToolStripMenuItem,
-            this.ReportesToolStripMenuItem});
+            this.ReportesToolStripMenuItem,
+            this.modificarContraseñaToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1355, 52);
@@ -260,6 +262,13 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // modificarContraseñaToolStripMenuItem
+            // 
+            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
+            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(165, 48);
+            this.modificarContraseñaToolStripMenuItem.Text = "Modificar Contraseña";
+            this.modificarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,6 +318,7 @@
         private System.Windows.Forms.ToolStripMenuItem ListarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AgregarPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListarPersonasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
     }
 }
 

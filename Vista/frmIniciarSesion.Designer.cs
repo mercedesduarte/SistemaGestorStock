@@ -34,6 +34,7 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMostrarContra = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@ namespace Vista
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(72, 65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(245, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,6 +73,7 @@ namespace Vista
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnMostrarContra);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnIniciarSesion);
             this.groupBox1.Controls.Add(this.lblContraseña);
@@ -81,13 +83,23 @@ namespace Vista
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 128);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1005, 421);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PARA INICAR SESION";
+            // 
+            // btnMostrarContra
+            // 
+            this.btnMostrarContra.Image = global::Vista.Properties.Resources.moscon;
+            this.btnMostrarContra.Location = new System.Drawing.Point(958, 221);
+            this.btnMostrarContra.Name = "btnMostrarContra";
+            this.btnMostrarContra.Size = new System.Drawing.Size(40, 40);
+            this.btnMostrarContra.TabIndex = 18;
+            this.btnMostrarContra.UseVisualStyleBackColor = true;
+            this.btnMostrarContra.Click += new System.EventHandler(this.btnMostrarContra_Click);
             // 
             // btnSalir
             // 
@@ -97,7 +109,7 @@ namespace Vista
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.Location = new System.Drawing.Point(791, 331);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnSalir.Size = new System.Drawing.Size(163, 55);
@@ -115,7 +127,7 @@ namespace Vista
             this.btnIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciarSesion.Image")));
             this.btnIniciarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIniciarSesion.Location = new System.Drawing.Point(72, 331);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnIniciarSesion.Size = new System.Drawing.Size(308, 55);
@@ -148,7 +160,7 @@ namespace Vista
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(603, 223);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(349, 38);
             this.txtContrasena.TabIndex = 2;
@@ -156,7 +168,7 @@ namespace Vista
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(603, 118);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(349, 38);
             this.txtUsuario.TabIndex = 1;
@@ -170,7 +182,7 @@ namespace Vista
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblIniciarSesion);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmIniciarSesion";
@@ -194,6 +206,7 @@ namespace Vista
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnMostrarContra;
     }
 }
 

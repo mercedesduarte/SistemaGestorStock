@@ -96,5 +96,23 @@ namespace Vista
         {
 
         }
+
+        private void btnMostrarContra_Click(object sender, EventArgs e)
+        {
+            txtContra.UseSystemPasswordChar = !txtContra.UseSystemPasswordChar;
+
+            btnMostrarContra.Image = txtContra.UseSystemPasswordChar
+                ? Properties.Resources.nomoscon
+                : Properties.Resources.moscon;
+        }
+
+        private void btnMostrarContraC_Click(object sender, EventArgs e)
+        {
+            txtConfContra.UseSystemPasswordChar = !txtConfContra.UseSystemPasswordChar;
+
+            btnMostrarContraC.Image = txtConfContra.UseSystemPasswordChar
+                ? Properties.Resources.nomoscon
+                : Properties.Resources.moscon;
+        }
     }
 }

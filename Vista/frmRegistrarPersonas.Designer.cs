@@ -139,6 +139,7 @@
             this.txtCUIL.Name = "txtCUIL";
             this.txtCUIL.Size = new System.Drawing.Size(348, 38);
             this.txtCUIL.TabIndex = 50;
+            this.txtCUIL.Visible = false;
             // 
             // searchImg
             // 
@@ -284,6 +285,7 @@
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(349, 38);
             this.txtCodigoPostal.TabIndex = 31;
+            this.txtCodigoPostal.TextChanged += new System.EventHandler(this.txtCodigoPostal_TextChanged);
             // 
             // lblCodigoPostal
             // 
@@ -341,6 +343,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(349, 38);
             this.txtAltura.TabIndex = 25;
+            this.txtAltura.TextChanged += new System.EventHandler(this.txtAltura_TextChanged);
             // 
             // lblAltura
             // 
@@ -382,6 +385,7 @@
             this.lblCUIL.Size = new System.Drawing.Size(89, 32);
             this.lblCUIL.TabIndex = 20;
             this.lblCUIL.Text = "CUIL:";
+            this.lblCUIL.Visible = false;
             // 
             // txtNumeroDocumento
             // 
@@ -391,6 +395,9 @@
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(349, 38);
             this.txtNumeroDocumento.TabIndex = 19;
+            this.txtNumeroDocumento.Visible = false;
+            this.txtNumeroDocumento.TextChanged += new System.EventHandler(this.txtNumeroDocumento_TextChanged);
+            this.txtNumeroDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDocumento_KeyPress);
             // 
             // lblNumeroDocumento
             // 
@@ -402,6 +409,7 @@
             this.lblNumeroDocumento.Size = new System.Drawing.Size(269, 32);
             this.lblNumeroDocumento.TabIndex = 18;
             this.lblNumeroDocumento.Text = "NÚMERO DOCUMENTO:";
+            this.lblNumeroDocumento.Visible = false;
             // 
             // cbTipoDocumento
             // 
@@ -413,6 +421,7 @@
             this.cbTipoDocumento.Name = "cbTipoDocumento";
             this.cbTipoDocumento.Size = new System.Drawing.Size(299, 39);
             this.cbTipoDocumento.TabIndex = 17;
+            this.cbTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.cbTipoDocumento_SelectedIndexChanged);
             // 
             // lblTipoDocumento
             // 
@@ -488,6 +497,8 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(349, 38);
             this.txtApellido.TabIndex = 10;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -496,6 +507,8 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(349, 38);
             this.txtNombre.TabIndex = 9;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // frmRegistrarPersonas
             // 

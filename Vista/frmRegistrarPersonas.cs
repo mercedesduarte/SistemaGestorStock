@@ -57,7 +57,7 @@ namespace Vista
         {
             try
             {
-      
+
                 if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
                     throw new ArgumentException("Nombre y Apellido son campos obligatorios.");
 
@@ -100,7 +100,7 @@ namespace Vista
 
                 int idGenero = traerGenero.IdGenero;
 
-            
+
                 Logica.L_Registro logica = new Logica.L_Registro();
 
                 bool resultado = logica.RegistrarPersona(
@@ -145,5 +145,77 @@ namespace Vista
                 MessageBox.Show("Error inesperado: " + ex.Message, "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cbTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var seleccionado = cbTipoDocumento.SelectedItem?.ToString();
+
+            // Para DNI
+            if (seleccionado == "DNI")
+            {
+                txtNumeroDocumento.Visible = true;
+                lblNumeroDocumento.Visible = true;
+
+                txtCUIL.Visible = false;
+                lblCUIL.Visible = false;
+            }
+            // Para CUIL
+            else if (seleccionado == "CUIL")
+            {
+                txtCUIL.Visible = true;
+                lblCUIL.Visible = true;
+
+                txtNumeroDocumento.Visible = false;
+                lblNumeroDocumento.Visible = false;
+            }
+            // Si no es ninguno de los dos
+            else
+            {
+                txtNumeroDocumento.Visible = false;
+                lblNumeroDocumento.Visible = false;
+
+                txtCUIL.Visible = false;
+                lblCUIL.Visible = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloLetras(sender, e);
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloLetras(sender, e);
+        }
+
+        private void txtNumeroDocumento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
+        private void txtAltura_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigoPostal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+

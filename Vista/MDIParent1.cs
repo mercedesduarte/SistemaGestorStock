@@ -243,5 +243,10 @@ namespace Vista
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();
         }
+
+        private void modificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
