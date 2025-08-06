@@ -75,5 +75,10 @@ namespace Vista
         {
 
         }
+
+        private void cbPreguntas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

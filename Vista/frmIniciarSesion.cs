@@ -43,7 +43,7 @@ namespace Vista
 
 
 
-            bool loginValido = L_Login.LoginUsuario(usuario, contrasena, out idUsuario, out esAdmin, out rol);
+            bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
 
             if (loginValido)
             {
@@ -113,9 +113,9 @@ namespace Vista
 
             if (result == DialogResult.Yes)
             {
-                this.Close(); 
+                this.Close();
             }
-          
+
         }
 
         private void btnMostrarContra_Click(object sender, EventArgs e)
@@ -125,6 +125,26 @@ namespace Vista
             btnMostrarContra.Image = txtContrasena.UseSystemPasswordChar
                 ? Properties.Resources.nomoscon
                 : Properties.Resources.moscon;
+        }
+
+        private void lkbContraOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using (var UsuarioNombreForm = new frmUsuarioNombre())
+            {
+                if (UsuarioNombreForm.ShowDialog() == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    this.Show();
+                }
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

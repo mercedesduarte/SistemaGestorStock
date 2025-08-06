@@ -21,6 +21,9 @@ namespace Vista
 
         private void frmCrearRespuesta_Load(object sender, EventArgs e)
         {
+            string usuario = SesionUsuario.Usuario;
+            Console.WriteLine("ID DEL USUARIO EN LA SESION:" + SesionUsuario.Usuario);
+            
 
         }
 
@@ -74,7 +77,9 @@ namespace Vista
             }
 
             L_CambioObligatorio cambio = new L_CambioObligatorio();
+            Console.WriteLine("Id del usuario: " + SesionUsuario.Usuario);
             cambio.CambiaContra(SesionUsuario.Usuario, contra, confContra);
+
 
             MessageBox.Show(
                 "Contraseña cambiada exitosamente",

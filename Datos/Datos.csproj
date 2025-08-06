@@ -52,6 +52,7 @@
     <Compile Include="DTOs\PreguntaDTO.cs" />
     <Compile Include="DTOs\RolDTO.cs" />
     <Compile Include="DTOs\UsuarioDTO.cs" />
+    <Compile Include="D_BuscarUsuario.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_CambioObligatorio.cs" />
     <Compile Include="D_CrearRespuesta.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="D_ModificarUsuario.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
+    <Compile Include="D_ResponderRespuestas.cs" />
     <Compile Include="D_Restriccion.cs" />
     <Compile Include="D_Verificacion2FA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

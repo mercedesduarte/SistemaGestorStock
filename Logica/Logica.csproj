@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="L_BuscarUsuario.cs" />
     <Compile Include="L_Log.cs" />
     <Compile Include="L_ModificarUsuario.cs" />
     <Compile Include="L_CambioObligatorio.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="L_Login.cs" />
     <Compile Include="L_RegistrarUsuario.cs" />
     <Compile Include="L_Registro.cs" />
+    <Compile Include="L_ResponderRespuestas.cs" />
     <Compile Include="L_Restriccion.cs" />
     <Compile Include="L_Traer_Genero.cs" />
     <Compile Include="PreguntaVista.cs" />

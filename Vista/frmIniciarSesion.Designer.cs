@@ -34,6 +34,7 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lkbContraOlvidada = new System.Windows.Forms.LinkLabel();
             this.btnMostrarContra = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@ namespace Vista
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lkbContraOlvidada);
             this.groupBox1.Controls.Add(this.btnMostrarContra);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnIniciarSesion);
@@ -90,6 +92,18 @@ namespace Vista
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS PARA INICAR SESION";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lkbContraOlvidada
+            // 
+            this.lkbContraOlvidada.AutoSize = true;
+            this.lkbContraOlvidada.Location = new System.Drawing.Point(597, 285);
+            this.lkbContraOlvidada.Name = "lkbContraOlvidada";
+            this.lkbContraOlvidada.Size = new System.Drawing.Size(314, 32);
+            this.lkbContraOlvidada.TabIndex = 19;
+            this.lkbContraOlvidada.TabStop = true;
+            this.lkbContraOlvidada.Text = "OLVIDE MI CONTRASEÑA";
+            this.lkbContraOlvidada.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbContraOlvidada_LinkClicked);
             // 
             // btnMostrarContra
             // 
@@ -207,6 +221,7 @@ namespace Vista
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnMostrarContra;
+        private System.Windows.Forms.LinkLabel lkbContraOlvidada;
     }
 }
 

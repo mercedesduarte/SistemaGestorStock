@@ -10,6 +10,7 @@ namespace Logica
 {
     public class L_CambioObligatorio
     {
+
         public bool CambiaContra(string usuario, string contrasena, string confcontra)
         {
             DateTime fechaCambio = DateTime.Now;

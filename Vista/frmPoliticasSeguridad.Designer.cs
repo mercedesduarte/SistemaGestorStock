@@ -36,8 +36,6 @@
             this.chkCaracterEspecial = new System.Windows.Forms.CheckBox();
             this.chkNumerosLetras = new System.Windows.Forms.CheckBox();
             this.chkMayusMinus = new System.Windows.Forms.CheckBox();
-            this.cbPreguntas = new System.Windows.Forms.ComboBox();
-            this.lblPreguntas = new System.Windows.Forms.Label();
             this.nudMinCaracteres = new System.Windows.Forms.NumericUpDown();
             this.lblMinCaracteres = new System.Windows.Forms.Label();
             this.groupBoxAutenticacion = new System.Windows.Forms.GroupBox();
@@ -71,8 +69,6 @@
             this.groupBoxPoliticas.Controls.Add(this.chkCaracterEspecial);
             this.groupBoxPoliticas.Controls.Add(this.chkNumerosLetras);
             this.groupBoxPoliticas.Controls.Add(this.chkMayusMinus);
-            this.groupBoxPoliticas.Controls.Add(this.cbPreguntas);
-            this.groupBoxPoliticas.Controls.Add(this.lblPreguntas);
             this.groupBoxPoliticas.Controls.Add(this.nudMinCaracteres);
             this.groupBoxPoliticas.Controls.Add(this.lblMinCaracteres);
             this.groupBoxPoliticas.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,31 +130,9 @@
             this.chkMayusMinus.Text = "COMBINAR MAYÚSCULAS Y MINÚSCULAS";
             this.chkMayusMinus.UseVisualStyleBackColor = true;
             // 
-            // cbPreguntas
-            // 
-            this.cbPreguntas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPreguntas.FormattingEnabled = true;
-            this.cbPreguntas.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "5"});
-            this.cbPreguntas.Location = new System.Drawing.Point(402, 95);
-            this.cbPreguntas.Name = "cbPreguntas";
-            this.cbPreguntas.Size = new System.Drawing.Size(60, 39);
-            this.cbPreguntas.TabIndex = 3;
-            // 
-            // lblPreguntas
-            // 
-            this.lblPreguntas.AutoSize = true;
-            this.lblPreguntas.Location = new System.Drawing.Point(20, 98);
-            this.lblPreguntas.Name = "lblPreguntas";
-            this.lblPreguntas.Size = new System.Drawing.Size(344, 32);
-            this.lblPreguntas.TabIndex = 2;
-            this.lblPreguntas.Text = "PREGUNTAS DE SEGURIDAD";
-            // 
             // nudMinCaracteres
             // 
-            this.nudMinCaracteres.Location = new System.Drawing.Point(402, 51);
+            this.nudMinCaracteres.Location = new System.Drawing.Point(400, 68);
             this.nudMinCaracteres.Maximum = new decimal(new int[] {
             20,
             0,
@@ -182,7 +156,7 @@
             // lblMinCaracteres
             // 
             this.lblMinCaracteres.AutoSize = true;
-            this.lblMinCaracteres.Location = new System.Drawing.Point(20, 57);
+            this.lblMinCaracteres.Location = new System.Drawing.Point(18, 74);
             this.lblMinCaracteres.Name = "lblMinCaracteres";
             this.lblMinCaracteres.Size = new System.Drawing.Size(314, 32);
             this.lblMinCaracteres.TabIndex = 0;
@@ -286,9 +260,7 @@
         private System.Windows.Forms.CheckBox chkCaracterEspecial;
         private System.Windows.Forms.CheckBox chkNumerosLetras;
         private System.Windows.Forms.CheckBox chkMayusMinus;
-        private System.Windows.Forms.ComboBox cbPreguntas;
         private System.Windows.Forms.NumericUpDown nudMinCaracteres;
-        private System.Windows.Forms.Label lblPreguntas;
         private System.Windows.Forms.Label lblMinCaracteres;
         private System.Windows.Forms.GroupBox groupBoxAutenticacion;
         private System.Windows.Forms.CheckBox chkAutenticacionDoble;
