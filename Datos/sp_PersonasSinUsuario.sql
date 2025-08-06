@@ -1,14 +1,4 @@
-USE [BD_GESTION]
-GO
-
-/****** Object:  StoredProcedure [dbo].[sp_PersonasSinUsuario]    Script Date: 29/7/2025 23:09:21 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-ALTER PROCEDURE [dbo].[sp_PersonasSinUsuario]
+CREATE PROCEDURE sp_PersonasSinUsuario
 AS
 BEGIN
     SET NOCOUNT ON;

@@ -1,13 +1,3 @@
-USE [BD_GESTION]
-GO
-
-/****** Object:  Table [dbo].[Codigos2FA]    Script Date: 28/7/2025 00:09:14 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
 CREATE TABLE [dbo].[Codigos2FA](
 	[Id_Codigo2FA] [int] IDENTITY(1,1) NOT NULL,
 	[Id_Usuario] [int] NOT NULL,

@@ -155,3 +155,12 @@ Respuesta NVARCHAR(50) NOT NULL,
 FOREIGN KEY(Id_Pregunta) REFERENCES Preguntas(Id_Pregunta),
 FOREIGN KEY(Id_Usuario) REFERENCES Usuarios(Id_Usuario),
 );
+
+CREATE TABLE Logs(
+    Id_Log INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    Id_Usuario INT NOT NULL,
+    Usuario NVARCHAR(50) NOT NULL,
+    Accion NVARCHAR(200) NOT NULL,
+    Fecha DATETIME DEFAULT GETDATE() NULL,
+    CONSTRAINT FK_Logs_Usuarios FOREIGN KEY (Id_Usuario) REFERENCES dbo.Usuarios(Id_Usuario)
+);
