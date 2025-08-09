@@ -224,3 +224,10 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources
 D:\programacion\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmResponderRespuesta.resources
 C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmUsuarioNombre.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmCambiarContra.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmEditarUsuario.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmLogs.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmResponderRespuesta.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmUsuarioNombre.resources
+C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmMensajes.resources

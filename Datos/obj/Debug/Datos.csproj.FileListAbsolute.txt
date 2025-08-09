@@ -74,3 +74,5 @@ C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.dll
 C:\Users\Gtsv\Desktop\SistemaGestion\Datos\bin\Debug\Sesion.pdb
 D:\programacion\SistemaGestion\Datos\bin\Debug\Sesion.dll
 D:\programacion\SistemaGestion\Datos\bin\Debug\Sesion.pdb
+C:\Users\Gerof\SistemaGestion\Datos\bin\Debug\Sesion.dll
+C:\Users\Gerof\SistemaGestion\Datos\bin\Debug\Sesion.pdb

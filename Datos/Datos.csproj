@@ -64,6 +64,7 @@
     <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_ListarUsuarios.cs" />
     <Compile Include="D_Login.cs" />
+    <Compile Include="D_Mensajes.cs" />
     <Compile Include="D_ModificarUsuario.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />

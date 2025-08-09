@@ -44,7 +44,7 @@ namespace Vista
 
 
             bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
-
+      
             if (loginValido)
             {
                 SesionUsuario.Usuario = usuario;

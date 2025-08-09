@@ -198,7 +198,7 @@ namespace Vista
 
         private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Verifica si ya hay una instancia del formulario abierta
+
             foreach (Form form in this.MdiChildren)
             {
                 if (form is frmListadoUsuarios)
@@ -209,9 +209,9 @@ namespace Vista
                 }
             }
 
-            // Si no existe una instancia, crear y mostrar una nueva
+
             frmListadoUsuarios formularioListado = new frmListadoUsuarios();
-            formularioListado.MdiParent = this; // Asignar el formulario MDI padre
+            formularioListado.MdiParent = this;
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();
         }
@@ -248,5 +248,36 @@ namespace Vista
         {
 
         }
+
+        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarUsuarios)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmMensajes formularioRegistrar = new frmMensajes();
+            formularioRegistrar.MdiParent = this;
+            formularioRegistrar.WindowState = FormWindowState.Maximized;
+            formularioRegistrar.Show();
+        }
+
+        private void MDIParent1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

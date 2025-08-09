@@ -46,6 +46,7 @@
             this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.lblHoras = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -210,21 +211,34 @@
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblRol});
-            this.statusStrip.Location = new System.Drawing.Point(0, 514);
+            this.lblRol,
+            this.toolStripMenuItem1});
+            this.statusStrip.Location = new System.Drawing.Point(0, 510);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1355, 44);
+            this.statusStrip.Size = new System.Drawing.Size(1355, 48);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
+            this.statusStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip_ItemClicked);
             // 
             // lblRol
             // 
             this.lblRol.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.Name = "lblRol";
             this.lblRol.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.lblRol.Size = new System.Drawing.Size(71, 38);
+            this.lblRol.Size = new System.Drawing.Size(71, 42);
             this.lblRol.Text = "Rol";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(156, 48);
+            this.toolStripMenuItem1.Text = "MENSAJES";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // lblHoras
             // 
@@ -287,6 +301,7 @@
             this.Name = "MDIParent1";
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MDIParent1_Load_1);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -320,6 +335,7 @@
         private System.Windows.Forms.ToolStripMenuItem AgregarPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListarPersonasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
