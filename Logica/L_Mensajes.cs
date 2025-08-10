@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MensajeriaApp.Logica
 {
-    public class MensajeBLL
+    public class L_Mensajes
     {
-        private MensajeDAL dal = new MensajeDAL();
+        private D_Mensajes dal = new D_Mensajes();
 
         public void Enviar(int emisorId, int receptorId, string mensaje)
         {
@@ -24,5 +24,11 @@ namespace MensajeriaApp.Logica
         {
             return dal.ObtenerMensajes(usuarioId);
         }
+
+        public DataTable ObtenerConversacion(int usuario1Id, int usuario2Id)
+        {
+            return dal.ObtenerConversacion(usuario1Id, usuario2Id);
+        }
+
     }
 }

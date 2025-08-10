@@ -5,7 +5,7 @@ using Datos.Conecction;
 
 namespace MensajeriaApp.Datos
 {
-    public class MensajeDAL
+    public class D_Mensajes
     {
         public void EnviarMensaje(int emisorId, int receptorId, string contenido)
         {
@@ -34,6 +34,24 @@ namespace MensajeriaApp.Datos
                 da.Fill(tabla);
                 return tabla;
             }
+        }
+
+        public DataTable ObtenerConversacion(int usuario1Id, int usuario2Id)
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection conn = ConnectionBD.ObtenerConexion())
+            using (SqlCommand cmd = new SqlCommand("sp_ObtenerConversacion", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Usuario1", usuario1Id);
+                cmd.Parameters.AddWithValue("@Usuario2", usuario2Id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+            }
+
+            return tabla;
         }
     }
 }
