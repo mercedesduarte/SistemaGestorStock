@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="L_BuscarUsuario.cs" />
+    <Compile Include="L_ListarPersonas.cs" />
     <Compile Include="L_Log.cs" />
     <Compile Include="L_Mensajes.cs" />
     <Compile Include="L_ModificarUsuario.cs" />

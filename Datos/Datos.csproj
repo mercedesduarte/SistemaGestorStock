@@ -60,6 +60,7 @@
     <Compile Include="D_CrearPregunta.cs" />
     <Compile Include="D_Lista.cs" />
     <Compile Include="D_ListarLogs.cs" />
+    <Compile Include="D_ListarPersonas.cs" />
     <Compile Include="D_ListarPreguntas.cs" />
     <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_ListarUsuarios.cs" />

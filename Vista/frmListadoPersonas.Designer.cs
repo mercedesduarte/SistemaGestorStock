@@ -72,7 +72,7 @@
             this.dgvPersonas.EnableHeadersVisualStyles = false;
             this.dgvPersonas.GridColor = System.Drawing.Color.White;
             this.dgvPersonas.Location = new System.Drawing.Point(16, 118);
-            this.dgvPersonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPersonas.Name = "dgvPersonas";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,9 +99,10 @@
             this.ControlBox = false;
             this.Controls.Add(this.dgvPersonas);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListadoPersonas";
             this.Text = "frmListadoPersonas";
+            this.Load += new System.EventHandler(this.frmListadoPersonas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             this.ResumeLayout(false);
 
