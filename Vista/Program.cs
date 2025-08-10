@@ -1,40 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vista
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Mostrar Form1 como ventana de login
-            frmIniciarSesion form1 = new frmIniciarSesion();
-            DialogResult result = form1.ShowDialog();
+            bool loggedIn = false;
+            string rol = null;
 
-            // Si el login fue exitoso
-            if (result == DialogResult.OK)
+            while (!loggedIn)
             {
-                // Obtener el rol desde la propiedad Tag
-                string rol = form1.Tag?.ToString();
+                using (frmIniciarSesion loginForm = new frmIniciarSesion())
+                {
+                    DialogResult result = loginForm.ShowDialog();
+                    rol = loginForm.Tag?.ToString();
 
-                // Iniciar la aplicación con el formulario MDI
-                Application.Run(new MDIParent1(rol));
+                    if (result == DialogResult.OK && rol != null)
+                    {
+                        loggedIn = true;
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                      
+                        Application.Exit();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se te llevara al inicio de sesion.", "Login Fallido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
-            else
-            {
-                // Si se canceló el login o fue incorrecto, salir de la aplicación
-                Application.Exit();
-            }
+
+            Application.Run(new MDIParent1(rol));
         }
     }
 }

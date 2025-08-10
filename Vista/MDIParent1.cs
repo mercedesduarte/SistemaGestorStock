@@ -36,7 +36,20 @@ namespace Vista
 
         private void AplicarPermisosPorRol(string rol)
         {
-            switch (rol.ToLower())
+
+
+            if (rol == null)
+            {
+
+                frmIniciarSesion loginForm = new frmIniciarSesion();
+                loginForm.Show();
+
+                this.Close();
+
+                return;
+            }
+
+                switch (rol.ToLower())
             {
                 case "administrador":
             
