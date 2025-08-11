@@ -13,6 +13,23 @@ namespace Logica
     {
         private D_BuscarUsuario dBuscarUsuario = new D_BuscarUsuario();
 
+        public string BuscarConMail(int idUsuario)
+        {
+            if (idUsuario <= 0)
+                throw new ArgumentException("IdUsuario debe ser mayor que cero.");
+
+            string email = dBuscarUsuario.ObtenerCorreoPorIdUsuario(idUsuario);
+
+            if (string.IsNullOrEmpty(email))
+            {
+                Console.WriteLine($"No se encontró correo para el IdUsuario {idUsuario}");
+                return null;
+            }
+
+            Console.WriteLine($"Email obtenido: {email}");
+            return email;
+        }
+
         public ResultadoUsuario BuscarUsuario(string usuarioIngresado)
         {
             if (string.IsNullOrWhiteSpace(usuarioIngresado))

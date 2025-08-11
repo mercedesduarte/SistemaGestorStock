@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="L_BuscarUsuario.cs" />
+    <Compile Include="L_CrearCodigo2FA.cs" />
     <Compile Include="L_ListarPersonas.cs" />
     <Compile Include="L_Log.cs" />
     <Compile Include="L_Mensajes.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="L_ResponderRespuestas.cs" />
     <Compile Include="L_Restriccion.cs" />
     <Compile Include="L_Traer_Genero.cs" />
+    <Compile Include="L_VerificarCodigo2FA.cs" />
     <Compile Include="PreguntaVista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="L_ResponderPreguntas.cs" />

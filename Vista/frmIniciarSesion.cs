@@ -57,6 +57,27 @@ namespace Vista
                 {
                     Logica.L_Logs logicaLogs = new Logica.L_Logs();
                     logicaLogs.InsertarLog(usuario, "Inicio de sesión");
+                    // Mostrar el formulario de doble autenticación si esta activado en el admin    
+                    L_Restriccion Restriccion = new L_Restriccion();
+                    EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
+                    if (estado.DosFA == 1)
+                    {
+                        // Mostrar el formulario de doble autenticación
+                        MessageBox.Show("Se requiere autenticación de dos factores.", "Autenticación requerida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frm2FA dobleAutenticacionForm = new frm2FA();
+                        dobleAutenticacionForm.Id_Usuario = idUsuario;
+                        DialogResult res = dobleAutenticacionForm.ShowDialog();
+                        if (res != DialogResult.OK)
+                        {
+                            MessageBox.Show("Autenticación fallida. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        // Si no se requiere autenticación de dos factores, continuar con el flujo normal
+                        MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 catch (Exception ex)
                 {

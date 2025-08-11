@@ -77,7 +77,6 @@ namespace Vista
             }
 
             L_CambioObligatorio cambio = new L_CambioObligatorio();
-            Console.WriteLine("Id del usuario: " + SesionUsuario.Usuario);
             cambio.CambiaContra(SesionUsuario.Usuario, contra, confContra);
 
 
@@ -118,6 +117,11 @@ namespace Vista
             btnMostrarContraC.Image = txtConfContra.UseSystemPasswordChar
                 ? Properties.Resources.nomoscon
                 : Properties.Resources.moscon;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close( );
         }
     }
 }

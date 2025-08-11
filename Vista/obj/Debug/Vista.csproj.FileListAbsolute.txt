@@ -231,3 +231,5 @@ C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmResponderPreguntas.resour
 C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmResponderRespuesta.resources
 C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmUsuarioNombre.resources
 C:\Users\Gerof\SistemaGestion\Vista\obj\Debug\Vista.frmMensajes.resources
+C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frmMensajes.resources
+C:\Users\Gtsv\Desktop\SistemaGestion\Vista\obj\Debug\Vista.frm2FA.resources

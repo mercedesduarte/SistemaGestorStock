@@ -55,6 +55,7 @@
     <Compile Include="D_BuscarUsuario.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_CambioObligatorio.cs" />
+    <Compile Include="D_CrearCodigo2Autenticacion.cs" />
     <Compile Include="D_CrearRespuesta.cs" />
     <Compile Include="D_HistorialContras.cs" />
     <Compile Include="D_CrearPregunta.cs" />

@@ -120,6 +120,7 @@ namespace Vista
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnCambiarContra
             // 
