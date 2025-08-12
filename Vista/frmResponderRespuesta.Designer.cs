@@ -32,11 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblProgreso = new System.Windows.Forms.Label();
             this.lblPreguntaLista = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.lblUsuario);
             this.groupBox1.Controls.Add(this.txtRespuesta);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(4, 96);
+            this.groupBox1.Location = new System.Drawing.Point(4, 95);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -76,6 +76,42 @@
             this.lblPreguntaLista.Size = new System.Drawing.Size(29, 32);
             this.lblPreguntaLista.TabIndex = 15;
             this.lblPreguntaLista.Text = " ";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(772, 235);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(185, 55);
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // btnResponderPregunta
+            // 
+            this.btnResponderPregunta.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnResponderPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResponderPregunta.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnResponderPregunta.Image = ((System.Drawing.Image)(resources.GetObject("btnResponderPregunta.Image")));
+            this.btnResponderPregunta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnResponderPregunta.Location = new System.Drawing.Point(120, 235);
+            this.btnResponderPregunta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResponderPregunta.Name = "btnResponderPregunta";
+            this.btnResponderPregunta.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.btnResponderPregunta.Size = new System.Drawing.Size(251, 55);
+            this.btnResponderPregunta.TabIndex = 13;
+            this.btnResponderPregunta.Text = "RESPONDER";
+            this.btnResponderPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResponderPregunta.UseVisualStyleBackColor = false;
+            this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
             // lblUsuario
             // 
@@ -109,46 +145,14 @@
             this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(772, 235);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(185, 55);
-            this.btnCerrar.TabIndex = 14;
-            this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            // 
-            // btnResponderPregunta
-            // 
-            this.btnResponderPregunta.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnResponderPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResponderPregunta.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnResponderPregunta.Image = ((System.Drawing.Image)(resources.GetObject("btnResponderPregunta.Image")));
-            this.btnResponderPregunta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnResponderPregunta.Location = new System.Drawing.Point(120, 235);
-            this.btnResponderPregunta.Margin = new System.Windows.Forms.Padding(4);
-            this.btnResponderPregunta.Name = "btnResponderPregunta";
-            this.btnResponderPregunta.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
-            this.btnResponderPregunta.Size = new System.Drawing.Size(251, 55);
-            this.btnResponderPregunta.TabIndex = 13;
-            this.btnResponderPregunta.Text = "RESPONDER";
-            this.btnResponderPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResponderPregunta.UseVisualStyleBackColor = false;
-            this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
-            // 
             // frmResponderRespuesta
             // 
+            this.AcceptButton = this.btnResponderPregunta;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(1071, 440);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmResponderRespuesta";

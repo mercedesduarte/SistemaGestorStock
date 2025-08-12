@@ -119,6 +119,7 @@ namespace Vista
             // 
             this.btnSalir.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -189,9 +190,11 @@ namespace Vista
             // 
             // frmIniciarSesion
             // 
+            this.AcceptButton = this.btnIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(1037, 564);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);

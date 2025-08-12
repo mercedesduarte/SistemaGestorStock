@@ -74,6 +74,7 @@
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,9 +127,11 @@
             // 
             // frmPreguntasDeSeguridad
             // 
+            this.AcceptButton = this.btnCrearPregunta;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(855, 500);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);

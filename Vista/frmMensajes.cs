@@ -109,5 +109,44 @@ namespace Vista
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if (listPersonas.SelectedValue == null || !int.TryParse(listPersonas.SelectedValue.ToString(), out int receptorId))
+            {
+                MessageBox.Show("Seleccione un usuario para enviar el mensaje.");
+                return;
+            }
+
+            string mensaje = txtMensaje.Text.Trim();
+            if (string.IsNullOrEmpty(mensaje))
+            {
+                MessageBox.Show("El mensaje no puede estar vacío.");
+                return;
+            }
+
+            try
+            {
+                logicaMensajes.Enviar(SesionUsuario.IdUsuario, receptorId, mensaje);
+                MessageBox.Show("Mensaje enviado correctamente.");
+                txtMensaje.Clear();
+
+                CargarMensajes(receptorId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al enviar mensaje: " + ex.Message);
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();  
+        }
     }
 }

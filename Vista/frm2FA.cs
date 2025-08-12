@@ -8,7 +8,6 @@ namespace Vista
     public partial class frm2FA : Form
     {
         public int Id_Usuario { get; set; }
-
         public frm2FA()
         {
             InitializeComponent();
@@ -26,7 +25,8 @@ namespace Vista
             L_BuscarUsuario logicaBuscar = new L_BuscarUsuario();
 
             // Obtener el correo del usuario
-            string correo = logicaBuscar.BuscarConMail(Id_Usuario);
+            string correo = logicaBuscar.ObtenerCorreoPorId(Id_Usuario);
+
 
             if (string.IsNullOrEmpty(correo))
             {
@@ -48,7 +48,17 @@ namespace Vista
             MessageBox.Show("Código enviado al correo: " + correo);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string codigoIngresado = textBox1.Text.Trim();
 
@@ -60,25 +70,33 @@ namespace Vista
 
             L_VerificarCodigo2FA logicaVerificar = new L_VerificarCodigo2FA();
 
-            // Cambio: Modifico L_VerificarCodigo2FA para que VerificarCodigo devuelva bool
+
             bool esValido = logicaVerificar.VerificarCodigo(Id_Usuario, codigoIngresado);
 
             if (esValido)
             {
                 MessageBox.Show("Código verificado correctamente.");
 
-                this.DialogResult = DialogResult.OK;
+                frmCambiarContra formcc = new frmCambiarContra();
 
-                // Cerramos el formulario actual para volver al formulario anterior (login)
-                this.Close();
+                this.Hide();
 
-                // Acá podés seguir con la lógica después de validar (cerrar formulario, abrir siguiente paso, etc)
+                DialogResult res = formcc.ShowDialog();
+
+                if (res == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                }
             }
             else
             {
                 MessageBox.Show("Código incorrecto. Intente nuevamente.");
             }
         }
-
     }
 }

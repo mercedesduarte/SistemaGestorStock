@@ -7,47 +7,79 @@ namespace Vista
 {
     public partial class frmUsuarioNombre : Form
     {
-        private L_BuscarUsuario logicaBuscarUsuario = new L_BuscarUsuario();
+        private L_BuscarUsuario logicaBuscar = new L_BuscarUsuario();
 
         public frmUsuarioNombre()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmUsuarioNombre_Load(object sender, EventArgs e)
         {
-            string usuarioIngresado = txtNombreUsuario.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(usuarioIngresado))
-            {
-                MessageBox.Show("Por favor, ingrese un nombre de usuario.");
-                return;
-            }
+        }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
             try
             {
-                var resultado = logicaBuscarUsuario.BuscarUsuario(usuarioIngresado);
+                string nombreUsuario = txtNombreUsuario.Text.Trim();
 
-                if (!resultado.Existe)
+                int? idUsuario = logicaBuscar.ObtenerIdPorUsuario(nombreUsuario);
+
+                if (!idUsuario.HasValue || idUsuario <= 0)
                 {
-                    MessageBox.Show("Usuario no encontrado. Intente nuevamente.");
+                    MessageBox.Show("Usuario no encontrado.");
                     return;
                 }
 
-                SesionUsuario.Usuario = usuarioIngresado;
+                string correo = logicaBuscar.ObtenerCorreoPorId(idUsuario.Value);
+
+                if (string.IsNullOrEmpty(correo))
+                {
+                    MessageBox.Show("No se encontró correo para el usuario.");
+                    return;
+                }
+
+                string codigo = GeneradorContraseña.Generar(6);
+
+                L_VerificarCodigo2FA logica2FA = new L_VerificarCodigo2FA();
+                var (codigoGenerado, idCodigo2FA) = logica2FA.CrearCodigo2FA(idUsuario.Value, codigo);
+
+                if (idCodigo2FA == 0)
+                {
+                    MessageBox.Show("Error al generar código 2FA.");
+                    return;
+                }
+
+                Sesion.ArmarMail.DireccionCorreo = correo;
+                Sesion.ArmarMail.Asunto = "Credenciales de acceso - Sistema de Gestión";
+                Sesion.ArmarMail.ContrasenaSistema = codigoGenerado;
+                Sesion.ArmarMail.Preparar();
+
+                MessageBox.Show($"Correo enviado a: {correo} con código 2FA ID: {idCodigo2FA}");
+
+                frm2FA form2fa = new frm2FA
+                {
+                    Id_Usuario = idUsuario.Value
+                };
 
                 this.Hide();
-                frmResponderRespuesta responderForm = new frmResponderRespuesta();
-                DialogResult res = responderForm.ShowDialog();
+
+                DialogResult res = form2fa.ShowDialog();
 
                 if (res == DialogResult.OK)
                 {
-                    MessageBox.Show("Respuestas correctas. Puedes continuar.");
                     this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Respuestas incorrectas o proceso cancelado.");
                     this.Show();
                 }
             }
@@ -57,8 +89,5 @@ namespace Vista
             }
         }
 
-        private void frmUsuarioNombre_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

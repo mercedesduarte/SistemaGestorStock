@@ -438,6 +438,7 @@
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -456,6 +457,7 @@
             // 
             this.btnCrearPersona.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCrearPersona.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrearPersona.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCrearPersona.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrearPersona.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearPersona.Image")));
             this.btnCrearPersona.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -512,9 +514,11 @@
             // 
             // frmRegistrarPersonas
             // 
+            this.AcceptButton = this.btnCrearPersona;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(1123, 1002);
             this.ControlBox = false;
             this.Controls.Add(this.label1);

@@ -41,7 +41,7 @@ namespace Vista
 
             string contrasenaHasheada = HashconUsu.Hashconusu(usuario, contrasena);
 
-
+           
 
             bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
       

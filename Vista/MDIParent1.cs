@@ -283,11 +283,17 @@ namespace Vista
 
             frmMensajes formularioRegistrar = new frmMensajes();
             formularioRegistrar.MdiParent = this;
-            formularioRegistrar.WindowState = FormWindowState.Maximized;
+            formularioRegistrar.StartPosition = FormStartPosition.Manual;
             formularioRegistrar.Show();
+
         }
 
         private void MDIParent1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

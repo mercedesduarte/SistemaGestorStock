@@ -5,9 +5,9 @@ using Datos.Conecction;
 
 namespace Datos
 {
-    public class D_Verificacion2FA
-    {
-        public string GenerarCodigo(int idUsuario)
+        public class D_Verificacion2FA
+        {
+        public (string CodigoGenerado, int IdCodigo2FA) CrearCodigo2FA(int idUsuario, string codigoGenerado)
         {
             try
             {
@@ -19,26 +19,30 @@ namespace Datos
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                        cmd.Parameters.AddWithValue("@CodigoGenerado", codigoGenerado);
 
-                        SqlParameter output = new SqlParameter("@CodigoGenerado", SqlDbType.NVarChar, 6)
+                        SqlParameter outputId = new SqlParameter("@IdCodigo2FA", SqlDbType.Int)
                         {
                             Direction = ParameterDirection.Output
                         };
-                        cmd.Parameters.Add(output);
+                        cmd.Parameters.Add(outputId);
 
                         cmd.ExecuteNonQuery();
-                        return output.Value.ToString();
+
+                        int idCodigo2FA = Convert.ToInt32(outputId.Value);
+
+                        return (codigoGenerado, idCodigo2FA);
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al generar el código 2FA: " + ex.Message);
-                return null;
+                Console.WriteLine("Error al crear código 2FA: " + ex.Message);
+                return (null, 0);
             }
         }
 
-        public bool ValidarCodigoIngresado(int idUsuario, string codigoIngresado)
+            public bool ValidarCodigoIngresado(int idUsuario, string codigoIngresado)
         {
             try
             {

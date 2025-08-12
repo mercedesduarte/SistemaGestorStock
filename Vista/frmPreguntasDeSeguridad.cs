@@ -25,6 +25,7 @@ namespace Vista
 
         private void btnCrearPregunta_Click(object sender, EventArgs e)
         {
+            AcceptButton.PerformClick();
             string pregunta = txtPregunta.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(pregunta))
@@ -57,6 +58,7 @@ namespace Vista
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            CancelButton.PerformClick();
             this.Close();
         }
     }

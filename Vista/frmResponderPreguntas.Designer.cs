@@ -84,6 +84,7 @@ namespace Vista
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,6 +103,7 @@ namespace Vista
             // 
             this.btnResponderPregunta.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnResponderPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResponderPregunta.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnResponderPregunta.ForeColor = System.Drawing.SystemColors.Control;
             this.btnResponderPregunta.Image = ((System.Drawing.Image)(resources.GetObject("btnResponderPregunta.Image")));
             this.btnResponderPregunta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -153,6 +155,7 @@ namespace Vista
             this.AcceptButton = this.btnResponderPregunta;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(1089, 487);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
