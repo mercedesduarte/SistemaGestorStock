@@ -235,6 +235,7 @@
             // 
             // cbSexo
             // 
+            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
@@ -413,6 +414,7 @@
             // 
             // cbTipoDocumento
             // 
+            this.cbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoDocumento.Items.AddRange(new object[] {
             "DNI",
             "CUIL"});

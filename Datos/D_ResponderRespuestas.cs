@@ -84,6 +84,7 @@ namespace Datos
                 }
             }
 
+            Console.WriteLine("El id del usuario que responde respuestas es: " + usuario);
             mensaje = "Todas las respuestas son correctas.";
             return true;
         }

@@ -27,13 +27,12 @@ namespace Vista
                     }
                     else if (result == DialogResult.Cancel)
                     {
-                      
                         Application.Exit();
                         return;
                     }
                     else
                     {
-                        MessageBox.Show("Se te llevara al inicio de sesion.", "Login Fallido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Se te llevará al inicio de sesión nuevamente.", "Login Fallido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

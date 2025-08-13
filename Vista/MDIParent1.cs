@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sesion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -293,7 +294,36 @@ namespace Vista
 
         }
 
-        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Limpiar sesión
+            SesionUsuario.Usuario = null;
+            SesionUsuario.IdUsuario = 0;
+            SesionUsuario.EsAdmin = false;
+            SesionUsuario.Rol = null;
+
+            // Ocultar MDI mientras se muestra el login
+            this.Hide();
+
+            using (frmIniciarSesion loginForm = new frmIniciarSesion())
+            {
+                DialogResult res = loginForm.ShowDialog();
+
+                if (res == DialogResult.OK && loginForm.Tag != null)
+                {
+                    // Login correcto: actualizar rol y mostrar MDI de nuevo
+                    this.AplicarPermisosPorRol(loginForm.Tag.ToString());
+                    this.Show();
+                }
+                else
+                {
+                    // Login cancelado o fallido: cerrar la aplicación
+                    Application.Exit();
+                }
+            }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
         }

@@ -22,9 +22,9 @@ namespace Vista
         private void frmCrearRespuesta_Load(object sender, EventArgs e)
         {
             string usuario = SesionUsuario.Usuario;
-            Console.WriteLine("ID DEL USUARIO EN LA SESION:" + SesionUsuario.Usuario);
-            
 
+            Console.WriteLine("Usuario en sesión: " + SesionUsuario.Usuario);
+            Console.WriteLine("IdUsuario en sesión: " + SesionUsuario.IdUsuario);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -76,8 +76,31 @@ namespace Vista
                 return;
             }
 
+            L_HistorialContras l = new L_HistorialContras();
+            var historial = l.HistorialDeContrasenas(SesionUsuario.Usuario);
+
+            if (historial != null && historial.Count > 0)
+            {
+                bool encontrada = false;
+
+                foreach (var contras in historial)
+                {
+                    if (contras.Value == contra)
+                    {
+                        encontrada = true;
+                        break;
+                    }
+
+                    if (encontrada)
+                    {
+                        MessageBox.Show("La contraseña ya fue utilizada anteriormente.");
+                    }
+                }
+            }
+
             L_CambioObligatorio cambio = new L_CambioObligatorio();
-            cambio.CambiaContra(SesionUsuario.Usuario, contra, confContra);
+            cambio.CambiaContra(SesionUsuario.IdUsuario, SesionUsuario.Usuario, contra, confContra);
+
 
 
             MessageBox.Show(

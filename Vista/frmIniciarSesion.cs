@@ -33,7 +33,7 @@ namespace Vista
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
+            string usuario = txtUsuario.Text.Trim();
             string contrasena = txtContrasena.Text;
             string rol;
             bool esAdmin;
@@ -41,86 +41,63 @@ namespace Vista
 
             string contrasenaHasheada = HashconUsu.Hashconusu(usuario, contrasena);
 
-           
-
             bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
-      
-            if (loginValido)
+
+            if (!loginValido)
             {
-                SesionUsuario.Usuario = usuario;
-                SesionUsuario.EsAdmin = esAdmin;
-                SesionUsuario.Rol = rol;
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                this.Tag = rol;
+            SesionUsuario.Usuario = usuario;
+            SesionUsuario.IdUsuario = idUsuario;
+            SesionUsuario.EsAdmin = esAdmin;
+            SesionUsuario.Rol = rol;
 
-                try
-                {
-                    Logica.L_Logs logicaLogs = new Logica.L_Logs();
-                    logicaLogs.InsertarLog(usuario, "Inicio de sesión");
-                    // Mostrar el formulario de doble autenticación si esta activado en el admin    
-                    L_Restriccion Restriccion = new L_Restriccion();
-                    EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
-                    if (estado.DosFA == 1)
-                    {
-                        // Mostrar el formulario de doble autenticación
-                        MessageBox.Show("Se requiere autenticación de dos factores.", "Autenticación requerida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frm2FA dobleAutenticacionForm = new frm2FA();
-                        dobleAutenticacionForm.Id_Usuario = idUsuario;
-                        DialogResult res = dobleAutenticacionForm.ShowDialog();
-                        if (res != DialogResult.OK)
-                        {
-                            MessageBox.Show("Autenticación fallida. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        // Si no se requiere autenticación de dos factores, continuar con el flujo normal
-                        MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar log: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            try
+            {
+                Logica.L_Logs logicaLogs = new Logica.L_Logs();
+                logicaLogs.InsertarLog(usuario, "Inicio de sesión");
 
-                Logica.L_HistorialContras l = new Logica.L_HistorialContras();
-                var historial = l.HistorialDeContrasenas(usuario);
-
-                if (historial == null)
+                L_Restriccion Restriccion = new L_Restriccion();
+                EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
+                if (estado.DosFA == 1)
                 {
-                    this.Hide();
-                    frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
-                    DialogResult res = cambiarContrasenaForm.ShowDialog();
-                    if (res == DialogResult.OK)
+                    frm2FA dobleAutenticacionForm = new frm2FA();
+                    dobleAutenticacionForm.Id_Usuario = idUsuario;
+                    DialogResult res2FA = dobleAutenticacionForm.ShowDialog();
+                    if (res2FA != DialogResult.OK)
                     {
-                        this.DialogResult = DialogResult.OK;
+                        MessageBox.Show("Autenticación fallida. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-                    else
-                    {
-                        this.Show();
-                    }
-                }
-                else
-                {
-                    this.Tag = rol;
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "Usuario o contraseña incorrectos",
-                    "Error de autenticación",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-
-                Console.WriteLine("Intento fallido de inicio de sesión para el usuario: " + contrasenaHasheada);
+                MessageBox.Show("Error al guardar log: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Historial de contraseñas
+            Logica.L_HistorialContras l = new Logica.L_HistorialContras();
+            var historial = l.HistorialDeContrasenas(usuario);
+
+            if (historial == null)
+            {
+                this.Hide();
+                frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
+                DialogResult res = cambiarContrasenaForm.ShowDialog();
+                if (res != DialogResult.OK)
+                {
+                    this.Show();
+                    return;
+                }
+            }
+
+            // Login exitoso
+            this.Tag = rol;
+            this.DialogResult = DialogResult.OK;
         }
-
 
 
         private void btnSalir_Click(object sender, EventArgs e)

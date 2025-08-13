@@ -2,7 +2,6 @@
 using Sesion;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Vista
@@ -23,7 +22,6 @@ namespace Vista
         private void frmResponderRespuesta_Load(object sender, EventArgs e)
         {
             string usuario = SesionUsuario.Usuario;
-
             preguntas = logica.ObtenerRespuestasDelUsuario(usuario);
 
             if (preguntas == null || preguntas.Count == 0)
@@ -42,33 +40,38 @@ namespace Vista
             {
                 lblPreguntaLista.Text = preguntas[indiceActual].Pregunta;
                 txtRespuesta.Clear();
+                txtRespuesta.Focus();
             }
             else
             {
-                string mensaje;
-                bool valido = logica.ValidarRespuestas(SesionUsuario.Usuario, respuestasUsuario, out mensaje);
+                ValidarRespuestas();
+            }
+        }
 
-                if (valido)
+        private void ValidarRespuestas()
+        {
+            string mensaje;
+            bool valido = logica.ValidarRespuestas(SesionUsuario.Usuario, respuestasUsuario, out mensaje);
+
+            if (valido)
+            {
+                MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                frmCambiarContra cambiarContrasenaForm = new frmCambiarContra();
+                DialogResult res = cambiarContrasenaForm.ShowDialog();
+
+                if (res == DialogResult.OK)
                 {
-                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-
-                    frmCambiarContra cambiarContrasenaForm = new frmCambiarContra();
-                    DialogResult res = cambiarContrasenaForm.ShowDialog();
-
-                    if (res == DialogResult.OK)
-                    {
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
-                else
-                {
-                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    respuestasUsuario.Clear();
-                    indiceActual = 0;
-                    MostrarPreguntaActual();
-                }
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                respuestasUsuario.Clear();
+                indiceActual = 0;
+                MostrarPreguntaActual();
             }
         }
 

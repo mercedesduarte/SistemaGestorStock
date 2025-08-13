@@ -120,18 +120,24 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKRJREFUSEvt
-        k9ENgyAQQB3FBaCO0FE6SjdxFEdxBOgE12DUnBde22v5anzJ/fDgkRDtupMWSIp3u9YUyVEkx1nS0FvX
-        hPWC3y6RHCYVejWzfrKKX/Yc67yxPinc3p071tVGu15QB8sTXa3XYAfF7sJk12tgB0Vxj8to1wjsoHCC
-        HRROsIPCCXZQOMEOCifYQeEEO5toNba/fOt20/fz2U958ic8AcCthLrkjuAXAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAUBJREFUSEvd
+        VdsNwyAMzCj9TDJFJajUMTpKN8koHSUDtKgjpDqowRyQx29O4iPG+HE+SNedHu/eXt1on5/BvtxgFzeY
+        2Y1mgg177L8b3/5+SUHXlpnhy+dXgep0AF2tT9zfHsHHzNqH41SRBd84hGRH/MOBv/MRfv2c/p2snouc
+        j2bS9hrHbEudmFnbIzyvFQevGBpkFICiRIui2kWsgA7pQeI7VxcXU8ZQm6jULuhE2zlJKzggs4AP73US
+        hLkF8iT14EASSWV/K0F+6dqXS3zYHhXEA2LOeSbaNwqFVOjRGhBzzjPRSVoxPPRl0XZ5ErQtJqFKpRgW
+        ikdGRa1FAtMTVVhTkCCpoFFFA6n7coYF0o1ucEk49NgBvoviuTYTEmMPS35C2d3YE1yj1H5rlXLdDak2
+        /GDCo4clD90m36fADxCfvD7MZMY/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnEnviar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAKZJREFUSEvl
-        lMENgCAMRVlA4giOwiiMwiaO4iiOUkOpCARTC17En/yDlD5KQZQaSzAvYrOCySrQ0OhdgV5L5KUw4Zwo
-        NS0ymxJLrSBwi3zVmD/ZMsTDQ2/NbX/74PE86n39ERyBp2Pylo/T7RDB8fDwm7ML8+Vwn0D2FVM8G2+p
-        vNTrPU/1YTjGXT25F87pMTy7DY9NL2MN7hVXbzaza9xB+gcKPIwOgKyOq6AOlZ0AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAS9JREFUSEvd
+        VckRgzAMpAw/UwDOpARKSSnphFIoA5wPpZDxIXsthMCTV7IzPLDk1bW2u+7vYeZ+MO7+MoudjLObcXY1
+        zo5hbe4H7n8ZZn7cgFT7Vu/L96sI2SEBZBsCv+0z+fhqsg/nEVGT65tCsAb/tCE5N/Q3zonapeyDno/c
+        dgaoZOW2gNhXxYGBZlH9U4JSFSWDkz5yMvBXOaK27YZZSWDyrarNs1jshOvRSJIDTUd5wr9Cnu0Htl0A
+        HFrYeEJOSPaNrxcF4YHCg3SFvAhlr0JpQCyISu4hcRQjHJZ6PQdRyT1ylZJQWI+rEnHQR8gqlBREABXI
+        WRwAqpcPGQIGJfeSoemy84hV8OvajiEwyZUeoUoAF8gRbCba1/7gEHK2sW1+iEFNMfCXT+bP4APKKWpn
+        K99oZwAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

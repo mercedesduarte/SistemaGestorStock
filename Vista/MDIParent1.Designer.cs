@@ -43,7 +43,8 @@
             this.CrearPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.CerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,7 @@
             this.PersonasToolStripMenuItem,
             this.ConfiguracionToolStripMenuItem,
             this.ReportesToolStripMenuItem,
-            this.modificarContraseñaToolStripMenuItem});
+            this.toolStripMenuItem2});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1355, 52);
@@ -96,7 +97,6 @@
             this.UsuariosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.UsuariosToolStripMenuItem.Size = new System.Drawing.Size(156, 48);
             this.UsuariosToolStripMenuItem.Text = "USUARIOS";
-            this.UsuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
             // CrearUsuarioToolStripMenuItem
             // 
@@ -200,13 +200,27 @@
             this.ReportesToolStripMenuItem.Text = "REPORTES";
             this.ReportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
-            // modificarContraseñaToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.modificarContraseñaToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
-            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(244, 48);
-            this.modificarContraseñaToolStripMenuItem.Text = "MODIFICAR CONTRASEÑA";
-            this.modificarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CerrarSesionToolStripMenuItem});
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(134, 48);
+            this.toolStripMenuItem2.Text = "PERFIL";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // CerrarSesionToolStripMenuItem
+            // 
+            this.CerrarSesionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CerrarSesionToolStripMenuItem.Image")));
+            this.CerrarSesionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem";
+            this.CerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
+            this.CerrarSesionToolStripMenuItem.Text = "CERRAR SESION";
+            this.CerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.CerrarSesionToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -296,6 +310,7 @@
             this.Controls.Add(this.lblHoras);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -335,8 +350,9 @@
         private System.Windows.Forms.ToolStripMenuItem ListarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AgregarPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListarPersonasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem CerrarSesionToolStripMenuItem;
     }
 }
 

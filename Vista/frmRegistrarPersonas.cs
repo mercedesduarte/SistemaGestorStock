@@ -177,6 +177,8 @@ namespace Vista
                 txtCUIL.Visible = false;
                 lblCUIL.Visible = false;
             }
+            
+
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace Datos
 
-//Seguir mas tarde con la implementacion en la logica
-
 {
     public class D_HistorialContras
     {
@@ -45,6 +43,8 @@ namespace Datos
                             }
                         }
                     }
+
+
                 }
             }
             catch (Exception ex)

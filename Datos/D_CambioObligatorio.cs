@@ -20,7 +20,7 @@ namespace Datos
                     using (SqlCommand cmd = new SqlCommand("sp_ObtenerCorreoPorIdUsuario", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                        cmd.Parameters.AddWithValue("@Id_Usuario", Sesion.SesionUsuario.IdUsuario);
 
                         object resultado = cmd.ExecuteScalar();
 
@@ -35,14 +35,13 @@ namespace Datos
             catch (Exception ex)
             {
                 Console.WriteLine("Error al obtener correo: " + ex.Message);
-                // Podés decidir si lanzás la excepción o devolver null
-                // throw;
+              
             }
 
             return correo;
         }
 
-        public static bool ActualizarContra(string usuario, string contrasena, DateTime fechacambio)
+        public static bool ActualizarContra(int idUsuario, string contrasena, DateTime fechacambio)
         {
             try
             {
@@ -54,26 +53,22 @@ namespace Datos
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-
-                        cmd.Parameters.AddWithValue("@Usuario", usuario);
-                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
-                        cmd.Parameters.AddWithValue("@FechaCambio", fechacambio);
+                        cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                        cmd.Parameters.AddWithValue("@contrasena", contrasena);
+                        cmd.Parameters.AddWithValue("@fechacambio", fechacambio);
 
                         cmd.ExecuteNonQuery();
-
-                        Console.WriteLine("Contraseña cambiada exitosamente");
-
                         return true;
-
                     }
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                Console.WriteLine("Error al cambiar contraseña: " + ex.Message);
-                return false;
+                throw new Exception($"Error SQL: {ex.Message}", ex);
             }
         }
+
+
 
         //    public void GuardarCodigo2FA(int idUsuario, string codigo2FA, DateTime fechaGeneracion)
         //    {

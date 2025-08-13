@@ -17,6 +17,8 @@ namespace Logica
 
             if (contrasenas == null || contrasenas.Count == 0)
             {
+                Console.WriteLine("No se encontraron contraseñas anteriores para el usuario.");
+
                 return null;
             }
 
@@ -24,6 +26,7 @@ namespace Logica
             foreach (var contra in contrasenas)
             {
                 listacontras.Add(new KeyValuePair<int, string>(contra.id_Contrasena, contra.contrasena));
+                Console.WriteLine($"ID: {contra.id_Contrasena}, Contraseña: {contra.contrasena}");
             }
 
             return listacontras;
