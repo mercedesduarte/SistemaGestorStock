@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarUsuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbPersona = new System.Windows.Forms.ComboBox();
@@ -40,8 +41,10 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,9 +61,9 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 182);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1001, 496);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -68,12 +71,13 @@
             // 
             // cbPersona
             // 
+            this.cbPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPersona.Items.AddRange(new object[] {
             "ROL 1",
             "ROL 2",
             "ROL 3"});
             this.cbPersona.Location = new System.Drawing.Point(589, 133);
-            this.cbPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPersona.Margin = new System.Windows.Forms.Padding(4);
             this.cbPersona.Name = "cbPersona";
             this.cbPersona.Size = new System.Drawing.Size(349, 39);
             this.cbPersona.TabIndex = 21;
@@ -92,11 +96,12 @@
             // 
             // cbRolUsuario
             // 
+            this.cbRolUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRolUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Usuario Normal"});
             this.cbRolUsuario.Location = new System.Drawing.Point(591, 267);
-            this.cbRolUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRolUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cbRolUsuario.Name = "cbRolUsuario";
             this.cbRolUsuario.Size = new System.Drawing.Size(349, 39);
             this.cbRolUsuario.TabIndex = 17;
@@ -121,7 +126,7 @@
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.Location = new System.Drawing.Point(753, 398);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnCerrar.Size = new System.Drawing.Size(188, 55);
@@ -139,7 +144,7 @@
             this.btnCrearUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCrearUsuario.Image")));
             this.btnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrearUsuario.Location = new System.Drawing.Point(60, 398);
-            this.btnCrearUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCrearUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
             this.btnCrearUsuario.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnCrearUsuario.Size = new System.Drawing.Size(296, 55);
@@ -162,7 +167,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(589, 204);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(349, 38);
             this.txtUsuario.TabIndex = 9;
@@ -171,7 +176,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(60, 89);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(285, 258);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,6 +197,10 @@
             this.label1.Text = "REGISTRAR USUARIOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmRegistrarUsuarios
             // 
             this.AcceptButton = this.btnCrearUsuario;
@@ -203,13 +212,14 @@
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarUsuarios";
             this.Text = "frmRegistrarUsuarios";
             this.Load += new System.EventHandler(this.frmRegistrarUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +236,6 @@
         private System.Windows.Forms.ComboBox cbRolUsuario;
         private System.Windows.Forms.ComboBox cbPersona;
         private System.Windows.Forms.Label lblPersona;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

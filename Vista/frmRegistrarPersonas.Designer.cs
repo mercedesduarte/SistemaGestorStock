@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPersonas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,8 +67,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,6 +143,7 @@
             this.txtCUIL.Size = new System.Drawing.Size(348, 38);
             this.txtCUIL.TabIndex = 50;
             this.txtCUIL.Visible = false;
+            this.txtCUIL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCUIL_KeyPress);
             // 
             // searchImg
             // 
@@ -258,6 +262,7 @@
             // 
             // cbGenero
             // 
+            this.cbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenero.Items.AddRange(new object[] {
             "Masculino",
             "Femenino",
@@ -286,7 +291,7 @@
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(349, 38);
             this.txtCodigoPostal.TabIndex = 31;
-            this.txtCodigoPostal.TextChanged += new System.EventHandler(this.txtCodigoPostal_TextChanged);
+            this.txtCodigoPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoPostal_KeyPress);
             // 
             // lblCodigoPostal
             // 
@@ -306,6 +311,7 @@
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(299, 38);
             this.txtDepartamento.TabIndex = 29;
+            this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDepartamento_KeyPress);
             // 
             // lblDepartamento
             // 
@@ -325,6 +331,7 @@
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(349, 38);
             this.txtPiso.TabIndex = 27;
+            this.txtPiso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPiso_KeyPress);
             // 
             // lblPiso
             // 
@@ -345,6 +352,7 @@
             this.txtAltura.Size = new System.Drawing.Size(349, 38);
             this.txtAltura.TabIndex = 25;
             this.txtAltura.TextChanged += new System.EventHandler(this.txtAltura_TextChanged);
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress_1);
             // 
             // lblAltura
             // 
@@ -514,6 +522,10 @@
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmRegistrarPersonas
             // 
             this.AcceptButton = this.btnCrearPersona;
@@ -531,6 +543,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,5 +587,6 @@
         private System.Windows.Forms.TextBox txtProvincia;
         private System.Windows.Forms.PictureBox searchImg;
         private System.Windows.Forms.MaskedTextBox txtCUIL;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

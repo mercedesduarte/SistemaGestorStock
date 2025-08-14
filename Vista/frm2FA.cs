@@ -21,12 +21,8 @@ namespace Vista
 
             string codigo = GeneradorContraseña.Generar(6);
 
-            // Instancia de la lógica para buscar email
             L_BuscarUsuario logicaBuscar = new L_BuscarUsuario();
-
-            // Obtener el correo del usuario
             string correo = logicaBuscar.ObtenerCorreoPorId(Id_Usuario);
-
 
             if (string.IsNullOrEmpty(correo))
             {
@@ -34,18 +30,14 @@ namespace Vista
                 return;
             }
 
-            // Asignar valores a Sesion.ArmarMail
-            Sesion.ArmarMail.DireccionCorreo = correo;
-            Sesion.ArmarMail.Asunto = "Credenciales de acceso - Sistema de Gestión";
-            Sesion.ArmarMail.ContrasenaSistema = codigo;
-
-            // Acá llamás tu lógica para enviar el mail, ejemplo:
             L_CrearCodigo2FA logica2FA = new L_CrearCodigo2FA();
             var fechaHoy = DateTime.Now;
             logica2FA.CrearCodigo2FA(Id_Usuario, codigo, fechaHoy);
 
-            // Opcional: informar que el mail fue enviado
-            MessageBox.Show("Código enviado al correo: " + correo);
+            Sesion.ArmarMail.DireccionCorreo = correo;
+            Sesion.ArmarMail.Asunto = "Código de verificación - Sistema de Gestión";
+            Sesion.ArmarMail.ContrasenaSistema = codigo;
+            ArmarMail.Preparar();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -64,7 +56,7 @@ namespace Vista
 
             if (string.IsNullOrEmpty(codigoIngresado))
             {
-                MessageBox.Show("Por favor, ingrese el código.");
+                errorProvider1.SetError(textBox1, "Por favor, ingrese el código.");
                 return;
             }
 
@@ -77,11 +69,11 @@ namespace Vista
             {
                 MessageBox.Show("Código verificado correctamente.");
 
-                frmCambiarContra formcc = new frmCambiarContra();
+                frmResponderPreguntas formrp = new frmResponderPreguntas();
 
                 this.Hide();
 
-                DialogResult res = formcc.ShowDialog();
+                DialogResult res = formrp.ShowDialog();
 
                 if (res == DialogResult.OK)
                 {
@@ -95,7 +87,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Código incorrecto. Intente nuevamente.");
+                errorProvider1.SetError(textBox1, "Código incorrecto. Intente nuevamente.");
             }
         }
     }

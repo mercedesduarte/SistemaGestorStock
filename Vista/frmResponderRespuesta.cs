@@ -81,7 +81,8 @@ namespace Vista
 
             if (string.IsNullOrEmpty(respuestaUsuario))
             {
-                MessageBox.Show("Debe ingresar una respuesta.");
+                errorProvider1.SetError(txtRespuesta, "Debe ingresar una respuesta.");
+                txtRespuesta.Focus();
                 return;
             }
 

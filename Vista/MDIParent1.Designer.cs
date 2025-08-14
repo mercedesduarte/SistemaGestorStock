@@ -53,6 +53,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mODIFICARCONTRASEÑAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,7 @@
             this.InicioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.InicioToolStripMenuItem.Size = new System.Drawing.Size(134, 48);
             this.InicioToolStripMenuItem.Text = "INICIO";
+            this.InicioToolStripMenuItem.Click += new System.EventHandler(this.InicioToolStripMenuItem_Click);
             // 
             // UsuariosToolStripMenuItem
             // 
@@ -203,6 +205,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mODIFICARCONTRASEÑAToolStripMenuItem,
             this.CerrarSesionToolStripMenuItem});
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
@@ -218,7 +221,7 @@
             this.CerrarSesionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CerrarSesionToolStripMenuItem.Image")));
             this.CerrarSesionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem";
-            this.CerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
+            this.CerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(318, 30);
             this.CerrarSesionToolStripMenuItem.Text = "CERRAR SESION";
             this.CerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.CerrarSesionToolStripMenuItem_Click);
             // 
@@ -299,6 +302,13 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // mODIFICARCONTRASEÑAToolStripMenuItem
+            // 
+            this.mODIFICARCONTRASEÑAToolStripMenuItem.Name = "mODIFICARCONTRASEÑAToolStripMenuItem";
+            this.mODIFICARCONTRASEÑAToolStripMenuItem.Size = new System.Drawing.Size(318, 30);
+            this.mODIFICARCONTRASEÑAToolStripMenuItem.Text = "MODIFICAR CONTRASEÑA";
+            this.mODIFICARCONTRASEÑAToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARCONTRASEÑAToolStripMenuItem_Click_1);
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +363,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem CerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mODIFICARCONTRASEÑAToolStripMenuItem;
     }
 }
 

@@ -30,6 +30,7 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResponderPreguntas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblProgreso = new System.Windows.Forms.Label();
@@ -39,7 +40,9 @@ namespace Vista
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -150,6 +153,10 @@ namespace Vista
             this.label1.Text = "RESPONDER PREGUNTAS DE SEGURIDAD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmResponderPreguntas
             // 
             this.AcceptButton = this.btnResponderPregunta;
@@ -167,6 +174,7 @@ namespace Vista
             this.Load += new System.EventHandler(this.frmResponderPreguntas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +189,6 @@ namespace Vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPreguntaLista;
         private System.Windows.Forms.Label lblProgreso;
+        private ErrorProvider errorProvider1;
     }
 }

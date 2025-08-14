@@ -68,35 +68,6 @@ namespace Vista
             }
         }
 
-        private void btnEnviar_Click_1(object sender, EventArgs e)
-        {
-            if (listPersonas.SelectedValue == null || !int.TryParse(listPersonas.SelectedValue.ToString(), out int receptorId))
-            {
-                MessageBox.Show("Seleccione un usuario para enviar el mensaje.");
-                return;
-            }
-
-            string mensaje = txtMensaje.Text.Trim();
-            if (string.IsNullOrEmpty(mensaje))
-            {
-                MessageBox.Show("El mensaje no puede estar vacío.");
-                return;
-            }
-
-            try
-            {
-                logicaMensajes.Enviar(SesionUsuario.IdUsuario, receptorId, mensaje);
-                MessageBox.Show("Mensaje enviado correctamente.");
-                txtMensaje.Clear();
-
-                CargarMensajes(receptorId);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al enviar mensaje: " + ex.Message);
-            }
-        }
-
         private void frmMensajes_Load_1(object sender, EventArgs e)
         {
             if (SesionUsuario.IdUsuario > 0)
@@ -110,12 +81,7 @@ namespace Vista
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
+        private void btnEnviar_Click_2(object sender, EventArgs e)
         {
             if (listPersonas.SelectedValue == null || !int.TryParse(listPersonas.SelectedValue.ToString(), out int receptorId))
             {
@@ -146,7 +112,7 @@ namespace Vista
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Close();
         }
     }
 }

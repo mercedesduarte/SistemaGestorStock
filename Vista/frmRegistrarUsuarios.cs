@@ -42,7 +42,22 @@ namespace Vista
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            L_Lista lcorreo = new L_Lista(); // Lógica para obtener el correo
+            if(string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                errorProvider1.SetError(txtUsuario, "El nombre de usuario no puede estar vacío.");
+                return;
+            }
+            if(cbPersona.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cbPersona, "Debe seleccionar una persona.");
+                return;
+            }
+            if(cbRolUsuario.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cbRolUsuario, "Debe seleccionar un rol.");
+                return;
+            }
+            L_Lista lcorreo = new L_Lista();
             int id_persona = (int)cbPersona.SelectedValue;
             string usuario = txtUsuario.Text.Trim();
             int id_rol = (int)cbRolUsuario.SelectedValue;

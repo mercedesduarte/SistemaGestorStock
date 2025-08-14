@@ -30,6 +30,7 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarContra));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnMostrarContraC = new System.Windows.Forms.Button();
@@ -41,7 +42,11 @@ namespace Vista
             this.lblContra = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,6 +103,8 @@ namespace Vista
             // 
             // txtConfContra
             // 
+            this.errorProvider2.SetIconAlignment(this.txtConfContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.errorProvider1.SetIconAlignment(this.txtConfContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.txtConfContra.Location = new System.Drawing.Point(67, 252);
             this.txtConfContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfContra.Name = "txtConfContra";
@@ -153,6 +160,7 @@ namespace Vista
             // 
             // txtContra
             // 
+            this.errorProvider1.SetIconAlignment(this.txtContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.txtContra.Location = new System.Drawing.Point(67, 112);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
@@ -173,6 +181,14 @@ namespace Vista
             this.label1.Text = "CAMBIAR CONTRASEÑA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // frmCambiarContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,6 +203,8 @@ namespace Vista
             this.Load += new System.EventHandler(this.frmCrearRespuesta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +221,7 @@ namespace Vista
         private System.Windows.Forms.TextBox txtConfContra;
         private Button btnMostrarContra;
         private Button btnMostrarContraC;
+        private ErrorProvider errorProvider2;
+        private ErrorProvider errorProvider1;
     }
 }

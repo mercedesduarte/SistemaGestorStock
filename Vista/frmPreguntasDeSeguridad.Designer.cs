@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPreguntasDeSeguridad));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -35,7 +36,9 @@
             this.btnCrearPregunta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtPregunta = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,6 +128,10 @@
             this.txtPregunta.Size = new System.Drawing.Size(571, 38);
             this.txtPregunta.TabIndex = 9;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmPreguntasDeSeguridad
             // 
             this.AcceptButton = this.btnCrearPregunta;
@@ -142,6 +149,7 @@
             this.Load += new System.EventHandler(this.frmPreguntasDeSeguridad_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +162,6 @@
         private System.Windows.Forms.Button btnCrearPregunta;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtPregunta;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

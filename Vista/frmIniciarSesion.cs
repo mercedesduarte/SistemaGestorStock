@@ -33,6 +33,34 @@ namespace Vista
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            if(txtUsuario.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtUsuario, "Debe ingresar un nombre de usuario.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtUsuario.Focus();
+                return;
+            }
+
+            if (txtContrasena.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider2.SetError(txtContrasena, "Debe ingresar su contraseña.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtContrasena.Focus();
+                return;
+            }
+
             string usuario = txtUsuario.Text.Trim();
             string contrasena = txtContrasena.Text;
             string rol;
@@ -63,6 +91,7 @@ namespace Vista
                 EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
                 if (estado.DosFA == 1)
                 {
+
                     frm2FA dobleAutenticacionForm = new frm2FA();
                     dobleAutenticacionForm.Id_Usuario = idUsuario;
                     DialogResult res2FA = dobleAutenticacionForm.ShowDialog();
@@ -78,7 +107,6 @@ namespace Vista
                 MessageBox.Show("Error al guardar log: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Historial de contraseñas
             Logica.L_HistorialContras l = new Logica.L_HistorialContras();
             var historial = l.HistorialDeContrasenas(usuario);
 
@@ -94,7 +122,6 @@ namespace Vista
                 }
             }
 
-            // Login exitoso
             this.Tag = rol;
             this.DialogResult = DialogResult.OK;
         }
@@ -141,6 +168,15 @@ namespace Vista
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void erroProvider1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

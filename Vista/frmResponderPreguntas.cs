@@ -17,7 +17,7 @@ namespace Vista
     {
         private List<PreguntaVista> preguntas = new List<PreguntaVista>();
         private int indiceActual = 0;
-        private L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
+        private readonly L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
 
         public frmResponderPreguntas()
         {
@@ -48,7 +48,7 @@ namespace Vista
         {
             if (indiceActual >= preguntas.Count)
             {
-                MessageBox.Show("No hay más preguntas.");
+                errorProvider1.SetError(txtRespuesta, "No hay más preguntas.");
                 return;
             }
 
@@ -71,7 +71,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Error al guardar: " + mensaje);
+                errorProvider1.SetError(txtRespuesta, mensaje);
             }
         }
 
@@ -86,7 +86,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("¡Felicitaciones! Has respondido todas las preguntas.");
+                MessageBox.Show("Respondiste todas las preguntas.");
                 btnResponderPregunta.Enabled = false;
                 this.Hide();
 

@@ -55,6 +55,162 @@ namespace Vista
 
         private void btnCrearPersona_Click(object sender, EventArgs e)
         {
+            if(txtNombre.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtNombre, "Debe ingresar un nombre.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtNombre.Focus();
+                return;
+            }
+            if(txtApellido.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtApellido, "Debe ingresar un apellido.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtApellido.Focus();
+                return;
+            }
+            if(cbTipoDocumento.SelectedItem == null)
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(cbTipoDocumento, "Debe seleccionar un tipo de documento.");
+                    timer.Stop();
+                };
+                timer.Start();
+                cbTipoDocumento.Focus();
+                return;
+            }
+            if(txtNumeroDocumento.Visible && txtNumeroDocumento.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtNumeroDocumento, "Debe ingresar un número de documento.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtNumeroDocumento.Focus();
+                return;
+            }
+            if(txtCUIL.Visible && txtCUIL.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtCUIL, "Debe ingresar un CUIL.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtCUIL.Focus();
+                return;
+            }
+            if(txtCalle.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtCalle, "Debe ingresar una calle.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtCalle.Focus();
+                return;
+            }
+            if(txtAltura.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtAltura, "Debe ingresar una altura.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtAltura.Focus();
+                return;
+            }
+            if(txtCodigoPostal.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtCodigoPostal, "Debe ingresar un código postal.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtCodigoPostal.Focus();
+                return;
+            }
+            if (cbGenero.SelectedItem == null)
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(cbGenero, "Debe seleccionar un género.");
+                    timer.Stop();
+                };
+                timer.Start();
+                cbGenero.Focus();
+                return;
+            }
+            if (cbSexo.SelectedItem == null)
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(cbSexo, "Debe seleccionar un sexo.");
+                    timer.Stop();
+                };
+                timer.Start();
+                cbSexo.Focus();
+                return;
+            }
+            if (txtCorreoElectronico.Text.Trim() == "")
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtCorreoElectronico, "Debe ingresar un correo electrónico.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtCorreoElectronico.Focus();
+                return;
+            }
+            if (!txtCorreoElectronico.Text.Contains("@") || !txtCorreoElectronico.Text.Contains("."))
+            {
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtCorreoElectronico, "El correo electrónico debe contener '@' y un dominio válido.");
+                    timer.Stop();
+                };
+                timer.Start();
+                txtCorreoElectronico.Focus();
+                return;
+            }
             try
             {
 
@@ -150,7 +306,6 @@ namespace Vista
         {
             var seleccionado = cbTipoDocumento.SelectedItem?.ToString();
 
-            // Para DNI
             if (seleccionado == "DNI")
             {
                 txtNumeroDocumento.Visible = true;
@@ -159,7 +314,6 @@ namespace Vista
                 txtCUIL.Visible = false;
                 lblCUIL.Visible = false;
             }
-            // Para CUIL
             else if (seleccionado == "CUIL")
             {
                 txtCUIL.Visible = true;
@@ -168,7 +322,6 @@ namespace Vista
                 txtNumeroDocumento.Visible = false;
                 lblNumeroDocumento.Visible = false;
             }
-            // Si no es ninguno de los dos
             else
             {
                 txtNumeroDocumento.Visible = false;
@@ -213,9 +366,34 @@ namespace Vista
 
         }
 
-        private void txtCodigoPostal_TextChanged(object sender, EventArgs e)
+        private void txtAltura_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
 
+        private void txtCUIL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
+
+        private void txtAltura_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
+
+        private void txtPiso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
+
+        private void txtDepartamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
+        }
+
+        private void txtCodigoPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidadorTextBox.SoloNumeros(sender, e);
         }
     }
 }

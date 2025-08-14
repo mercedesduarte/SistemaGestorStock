@@ -25,12 +25,11 @@ namespace Vista
 
         private void btnCrearPregunta_Click(object sender, EventArgs e)
         {
-            AcceptButton.PerformClick();
             string pregunta = txtPregunta.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(pregunta))
             {
-                MessageBox.Show("Por favor, ingrese una pregunta válida.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProvider1.SetError(txtPregunta, "Por favor, ingrese una pregunta válida.");
                 return;
             }
 
@@ -47,7 +46,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(txtPregunta, mensaje);
             }
         }
 
@@ -58,7 +57,6 @@ namespace Vista
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            CancelButton.PerformClick();
             this.Close();
         }
     }

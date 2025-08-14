@@ -87,6 +87,7 @@
             this.btnCerrar.Text = "SALIR";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEnviar
             // 
@@ -104,6 +105,7 @@
             this.btnEnviar.Text = "ENVIAR";
             this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click_2);
             // 
             // listPersonas
             // 

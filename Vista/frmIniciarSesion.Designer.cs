@@ -30,6 +30,7 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciarSesion));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
@@ -42,8 +43,12 @@ namespace Vista
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -97,7 +102,7 @@ namespace Vista
             // lkbContraOlvidada
             // 
             this.lkbContraOlvidada.AutoSize = true;
-            this.lkbContraOlvidada.Location = new System.Drawing.Point(384, 276);
+            this.lkbContraOlvidada.Location = new System.Drawing.Point(620, 265);
             this.lkbContraOlvidada.Name = "lkbContraOlvidada";
             this.lkbContraOlvidada.Size = new System.Drawing.Size(314, 32);
             this.lkbContraOlvidada.TabIndex = 19;
@@ -123,7 +128,7 @@ namespace Vista
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(458, 331);
+            this.btnSalir.Location = new System.Drawing.Point(789, 331);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
@@ -174,6 +179,10 @@ namespace Vista
             // 
             // txtContrasena
             // 
+            this.errorProvider2.SetIconAlignment(this.txtContrasena, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.errorProvider1.SetIconAlignment(this.txtContrasena, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.errorProvider2.SetIconPadding(this.txtContrasena, 2);
+            this.errorProvider1.SetIconPadding(this.txtContrasena, 2);
             this.txtContrasena.Location = new System.Drawing.Point(603, 223);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
@@ -182,11 +191,23 @@ namespace Vista
             // 
             // txtUsuario
             // 
+            this.errorProvider1.SetIconAlignment(this.txtUsuario, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.errorProvider2.SetIconPadding(this.txtUsuario, 2);
+            this.errorProvider1.SetIconPadding(this.txtUsuario, 2);
             this.txtUsuario.Location = new System.Drawing.Point(603, 118);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(349, 38);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // frmIniciarSesion
             // 
@@ -208,6 +229,8 @@ namespace Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,6 +248,8 @@ namespace Vista
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.LinkLabel lkbContraOlvidada;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
 

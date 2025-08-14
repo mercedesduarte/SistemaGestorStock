@@ -8,12 +8,12 @@ namespace Vista
     {
         public int IdUsuario { get; set; }
 
-        private UsuarioVista usuarioOriginal; // Guarda el usuario cargado para comparar cambios
+        private UsuarioVista usuarioOriginal;
 
         public frmEditarUsuario()
         {
             InitializeComponent();
-            button2.Click += button2_Click;  // Asociar evento clic
+            button2.Click += button2_Click;
         }
 
         private void frmEditarUsuario_Load(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace Vista
             if (exito)
             {
                 MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                usuarioOriginal = usuarioActual; // Actualizamos para futuras comparaciones
+                usuarioOriginal = usuarioActual;
             }
             else
             {
@@ -115,7 +115,6 @@ namespace Vista
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            AcceptButton.PerformClick();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -125,14 +124,12 @@ namespace Vista
             bool nuevoEstado = !usuarioOriginal.Bloqueado;
             DateTime? nuevaFechaBloqueo = nuevoEstado ? DateTime.Now : usuarioOriginal.Fecha_Bloqueo;
 
-            // Enviar al SP (aunque no lo actualice si está desbloqueando)
             bool exito = logica.BloquearUsuario(IdUsuario, nuevoEstado, nuevaFechaBloqueo, out string mensaje);
 
             if (exito)
             {
                 usuarioOriginal.Bloqueado = nuevoEstado;
 
-                // 👇 Solo actualizá la fecha si está bloqueando
                 if (nuevoEstado)
                     usuarioOriginal.Fecha_Bloqueo = nuevaFechaBloqueo;
 

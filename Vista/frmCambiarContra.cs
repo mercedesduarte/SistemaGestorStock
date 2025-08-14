@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vista
 {
@@ -39,7 +40,15 @@ namespace Vista
 
             if (contra != confContra)
             {
-                MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, "Las contraseñas no son iguales");
+                    errorProvider2.SetError(txtConfContra, "Las contraseñas no son iguales");
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
@@ -47,32 +56,72 @@ namespace Vista
 
             if (!restriccion.ObtenerMinimoCaracteres(contra))
             {
-                MessageBox.Show("La contraseña no cumple con el mínimo de caracteres requeridos.", "Restricción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                L_Restriccion Restriccion = new L_Restriccion();
+                EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
+
+                int nudMinCaracteres = estado.CaracteresUtilizados;
+
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, $"La contraseña no cumple con el mínimo de caracteres requeridos {nudMinCaracteres}.");
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
             if (!restriccion.ObtenerNumeros(contra))
             {
-                MessageBox.Show("La contraseña no cumple con la cantidad mínima de números.", "Restricción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, "La contraseña no tiene números");
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
             if (!restriccion.ObtenerMayusculas(contra))
             {
-                MessageBox.Show("La contraseña no cumple con la cantidad mínima de mayúsculas.", "Restricción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, "La contraseña no tiene Mayúsculas");
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
             if (!restriccion.ObtenerCaracteresEspeciales(contra))
             {
-                MessageBox.Show("La contraseña no cumple con la cantidad mínima de caracteres especiales.", "Restricción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, "La contraseña no tiene caracteres especiales.");
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
             string resultadoVerificacion = restriccion.VerificarContraContraDatosPersonales(SesionUsuario.IdUsuario, contra);
             if (resultadoVerificacion != "OK")
             {
-                MessageBox.Show(resultadoVerificacion, "Restricción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Timer timer = new Timer();
+                timer.Interval = 3000;
+                timer.Tick += (senderTimer, args) =>
+                {
+                    errorProvider1.SetError(txtContra, resultadoVerificacion);
+                    timer.Stop();
+                };
+                timer.Start();
                 return;
             }
 
@@ -93,7 +142,14 @@ namespace Vista
 
                     if (encontrada)
                     {
-                        MessageBox.Show("La contraseña ya fue utilizada anteriormente.");
+                        Timer timer = new Timer();
+                        timer.Interval = 3000;
+                        timer.Tick += (senderTimer, args) =>
+                        {
+                            errorProvider1.SetError(txtContra, "Estas contraseña ya fue utilizada anteriormente.");
+                            timer.Stop();
+                        };
+                        timer.Start();
                     }
                 }
             }

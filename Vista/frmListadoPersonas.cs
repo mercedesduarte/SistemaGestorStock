@@ -33,6 +33,15 @@ namespace Vista
                 if (dt != null)
                 {
                     dgvPersonas.DataSource = dt;
+                    dgvPersonas.AutoResizeColumns();
+
+                    dgvPersonas.Columns[0].Visible = false;
+                    dgvPersonas.Columns[12].Visible = false;
+                    dgvPersonas.Columns[13].Visible = false;
+                    dgvPersonas.Columns[14].Visible = false;
+                    dgvPersonas.Columns[15].Visible = false;
+                    dgvPersonas.Columns[16].Visible = false;
+
                 }
                 else
                 {
@@ -47,6 +56,11 @@ namespace Vista
 
         private void dgvPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

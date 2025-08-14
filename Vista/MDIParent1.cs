@@ -230,11 +230,6 @@ namespace Vista
             formularioListado.Show();
         }
 
-        private void MDIParent1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ConfiguracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -258,11 +253,6 @@ namespace Vista
             formularioListado.Show();
         }
 
-        private void modificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -284,7 +274,7 @@ namespace Vista
 
             frmMensajes formularioRegistrar = new frmMensajes();
             formularioRegistrar.MdiParent = this;
-            formularioRegistrar.StartPosition = FormStartPosition.Manual;
+            formularioRegistrar.WindowState = FormWindowState.Maximized;
             formularioRegistrar.Show();
 
         }
@@ -296,13 +286,11 @@ namespace Vista
 
         private void CerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Limpiar sesión
             SesionUsuario.Usuario = null;
             SesionUsuario.IdUsuario = 0;
             SesionUsuario.EsAdmin = false;
             SesionUsuario.Rol = null;
 
-            // Ocultar MDI mientras se muestra el login
             this.Hide();
 
             using (frmIniciarSesion loginForm = new frmIniciarSesion())
@@ -311,13 +299,11 @@ namespace Vista
 
                 if (res == DialogResult.OK && loginForm.Tag != null)
                 {
-                    // Login correcto: actualizar rol y mostrar MDI de nuevo
                     this.AplicarPermisosPorRol(loginForm.Tag.ToString());
                     this.Show();
                 }
                 else
                 {
-                    // Login cancelado o fallido: cerrar la aplicación
                     Application.Exit();
                 }
             }
@@ -326,6 +312,33 @@ namespace Vista
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                child.Close();
+            }
+        }
+
+        private void mODIFICARCONTRASEÑAToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmCambiarContra)
+                {
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                    
+                }
+            }
+            frmCambiarContra formcc = new frmCambiarContra();
+            formcc.MdiParent = this;
+            formcc.WindowState = FormWindowState.Maximized;
+            formcc.Show();
         }
     }
 }
