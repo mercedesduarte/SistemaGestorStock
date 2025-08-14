@@ -112,18 +112,16 @@ namespace Vista
 
             if (historial == null)
             {
-                this.Hide();
-                frmResponderPreguntas cambiarContrasenaForm = new frmResponderPreguntas();
-                DialogResult res = cambiarContrasenaForm.ShowDialog();
-                if (res != DialogResult.OK)
-                {
-                    this.Show();
-                    return;
-                }
+                frmResponderPreguntas preguntasForm = new frmResponderPreguntas();
+                preguntasForm.ShowDialog(); 
+
+                frmCambiarContra cambiarContraForm = new frmCambiarContra();
+                cambiarContraForm.ShowDialog();
             }
 
             this.Tag = rol;
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.OK; 
+
         }
 
 

@@ -85,7 +85,8 @@ namespace Datos
                         cmd.Parameters.AddWithValue("@FechaCambioContra", (object)usuario.FechaCambioContra ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@Id_Rol", usuario.Id_Rol);
 
-                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        object result = cmd.ExecuteScalar();
+                        int filasAfectadas = (result != null) ? Convert.ToInt32(result) : 0;
 
                         if (filasAfectadas > 0)
                         {
@@ -102,7 +103,6 @@ namespace Datos
             }
             catch (SqlException ex)
             {
-                // Construir mensaje detallado de SqlException
                 var sb = new System.Text.StringBuilder();
                 sb.AppendLine("Error SQL:");
                 foreach (SqlError error in ex.Errors)
@@ -155,12 +155,6 @@ namespace Datos
                 return false;
             }
         }
-
-
-
-
-
-
     }
 
 

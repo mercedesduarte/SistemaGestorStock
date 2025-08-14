@@ -88,19 +88,9 @@ namespace Vista
             {
                 MessageBox.Show("Respondiste todas las preguntas.");
                 btnResponderPregunta.Enabled = false;
-                this.Hide();
-
-                frmCambiarContra cambiarContrasenaForm = new frmCambiarContra();
-                DialogResult res = cambiarContrasenaForm.ShowDialog();
-
-                if (res == DialogResult.OK)
-                {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-
-
+                this.Close();
             }
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
