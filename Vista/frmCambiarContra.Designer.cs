@@ -44,9 +44,17 @@ namespace Vista
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grpRestricciones = new System.Windows.Forms.GroupBox();
+            this.chkDatosPersonales = new System.Windows.Forms.CheckBox();
+            this.chkHistorial = new System.Windows.Forms.CheckBox();
+            this.chkEspeciales = new System.Windows.Forms.CheckBox();
+            this.chkMayuscula = new System.Windows.Forms.CheckBox();
+            this.chkNumeros = new System.Windows.Forms.CheckBox();
+            this.chkMinCaracteres = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            this.grpRestricciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,19 +69,18 @@ namespace Vista
             this.groupBox1.Controls.Add(this.lblContra);
             this.groupBox1.Controls.Add(this.txtContra);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 104);
+            this.groupBox1.Location = new System.Drawing.Point(13, 114);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(862, 442);
+            this.groupBox1.Size = new System.Drawing.Size(777, 467);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnMostrarContraC
             // 
             this.btnMostrarContraC.Image = global::Vista.Properties.Resources.moscon;
-            this.btnMostrarContraC.Location = new System.Drawing.Point(780, 250);
+            this.btnMostrarContraC.Location = new System.Drawing.Point(727, 253);
             this.btnMostrarContraC.Name = "btnMostrarContraC";
             this.btnMostrarContraC.Size = new System.Drawing.Size(40, 40);
             this.btnMostrarContraC.TabIndex = 18;
@@ -83,7 +90,7 @@ namespace Vista
             // btnMostrarContra
             // 
             this.btnMostrarContra.Image = global::Vista.Properties.Resources.moscon;
-            this.btnMostrarContra.Location = new System.Drawing.Point(780, 112);
+            this.btnMostrarContra.Location = new System.Drawing.Point(727, 115);
             this.btnMostrarContra.Name = "btnMostrarContra";
             this.btnMostrarContra.Size = new System.Drawing.Size(40, 40);
             this.btnMostrarContra.TabIndex = 17;
@@ -93,19 +100,18 @@ namespace Vista
             // lblConfContra
             // 
             this.lblConfContra.AutoSize = true;
-            this.lblConfContra.Location = new System.Drawing.Point(71, 202);
+            this.lblConfContra.Location = new System.Drawing.Point(18, 205);
             this.lblConfContra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfContra.Name = "lblConfContra";
             this.lblConfContra.Size = new System.Drawing.Size(329, 32);
             this.lblConfContra.TabIndex = 16;
             this.lblConfContra.Text = "CONFIRMAR CONTRASEÑA:";
-            this.lblConfContra.Click += new System.EventHandler(this.lblConfContra_Click);
             // 
             // txtConfContra
             // 
             this.errorProvider2.SetIconAlignment(this.txtConfContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.errorProvider1.SetIconAlignment(this.txtConfContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.txtConfContra.Location = new System.Drawing.Point(67, 252);
+            this.txtConfContra.Location = new System.Drawing.Point(14, 255);
             this.txtConfContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfContra.Name = "txtConfContra";
             this.txtConfContra.Size = new System.Drawing.Size(703, 38);
@@ -119,7 +125,7 @@ namespace Vista
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(572, 331);
+            this.btnCerrar.Location = new System.Drawing.Point(416, 317);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
@@ -137,7 +143,7 @@ namespace Vista
             this.btnCambiarContra.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCambiarContra.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContra.Image")));
             this.btnCambiarContra.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCambiarContra.Location = new System.Drawing.Point(67, 331);
+            this.btnCambiarContra.Location = new System.Drawing.Point(14, 317);
             this.btnCambiarContra.Margin = new System.Windows.Forms.Padding(4);
             this.btnCambiarContra.Name = "btnCambiarContra";
             this.btnCambiarContra.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
@@ -151,22 +157,22 @@ namespace Vista
             // lblContra
             // 
             this.lblContra.AutoSize = true;
-            this.lblContra.Location = new System.Drawing.Point(61, 54);
+            this.lblContra.Location = new System.Drawing.Point(8, 57);
             this.lblContra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContra.Name = "lblContra";
             this.lblContra.Size = new System.Drawing.Size(314, 32);
             this.lblContra.TabIndex = 11;
             this.lblContra.Text = "INGRESAR CONTRASEÑA:";
-            this.lblContra.Click += new System.EventHandler(this.lblContra_Click);
             // 
             // txtContra
             // 
             this.errorProvider1.SetIconAlignment(this.txtContra, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.txtContra.Location = new System.Drawing.Point(67, 112);
+            this.txtContra.Location = new System.Drawing.Point(14, 115);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(703, 38);
             this.txtContra.TabIndex = 9;
+            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // label1
             // 
@@ -174,10 +180,10 @@ namespace Vista
             this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(862, 66);
+            this.label1.Size = new System.Drawing.Size(1256, 66);
             this.label1.TabIndex = 4;
             this.label1.Text = "CAMBIAR CONTRASEÑA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,17 +196,112 @@ namespace Vista
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // grpRestricciones
+            // 
+            this.grpRestricciones.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpRestricciones.Controls.Add(this.chkDatosPersonales);
+            this.grpRestricciones.Controls.Add(this.chkHistorial);
+            this.grpRestricciones.Controls.Add(this.chkEspeciales);
+            this.grpRestricciones.Controls.Add(this.chkMayuscula);
+            this.grpRestricciones.Controls.Add(this.chkNumeros);
+            this.grpRestricciones.Controls.Add(this.chkMinCaracteres);
+            this.grpRestricciones.Font = new System.Drawing.Font("Consolas", 13.75F, System.Drawing.FontStyle.Bold);
+            this.grpRestricciones.Location = new System.Drawing.Point(797, 114);
+            this.grpRestricciones.Name = "grpRestricciones";
+            this.grpRestricciones.Size = new System.Drawing.Size(472, 467);
+            this.grpRestricciones.TabIndex = 6;
+            this.grpRestricciones.TabStop = false;
+            this.grpRestricciones.Text = "RESTRICCIONES DE CONTRASEÑA";
+            // 
+            // chkDatosPersonales
+            // 
+            this.chkDatosPersonales.AutoSize = true;
+            this.chkDatosPersonales.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkDatosPersonales.Location = new System.Drawing.Point(17, 368);
+            this.chkDatosPersonales.Margin = new System.Windows.Forms.Padding(20);
+            this.chkDatosPersonales.Name = "chkDatosPersonales";
+            this.chkDatosPersonales.Size = new System.Drawing.Size(246, 68);
+            this.chkDatosPersonales.TabIndex = 5;
+            this.chkDatosPersonales.Text = "Contiene datos\r\npersonales";
+            this.chkDatosPersonales.UseVisualStyleBackColor = true;
+            // 
+            // chkHistorial
+            // 
+            this.chkHistorial.AutoSize = true;
+            this.chkHistorial.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkHistorial.Location = new System.Drawing.Point(17, 293);
+            this.chkHistorial.Margin = new System.Windows.Forms.Padding(20);
+            this.chkHistorial.Name = "chkHistorial";
+            this.chkHistorial.Size = new System.Drawing.Size(381, 68);
+            this.chkHistorial.TabIndex = 4;
+            this.chkHistorial.Text = "No contiene contraseñas\r\nanteriores";
+            this.chkHistorial.UseVisualStyleBackColor = true;
+            // 
+            // chkEspeciales
+            // 
+            this.chkEspeciales.AutoSize = true;
+            this.chkEspeciales.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkEspeciales.Location = new System.Drawing.Point(17, 218);
+            this.chkEspeciales.Margin = new System.Windows.Forms.Padding(20);
+            this.chkEspeciales.Name = "chkEspeciales";
+            this.chkEspeciales.Size = new System.Drawing.Size(321, 68);
+            this.chkEspeciales.TabIndex = 3;
+            this.chkEspeciales.Text = "Contiene caracteres\r\nespeciales";
+            this.chkEspeciales.UseVisualStyleBackColor = true;
+            // 
+            // chkMayuscula
+            // 
+            this.chkMayuscula.AutoSize = true;
+            this.chkMayuscula.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkMayuscula.Location = new System.Drawing.Point(17, 175);
+            this.chkMayuscula.Margin = new System.Windows.Forms.Padding(20);
+            this.chkMayuscula.Name = "chkMayuscula";
+            this.chkMayuscula.Size = new System.Drawing.Size(321, 36);
+            this.chkMayuscula.TabIndex = 2;
+            this.chkMayuscula.Text = "Contiene mayúsculas";
+            this.chkMayuscula.UseVisualStyleBackColor = true;
+            // 
+            // chkNumeros
+            // 
+            this.chkNumeros.AutoSize = true;
+            this.chkNumeros.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkNumeros.Location = new System.Drawing.Point(17, 132);
+            this.chkNumeros.Margin = new System.Windows.Forms.Padding(20);
+            this.chkNumeros.Name = "chkNumeros";
+            this.chkNumeros.Size = new System.Drawing.Size(276, 36);
+            this.chkNumeros.TabIndex = 1;
+            this.chkNumeros.Text = "Contiene numeros";
+            this.chkNumeros.UseVisualStyleBackColor = true;
+            // 
+            // chkMinCaracteres
+            // 
+            this.chkMinCaracteres.AutoSize = true;
+            this.chkMinCaracteres.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.chkMinCaracteres.Location = new System.Drawing.Point(17, 57);
+            this.chkMinCaracteres.Margin = new System.Windows.Forms.Padding(20);
+            this.chkMinCaracteres.Name = "chkMinCaracteres";
+            this.chkMinCaracteres.Size = new System.Drawing.Size(336, 68);
+            this.chkMinCaracteres.TabIndex = 0;
+            this.chkMinCaracteres.Text = "Contiene caracteres \r\nminimos";
+            this.chkMinCaracteres.UseVisualStyleBackColor = true;
+            // 
             // frmCambiarContra
             // 
             this.AcceptButton = this.btnCambiarContra;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.CancelButton = this.btnCerrar;
-            this.ClientSize = new System.Drawing.Size(888, 559);
+            this.ClientSize = new System.Drawing.Size(1281, 594);
+            this.ControlBox = false;
+            this.Controls.Add(this.grpRestricciones);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCambiarContra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCrearRespuesta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCrearRespuesta_Load);
@@ -208,6 +309,8 @@ namespace Vista
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            this.grpRestricciones.ResumeLayout(false);
+            this.grpRestricciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +329,12 @@ namespace Vista
         private Button btnMostrarContraC;
         private ErrorProvider errorProvider2;
         private ErrorProvider errorProvider1;
+        private GroupBox grpRestricciones;
+        private CheckBox chkDatosPersonales;
+        private CheckBox chkHistorial;
+        private CheckBox chkEspeciales;
+        private CheckBox chkMayuscula;
+        private CheckBox chkNumeros;
+        private CheckBox chkMinCaracteres;
     }
 }

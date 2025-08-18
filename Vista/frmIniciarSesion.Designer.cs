@@ -103,7 +103,7 @@ namespace Vista
             // lkbContraOlvidada
             // 
             this.lkbContraOlvidada.AutoSize = true;
-            this.lkbContraOlvidada.Location = new System.Drawing.Point(620, 265);
+            this.lkbContraOlvidada.Location = new System.Drawing.Point(638, 343);
             this.lkbContraOlvidada.Name = "lkbContraOlvidada";
             this.lkbContraOlvidada.Size = new System.Drawing.Size(314, 32);
             this.lkbContraOlvidada.TabIndex = 19;
@@ -129,7 +129,7 @@ namespace Vista
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(789, 331);
+            this.btnSalir.Location = new System.Drawing.Point(417, 331);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);

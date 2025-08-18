@@ -31,6 +31,8 @@ namespace Vista
 
             AplicarPermisosPorRol(rol);
 
+            this.IsMdiContainer = true;
+
         }
 
 
@@ -104,6 +106,7 @@ namespace Vista
             {
                 if (form is frmPoliticasSeguridad)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront(); 
                     form.Focus();        
                     return;            
@@ -111,8 +114,8 @@ namespace Vista
             }
 
             frmPoliticasSeguridad formularioPoliticas = new frmPoliticasSeguridad();
-            formularioPoliticas.MdiParent = this; 
-            formularioPoliticas.WindowState = FormWindowState.Maximized; 
+            formularioPoliticas.MdiParent = this;
+            formularioPoliticas.WindowState = FormWindowState.Maximized;
             formularioPoliticas.Show(); 
 
         }
@@ -124,6 +127,7 @@ namespace Vista
             {
                 if (form is frmPreguntasDeSeguridad)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -132,7 +136,7 @@ namespace Vista
 
 
             frmPreguntasDeSeguridad formularioPreguntas = new frmPreguntasDeSeguridad();
-            formularioPreguntas.MdiParent = this; 
+            formularioPreguntas.MdiParent = this;
             formularioPreguntas.WindowState = FormWindowState.Maximized;
             formularioPreguntas.Show();
         }
@@ -143,6 +147,7 @@ namespace Vista
             {
                 if (form is frmListadoPreguntasDeSeguridad)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -151,7 +156,7 @@ namespace Vista
 
      
             frmListadoPreguntasDeSeguridad formularioListado = new frmListadoPreguntasDeSeguridad();
-            formularioListado.MdiParent = this; 
+            formularioListado.MdiParent = this;
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();
         }
@@ -163,6 +168,7 @@ namespace Vista
             {
                 if (form is frmRegistrarUsuarios)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -171,7 +177,7 @@ namespace Vista
 
 
             frmRegistrarUsuarios formularioRegistrar = new frmRegistrarUsuarios();
-            formularioRegistrar.MdiParent = this; 
+            formularioRegistrar.MdiParent = this;
             formularioRegistrar.WindowState = FormWindowState.Maximized;
             formularioRegistrar.Show();
         }
@@ -183,6 +189,7 @@ namespace Vista
             {
                 if (form is frmRegistrarPersonas)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -191,29 +198,31 @@ namespace Vista
 
  
             frmRegistrarPersonas formularioPersona = new frmRegistrarPersonas();
-            formularioPersona.MdiParent = this; 
+            formularioPersona.MdiParent = this;
             formularioPersona.WindowState = FormWindowState.Maximized;
             formularioPersona.Show();
         }
 
         private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-     
-            foreach (Form form in this.MdiChildren)
+            var formularioExistente = this.MdiChildren.OfType<frmListadoPersonas>().FirstOrDefault();
+
+            if (formularioExistente != null)
             {
-                if (form is frmListadoPersonas)
-                {
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
+                formularioExistente.WindowState = FormWindowState.Maximized;
+                formularioExistente.BringToFront();
+                formularioExistente.Focus();
+                return;
             }
 
+            var nuevoForm = new frmListadoPersonas()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
 
-            frmListadoPersonas formularioListado = new frmListadoPersonas();
-            formularioListado.MdiParent = this; 
-            formularioListado.WindowState = FormWindowState.Maximized;
-            formularioListado.Show();
+            nuevoForm.Show();
+            nuevoForm.WindowState = FormWindowState.Maximized; // Forzar maximizado
         }
 
         private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -223,6 +232,7 @@ namespace Vista
             {
                 if (form is frmListadoUsuarios)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -247,6 +257,7 @@ namespace Vista
             {
                 if (form is frmLogs)
                 {
+                    form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
                     form.Focus();
                     return;
@@ -264,12 +275,12 @@ namespace Vista
 
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void MensajesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             foreach (Form form in this.MdiChildren)
             {
-                if (form is frmRegistrarUsuarios)
+                if (form is frmMensajes)
                 {
                     form.BringToFront();
                     form.Focus();
@@ -278,11 +289,9 @@ namespace Vista
             }
 
 
-            frmMensajes formularioRegistrar = new frmMensajes();
-            formularioRegistrar.MdiParent = this;
-            formularioRegistrar.WindowState = FormWindowState.Maximized;
-            formularioRegistrar.Show();
-
+            frmMensajes formMensajes = new frmMensajes();
+            formMensajes.MdiParent = this;
+            formMensajes.Show();
         }
 
         private void MDIParent1_Load_1(object sender, EventArgs e)
@@ -328,23 +337,35 @@ namespace Vista
             }
         }
 
-        private void mODIFICARCONTRASEÑAToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void ModificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Buscar si ya existe una instancia abierta
+            var formularioExistente = this.MdiChildren.OfType<frmCambiarContra>().FirstOrDefault();
 
-            foreach (Form form in this.MdiChildren)
+            if (formularioExistente != null)
             {
-                if (form is frmCambiarContra)
-                {
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                    
-                }
+                formularioExistente.WindowState = FormWindowState.Maximized;
+                formularioExistente.BringToFront();
+                formularioExistente.Focus();
+                return;
             }
-            frmCambiarContra formcc = new frmCambiarContra();
-            formcc.MdiParent = this;
-            formcc.WindowState = FormWindowState.Maximized;
-            formcc.Show();
+
+            // Crear nueva instancia maximizada
+            var nuevoForm = new frmCambiarContra()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
+
+            // Truco para asegurar la maximización
+            nuevoForm.Show();
+            nuevoForm.WindowState = FormWindowState.Maximized; // Forzar maximizado
+        }
+        private void ForceMaximize(Form childForm)
+        {
+            childForm.Show();
+            childForm.WindowState = FormWindowState.Normal;
+            childForm.WindowState = FormWindowState.Maximized;
         }
     }
 }

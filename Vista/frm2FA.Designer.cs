@@ -65,10 +65,10 @@
             this.label2.BackColor = System.Drawing.Color.RoyalBlue;
             this.label2.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(-2, 9);
+            this.label2.Location = new System.Drawing.Point(13, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(794, 66);
+            this.label2.Size = new System.Drawing.Size(767, 66);
             this.label2.TabIndex = 12;
             this.label2.Text = "AUTENTICACION 2FA";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,11 +117,11 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 93);
+            this.groupBox1.Location = new System.Drawing.Point(13, 93);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(771, 390);
+            this.groupBox1.Size = new System.Drawing.Size(767, 390);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
