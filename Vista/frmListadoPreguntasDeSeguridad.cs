@@ -46,6 +46,9 @@ namespace Vista
 
                 if (dgvPreguntas.Columns.Contains("Id_Usuario"))
                     dgvPreguntas.Columns["Id_Usuario"].Visible = false;
+
+                if (dgvPreguntas.Columns.Contains("RespuestaCorrecta"))
+                    dgvPreguntas.Columns["RespuestaCorrecta"].Visible = false;
             }
             else
             {

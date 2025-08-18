@@ -24,7 +24,7 @@ namespace Vista
 
             rolUsuario = rol;
 
-        
+
             lblRol.Text = $"CARGO: {rolUsuario}";
 
             Console.WriteLine($"Rol del usuario: {rolUsuario}");
@@ -66,6 +66,12 @@ namespace Vista
 
                     PoliticasSeguridadToolStripMenuItem.Enabled = false;
                     PoliticasSeguridadToolStripMenuItem.Visible = false;
+
+                    ReportesToolStripMenuItem.Enabled = false;
+                    ReportesToolStripMenuItem.Visible = false;
+
+                    CrearPreguntasSeguridadToolStripMenuItem.Enabled = false;
+                    CrearPreguntasSeguridadToolStripMenuItem.Visible = false;
                     break;               
 
                 default:

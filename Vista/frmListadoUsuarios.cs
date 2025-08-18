@@ -84,9 +84,9 @@ namespace Vista
             frmEditarUsuario frmEditar = new frmEditarUsuario();
             frmEditar.IdUsuario = id;
 
-            var resultado = frmEditar.ShowDialog(); // Espera hasta que se cierre
+            var resultado = frmEditar.ShowDialog();
 
-            // Cuando se cierra, recargar los usuarios
+
             CargarUsuarios();
 
             btnEliminar.Enabled = false;
@@ -118,5 +118,42 @@ namespace Vista
         {
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nombreUsuario = textBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreUsuario))
+            {
+                CargarUsuarios();
+                return;
+            }
+
+            try
+            {
+                L_BuscarUsuario logicaBuscar = new L_BuscarUsuario();
+                int? idUsuario = logicaBuscar.ObtenerIdPorUsuario(nombreUsuario);
+
+                if (idUsuario.HasValue)
+                {
+                    L_ListarUsuarios logicaListar = new L_ListarUsuarios();
+                    DataTable dt = logicaListar.ListarUsuarios(); 
+                    DataView dv = new DataView(dt);
+
+                    dv.RowFilter = $"Id_Usuario = {idUsuario.Value}";
+
+                    dgvUsuarios.DataSource = dv;
+                }
+                else
+                {
+                    dgvUsuarios.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al buscar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
