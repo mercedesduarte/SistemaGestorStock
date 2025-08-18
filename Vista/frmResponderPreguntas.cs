@@ -15,87 +15,96 @@ namespace Vista
 {
     public partial class frmResponderPreguntas : Form
     {
-        private List<PreguntaVista> preguntas = new List<PreguntaVista>();
-        private int indiceActual = 0;
-        private readonly L_ListarPreguntas logicaPreguntas = new L_ListarPreguntas();
+        private List<PreguntaVista> _preguntas;
+        private int _indiceActual = 0;
+        private bool _todasRespondidas = false;
 
         public frmResponderPreguntas()
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) =>
+            {
+                if (!_todasRespondidas && this.DialogResult != DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
+            };
         }
 
         private void frmResponderPreguntas_Load(object sender, EventArgs e)
         {
-            preguntas = logicaPreguntas.ListarPreguntas();
+            var logica = new L_ListarPreguntas();
+            _preguntas = logica.ListarPreguntas();
 
-            if (preguntas.Count > 0)
-            {
-                MostrarPreguntaActual();
-            }
-            else
+            if (_preguntas.Count == 0)
             {
                 MessageBox.Show("No hay preguntas disponibles.");
-                btnResponderPregunta.Enabled = false;
+                this.Close();
+                return;
             }
-        }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            MostrarPreguntaActual();
         }
 
         private void btnResponderPregunta_Click(object sender, EventArgs e)
         {
-            if (indiceActual >= preguntas.Count)
+            if (string.IsNullOrWhiteSpace(txtRespuesta.Text))
             {
-                errorProvider1.SetError(txtRespuesta, "No hay más preguntas.");
+                errorProvider1.SetError(txtRespuesta, "La respuesta no puede estar vacía.");
                 return;
             }
 
-            string respuestaUsuario = txtRespuesta.Text.Trim();
-            int idUsuario = SesionUsuario.IdUsuario;
-            int idPregunta = preguntas[indiceActual].Id;
-
-            L_ResponderPregunta logica = new L_ResponderPregunta();
+            var logica = new L_ResponderPregunta();
             string mensaje;
 
-            bool resultado = logica.ResponderPregunta(idUsuario, idPregunta, respuestaUsuario, out mensaje);
+            bool resultado = logica.ResponderPregunta(
+                SesionUsuario.IdUsuario,
+                _preguntas[_indiceActual].Id,
+                txtRespuesta.Text,
+                out mensaje
+            );
 
-            if (resultado)
+            if (!resultado)
             {
-                MessageBox.Show("Respuesta guardada correctamente.");
-                indiceActual++;
-                MostrarPreguntaActual();
-                txtRespuesta.Clear();
+                errorProvider1.SetError(txtRespuesta, mensaje);
+                return;
+            }
 
+            _indiceActual++;
+
+            if (_indiceActual >= _preguntas.Count)
+            {
+                _todasRespondidas = true;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
-                errorProvider1.SetError(txtRespuesta, mensaje);
+                MostrarPreguntaActual();
+                txtRespuesta.Clear();
             }
         }
 
-
         private void MostrarPreguntaActual()
         {
-            if (indiceActual < preguntas.Count)
-            {
-                lblPreguntaLista.Text = preguntas[indiceActual].Pregunta;
-                lblProgreso.Text = $"{indiceActual + 1} de {preguntas.Count}";
-                txtRespuesta.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Respondiste todas las preguntas.");
-                btnResponderPregunta.Enabled = false;
-                this.Close();
-            }
-
+            lblPreguntaLista.Text = _preguntas[_indiceActual].Pregunta;
+            lblProgreso.Text = $"{_indiceActual + 1} de {_preguntas.Count}";
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var confirmacion = MessageBox.Show(
+                "¿Estás seguro de salir sin completar las preguntas?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
         }
     }
 }

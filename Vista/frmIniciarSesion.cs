@@ -112,11 +112,23 @@ namespace Vista
 
             if (historial == null)
             {
-                frmResponderPreguntas preguntasForm = new frmResponderPreguntas();
-                preguntasForm.ShowDialog(); 
+                using (var frmPreguntas = new frmResponderPreguntas())
+                {
+                    if (frmPreguntas.ShowDialog() != DialogResult.OK)
+                    {
+                        MessageBox.Show("Debes responder todas las preguntas de seguridad.");
+                        return;
+                    }
+                }
 
-                frmCambiarContra cambiarContraForm = new frmCambiarContra();
-                cambiarContraForm.ShowDialog();
+                using (var frmCambioContra = new frmCambiarContra())
+                {
+                    if (frmCambioContra.ShowDialog() != DialogResult.OK)
+                    {
+                        MessageBox.Show("Debes cambiar tu contraseña.");
+                        return;
+                    }
+                }
             }
 
             this.Tag = rol;
@@ -127,20 +139,8 @@ namespace Vista
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "¿Estás seguro que deseas salir del sistema?",
-                "Confirmar salida",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-
+            this.Close();
         }
-
         private void btnMostrarContra_Click(object sender, EventArgs e)
         {
             txtContrasena.UseSystemPasswordChar = !txtContrasena.UseSystemPasswordChar;
@@ -164,7 +164,6 @@ namespace Vista
                 }
             }
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 

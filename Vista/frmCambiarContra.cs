@@ -41,7 +41,6 @@ namespace Vista
             if (contra != confContra)
             {
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, "Las contraseñas no son iguales");
@@ -62,7 +61,6 @@ namespace Vista
                 int nudMinCaracteres = estado.CaracteresUtilizados;
 
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, $"La contraseña no cumple con el mínimo de caracteres requeridos {nudMinCaracteres}.");
@@ -75,7 +73,6 @@ namespace Vista
             if (!restriccion.ObtenerNumeros(contra))
             {
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, "La contraseña no tiene números");
@@ -88,7 +85,6 @@ namespace Vista
             if (!restriccion.ObtenerMayusculas(contra))
             {
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, "La contraseña no tiene Mayúsculas");
@@ -101,7 +97,6 @@ namespace Vista
             if (!restriccion.ObtenerCaracteresEspeciales(contra))
             {
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, "La contraseña no tiene caracteres especiales.");
@@ -115,7 +110,6 @@ namespace Vista
             if (resultadoVerificacion != "OK")
             {
                 Timer timer = new Timer();
-                timer.Interval = 3000;
                 timer.Tick += (senderTimer, args) =>
                 {
                     errorProvider1.SetError(txtContra, resultadoVerificacion);
@@ -143,7 +137,6 @@ namespace Vista
                     if (encontrada)
                     {
                         Timer timer = new Timer();
-                        timer.Interval = 3000;
                         timer.Tick += (senderTimer, args) =>
                         {
                             errorProvider1.SetError(txtContra, "Estas contraseña ya fue utilizada anteriormente.");
