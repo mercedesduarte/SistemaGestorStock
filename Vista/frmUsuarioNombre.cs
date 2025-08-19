@@ -8,15 +8,11 @@ namespace Vista
     public partial class frmUsuarioNombre : Form
     {
         private L_BuscarUsuario logicaBuscar = new L_BuscarUsuario();
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
 
         public frmUsuarioNombre()
         {
             InitializeComponent();
-        }
-
-        private void frmUsuarioNombre_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -30,7 +26,8 @@ namespace Vista
 
             if (string.IsNullOrEmpty(nombreUsuario))
             {
-                MessageBox.Show("Debe ingresar un nombre de usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mostrarTT.MostrarTooltip(txtNombreUsuario, "Debe ingresar un nombre de usuario.");
+                txtNombreUsuario.Focus();
                 return;
             }
 
@@ -42,7 +39,8 @@ namespace Vista
 
                 if (!idUsuario.HasValue)
                 {
-                    errorProvider1.SetError(txtNombreUsuario, "Usuario no encontrado.");
+                    mostrarTT.MostrarTooltip(txtNombreUsuario, "Usuario no encontrado.");
+                    txtNombreUsuario.Focus();
                     return;
                 }
 
@@ -67,12 +65,6 @@ namespace Vista
             {
                 MessageBox.Show($"Error al validar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -11,8 +11,8 @@ namespace Vista
         private List<PreguntaVista> preguntas;
         private int indiceActual = 0;
         private Dictionary<int, string> respuestasUsuario = new Dictionary<int, string>();
-
         private L_ResponderRespuestas logica = new L_ResponderRespuestas();
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
 
         public frmResponderRespuesta()
         {
@@ -81,7 +81,7 @@ namespace Vista
 
             if (string.IsNullOrEmpty(respuestaUsuario))
             {
-                errorProvider1.SetError(txtRespuesta, "Debe ingresar una respuesta.");
+                mostrarTT.MostrarTooltip(txtRespuesta, "Debe ingresar una respuesta.");
                 txtRespuesta.Focus();
                 return;
             }

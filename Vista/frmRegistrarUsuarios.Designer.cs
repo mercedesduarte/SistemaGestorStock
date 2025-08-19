@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarUsuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbPersona = new System.Windows.Forms.ComboBox();
@@ -41,10 +40,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,7 +78,6 @@
             this.cbPersona.Name = "cbPersona";
             this.cbPersona.Size = new System.Drawing.Size(349, 39);
             this.cbPersona.TabIndex = 21;
-            this.cbPersona.SelectedIndexChanged += new System.EventHandler(this.cbPersona_SelectedIndexChanged);
             // 
             // lblPersona
             // 
@@ -197,10 +193,6 @@
             this.label1.Text = "REGISTRAR USUARIOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // frmRegistrarUsuarios
             // 
             this.AcceptButton = this.btnCrearUsuario;
@@ -219,7 +211,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,6 +227,5 @@
         private System.Windows.Forms.ComboBox cbRolUsuario;
         private System.Windows.Forms.ComboBox cbPersona;
         private System.Windows.Forms.Label lblPersona;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

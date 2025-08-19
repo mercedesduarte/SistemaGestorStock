@@ -1,21 +1,14 @@
 ﻿using Logica;
 using Sesion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace Vista
 {
     public partial class frmRegistrarUsuarios : Form
     {
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
+
         public frmRegistrarUsuarios()
         {
             InitializeComponent();
@@ -42,21 +35,27 @@ namespace Vista
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtUsuario.Text))
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                errorProvider1.SetError(txtUsuario, "El nombre de usuario no puede estar vacío.");
+                mostrarTT.MostrarTooltip(txtUsuario, "El nombre de usuario no puede estar vacío.");
+                txtUsuario.Focus();
                 return;
             }
-            if(cbPersona.SelectedIndex == -1)
+
+            if (cbPersona.SelectedIndex == -1)
             {
-                errorProvider1.SetError(cbPersona, "Debe seleccionar una persona.");
+                mostrarTT.MostrarTooltip(cbPersona, "Debe seleccionar una persona.");
+                cbPersona.Focus();
                 return;
             }
-            if(cbRolUsuario.SelectedIndex == -1)
+
+            if (cbRolUsuario.SelectedIndex == -1)
             {
-                errorProvider1.SetError(cbRolUsuario, "Debe seleccionar un rol.");
+                mostrarTT.MostrarTooltip(cbRolUsuario, "Debe seleccionar un rol.");
+                cbRolUsuario.Focus();
                 return;
             }
+
             L_Lista lcorreo = new L_Lista();
             int id_persona = (int)cbPersona.SelectedValue;
             string usuario = txtUsuario.Text.Trim();
@@ -83,13 +82,6 @@ namespace Vista
             {
                 MessageBox.Show("Error al registrar el usuario. Revisá la consola para más detalles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-
-        private void cbPersona_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

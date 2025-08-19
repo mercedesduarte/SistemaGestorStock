@@ -1,18 +1,13 @@
 ﻿using Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vista
 {
     public partial class frmPreguntasDeSeguridad : Form
     {
+        private ToolTip tt = new ToolTip();
+
         public frmPreguntasDeSeguridad()
         {
             InitializeComponent();
@@ -29,7 +24,7 @@ namespace Vista
 
             if (string.IsNullOrWhiteSpace(pregunta))
             {
-                errorProvider1.SetError(txtPregunta, "Por favor, ingrese una pregunta válida.");
+                tt.Show("Por favor, ingrese una pregunta válida.", txtPregunta, 3000);
                 return;
             }
 
@@ -46,7 +41,7 @@ namespace Vista
             }
             else
             {
-                errorProvider1.SetError(txtPregunta, mensaje);
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

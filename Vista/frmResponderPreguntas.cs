@@ -1,12 +1,6 @@
 ﻿using Logica;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Logica.L_ResponderPreguntas;
 using Sesion;
@@ -18,6 +12,7 @@ namespace Vista
         private List<PreguntaVista> _preguntas;
         private int _indiceActual = 0;
         private bool _todasRespondidas = false;
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
 
         public frmResponderPreguntas()
         {
@@ -50,7 +45,8 @@ namespace Vista
         {
             if (string.IsNullOrWhiteSpace(txtRespuesta.Text))
             {
-                errorProvider1.SetError(txtRespuesta, "La respuesta no puede estar vacía.");
+                mostrarTT.MostrarTooltip(txtRespuesta, "La respuesta no puede estar vacía.");
+                txtRespuesta.Focus();
                 return;
             }
 
@@ -66,7 +62,7 @@ namespace Vista
 
             if (!resultado)
             {
-                errorProvider1.SetError(txtRespuesta, mensaje);
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

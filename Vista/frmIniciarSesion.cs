@@ -8,55 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
-
 using Logica;
 using Servicios;
 using Sesion;
-
-
 
 namespace Vista
 {
     public partial class frmIniciarSesion : Form
     {
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
+
         public frmIniciarSesion()
         {
             InitializeComponent();
             this.BackColor = Color.AliceBlue;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if(txtUsuario.Text.Trim() == "")
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtUsuario, "Debe ingresar un nombre de usuario.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtUsuario, "El nombre de usuario no puede estar \n vacío");
                 txtUsuario.Focus();
                 return;
             }
 
-            if (txtContrasena.Text.Trim() == "")
+            if (string.IsNullOrWhiteSpace(txtContrasena.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider2.SetError(txtContrasena, "Debe ingresar su contraseña.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtContrasena, "Debe ingresar su contraseña.");
                 txtContrasena.Focus();
                 return;
             }
@@ -91,7 +70,6 @@ namespace Vista
                 EstadoRestricciones estado = Restriccion.ConseguirRestricciones();
                 if (estado.DosFA == 1)
                 {
-
                     frm2FA dobleAutenticacionForm = new frm2FA();
                     dobleAutenticacionForm.Id_Usuario = idUsuario;
                     DialogResult res2FA = dobleAutenticacionForm.ShowDialog();
@@ -132,15 +110,14 @@ namespace Vista
             }
 
             this.Tag = rol;
-            this.DialogResult = DialogResult.OK; 
-
+            this.DialogResult = DialogResult.OK;
         }
-
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void btnMostrarContra_Click(object sender, EventArgs e)
         {
             txtContrasena.UseSystemPasswordChar = !txtContrasena.UseSystemPasswordChar;
@@ -163,19 +140,6 @@ namespace Vista
                     this.Show();
                 }
             }
-        }
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void erroProvider1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

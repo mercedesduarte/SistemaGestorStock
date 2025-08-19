@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPersonas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,10 +66,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -351,8 +348,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(349, 38);
             this.txtAltura.TabIndex = 25;
-            this.txtAltura.TextChanged += new System.EventHandler(this.txtAltura_TextChanged);
-            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress_1);
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             // 
             // lblAltura
             // 
@@ -405,7 +401,6 @@
             this.txtNumeroDocumento.Size = new System.Drawing.Size(349, 38);
             this.txtNumeroDocumento.TabIndex = 19;
             this.txtNumeroDocumento.Visible = false;
-            this.txtNumeroDocumento.TextChanged += new System.EventHandler(this.txtNumeroDocumento_TextChanged);
             this.txtNumeroDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDocumento_KeyPress);
             // 
             // lblNumeroDocumento
@@ -509,7 +504,6 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(349, 38);
             this.txtApellido.TabIndex = 10;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
@@ -519,12 +513,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(349, 38);
             this.txtNombre.TabIndex = 9;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // frmRegistrarPersonas
             // 
@@ -543,7 +532,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,6 +575,5 @@
         private System.Windows.Forms.TextBox txtProvincia;
         private System.Windows.Forms.PictureBox searchImg;
         private System.Windows.Forms.MaskedTextBox txtCUIL;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -62,7 +62,6 @@ namespace Vista
             label4.Visible = false;
 
             button1.Text = usuario.Bloqueado ? "Desbloquear" : "BLOQUEAR";
-
         }
 
         private UsuarioVista ObtenerUsuarioDesdeFormulario()
@@ -72,7 +71,8 @@ namespace Vista
                 Id_Usuario = usuarioOriginal.Id_Usuario,
                 Id_Persona = usuarioOriginal.Id_Persona,
                 Usuario = textBox1.Text.Trim(),
-                Fecha_Bloqueo = string.IsNullOrEmpty(textBox2.Text) ? (DateTime?)null : DateTime.ParseExact(textBox2.Text, "dd/MM/yyyy", null),
+                Fecha_Bloqueo = string.IsNullOrEmpty(textBox2.Text) ? (DateTime?)null :
+                                DateTime.ParseExact(textBox2.Text, "dd/MM/yyyy", null),
                 CambioContra = int.TryParse(textBox3.Text, out int cambio) ? cambio : 0,
                 Id_Rol = (int)comboBox1.SelectedValue,
                 Bloqueado = usuarioOriginal.Bloqueado,
@@ -91,11 +91,38 @@ namespace Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El nombre de usuario no puede estar vacío.",
+                                "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox1.Focus();
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(textBox2.Text) &&
+                !DateTime.TryParseExact(textBox2.Text, "dd/MM/yyyy", null,
+                                        System.Globalization.DateTimeStyles.None, out _))
+            {
+                MessageBox.Show("La fecha de bloqueo debe tener el formato dd/MM/yyyy.",
+                                "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox2.Focus();
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(textBox3.Text) && !int.TryParse(textBox3.Text, out _))
+            {
+                MessageBox.Show("El campo 'Cambios de contraseña' debe ser un número válido.",
+                                "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox3.Focus();
+                return;
+            }
+
             var usuarioActual = ObtenerUsuarioDesdeFormulario();
 
             if (!HayCambios(usuarioOriginal, usuarioActual))
             {
-                MessageBox.Show("No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay cambios para guardar.", "Información",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -104,43 +131,48 @@ namespace Vista
 
             if (exito)
             {
-                MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario actualizado correctamente.", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 usuarioOriginal = usuarioActual;
             }
             else
             {
-                MessageBox.Show("Error al actualizar usuario: " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al actualizar usuario: " + mensaje, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            string accionConfirmar = usuarioOriginal.Bloqueado ? "desbloquear" : "bloquear";
+            DialogResult confirmacion = MessageBox.Show(
+                $"¿Está seguro que desea {accionConfirmar} este usuario?",
+                "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.No) return;
+
             var logica = new L_ModificarUsuario();
 
             bool nuevoEstado = !usuarioOriginal.Bloqueado;
-            DateTime? nuevaFechaBloqueo = nuevoEstado ? DateTime.Now : usuarioOriginal.Fecha_Bloqueo;
+            DateTime? nuevaFechaBloqueo = nuevoEstado ? (DateTime?)DateTime.Now : (DateTime?)null;
 
             bool exito = logica.BloquearUsuario(IdUsuario, nuevoEstado, nuevaFechaBloqueo, out string mensaje);
 
             if (exito)
             {
                 usuarioOriginal.Bloqueado = nuevoEstado;
-
-                if (nuevoEstado)
-                    usuarioOriginal.Fecha_Bloqueo = nuevaFechaBloqueo;
+                usuarioOriginal.Fecha_Bloqueo = nuevaFechaBloqueo;
 
                 CargarDatosEnFormulario(usuarioOriginal);
 
                 string accion = nuevoEstado ? "bloqueado" : "desbloqueado";
-                MessageBox.Show($"Usuario {accion} correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Usuario {accion} correctamente.", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Error al actualizar estado del usuario: " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al actualizar estado del usuario: " + mensaje, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

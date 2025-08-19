@@ -31,7 +31,6 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciarSesion));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
@@ -44,12 +43,8 @@ namespace Vista
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -97,8 +92,7 @@ namespace Vista
             this.groupBox1.Size = new System.Drawing.Size(1005, 421);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INGRESE LOS DATOS PARA INICAR SESION";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.Text = "INGRESE LOS DATOS PARA INICIAR SESION";
             // 
             // lkbContraOlvidada
             // 
@@ -180,10 +174,6 @@ namespace Vista
             // 
             // txtContrasena
             // 
-            this.errorProvider2.SetIconAlignment(this.txtContrasena, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.errorProvider1.SetIconAlignment(this.txtContrasena, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.errorProvider2.SetIconPadding(this.txtContrasena, 2);
-            this.errorProvider1.SetIconPadding(this.txtContrasena, 2);
             this.txtContrasena.Location = new System.Drawing.Point(603, 223);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
@@ -192,23 +182,11 @@ namespace Vista
             // 
             // txtUsuario
             // 
-            this.errorProvider1.SetIconAlignment(this.txtUsuario, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.errorProvider2.SetIconPadding(this.txtUsuario, 2);
-            this.errorProvider1.SetIconPadding(this.txtUsuario, 2);
             this.txtUsuario.Location = new System.Drawing.Point(603, 118);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(349, 38);
             this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
             // 
             // frmIniciarSesion
             // 
@@ -226,12 +204,9 @@ namespace Vista
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmIniciarSesion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,8 +224,6 @@ namespace Vista
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.LinkLabel lkbContraOlvidada;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
 

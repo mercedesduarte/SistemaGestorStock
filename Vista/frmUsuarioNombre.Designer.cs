@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioNombre));
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(284, 223);
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(248, 199);
+            this.txtNombreUsuario.Multiline = true;
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(224, 22);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(290, 40);
             this.txtNombreUsuario.TabIndex = 0;
-            this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // label1
             // 
@@ -52,18 +50,19 @@
             this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-116, -2);
+            this.label1.Location = new System.Drawing.Point(2, -1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1063, 66);
+            this.label1.Size = new System.Drawing.Size(803, 66);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Insertar nombre";
+            this.label1.Text = "INSERTAR NOMBRE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -73,7 +72,7 @@
             this.btnConfirmar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.btnConfirmar.Size = new System.Drawing.Size(197, 55);
             this.btnConfirmar.TabIndex = 14;
-            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.Text = "CONFIRMAR";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -83,6 +82,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCerrar.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,10 +96,6 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // frmUsuarioNombre
             // 
@@ -115,8 +111,6 @@
             this.Controls.Add(this.txtNombreUsuario);
             this.Name = "frmUsuarioNombre";
             this.Text = "frmUsuarioNombre";
-            this.Load += new System.EventHandler(this.frmUsuarioNombre_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +122,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

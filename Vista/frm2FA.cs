@@ -8,6 +8,8 @@ namespace Vista
     public partial class frm2FA : Form
     {
         public int Id_Usuario { get; set; }
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
+
         public frm2FA()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace Vista
 
             if (string.IsNullOrEmpty(correo))
             {
-                MessageBox.Show("No se encontró correo para el usuario.");
+                MessageBox.Show("No se encontró correo para el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -40,11 +42,6 @@ namespace Vista
             ArmarMail.Preparar();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -56,21 +53,18 @@ namespace Vista
 
             if (string.IsNullOrEmpty(codigoIngresado))
             {
-                errorProvider1.SetError(textBox1, "Por favor, ingrese el código.");
+                mostrarTT.MostrarTooltip(textBox1, "Por favor, ingrese el código.");
                 return;
             }
 
             L_VerificarCodigo2FA logicaVerificar = new L_VerificarCodigo2FA();
-
-
             bool esValido = logicaVerificar.VerificarCodigo(Id_Usuario, codigoIngresado);
 
             if (esValido)
             {
-                MessageBox.Show("Código verificado correctamente.");
+                MessageBox.Show("Código verificado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 frmResponderPreguntas formrp = new frmResponderPreguntas();
-
                 this.Hide();
 
                 DialogResult res = formrp.ShowDialog();
@@ -87,7 +81,7 @@ namespace Vista
             }
             else
             {
-                errorProvider1.SetError(textBox1, "Código incorrecto. Intente nuevamente.");
+                MessageBox.Show("Código incorrecto. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

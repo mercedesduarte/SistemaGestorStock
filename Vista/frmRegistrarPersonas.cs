@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 
@@ -13,6 +6,7 @@ namespace Vista
 {
     public partial class frmRegistrarPersonas : Form
     {
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
         public frmRegistrarPersonas()
         {
             InitializeComponent();
@@ -34,10 +28,6 @@ namespace Vista
                     txtLocalidad.Text = L_EjecutarBusquedaCP.Localidad;
                     txtPartido.Text = L_EjecutarBusquedaCP.Partido;
                     txtProvincia.Text = L_EjecutarBusquedaCP.Provincia;
-
-                    Console.WriteLine(L_EjecutarBusquedaCP.idLocalidad);
-                    Console.WriteLine(L_EjecutarBusquedaCP.idPartido);
-                    Console.WriteLine(L_EjecutarBusquedaCP.idProvincia);
                 }
                 else
                 {
@@ -49,183 +39,98 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Ingrese un código postal válido.");
+                mostrarTT.MostrarTooltip(txtCodigoPostal, "Ingrese un código postal válido.");
             }
         }
 
         private void btnCrearPersona_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text.Trim() == "")
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtNombre, "Debe ingresar un nombre.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtNombre, "Debe ingresar un nombre.");
                 txtNombre.Focus();
                 return;
             }
-            if(txtApellido.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtApellido, "Debe ingresar un apellido.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtApellido, "Debe ingresar un apellido.");
                 txtApellido.Focus();
                 return;
             }
-            if(cbTipoDocumento.SelectedItem == null)
+
+            if (cbTipoDocumento.SelectedItem == null)
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(cbTipoDocumento, "Debe seleccionar un tipo de documento.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(cbTipoDocumento, "Debe seleccionar un tipo de documento.");
                 cbTipoDocumento.Focus();
                 return;
             }
-            if(txtNumeroDocumento.Visible && txtNumeroDocumento.Text.Trim() == "")
+
+            if (txtNumeroDocumento.Visible && string.IsNullOrWhiteSpace(txtNumeroDocumento.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtNumeroDocumento, "Debe ingresar un número de documento.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtNumeroDocumento, "Debe ingresar un número de documento.");
                 txtNumeroDocumento.Focus();
                 return;
             }
-            if(txtCUIL.Visible && txtCUIL.Text.Trim() == "")
+
+            if (txtCUIL.Visible && string.IsNullOrWhiteSpace(txtCUIL.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtCUIL, "Debe ingresar un CUIL.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtCUIL, "Debe ingresar un CUIL.");
                 txtCUIL.Focus();
                 return;
             }
-            if(txtCalle.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(txtCalle.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtCalle, "Debe ingresar una calle.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtCalle, "Debe ingresar una calle.");
                 txtCalle.Focus();
                 return;
             }
-            if(txtAltura.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(txtAltura.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtAltura, "Debe ingresar una altura.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtAltura, "Debe ingresar una altura.");
                 txtAltura.Focus();
                 return;
             }
-            if(txtCodigoPostal.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(txtCodigoPostal.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtCodigoPostal, "Debe ingresar un código postal.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtCodigoPostal, "Debe ingresar un código postal.");
                 txtCodigoPostal.Focus();
                 return;
             }
+
             if (cbGenero.SelectedItem == null)
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(cbGenero, "Debe seleccionar un género.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(cbGenero, "Debe seleccionar un género.");
                 cbGenero.Focus();
                 return;
             }
+
             if (cbSexo.SelectedItem == null)
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(cbSexo, "Debe seleccionar un sexo.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(cbSexo, "Debe seleccionar un sexo.");
                 cbSexo.Focus();
                 return;
             }
-            if (txtCorreoElectronico.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(txtCorreoElectronico.Text))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtCorreoElectronico, "Debe ingresar un correo electrónico.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtCorreoElectronico, "Debe ingresar un correo electrónico.");
                 txtCorreoElectronico.Focus();
                 return;
             }
+
             if (!txtCorreoElectronico.Text.Contains("@") || !txtCorreoElectronico.Text.Contains("."))
             {
-                Timer timer = new Timer();
-                timer.Interval = 3000;
-                timer.Tick += (senderTimer, args) =>
-                {
-                    errorProvider1.SetError(txtCorreoElectronico, "El correo electrónico debe contener '@' y un dominio válido.");
-                    timer.Stop();
-                };
-                timer.Start();
+                mostrarTT.MostrarTooltip(txtCorreoElectronico, "El correo electrónico debe contener '@' y un dominio válido.");
                 txtCorreoElectronico.Focus();
                 return;
             }
+
             try
             {
-
-                if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
-                    throw new ArgumentException("Nombre y Apellido son campos obligatorios.");
-
-                if (cbTipoDocumento.SelectedItem == null)
-                    throw new ArgumentNullException("Tipo de documento no seleccionado.");
-
-                if (cbGenero.SelectedItem == null)
-                    throw new ArgumentNullException("Debe seleccionar un género.");
-
-                if (cbSexo.SelectedItem == null)
-                    throw new ArgumentNullException("Debe seleccionar un sexo.");
-
                 string nombre = txtNombre.Text.Trim();
                 string apellido = txtApellido.Text.Trim();
                 string tipoDocumento = cbTipoDocumento.SelectedItem.ToString();
@@ -244,7 +149,6 @@ namespace Vista
                 int localidad = L_EjecutarBusquedaCP.idProvincia;
                 DateTime fechaAlta = DateTime.Now;
 
-
                 var traerGenero = new L_Traer_Genero();
                 traerGenero.Genero = genero;
 
@@ -256,7 +160,6 @@ namespace Vista
 
                 int idGenero = traerGenero.IdGenero;
 
-
                 Logica.L_Registro logica = new Logica.L_Registro();
 
                 bool resultado = logica.RegistrarPersona(
@@ -266,39 +169,14 @@ namespace Vista
                     sexo, email, fechaAlta
                 );
 
-                if (resultado == true)
-                {
+                if (resultado)
                     MessageBox.Show("Persona registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else
-                {
                     MessageBox.Show("Ocurrió un error al registrar la persona.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (ArgumentNullException ex)
-            {
-                MessageBox.Show("Falta un campo obligatorio: " + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show("Datos inválidos: " + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (FormatException ex)
-            {
-                MessageBox.Show("Formato incorrecto en los datos ingresados. " + ex.Message, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (System.Data.SqlClient.SqlException ex)
-            {
-                System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                foreach (System.Data.SqlClient.SqlError error in ex.Errors)
-                {
-                    sb.AppendLine($"Código: {error.Number} | Línea: {error.LineNumber} | Mensaje: {error.Message}");
-                }
-                MessageBox.Show("Error en la base de datos:\n" + sb.ToString(), "Error SQL Detallado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado: " + ex.Message, "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -310,7 +188,6 @@ namespace Vista
             {
                 txtNumeroDocumento.Visible = true;
                 lblNumeroDocumento.Visible = true;
-
                 txtCUIL.Visible = false;
                 lblCUIL.Visible = false;
             }
@@ -318,7 +195,6 @@ namespace Vista
             {
                 txtCUIL.Visible = true;
                 lblCUIL.Visible = true;
-
                 txtNumeroDocumento.Visible = false;
                 lblNumeroDocumento.Visible = false;
             }
@@ -326,17 +202,9 @@ namespace Vista
             {
                 txtNumeroDocumento.Visible = false;
                 lblNumeroDocumento.Visible = false;
-
                 txtCUIL.Visible = false;
                 lblCUIL.Visible = false;
             }
-            
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -344,26 +212,14 @@ namespace Vista
             ValidadorTextBox.SoloLetras(sender, e);
         }
 
-        private void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidadorTextBox.SoloLetras(sender, e);
         }
 
-        private void txtNumeroDocumento_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidadorTextBox.SoloNumeros(sender, e);
-        }
-        private void txtAltura_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtAltura_KeyPress(object sender, KeyPressEventArgs e)
@@ -372,11 +228,6 @@ namespace Vista
         }
 
         private void txtCUIL_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidadorTextBox.SoloNumeros(sender, e);
-        }
-
-        private void txtAltura_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             ValidadorTextBox.SoloNumeros(sender, e);
         }
@@ -397,5 +248,3 @@ namespace Vista
         }
     }
 }
-
-

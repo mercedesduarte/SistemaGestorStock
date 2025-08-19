@@ -53,11 +53,6 @@ namespace Vista
                 MessageBox.Show("Error al cargar personas: " + ex.Message);
             }
         }
-
-        private void dgvPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();

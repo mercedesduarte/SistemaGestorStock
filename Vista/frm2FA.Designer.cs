@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm2FA));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,9 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -57,8 +54,7 @@
             this.label1.Size = new System.Drawing.Size(104, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
+            //
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -86,7 +82,7 @@
             this.button1.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.button1.Size = new System.Drawing.Size(185, 55);
             this.button1.TabIndex = 15;
-            this.button1.Text = "MANDAR";
+            this.button1.Text = "ENVIAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -125,10 +121,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // frm2FA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,7 +134,6 @@
             this.Load += new System.EventHandler(this.frm2FA_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,6 +146,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

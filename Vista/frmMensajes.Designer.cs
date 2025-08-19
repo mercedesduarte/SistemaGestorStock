@@ -126,7 +126,7 @@
             this.listMensajes.Name = "listMensajes";
             this.listMensajes.Size = new System.Drawing.Size(820, 283);
             this.listMensajes.TabIndex = 1;
-            this.listMensajes.SelectedIndexChanged += new System.EventHandler(this.listMensajes_SelectedIndexChanged);
+            this.listMensajes.SelectedIndexChanged += new System.EventHandler(this.listPersonas_SelectedIndexChanged);
             // 
             // txtMensaje
             // 

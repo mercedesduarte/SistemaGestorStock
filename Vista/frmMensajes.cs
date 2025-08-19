@@ -11,6 +11,7 @@ namespace Vista
     {
         private L_ListarUsuarios logicaUsuarios = new L_ListarUsuarios();
         private L_Mensajes logicaMensajes = new L_Mensajes();
+        private MostrarToolTip mostrarTT = new MostrarToolTip();
 
         public frmMensajes()
         {
@@ -22,7 +23,6 @@ namespace Vista
             try
             {
                 DataTable dtUsuarios = logicaUsuarios.ListarUsuarios();
-
                 DataView vista = dtUsuarios.DefaultView;
                 vista.RowFilter = $"Id_Usuario <> {SesionUsuario.IdUsuario}";
 
@@ -49,7 +49,6 @@ namespace Vista
             try
             {
                 DataTable mensajes = logicaMensajes.ObtenerConversacion(SesionUsuario.IdUsuario, receptorId);
-
                 listMensajes.Items.Clear();
 
                 foreach (DataRow row in mensajes.Rows)
@@ -57,7 +56,6 @@ namespace Vista
                     string fecha = Convert.ToDateTime(row["Fecha"]).ToString("g");
                     string contenido = row["Contenido"].ToString();
                     string emisor = (Convert.ToInt32(row["EmisorId"]) == SesionUsuario.IdUsuario) ? "Yo" : "Ellos";
-
                     string texto = $"{fecha} - {emisor}: {contenido}";
                     listMensajes.Items.Add(texto);
                 }
@@ -76,23 +74,18 @@ namespace Vista
                 MessageBox.Show("No se ha iniciado sesión correctamente.");
         }
 
-        private void listMensajes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEnviar_Click_2(object sender, EventArgs e)
         {
             if (listPersonas.SelectedValue == null || !int.TryParse(listPersonas.SelectedValue.ToString(), out int receptorId))
             {
-                MessageBox.Show("Seleccione un usuario para enviar el mensaje.");
+                mostrarTT.MostrarTooltip(listPersonas, "Seleccione un usuario para enviar el mensaje.");
                 return;
             }
 
             string mensaje = txtMensaje.Text.Trim();
             if (string.IsNullOrEmpty(mensaje))
             {
-                MessageBox.Show("El mensaje no puede estar vacío.");
+                mostrarTT.MostrarTooltip(txtMensaje, "El mensaje no puede estar vacío.");
                 return;
             }
 
@@ -101,7 +94,6 @@ namespace Vista
                 logicaMensajes.Enviar(SesionUsuario.IdUsuario, receptorId, mensaje);
                 MessageBox.Show("Mensaje enviado correctamente.");
                 txtMensaje.Clear();
-
                 CargarMensajes(receptorId);
             }
             catch (Exception ex)

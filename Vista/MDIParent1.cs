@@ -31,8 +31,6 @@ namespace Vista
 
             AplicarPermisosPorRol(rol);
 
-            this.IsMdiContainer = true;
-
         }
 
 
@@ -205,24 +203,28 @@ namespace Vista
 
         private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formularioExistente = this.MdiChildren.OfType<frmListadoPersonas>().FirstOrDefault();
-
-            if (formularioExistente != null)
+     
+            foreach (Form form in this.MdiChildren)
             {
-                formularioExistente.WindowState = FormWindowState.Maximized;
-                formularioExistente.BringToFront();
-                formularioExistente.Focus();
-                return;
+                if (form is frmListadoPersonas)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
             }
 
-            var nuevoForm = new frmListadoPersonas()
-            {
-                MdiParent = this,
-                WindowState = FormWindowState.Maximized
-            };
 
-            nuevoForm.Show();
-            nuevoForm.WindowState = FormWindowState.Maximized; // Forzar maximizado
+            frmListadoPersonas formularioListadoP = new frmListadoPersonas();
+            formularioListadoP.MdiParent = this;
+            formularioListadoP.StartPosition = FormStartPosition.Manual;
+            formularioListadoP.Location = new Point(
+                (this.ClientSize.Width - formularioListadoP.Width) / 2,
+                (this.ClientSize.Height - formularioListadoP.Height) / 3
+            );
+
+            formularioListadoP.Show();
         }
 
         private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -339,34 +341,28 @@ namespace Vista
 
         private void ModificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Buscar si ya existe una instancia abierta
-            var formularioExistente = this.MdiChildren.OfType<frmCambiarContra>().FirstOrDefault();
-
-            if (formularioExistente != null)
+            foreach (Form form in this.MdiChildren)
             {
-                formularioExistente.WindowState = FormWindowState.Maximized;
-                formularioExistente.BringToFront();
-                formularioExistente.Focus();
-                return;
+                if (form is frmCambiarContra)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
             }
+            frmCambiarContra frmCambiar = new frmCambiarContra();
+            frmCambiar.MdiParent = this;
+            frmCambiar.StartPosition = FormStartPosition.Manual;
+            frmCambiar.Location = new Point(
+                (this.ClientSize.Width - frmCambiar.Width) / 2,
+                (this.ClientSize.Height - frmCambiar.Height) / 3
+            );
 
-            // Crear nueva instancia maximizada
-            var nuevoForm = new frmCambiarContra()
-            {
-                MdiParent = this,
-                WindowState = FormWindowState.Maximized
-            };
+            frmCambiar.Show();
+        }
 
-            // Truco para asegurar la maximización
-            nuevoForm.Show();
-            nuevoForm.WindowState = FormWindowState.Maximized; // Forzar maximizado
-        }
-        private void ForceMaximize(Form childForm)
-        {
-            childForm.Show();
-            childForm.WindowState = FormWindowState.Normal;
-            childForm.WindowState = FormWindowState.Maximized;
-        }
+
     }
 }
 
