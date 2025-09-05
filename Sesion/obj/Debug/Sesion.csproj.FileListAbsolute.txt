@@ -46,3 +46,12 @@ C:\Users\alexi\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
 C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Gerof\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Gerof\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\bin\Debug\Sesion.dll
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.dll
+C:\Users\Mercedes\Desktop\SistemaGestion\Sesion\obj\Debug\Sesion.pdb
