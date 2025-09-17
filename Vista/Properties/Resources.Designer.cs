@@ -73,6 +73,26 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap child_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("child-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_ul_black {
+            get {
+                object obj = ResourceManager.GetObject("list-ul-black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lupita {
             get {
                 object obj = ResourceManager.GetObject("lupita", resourceCulture);
@@ -96,6 +116,36 @@ namespace Vista.Properties {
         internal static System.Drawing.Bitmap nomoscon {
             get {
                 object obj = ResourceManager.GetObject("nomoscon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_square {
+            get {
+                object obj = ResourceManager.GetObject("plus-square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap universal_access_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("universal-access-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap universal_access_regular_241 {
+            get {
+                object obj = ResourceManager.GetObject("universal-access-regular-241", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

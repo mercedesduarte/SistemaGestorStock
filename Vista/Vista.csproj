@@ -267,6 +267,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1004017.png" />
+    <None Include="Resources\imgs\universal-access-regular-24.png" />
+    <None Include="Resources\imgs\plus-square.png" />
+    <None Include="Resources\imgs\list-ul-black.png" />
+    <None Include="Resources\imgs\child-regular-24.png" />
     <Content Include="Resources\imgs\userCircleBlue.png" />
     <None Include="Resources\lupita.png" />
   </ItemGroup>

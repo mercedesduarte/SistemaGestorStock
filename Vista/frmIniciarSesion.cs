@@ -41,7 +41,7 @@ namespace Vista
             }
 
             string usuario = txtUsuario.Text.Trim();
-            string contrasena = txtContrasena.Text;
+            string contrasena = txtContrasena.Text.Trim();
             string rol;
             bool esAdmin;
             int idUsuario;
@@ -49,6 +49,12 @@ namespace Vista
             string contrasenaHasheada = HashconUsu.Hashconusu(usuario, contrasena);
 
             bool loginValido = L_Login.LoginUsuario(usuario, contrasenaHasheada, out idUsuario, out esAdmin, out rol);
+
+            // Intento 2 → login con contraseña hasheada
+            if (!loginValido)
+            {
+                loginValido = L_Login.LoginUsuario(usuario, contrasena, out idUsuario, out esAdmin, out rol);
+            }
 
             if (!loginValido)
             {

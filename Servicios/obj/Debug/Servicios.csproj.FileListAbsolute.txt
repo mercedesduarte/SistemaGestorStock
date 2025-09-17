@@ -89,3 +89,14 @@ C:\Users\Mercedes\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Co
 C:\Users\Mercedes\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.csproj.Up2Date
 C:\Users\Mercedes\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.dll
 C:\Users\Mercedes\Desktop\SistemaGestion\Servicios\obj\Debug\Servicios.pdb
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\Servicios.dll
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\Servicios.pdb
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\Sesion.dll
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\System.Data.SqlClient.dll
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\Sesion.pdb
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\bin\Debug\System.Data.SqlClient.xml
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\obj\Debug\Servicios.csproj.Up2Date
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\obj\Debug\Servicios.dll
+C:\Users\User\Desktop\SistemaGestorStock\Servicios\obj\Debug\Servicios.pdb

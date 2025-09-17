@@ -58,8 +58,8 @@ namespace Vista
 
                 case "usuario normal":
                 
-                    UsuariosToolStripMenuItem.Enabled = false;
-                    UsuariosToolStripMenuItem.Visible = false;
+                    GestionUsuariosToolStripMenuItem.Enabled = false;
+                    GestionUsuariosToolStripMenuItem.Visible = false;
 
                     PersonasToolStripMenuItem.Enabled = false;
                     PersonasToolStripMenuItem.Visible = false;
@@ -97,161 +97,156 @@ namespace Vista
 
         }
 
-        private void PoliticasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmPoliticasSeguridad)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront(); 
-                    form.Focus();        
-                    return;            
-                }
-            }
+        //private void PoliticasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
-            frmPoliticasSeguridad formularioPoliticas = new frmPoliticasSeguridad();
-            formularioPoliticas.MdiParent = this;
-            formularioPoliticas.WindowState = FormWindowState.Maximized;
-            formularioPoliticas.Show(); 
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmPoliticasSeguridad)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront(); 
+        //            form.Focus();        
+        //            return;            
+        //        }
+        //    }
 
-        }
+        //    frmPoliticasSeguridad formularioPoliticas = new frmPoliticasSeguridad();
+        //    formularioPoliticas.MdiParent = this;
+        //    formularioPoliticas.WindowState = FormWindowState.Maximized;
+        //    formularioPoliticas.Show(); 
 
-        private void CrearPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        //}
 
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmPreguntasDeSeguridad)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
+        //private void CrearPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
-
-            frmPreguntasDeSeguridad formularioPreguntas = new frmPreguntasDeSeguridad();
-            formularioPreguntas.MdiParent = this;
-            formularioPreguntas.WindowState = FormWindowState.Maximized;
-            formularioPreguntas.Show();
-        }
-
-        private void ListarPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmListadoPreguntasDeSeguridad)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
-
-     
-            frmListadoPreguntasDeSeguridad formularioListado = new frmListadoPreguntasDeSeguridad();
-            formularioListado.MdiParent = this;
-            formularioListado.WindowState = FormWindowState.Maximized;
-            formularioListado.Show();
-        }
-
-        private void CrearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmRegistrarUsuarios)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmPreguntasDeSeguridad)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
 
 
-            frmRegistrarUsuarios formularioRegistrar = new frmRegistrarUsuarios();
-            formularioRegistrar.MdiParent = this;
-            formularioRegistrar.WindowState = FormWindowState.Maximized;
-            formularioRegistrar.Show();
-        }
+        //    frmPreguntasDeSeguridad formularioPreguntas = new frmPreguntasDeSeguridad();
+        //    formularioPreguntas.MdiParent = this;
+        //    formularioPreguntas.WindowState = FormWindowState.Maximized;
+        //    formularioPreguntas.Show();
+        //}
 
-        private void AgregarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmRegistrarPersonas)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
-
- 
-            frmRegistrarPersonas formularioPersona = new frmRegistrarPersonas();
-            formularioPersona.MdiParent = this;
-            formularioPersona.WindowState = FormWindowState.Maximized;
-            formularioPersona.Show();
-        }
-
-        private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-     
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmListadoPersonas)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
+        //private void ListarPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmListadoPreguntasDeSeguridad)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
 
 
-            frmListadoPersonas formularioListadoP = new frmListadoPersonas();
-            formularioListadoP.MdiParent = this;
-            formularioListadoP.StartPosition = FormStartPosition.Manual;
-            formularioListadoP.Location = new Point(
-                (this.ClientSize.Width - formularioListadoP.Width) / 2,
-                (this.ClientSize.Height - formularioListadoP.Height) / 3
-            );
+        //    frmListadoPreguntasDeSeguridad formularioListado = new frmListadoPreguntasDeSeguridad();
+        //    formularioListado.MdiParent = this;
+        //    formularioListado.WindowState = FormWindowState.Maximized;
+        //    formularioListado.Show();
+        //}
 
-            formularioListadoP.Show();
-        }
+        //private void CrearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
-        private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmListadoUsuarios)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmRegistrarUsuarios)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
 
 
-            frmListadoUsuarios formularioListado = new frmListadoUsuarios();
-            formularioListado.MdiParent = this;
-            formularioListado.WindowState = FormWindowState.Maximized;
-            formularioListado.Show();
-        }
+        //    frmRegistrarUsuarios formularioRegistrar = new frmRegistrarUsuarios();
+        //    formularioRegistrar.MdiParent = this;
+        //    formularioRegistrar.WindowState = FormWindowState.Maximized;
+        //    formularioRegistrar.Show();
+        //}
 
-        private void ConfiguracionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        //private void AgregarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmRegistrarPersonas)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
+
+
+        //    frmRegistrarPersonas formularioPersona = new frmRegistrarPersonas();
+        //    formularioPersona.MdiParent = this;
+        //    formularioPersona.WindowState = FormWindowState.Maximized;
+        //    formularioPersona.Show();
+        //}
+
+        //private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmListadoPersonas)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
+
+
+        //    frmListadoPersonas formularioListadoP = new frmListadoPersonas();
+        //    formularioListadoP.MdiParent = this;
+        //    formularioListadoP.StartPosition = FormStartPosition.Manual;
+        //    formularioListadoP.Location = new Point(
+        //        (this.ClientSize.Width - formularioListadoP.Width) / 2,
+        //        (this.ClientSize.Height - formularioListadoP.Height) / 3
+        //    );
+
+        //    formularioListadoP.Show();
+        //}
+
+        //private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmListadoUsuarios)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
+
+
+        //    frmListadoUsuarios formularioListado = new frmListadoUsuarios();
+        //    formularioListado.MdiParent = this;
+        //    formularioListado.WindowState = FormWindowState.Maximized;
+        //    formularioListado.Show();
+        //}
 
         private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -362,7 +357,161 @@ namespace Vista
             frmCambiar.Show();
         }
 
+        private void AgregarPersona2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void AgregarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarPersonas)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmRegistrarPersonas formularioPersona = new frmRegistrarPersonas();
+            formularioPersona.MdiParent = this;
+            formularioPersona.WindowState = FormWindowState.Maximized;
+            formularioPersona.Show();
+        }
+
+        private void ListarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoPersonas)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmListadoPersonas formularioListadoP = new frmListadoPersonas();
+            formularioListadoP.MdiParent = this;
+            formularioListadoP.StartPosition = FormStartPosition.Manual;
+            formularioListadoP.Location = new Point(
+                (this.ClientSize.Width - formularioListadoP.Width) / 2,
+                (this.ClientSize.Height - formularioListadoP.Height) / 3
+            );
+
+            formularioListadoP.Show();
+        }
+
+        private void PoliticasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmPoliticasSeguridad)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            frmPoliticasSeguridad formularioPoliticas = new frmPoliticasSeguridad();
+            formularioPoliticas.MdiParent = this;
+            formularioPoliticas.WindowState = FormWindowState.Maximized;
+            formularioPoliticas.Show();
+
+        }
+
+        private void CrearPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmPreguntasDeSeguridad)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmPreguntasDeSeguridad formularioPreguntas = new frmPreguntasDeSeguridad();
+            formularioPreguntas.MdiParent = this;
+            formularioPreguntas.WindowState = FormWindowState.Maximized;
+            formularioPreguntas.Show();
+        }
+
+        private void ListarPreguntasSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoPreguntasDeSeguridad)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmListadoPreguntasDeSeguridad formularioListado = new frmListadoPreguntasDeSeguridad();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
+
+        private void CrearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmRegistrarUsuarios)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmRegistrarUsuarios formularioRegistrar = new frmRegistrarUsuarios();
+            formularioRegistrar.MdiParent = this;
+            formularioRegistrar.WindowState = FormWindowState.Maximized;
+            formularioRegistrar.Show();
+        }
+
+        private void ListarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoUsuarios)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+
+            frmListadoUsuarios formularioListado = new frmListadoUsuarios();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
     }
 }
 

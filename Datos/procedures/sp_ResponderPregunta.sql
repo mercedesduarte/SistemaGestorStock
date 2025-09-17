@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_ResponderPregunta
+CREATE OR ALTER PROCEDURE sp_ResponderPregunta
     @idusuario INT,
     @respuesta NVARCHAR(50),
     @idpregunta INT
