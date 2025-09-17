@@ -44,7 +44,7 @@
             this.CrearPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarPreguntasSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.PerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
@@ -70,7 +70,7 @@
             this.GestionUsuariosToolStripMenuItem,
             this.InventarioToolStripMenuItem,
             this.ReportesToolStripMenuItem,
-            this.toolStripMenuItem2});
+            this.PerfilToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -216,19 +216,19 @@
             this.ReportesToolStripMenuItem.Text = "REPORTES";
             this.ReportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // PerfilToolStripMenuItem
             // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PerfilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ModificarContraseñaToolStripMenuItem,
             this.CerrarSesionToolStripMenuItem});
-            this.toolStripMenuItem2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
-            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(121, 48);
-            this.toolStripMenuItem2.Text = "PERFIL";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.PerfilToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PerfilToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PerfilToolStripMenuItem.Image")));
+            this.PerfilToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem";
+            this.PerfilToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.PerfilToolStripMenuItem.Size = new System.Drawing.Size(121, 48);
+            this.PerfilToolStripMenuItem.Text = "PERFIL";
+            this.PerfilToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // ModificarContraseñaToolStripMenuItem
             // 
@@ -331,7 +331,7 @@
             this.InventarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem";
             this.InventarioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.InventarioToolStripMenuItem.Size = new System.Drawing.Size(157, 48);
+            this.InventarioToolStripMenuItem.Size = new System.Drawing.Size(156, 48);
             this.InventarioToolStripMenuItem.Text = "INVENTARIO";
             // 
             // MDIParent1
@@ -375,7 +375,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblRol;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem MensajesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem PerfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ModificarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem InicioToolStripMenuItem;
