@@ -45,9 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="L_BuscarUsuario.cs" />
+    <Compile Include="L_Categoria.cs" />
     <Compile Include="L_CrearCodigo2FA.cs" />
     <Compile Include="L_ListarPersonas.cs" />
     <Compile Include="L_Log.cs" />
+    <Compile Include="L_Marca.cs" />
     <Compile Include="L_Mensajes.cs" />
     <Compile Include="L_ModificarUsuario.cs" />
     <Compile Include="L_CambioObligatorio.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="L_ListarPreguntas.cs" />
     <Compile Include="L_ListarUsuarios.cs" />
     <Compile Include="L_Login.cs" />
+    <Compile Include="L_Producto.cs" />
     <Compile Include="L_RegistrarUsuario.cs" />
     <Compile Include="L_Registro.cs" />
     <Compile Include="L_ResponderRespuestas.cs" />

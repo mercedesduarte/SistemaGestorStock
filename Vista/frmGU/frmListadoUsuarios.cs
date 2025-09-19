@@ -9,9 +9,13 @@ namespace Vista
 {
     public partial class frmListadoUsuarios : Form
     {
-        public frmListadoUsuarios()
+        private string _rol; // Guardamos el rol recibido
+
+        // Constructor con rol
+        public frmListadoUsuarios(string rol)
         {
             InitializeComponent();
+            _rol = rol;
             this.Load += frmListadoUsuarios_Load;
         }
 
@@ -32,6 +36,21 @@ namespace Vista
             btnModificar.Enabled = false;
             btnModificar.BackColor = System.Drawing.Color.LightGray;
             btnEliminar.BackColor = System.Drawing.Color.LightGray;
+
+
+            AplicarPermisos(); // 🔹 Se aplican los permisos según el rol
+
+        }
+
+
+
+        private void AplicarPermisos()
+        {
+            if (!string.IsNullOrEmpty(_rol) && _rol.ToLower() == "usuario normal")
+            {
+                btnModificar.Visible = false;
+                btnEliminar.Visible = false;
+            }
         }
 
         private void CargarUsuarios()
@@ -93,11 +112,6 @@ namespace Vista
             btnModificar.Enabled = false;
             btnModificar.BackColor = System.Drawing.Color.LightGray;
             btnEliminar.BackColor = System.Drawing.Color.LightGray;
-        }
-
-        private void txtPregunta_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

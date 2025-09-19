@@ -35,12 +35,12 @@ namespace Vista
                     dgvPersonas.DataSource = dt;
                     dgvPersonas.AutoResizeColumns();
 
-                    dgvPersonas.Columns[0].Visible = false;
-                    dgvPersonas.Columns[12].Visible = false;
-                    dgvPersonas.Columns[13].Visible = false;
-                    dgvPersonas.Columns[14].Visible = false;
-                    dgvPersonas.Columns[15].Visible = false;
-                    dgvPersonas.Columns[16].Visible = false;
+                    //dgvPersonas.Columns[0].Visible = false;
+                    //dgvPersonas.Columns[1].Visible = false;
+                    //dgvPersonas.Columns[2].Visible = false;
+                    //dgvPersonas.Columns[3].Visible = false;
+                    //dgvPersonas.Columns[4].Visible = false;
+                    //dgvPersonas.Columns[5].Visible = false;
 
                 }
                 else

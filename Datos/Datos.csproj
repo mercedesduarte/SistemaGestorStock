@@ -55,6 +55,7 @@
     <Compile Include="D_BuscarUsuario.cs" />
     <Compile Include="D_BusquedaCP.cs" />
     <Compile Include="D_CambioObligatorio.cs" />
+    <Compile Include="D_Categoria.cs" />
     <Compile Include="D_CrearCodigo2Autenticacion.cs" />
     <Compile Include="D_CrearRespuesta.cs" />
     <Compile Include="D_HistorialContras.cs" />
@@ -66,8 +67,10 @@
     <Compile Include="D_ListaRol.cs" />
     <Compile Include="D_ListarUsuarios.cs" />
     <Compile Include="D_Login.cs" />
+    <Compile Include="D_Marca.cs" />
     <Compile Include="D_Mensajes.cs" />
     <Compile Include="D_ModificarUsuario.cs" />
+    <Compile Include="D_Producto.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
     <Compile Include="D_ResponderRespuestas.cs" />

@@ -70,101 +70,155 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm2FA.cs">
+    <Compile Include="frmGI\Categorias\frmInsertarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm2FA.Designer.cs">
+    <Compile Include="frmGI\Categorias\frmInsertarCategoria.Designer.cs">
+      <DependentUpon>frmInsertarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Categorias\frmListadoCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Categorias\frmListadoCategorias.Designer.cs">
+      <DependentUpon>frmListadoCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Categorias\frmModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Categorias\frmModificarCategoria.Designer.cs">
+      <DependentUpon>frmModificarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Marcas\frmModificarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Marcas\frmModificarMarca.Designer.cs">
+      <DependentUpon>frmModificarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmInsertarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmInsertarProducto.Designer.cs">
+      <DependentUpon>frmInsertarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmListadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmListadoProductos.Designer.cs">
+      <DependentUpon>frmListadoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Productos\frmModificarProducto.Designer.cs">
+      <DependentUpon>frmModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGU\frm2FA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGU\frm2FA.Designer.cs">
       <DependentUpon>frm2FA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCambiarContra.cs">
+    <Compile Include="frmGU\frmCambiarContra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCambiarContra.Designer.cs">
+    <Compile Include="frmGU\frmCambiarContra.Designer.cs">
       <DependentUpon>frmCambiarContra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarUsuario.cs">
+    <Compile Include="frmGU\frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarUsuario.Designer.cs">
+    <Compile Include="frmGU\frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogs.cs">
+    <Compile Include="frmGI\Marcas\frmListadoMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogs.Designer.cs">
+    <Compile Include="frmGI\Marcas\frmListadoMarcas.Designer.cs">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGU\frmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGU\frmLogs.Designer.cs">
       <DependentUpon>frmLogs.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMensajes.cs">
+    <Compile Include="frmGU\frmMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMensajes.Designer.cs">
+    <Compile Include="frmGU\frmMensajes.Designer.cs">
       <DependentUpon>frmMensajes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmResponderPreguntas.cs">
+    <Compile Include="frmGU\frmResponderPreguntas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmResponderPreguntas.Designer.cs">
+    <Compile Include="frmGU\frmResponderPreguntas.Designer.cs">
       <DependentUpon>frmResponderPreguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIniciarSesion.cs">
+    <Compile Include="frmGU\frmIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIniciarSesion.Designer.cs">
+    <Compile Include="frmGU\frmIniciarSesion.Designer.cs">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoPersonas.cs">
+    <Compile Include="frmGU\frmListadoPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListadoPersonas.Designer.cs">
+    <Compile Include="frmGU\frmListadoPersonas.Designer.cs">
       <DependentUpon>frmListadoPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoPreguntasDeSeguridad.cs">
+    <Compile Include="frmGU\frmListadoPreguntasDeSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListadoPreguntasDeSeguridad.Designer.cs">
+    <Compile Include="frmGU\frmListadoPreguntasDeSeguridad.Designer.cs">
       <DependentUpon>frmListadoPreguntasDeSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoUsuarios.cs">
+    <Compile Include="frmGU\frmListadoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListadoUsuarios.Designer.cs">
+    <Compile Include="frmGU\frmListadoUsuarios.Designer.cs">
       <DependentUpon>frmListadoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPoliticasSeguridad.cs">
+    <Compile Include="frmGU\frmPoliticasSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPoliticasSeguridad.Designer.cs">
+    <Compile Include="frmGU\frmPoliticasSeguridad.Designer.cs">
       <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPreguntasDeSeguridad.cs">
+    <Compile Include="frmGU\frmPreguntasDeSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPreguntasDeSeguridad.Designer.cs">
+    <Compile Include="frmGU\frmPreguntasDeSeguridad.Designer.cs">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarUsuarios.cs">
+    <Compile Include="frmGU\frmRegistrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarUsuarios.Designer.cs">
+    <Compile Include="frmGU\frmRegistrarUsuarios.Designer.cs">
       <DependentUpon>frmRegistrarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarPersonas.cs">
+    <Compile Include="frmGU\frmRegistrarPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarPersonas.Designer.cs">
+    <Compile Include="frmGU\frmRegistrarPersonas.Designer.cs">
       <DependentUpon>frmRegistrarPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmResponderRespuesta.cs">
+    <Compile Include="frmGU\frmResponderRespuesta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmResponderRespuesta.Designer.cs">
+    <Compile Include="frmGU\frmResponderRespuesta.Designer.cs">
       <DependentUpon>frmResponderRespuesta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUsuarioNombre.cs">
+    <Compile Include="frmGU\frmUsuarioNombre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsuarioNombre.Designer.cs">
+    <Compile Include="frmGU\frmUsuarioNombre.Designer.cs">
       <DependentUpon>frmUsuarioNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Marcas\frmInsertarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Marcas\frmInsertarMarca.Designer.cs">
+      <DependentUpon>frmInsertarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
@@ -176,53 +230,71 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidadorTextBox.cs" />
-    <EmbeddedResource Include="frm2FA.resx">
+    <EmbeddedResource Include="frmGI\Categorias\frmInsertarCategoria.resx">
+      <DependentUpon>frmInsertarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Categorias\frmListadoCategorias.resx">
+      <DependentUpon>frmListadoCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Categorias\frmModificarCategoria.resx">
+      <DependentUpon>frmModificarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Marcas\frmListadoMarcas.resx">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Marcas\frmModificarMarca.resx">
+      <DependentUpon>frmModificarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGU\frm2FA.resx">
       <DependentUpon>frm2FA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCambiarContra.resx">
+    <EmbeddedResource Include="frmGU\frmCambiarContra.resx">
       <DependentUpon>frmCambiarContra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarUsuario.resx">
+    <EmbeddedResource Include="frmGU\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIniciarSesion.resx">
+    <EmbeddedResource Include="frmGU\frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoPersonas.resx">
+    <EmbeddedResource Include="frmGU\frmListadoPersonas.resx">
       <DependentUpon>frmListadoPersonas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoPreguntasDeSeguridad.resx">
+    <EmbeddedResource Include="frmGU\frmListadoPreguntasDeSeguridad.resx">
       <DependentUpon>frmListadoPreguntasDeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoUsuarios.resx">
+    <EmbeddedResource Include="frmGU\frmListadoUsuarios.resx">
       <DependentUpon>frmListadoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogs.resx">
+    <EmbeddedResource Include="frmGU\frmLogs.resx">
       <DependentUpon>frmLogs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMensajes.resx">
+    <EmbeddedResource Include="frmGU\frmMensajes.resx">
       <DependentUpon>frmMensajes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPoliticasSeguridad.resx">
+    <EmbeddedResource Include="frmGU\frmPoliticasSeguridad.resx">
       <DependentUpon>frmPoliticasSeguridad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPreguntasDeSeguridad.resx">
+    <EmbeddedResource Include="frmGU\frmPreguntasDeSeguridad.resx">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarUsuarios.resx">
+    <EmbeddedResource Include="frmGU\frmRegistrarUsuarios.resx">
       <DependentUpon>frmRegistrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarPersonas.resx">
+    <EmbeddedResource Include="frmGU\frmRegistrarPersonas.resx">
       <DependentUpon>frmRegistrarPersonas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResponderPreguntas.resx">
+    <EmbeddedResource Include="frmGU\frmResponderPreguntas.resx">
       <DependentUpon>frmResponderPreguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResponderRespuesta.resx">
+    <EmbeddedResource Include="frmGU\frmResponderRespuesta.resx">
       <DependentUpon>frmResponderRespuesta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsuarioNombre.resx">
+    <EmbeddedResource Include="frmGU\frmUsuarioNombre.resx">
       <DependentUpon>frmUsuarioNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Marcas\frmInsertarMarca.resx">
+      <DependentUpon>frmInsertarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
@@ -271,6 +343,9 @@
     <None Include="Resources\imgs\plus-square.png" />
     <None Include="Resources\imgs\list-ul-black.png" />
     <None Include="Resources\imgs\child-regular-24.png" />
+    <None Include="Resources\imgs\globe-americas.png" />
+    <None Include="Resources\imgs\layers.png" />
+    <None Include="Resources\imgs\cart-plus.png" />
     <Content Include="Resources\imgs\userCircleBlue.png" />
     <None Include="Resources\lupita.png" />
   </ItemGroup>
@@ -286,5 +361,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

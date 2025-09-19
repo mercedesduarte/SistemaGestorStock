@@ -309,3 +309,9 @@ C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.csproj.CoreCompil
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.exe
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.pdb
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Categorias.frmInsertarCategoria.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Categorias.frmModificarCategoria.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmListadoMarcas.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmModificarMarca.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmInsertarMarca.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Categorias.frmListadoCategorias.resources
