@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.frmGI.Marcas;
 using Vista.frmGI.Categorias;
+using Vista.frmGI.Productos;
 
 namespace Vista
 {
@@ -422,6 +423,44 @@ namespace Vista
                 }
             }
             frmListadoCategorias formularioListado = new frmListadoCategorias();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+
+        }
+
+        private void InsertarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmInsertarProducto)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmInsertarProducto formularioProducto = new frmInsertarProducto();
+            formularioProducto.MdiParent = this;
+            formularioProducto.WindowState = FormWindowState.Maximized;
+            formularioProducto.Show();
+
+        }
+
+        private void ListarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoProductos)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmListadoProductos formularioListado = new frmListadoProductos();
             formularioListado.MdiParent = this;
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();

@@ -245,6 +245,15 @@
     <EmbeddedResource Include="frmGI\Marcas\frmModificarMarca.resx">
       <DependentUpon>frmModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Productos\frmInsertarProducto.resx">
+      <DependentUpon>frmInsertarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Productos\frmListadoProductos.resx">
+      <DependentUpon>frmListadoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Productos\frmModificarProducto.resx">
+      <DependentUpon>frmModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGU\frm2FA.resx">
       <DependentUpon>frm2FA.cs</DependentUpon>
     </EmbeddedResource>

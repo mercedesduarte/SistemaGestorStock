@@ -31,6 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarProducto));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblStockMaximo = new System.Windows.Forms.Label();
+            this.nudStockMaximo = new System.Windows.Forms.NumericUpDown();
+            this.lblStockIdeal = new System.Windows.Forms.Label();
+            this.nudStockIdeal = new System.Windows.Forms.NumericUpDown();
+            this.lblStockMinimo = new System.Windows.Forms.Label();
+            this.nudStockMinimo = new System.Windows.Forms.NumericUpDown();
+            this.lblStockActual = new System.Windows.Forms.Label();
+            this.nudStockActual = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioVenta = new System.Windows.Forms.Label();
+            this.nudPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
             this.nudPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.lblDiasAviso = new System.Windows.Forms.Label();
@@ -53,24 +63,14 @@
             this.btnInsertarCategoria = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblPrecioVenta = new System.Windows.Forms.Label();
-            this.nudPrecioVenta = new System.Windows.Forms.NumericUpDown();
-            this.lblStockActual = new System.Windows.Forms.Label();
-            this.nudStockActual = new System.Windows.Forms.NumericUpDown();
-            this.lblStockMinimo = new System.Windows.Forms.Label();
-            this.nudStockMinimo = new System.Windows.Forms.NumericUpDown();
-            this.lblStockIdeal = new System.Windows.Forms.Label();
-            this.nudStockIdeal = new System.Windows.Forms.NumericUpDown();
-            this.lblStockMaximo = new System.Windows.Forms.Label();
-            this.nudStockMaximo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMaximo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockIdeal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockActual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiasAviso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockActual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockIdeal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockMaximo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -129,6 +129,116 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS DEL PRODUCTO";
             // 
+            // lblStockMaximo
+            // 
+            this.lblStockMaximo.AutoSize = true;
+            this.lblStockMaximo.Location = new System.Drawing.Point(437, 277);
+            this.lblStockMaximo.Name = "lblStockMaximo";
+            this.lblStockMaximo.Size = new System.Drawing.Size(166, 24);
+            this.lblStockMaximo.TabIndex = 43;
+            this.lblStockMaximo.Text = "STOCK MAXIMO:";
+            // 
+            // nudStockMaximo
+            // 
+            this.nudStockMaximo.Location = new System.Drawing.Point(441, 304);
+            this.nudStockMaximo.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudStockMaximo.Name = "nudStockMaximo";
+            this.nudStockMaximo.Size = new System.Drawing.Size(190, 32);
+            this.nudStockMaximo.TabIndex = 42;
+            this.nudStockMaximo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblStockIdeal
+            // 
+            this.lblStockIdeal.AutoSize = true;
+            this.lblStockIdeal.Location = new System.Drawing.Point(241, 277);
+            this.lblStockIdeal.Name = "lblStockIdeal";
+            this.lblStockIdeal.Size = new System.Drawing.Size(154, 24);
+            this.lblStockIdeal.TabIndex = 41;
+            this.lblStockIdeal.Text = "STOCK IDEAL:";
+            // 
+            // nudStockIdeal
+            // 
+            this.nudStockIdeal.Location = new System.Drawing.Point(245, 304);
+            this.nudStockIdeal.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudStockIdeal.Name = "nudStockIdeal";
+            this.nudStockIdeal.Size = new System.Drawing.Size(190, 32);
+            this.nudStockIdeal.TabIndex = 40;
+            this.nudStockIdeal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblStockMinimo
+            // 
+            this.lblStockMinimo.AutoSize = true;
+            this.lblStockMinimo.Location = new System.Drawing.Point(45, 277);
+            this.lblStockMinimo.Name = "lblStockMinimo";
+            this.lblStockMinimo.Size = new System.Drawing.Size(166, 24);
+            this.lblStockMinimo.TabIndex = 39;
+            this.lblStockMinimo.Text = "STOCK MINIMO:";
+            // 
+            // nudStockMinimo
+            // 
+            this.nudStockMinimo.Location = new System.Drawing.Point(49, 304);
+            this.nudStockMinimo.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudStockMinimo.Name = "nudStockMinimo";
+            this.nudStockMinimo.Size = new System.Drawing.Size(190, 32);
+            this.nudStockMinimo.TabIndex = 38;
+            this.nudStockMinimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblStockActual
+            // 
+            this.lblStockActual.AutoSize = true;
+            this.lblStockActual.Location = new System.Drawing.Point(829, 205);
+            this.lblStockActual.Name = "lblStockActual";
+            this.lblStockActual.Size = new System.Drawing.Size(166, 24);
+            this.lblStockActual.TabIndex = 37;
+            this.lblStockActual.Text = "STOCK ACTUAL:";
+            // 
+            // nudStockActual
+            // 
+            this.nudStockActual.Location = new System.Drawing.Point(833, 232);
+            this.nudStockActual.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudStockActual.Name = "nudStockActual";
+            this.nudStockActual.Size = new System.Drawing.Size(190, 32);
+            this.nudStockActual.TabIndex = 36;
+            this.nudStockActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblPrecioVenta
+            // 
+            this.lblPrecioVenta.AutoSize = true;
+            this.lblPrecioVenta.Location = new System.Drawing.Point(633, 205);
+            this.lblPrecioVenta.Name = "lblPrecioVenta";
+            this.lblPrecioVenta.Size = new System.Drawing.Size(166, 24);
+            this.lblPrecioVenta.TabIndex = 35;
+            this.lblPrecioVenta.Text = "PRECIO VENTA:";
+            // 
+            // nudPrecioVenta
+            // 
+            this.nudPrecioVenta.Location = new System.Drawing.Point(637, 232);
+            this.nudPrecioVenta.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudPrecioVenta.Name = "nudPrecioVenta";
+            this.nudPrecioVenta.Size = new System.Drawing.Size(190, 32);
+            this.nudPrecioVenta.TabIndex = 34;
+            this.nudPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblPrecioCompra
             // 
             this.lblPrecioCompra.AutoSize = true;
@@ -141,6 +251,11 @@
             // nudPrecioCompra
             // 
             this.nudPrecioCompra.Location = new System.Drawing.Point(441, 232);
+            this.nudPrecioCompra.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.nudPrecioCompra.Name = "nudPrecioCompra";
             this.nudPrecioCompra.Size = new System.Drawing.Size(190, 32);
             this.nudPrecioCompra.TabIndex = 32;
@@ -158,6 +273,11 @@
             // nudDiasAviso
             // 
             this.nudDiasAviso.Location = new System.Drawing.Point(833, 152);
+            this.nudDiasAviso.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.nudDiasAviso.Name = "nudDiasAviso";
             this.nudDiasAviso.Size = new System.Drawing.Size(190, 32);
             this.nudDiasAviso.TabIndex = 30;
@@ -301,6 +421,7 @@
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnInsertarCategoria
             // 
@@ -318,6 +439,7 @@
             this.btnInsertarCategoria.Text = "INSERTAR";
             this.btnInsertarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInsertarCategoria.UseVisualStyleBackColor = false;
+            this.btnInsertarCategoria.Click += new System.EventHandler(this.btnInsertarCategoria_Click);
             // 
             // lblNombre
             // 
@@ -335,109 +457,26 @@
             this.txtNombre.Size = new System.Drawing.Size(190, 32);
             this.txtNombre.TabIndex = 9;
             // 
-            // lblPrecioVenta
-            // 
-            this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(633, 205);
-            this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(166, 24);
-            this.lblPrecioVenta.TabIndex = 35;
-            this.lblPrecioVenta.Text = "PRECIO VENTA:";
-            // 
-            // nudPrecioVenta
-            // 
-            this.nudPrecioVenta.Location = new System.Drawing.Point(637, 232);
-            this.nudPrecioVenta.Name = "nudPrecioVenta";
-            this.nudPrecioVenta.Size = new System.Drawing.Size(190, 32);
-            this.nudPrecioVenta.TabIndex = 34;
-            this.nudPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblStockActual
-            // 
-            this.lblStockActual.AutoSize = true;
-            this.lblStockActual.Location = new System.Drawing.Point(829, 205);
-            this.lblStockActual.Name = "lblStockActual";
-            this.lblStockActual.Size = new System.Drawing.Size(166, 24);
-            this.lblStockActual.TabIndex = 37;
-            this.lblStockActual.Text = "STOCK ACTUAL:";
-            // 
-            // nudStockActual
-            // 
-            this.nudStockActual.Location = new System.Drawing.Point(833, 232);
-            this.nudStockActual.Name = "nudStockActual";
-            this.nudStockActual.Size = new System.Drawing.Size(190, 32);
-            this.nudStockActual.TabIndex = 36;
-            this.nudStockActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblStockMinimo
-            // 
-            this.lblStockMinimo.AutoSize = true;
-            this.lblStockMinimo.Location = new System.Drawing.Point(45, 277);
-            this.lblStockMinimo.Name = "lblStockMinimo";
-            this.lblStockMinimo.Size = new System.Drawing.Size(166, 24);
-            this.lblStockMinimo.TabIndex = 39;
-            this.lblStockMinimo.Text = "STOCK MINIMO:";
-            // 
-            // nudStockMinimo
-            // 
-            this.nudStockMinimo.Location = new System.Drawing.Point(49, 304);
-            this.nudStockMinimo.Name = "nudStockMinimo";
-            this.nudStockMinimo.Size = new System.Drawing.Size(190, 32);
-            this.nudStockMinimo.TabIndex = 38;
-            this.nudStockMinimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblStockIdeal
-            // 
-            this.lblStockIdeal.AutoSize = true;
-            this.lblStockIdeal.Location = new System.Drawing.Point(241, 277);
-            this.lblStockIdeal.Name = "lblStockIdeal";
-            this.lblStockIdeal.Size = new System.Drawing.Size(154, 24);
-            this.lblStockIdeal.TabIndex = 41;
-            this.lblStockIdeal.Text = "STOCK IDEAL:";
-            // 
-            // nudStockIdeal
-            // 
-            this.nudStockIdeal.Location = new System.Drawing.Point(245, 304);
-            this.nudStockIdeal.Name = "nudStockIdeal";
-            this.nudStockIdeal.Size = new System.Drawing.Size(190, 32);
-            this.nudStockIdeal.TabIndex = 40;
-            this.nudStockIdeal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblStockMaximo
-            // 
-            this.lblStockMaximo.AutoSize = true;
-            this.lblStockMaximo.Location = new System.Drawing.Point(437, 277);
-            this.lblStockMaximo.Name = "lblStockMaximo";
-            this.lblStockMaximo.Size = new System.Drawing.Size(166, 24);
-            this.lblStockMaximo.TabIndex = 43;
-            this.lblStockMaximo.Text = "STOCK MAXIMO:";
-            // 
-            // nudStockMaximo
-            // 
-            this.nudStockMaximo.Location = new System.Drawing.Point(441, 304);
-            this.nudStockMaximo.Name = "nudStockMaximo";
-            this.nudStockMaximo.Size = new System.Drawing.Size(190, 32);
-            this.nudStockMaximo.TabIndex = 42;
-            this.nudStockMaximo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // frmInsertarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 546);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmInsertarProducto";
             this.Text = "frmInsertarProducto";
+            this.Load += new System.EventHandler(this.frmInsertarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMaximo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockIdeal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockActual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiasAviso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockActual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockIdeal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStockMaximo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -315,3 +315,6 @@ C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmL
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmModificarMarca.resources
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmInsertarMarca.resources
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Categorias.frmListadoCategorias.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Productos.frmInsertarProducto.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Productos.frmListadoProductos.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Productos.frmModificarProducto.resources

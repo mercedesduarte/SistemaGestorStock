@@ -117,5 +117,17 @@ namespace Logica
         {
             return D_Producto.ListarProductos();
         }
+
+        public DataRow ObtenerPorId(int idProducto, out string mensaje)
+        {
+            if (idProducto <= 0)
+            {
+                mensaje = "Id inválido.";
+                return null;
+            }
+
+            return D_Producto.ObtenerPorId(idProducto, out mensaje);
+        }
+
     }
 }

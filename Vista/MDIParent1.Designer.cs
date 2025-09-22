@@ -301,6 +301,7 @@
             this.InsertarProductoToolStripMenuItem.Name = "InsertarProductoToolStripMenuItem";
             this.InsertarProductoToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.InsertarProductoToolStripMenuItem.Text = "INSERTAR PRODUCTO";
+            this.InsertarProductoToolStripMenuItem.Click += new System.EventHandler(this.InsertarProductoToolStripMenuItem_Click);
             // 
             // ListarProductoToolStripMenuItem
             // 
@@ -309,6 +310,7 @@
             this.ListarProductoToolStripMenuItem.Name = "ListarProductoToolStripMenuItem";
             this.ListarProductoToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.ListarProductoToolStripMenuItem.Text = "LISTAR PRODUCTOS";
+            this.ListarProductoToolStripMenuItem.Click += new System.EventHandler(this.ListarProductoToolStripMenuItem_Click);
             // 
             // ReportesToolStripMenuItem
             // 

@@ -128,5 +128,42 @@ namespace Datos
             }
             return tabla;
         }
+
+        public static DataRow ObtenerPorId(int idProducto, out string mensaje)
+        {
+            mensaje = "";
+            try
+            {
+                using (SqlConnection cn = ConnectionBD.ObtenerConexion())
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerProductoPorId", cn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdProducto", idProducto);
+
+                        cn.Open();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            return dt.Rows[0];
+                        }
+                        else
+                        {
+                            mensaje = "No se encontró el producto.";
+                            return null;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error al obtener producto: " + ex.Message;
+                return null;
+            }
+        }
+
     }
 }
