@@ -53,6 +53,9 @@
             this.ProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InsertarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InsertarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -219,7 +222,8 @@
             this.InventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CategoriasToolStripMenuItem,
             this.MarcaToolStripMenuItem,
-            this.ProductosToolStripMenuItem});
+            this.ProductosToolStripMenuItem,
+            this.ProveedoresToolStripMenuItem});
             this.InventarioToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InventarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InventarioToolStripMenuItem.Image")));
             this.InventarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -311,6 +315,33 @@
             this.ListarProductoToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.ListarProductoToolStripMenuItem.Text = "LISTAR PRODUCTOS";
             this.ListarProductoToolStripMenuItem.Click += new System.EventHandler(this.ListarProductoToolStripMenuItem_Click);
+            // 
+            // ProveedoresToolStripMenuItem
+            // 
+            this.ProveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InsertarProveedoresToolStripMenuItem,
+            this.ListarProveedoresToolStripMenuItem});
+            this.ProveedoresToolStripMenuItem.Image = global::Vista.Properties.Resources.garage;
+            this.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem";
+            this.ProveedoresToolStripMenuItem.Size = new System.Drawing.Size(187, 30);
+            this.ProveedoresToolStripMenuItem.Text = "PROVEEDORES";
+            // 
+            // InsertarProveedoresToolStripMenuItem
+            // 
+            this.InsertarProveedoresToolStripMenuItem.Image = global::Vista.Properties.Resources.plus_square4;
+            this.InsertarProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InsertarProveedoresToolStripMenuItem.Name = "InsertarProveedoresToolStripMenuItem";
+            this.InsertarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.InsertarProveedoresToolStripMenuItem.Text = "INSERTAR PROVEEDORES";
+            // 
+            // ListarProveedoresToolStripMenuItem
+            // 
+            this.ListarProveedoresToolStripMenuItem.Image = global::Vista.Properties.Resources.list_ul_black5;
+            this.ListarProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ListarProveedoresToolStripMenuItem.Name = "ListarProveedoresToolStripMenuItem";
+            this.ListarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.ListarProveedoresToolStripMenuItem.Text = "LISTAR PROVEEDORES";
             // 
             // ReportesToolStripMenuItem
             // 
@@ -492,6 +523,9 @@
         private System.Windows.Forms.ToolStripMenuItem ProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem InsertarProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListarProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ProveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InsertarProveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListarProveedoresToolStripMenuItem;
     }
 }
 

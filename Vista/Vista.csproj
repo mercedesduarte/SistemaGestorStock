@@ -355,6 +355,7 @@
     <None Include="Resources\imgs\globe-americas.png" />
     <None Include="Resources\imgs\layers.png" />
     <None Include="Resources\imgs\cart-plus.png" />
+    <None Include="Resources\imgs\garage.png" />
     <Content Include="Resources\imgs\userCircleBlue.png" />
     <None Include="Resources\lupita.png" />
   </ItemGroup>

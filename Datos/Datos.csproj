@@ -71,6 +71,7 @@
     <Compile Include="D_Mensajes.cs" />
     <Compile Include="D_ModificarUsuario.cs" />
     <Compile Include="D_Producto.cs" />
+    <Compile Include="D_Proveedor.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
     <Compile Include="D_ResponderRespuestas.cs" />

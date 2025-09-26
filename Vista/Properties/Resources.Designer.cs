@@ -93,6 +93,16 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garage {
+            get {
+                object obj = ResourceManager.GetObject("garage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap globe_americas {
             get {
                 object obj = ResourceManager.GetObject("globe-americas", resourceCulture);
@@ -163,6 +173,16 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_ul_black5 {
+            get {
+                object obj = ResourceManager.GetObject("list-ul-black5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lupita {
             get {
                 object obj = ResourceManager.GetObject("lupita", resourceCulture);
@@ -226,6 +246,16 @@ namespace Vista.Properties {
         internal static System.Drawing.Bitmap plus_square3 {
             get {
                 object obj = ResourceManager.GetObject("plus-square3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_square4 {
+            get {
+                object obj = ResourceManager.GetObject("plus-square4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

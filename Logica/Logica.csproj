@@ -62,6 +62,7 @@
     <Compile Include="L_ListarUsuarios.cs" />
     <Compile Include="L_Login.cs" />
     <Compile Include="L_Producto.cs" />
+    <Compile Include="L_Proveedor.cs" />
     <Compile Include="L_RegistrarUsuario.cs" />
     <Compile Include="L_Registro.cs" />
     <Compile Include="L_ResponderRespuestas.cs" />

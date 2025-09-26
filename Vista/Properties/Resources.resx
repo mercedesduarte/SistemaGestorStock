@@ -127,6 +127,9 @@
   <data name="list-ul-black2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="universal-access-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\universal-access-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,23 +139,26 @@
   <data name="layers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\layers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="list-ul-black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus-square3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\plus-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="list-ul-black4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="list-ul-black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cart-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\cart-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="list-ul-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="list-ul-black4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="child-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgs\child-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus-square4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\plus-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nomoscon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nomoscon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list-ul-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="universal-access-regular-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\universal-access-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +166,11 @@
   <data name="plus-square2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\plus-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgs\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\garage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="child-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\child-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1004017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1004017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +181,7 @@
   <data name="plus-square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgs\plus-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus-square3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgs\plus-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list-ul-black5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgs\list-ul-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
