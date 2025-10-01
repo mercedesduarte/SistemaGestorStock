@@ -85,7 +85,7 @@
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(101, 28);
             this.chkActivo.TabIndex = 22;
-            this.chkActivo.Text = "Activo";
+            this.chkActivo.Text = "ACTIVO";
             this.chkActivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkActivo.UseVisualStyleBackColor = true;
             // 

@@ -334,6 +334,7 @@
             this.InsertarProveedoresToolStripMenuItem.Name = "InsertarProveedoresToolStripMenuItem";
             this.InsertarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
             this.InsertarProveedoresToolStripMenuItem.Text = "INSERTAR PROVEEDORES";
+            this.InsertarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.InsertarProveedoresToolStripMenuItem_Click);
             // 
             // ListarProveedoresToolStripMenuItem
             // 
@@ -342,6 +343,7 @@
             this.ListarProveedoresToolStripMenuItem.Name = "ListarProveedoresToolStripMenuItem";
             this.ListarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
             this.ListarProveedoresToolStripMenuItem.Text = "LISTAR PROVEEDORES";
+            this.ListarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.ListarProveedoresToolStripMenuItem_Click);
             // 
             // ReportesToolStripMenuItem
             // 

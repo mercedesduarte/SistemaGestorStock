@@ -112,6 +112,24 @@
     <Compile Include="frmGI\Productos\frmModificarProducto.Designer.cs">
       <DependentUpon>frmModificarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\Proveedores\frmInsertarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmInsertarProveedor.Designer.cs">
+      <DependentUpon>frmInsertarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmListadoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmListadoProveedores.Designer.cs">
+      <DependentUpon>frmListadoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmModificarProveedor.Designer.cs">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGU\frm2FA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +271,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Productos\frmModificarProducto.resx">
       <DependentUpon>frmModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\frmInsertarProveedor.resx">
+      <DependentUpon>frmInsertarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\frmListadoProveedores.resx">
+      <DependentUpon>frmListadoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\frmModificarProveedor.resx">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGU\frm2FA.resx">
       <DependentUpon>frm2FA.cs</DependentUpon>

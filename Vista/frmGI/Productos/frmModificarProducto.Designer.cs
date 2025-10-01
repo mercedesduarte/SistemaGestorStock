@@ -59,11 +59,11 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStockMaximo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStockIdeal)).BeginInit();
@@ -77,6 +77,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.chkActivo);
             this.groupBox1.Controls.Add(this.lblStockMaximo);
             this.groupBox1.Controls.Add(this.nudStockMaximo);
@@ -106,7 +107,6 @@
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.lblDescripcion);
             this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.txtNombre);
@@ -125,7 +125,7 @@
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(101, 28);
             this.chkActivo.TabIndex = 44;
-            this.chkActivo.Text = "Activo";
+            this.chkActivo.Text = "ACTIVO";
             this.chkActivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -405,24 +405,6 @@
             this.txtDescripcion.Size = new System.Drawing.Size(386, 112);
             this.txtDescripcion.TabIndex = 15;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(294, 377);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(141, 45);
-            this.btnCerrar.TabIndex = 14;
-            this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
@@ -469,6 +451,23 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "MODIFICAR PRODUCTO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(300, 377);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(135, 45);
+            this.btnCerrar.TabIndex = 45;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // frmModificarProducto
             // 
@@ -524,11 +523,11 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkActivo;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

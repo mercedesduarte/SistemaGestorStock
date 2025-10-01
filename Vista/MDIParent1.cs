@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Vista.frmGI.Marcas;
 using Vista.frmGI.Categorias;
 using Vista.frmGI.Productos;
+using Vista.frmGI.Proveedores;
 
 namespace Vista
 {
@@ -61,6 +62,8 @@ namespace Vista
 
                 case "usuario normal":
 
+                 //------------ SISTEMA GESTOR USUARIOS START ------------------
+
                     //GestionUsuariosToolStripMenuItem.Enabled = false;
                     //GestionUsuariosToolStripMenuItem.Visible = false;
                     CrearUsuarioToolStripMenuItem.Enabled = false;
@@ -81,6 +84,30 @@ namespace Vista
 
                     CrearPreguntasSeguridadToolStripMenuItem.Enabled = false;
                     CrearPreguntasSeguridadToolStripMenuItem.Visible = false;
+
+                 //------------ SISTEMA GESTOR USUARIOS END --------------------
+
+
+                 //------------ SISTEMA GESTOR INVENTARIO START ----------------
+
+                    //GestionInventarioToolStripMenuItem.Enabled = false;
+                    //GestionInventarioToolStripMenuItem.Visible = false;
+
+                    InsertarMarcaToolStripMenuItem.Enabled = false;
+                    InsertarMarcaToolStripMenuItem.Visible = false;
+
+                    InsertarCategoriaToolStripMenuItem.Enabled = false;
+                    InsertarCategoriaToolStripMenuItem.Visible = false;
+
+                    InsertarProductoToolStripMenuItem.Enabled = false;
+                    InsertarProductoToolStripMenuItem.Visible = false;
+
+                    InsertarProveedoresToolStripMenuItem.Enabled = false;
+                    InsertarProveedoresToolStripMenuItem.Visible = false;
+
+                 //------------ SISTEMA GESTOR INVENTARIO END ----------------
+
+
                     break;               
 
                 default:
@@ -461,6 +488,44 @@ namespace Vista
                 }
             }
             frmListadoProductos formularioListado = new frmListadoProductos();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+
+        }
+
+        private void InsertarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmInsertarProveedor)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmInsertarProveedor formularioProveedor = new frmInsertarProveedor();
+            formularioProveedor.MdiParent = this;
+            formularioProveedor.WindowState = FormWindowState.Maximized;
+            formularioProveedor.Show();
+
+        }
+
+        private void ListarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoProveedores)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmListadoProveedores formularioListado = new frmListadoProveedores();
             formularioListado.MdiParent = this;
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();
