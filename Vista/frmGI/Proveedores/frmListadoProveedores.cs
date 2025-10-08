@@ -1,11 +1,10 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 using Logica;
 using System;
@@ -56,6 +55,26 @@ namespace Vista.frmGI.Proveedores
             frmModificarProveedor frm = new frmModificarProveedor(idProveedor);
             frm.ShowDialog();
             CargarProveedores();
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+
+            if (dgvProveedores.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un proveedor.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idProveedor = Convert.ToInt32(dgvProveedores.CurrentRow.Cells["IdProveedor"].Value);
+
+            // Abro el detalle como un formulario normal (no bloquea la ventana padre)
+            frmDetalleProveedor frm = new frmDetalleProveedor(idProveedor);
+            frm.MdiParent = this.MdiParent; // si estás usando MDI, lo hace hijo del contenedor
+            frm.WindowState = FormWindowState.Maximized; // opcional: para abrirlo maximizado
+            frm.Show();
+
+            this.Close(); // cierro el listado si es necesario
         }
     }
 }

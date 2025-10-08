@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoProveedores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoProveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnDetalle);
             this.groupBox1.Controls.Add(this.dgvProveedores);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.btnModificar);
@@ -53,6 +55,24 @@
             this.groupBox1.Size = new System.Drawing.Size(1075, 479);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            // 
+            // btnDetalle
+            // 
+            this.btnDetalle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDetalle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDetalle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDetalle.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDetalle.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalle.Image")));
+            this.btnDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDetalle.Location = new System.Drawing.Point(238, 412);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDetalle.Size = new System.Drawing.Size(186, 45);
+            this.btnDetalle.TabIndex = 16;
+            this.btnDetalle.Text = "+ DETALLES";
+            this.btnDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalle.UseVisualStyleBackColor = false;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // dgvProveedores
             // 
@@ -101,7 +121,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(268, 412);
+            this.btnCerrar.Location = new System.Drawing.Point(477, 412);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCerrar.Size = new System.Drawing.Size(141, 45);
@@ -167,5 +187,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDetalle;
     }
 }

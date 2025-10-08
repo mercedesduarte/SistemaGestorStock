@@ -112,6 +112,30 @@
     <Compile Include="frmGI\Productos\frmModificarProducto.Designer.cs">
       <DependentUpon>frmModificarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\Proveedores\Direcciones\frmAgregarProveedorDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Direcciones\frmAgregarProveedorDireccion.Designer.cs">
+      <DependentUpon>frmAgregarProveedorDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Direcciones\frmModificarProveedorDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Direcciones\frmModificarProveedorDireccion.Designer.cs">
+      <DependentUpon>frmModificarProveedorDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Telefonos\frmAgregarProveedorTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Telefonos\frmAgregarProveedorTelefono.Designer.cs">
+      <DependentUpon>frmAgregarProveedorTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmDetalleProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\frmDetalleProveedor.Designer.cs">
+      <DependentUpon>frmDetalleProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGI\Proveedores\frmInsertarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +153,12 @@
     </Compile>
     <Compile Include="frmGI\Proveedores\frmModificarProveedor.Designer.cs">
       <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Telefonos\frmModificarProveedorTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Proveedores\Telefonos\frmModificarProveedorTelefono.Designer.cs">
+      <DependentUpon>frmModificarProveedorTelefono.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGU\frm2FA.cs">
       <SubType>Form</SubType>
@@ -272,6 +302,18 @@
     <EmbeddedResource Include="frmGI\Productos\frmModificarProducto.resx">
       <DependentUpon>frmModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\Direcciones\frmAgregarProveedorDireccion.resx">
+      <DependentUpon>frmAgregarProveedorDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\Direcciones\frmModificarProveedorDireccion.resx">
+      <DependentUpon>frmModificarProveedorDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\Telefonos\frmAgregarProveedorTelefono.resx">
+      <DependentUpon>frmAgregarProveedorTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\frmDetalleProveedor.resx">
+      <DependentUpon>frmDetalleProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Proveedores\frmInsertarProveedor.resx">
       <DependentUpon>frmInsertarProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Proveedores\frmModificarProveedor.resx">
       <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Proveedores\Telefonos\frmModificarProveedorTelefono.resx">
+      <DependentUpon>frmModificarProveedorTelefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGU\frm2FA.resx">
       <DependentUpon>frm2FA.cs</DependentUpon>
@@ -398,6 +443,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="frmGI\Proveedores\Productos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
