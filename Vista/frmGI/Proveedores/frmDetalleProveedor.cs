@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.frmGI.Proveedores.Direcciones;
+using Vista.frmGI.Proveedores.Productos;
 
 namespace Vista.frmGI.Proveedores
 {
@@ -30,6 +31,7 @@ namespace Vista.frmGI.Proveedores
             CargarDatosGenerales();
             CargarTelefonos();
             CargarDirecciones();
+            CargarProductos();
 
         }
 
@@ -55,7 +57,6 @@ namespace Vista.frmGI.Proveedores
                 MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnGuardarGeneral_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text.Trim();
@@ -91,6 +92,8 @@ namespace Vista.frmGI.Proveedores
 
 
 
+
+
      //----------------------------------- START TELEFONOS ---------------------------------------------
         private void btnAgregarTelefono_Click(object sender, EventArgs e)
         {
@@ -102,7 +105,6 @@ namespace Vista.frmGI.Proveedores
                 }
             }
         }
-
         private void btnModificarTelefono_Click(object sender, EventArgs e)
         {
             if (dgvTelefonos.CurrentRow == null)
@@ -119,7 +121,6 @@ namespace Vista.frmGI.Proveedores
                 CargarTelefonos(); // refresca la grilla de teléfonos del proveedor
             }
         }
-
         private void CargarTelefonos()
         {
             try
@@ -140,6 +141,9 @@ namespace Vista.frmGI.Proveedores
 
 
 
+
+
+
      //------------------------------------ START DIRECCIONES -----------------------------------------
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
@@ -152,8 +156,6 @@ namespace Vista.frmGI.Proveedores
                 }
             }
         }
-
-
         private void btnModificarDireccion_Click(object sender, EventArgs e)
         {
             if (dgvDirecciones.CurrentRow == null)
@@ -174,7 +176,6 @@ namespace Vista.frmGI.Proveedores
                 }
             }
         }
-
         private void CargarDirecciones()
         {
             try
@@ -196,8 +197,61 @@ namespace Vista.frmGI.Proveedores
                 MessageBox.Show("Error al cargar direcciones: " + ex.Message);
             }
         }
-    //------------------------------------ END DIRECCIONES ------------------------------------------
+        //------------------------------------ END DIRECCIONES ------------------------------------------
 
+
+
+
+
+
+        //------------------------------------ START PRODUCTOS ------------------------------------------
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmAgregarProveedorProducto(_idProveedor))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    CargarProductos(); // recarga la grilla de productos
+                }
+            }
+        }
+        private void btnModificarProducto_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Obtenemos el IdProductoProveedor de la fila seleccionada
+            int idProductoProveedor = Convert.ToInt32(dgvProductos.CurrentRow.Cells["IdProductoProveedor"].Value);
+
+            // Abrimos el formulario de modificación de manera modal
+            using (var frm = new frmModificarProveedorProducto(idProductoProveedor, _idProveedor))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    CargarProductos(); // refresca la grilla de productos del proveedor
+                }
+            }
+        }
+        private void CargarProductos()
+        {
+            try
+            {
+                L_ProveedorProducto logicaProductos = new L_ProveedorProducto();
+                DataTable dt = logicaProductos.ListarProductosPorProveedor(_idProveedor); // <- usar este método
+
+                dgvProductos.DataSource = dt;
+
+                dgvProductos.Columns["IdProductoProveedor"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //------------------------------------- END PRODUCTOS -------------------------------------------
 
 
 

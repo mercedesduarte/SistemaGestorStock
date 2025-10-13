@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarProveedorTelefono));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblSector = new System.Windows.Forms.Label();
-            this.txtSector = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.lblContacto = new System.Windows.Forms.Label();
-            this.txtContacto = new System.Windows.Forms.TextBox();
-            this.btnAgregarTelefono = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.txtHorario = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmailContacto = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblSector = new System.Windows.Forms.Label();
+            this.txtSector = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.btnAgregarTelefono = new System.Windows.Forms.Button();
+            this.lblContacto = new System.Windows.Forms.Label();
+            this.txtContacto = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,71 +83,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INGRESE LOS DATOS DE TELEFONO";
             // 
-            // lblSector
+            // btnCerrar
             // 
-            this.lblSector.AutoSize = true;
-            this.lblSector.Location = new System.Drawing.Point(420, 53);
-            this.lblSector.Name = "lblSector";
-            this.lblSector.Size = new System.Drawing.Size(94, 24);
-            this.lblSector.TabIndex = 20;
-            this.lblSector.Text = "SECTOR:";
-            // 
-            // txtSector
-            // 
-            this.txtSector.Location = new System.Drawing.Point(424, 80);
-            this.txtSector.Name = "txtSector";
-            this.txtSector.Size = new System.Drawing.Size(190, 32);
-            this.txtSector.TabIndex = 19;
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(28, 53);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(118, 24);
-            this.lblTelefono.TabIndex = 18;
-            this.lblTelefono.Text = "TELEFONO:";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(32, 80);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(190, 32);
-            this.txtTelefono.TabIndex = 17;
-            // 
-            // lblContacto
-            // 
-            this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(224, 53);
-            this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(118, 24);
-            this.lblContacto.TabIndex = 11;
-            this.lblContacto.Text = "CONTACTO:";
-            // 
-            // txtContacto
-            // 
-            this.txtContacto.Location = new System.Drawing.Point(228, 80);
-            this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(190, 32);
-            this.txtContacto.TabIndex = 9;
-            // 
-            // btnAgregarTelefono
-            // 
-            this.btnAgregarTelefono.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAgregarTelefono.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarTelefono.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAgregarTelefono.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAgregarTelefono.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTelefono.Image")));
-            this.btnAgregarTelefono.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarTelefono.Location = new System.Drawing.Point(32, 255);
-            this.btnAgregarTelefono.Name = "btnAgregarTelefono";
-            this.btnAgregarTelefono.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAgregarTelefono.Size = new System.Drawing.Size(144, 45);
-            this.btnAgregarTelefono.TabIndex = 13;
-            this.btnAgregarTelefono.Text = "AGREGAR";
-            this.btnAgregarTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarTelefono.UseVisualStyleBackColor = false;
-            this.btnAgregarTelefono.Click += new System.EventHandler(this.btnAgregarTelefono_Click);
+            this.btnCerrar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.Location = new System.Drawing.Point(228, 255);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(135, 45);
+            this.btnCerrar.TabIndex = 46;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // lblHorario
             // 
@@ -181,22 +132,71 @@
             this.txtEmailContacto.Size = new System.Drawing.Size(386, 32);
             this.txtEmailContacto.TabIndex = 21;
             // 
-            // btnCerrar
+            // lblSector
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(228, 255);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(135, 45);
-            this.btnCerrar.TabIndex = 46;
-            this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            this.lblSector.AutoSize = true;
+            this.lblSector.Location = new System.Drawing.Point(420, 53);
+            this.lblSector.Name = "lblSector";
+            this.lblSector.Size = new System.Drawing.Size(94, 24);
+            this.lblSector.TabIndex = 20;
+            this.lblSector.Text = "SECTOR:";
+            // 
+            // txtSector
+            // 
+            this.txtSector.Location = new System.Drawing.Point(424, 80);
+            this.txtSector.Name = "txtSector";
+            this.txtSector.Size = new System.Drawing.Size(190, 32);
+            this.txtSector.TabIndex = 19;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(28, 53);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(118, 24);
+            this.lblTelefono.TabIndex = 18;
+            this.lblTelefono.Text = "TELEFONO:";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(32, 80);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(190, 32);
+            this.txtTelefono.TabIndex = 17;
+            // 
+            // btnAgregarTelefono
+            // 
+            this.btnAgregarTelefono.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAgregarTelefono.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarTelefono.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAgregarTelefono.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregarTelefono.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTelefono.Image")));
+            this.btnAgregarTelefono.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarTelefono.Location = new System.Drawing.Point(32, 255);
+            this.btnAgregarTelefono.Name = "btnAgregarTelefono";
+            this.btnAgregarTelefono.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAgregarTelefono.Size = new System.Drawing.Size(144, 45);
+            this.btnAgregarTelefono.TabIndex = 13;
+            this.btnAgregarTelefono.Text = "AGREGAR";
+            this.btnAgregarTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarTelefono.UseVisualStyleBackColor = false;
+            this.btnAgregarTelefono.Click += new System.EventHandler(this.btnAgregarTelefono_Click);
+            // 
+            // lblContacto
+            // 
+            this.lblContacto.AutoSize = true;
+            this.lblContacto.Location = new System.Drawing.Point(224, 53);
+            this.lblContacto.Name = "lblContacto";
+            this.lblContacto.Size = new System.Drawing.Size(118, 24);
+            this.lblContacto.TabIndex = 11;
+            this.lblContacto.Text = "CONTACTO:";
+            // 
+            // txtContacto
+            // 
+            this.txtContacto.Location = new System.Drawing.Point(228, 80);
+            this.txtContacto.Name = "txtContacto";
+            this.txtContacto.Size = new System.Drawing.Size(190, 32);
+            this.txtContacto.TabIndex = 9;
             // 
             // frmAgregarProveedorTelefono
             // 

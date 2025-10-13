@@ -32,5 +32,13 @@ namespace Vista
                 e.Handled = true;
             }
         }
+
+        public static void NoPermitirEscribir(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

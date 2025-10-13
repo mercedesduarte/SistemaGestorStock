@@ -39,7 +39,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.btnAgregarDireccion = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,14 +68,14 @@
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.lblDireccion);
             this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Controls.Add(this.btnAgregarDireccion);
+            this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 90);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(647, 397);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INGRESE LOS DATOS DE LA DIRECCION";
+            this.groupBox1.Text = "MODIFICAR LOS DATOS DE LA DIRECCION";
             // 
             // chkActivo
             // 
@@ -153,23 +153,23 @@
             this.txtDireccion.Size = new System.Drawing.Size(552, 32);
             this.txtDireccion.TabIndex = 17;
             // 
-            // btnAgregarDireccion
+            // btnModificar
             // 
-            this.btnAgregarDireccion.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAgregarDireccion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarDireccion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAgregarDireccion.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAgregarDireccion.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDireccion.Image")));
-            this.btnAgregarDireccion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarDireccion.Location = new System.Drawing.Point(32, 327);
-            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
-            this.btnAgregarDireccion.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAgregarDireccion.Size = new System.Drawing.Size(170, 45);
-            this.btnAgregarDireccion.TabIndex = 13;
-            this.btnAgregarDireccion.Text = "MODIFICAR";
-            this.btnAgregarDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDireccion.UseVisualStyleBackColor = false;
-            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
+            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.Location = new System.Drawing.Point(32, 327);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnModificar.Size = new System.Drawing.Size(170, 45);
+            this.btnModificar.TabIndex = 13;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // frmModificarProveedorDireccion
             // 
@@ -198,7 +198,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Button btnAgregarDireccion;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.CheckBox chkActivo;
     }
 }

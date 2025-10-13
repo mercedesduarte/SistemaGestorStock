@@ -118,14 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAgregarTelefono.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAKZJREFUSEvl
-        lMENgCAMRVlA4giOwiiMwiaO4iiOUkOpCARTC17En/yDlD5KQZQaSzAvYrOCySrQ0OhdgV5L5KUw4Zwo
-        NS0ymxJLrSBwi3zVmD/ZMsTDQ2/NbX/74PE86n39ERyBp2Pylo/T7RDB8fDwm7ML8+Vwn0D2FVM8G2+p
-        vNTrPU/1YTjGXT25F87pMTy7DY9NL2MN7hVXbzaza9xB+gcKPIwOgKyOq6AOlZ0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATlJREFUSEvd
@@ -135,6 +127,14 @@
         bnCARNLubyWQS9e9XNlH7UVBOiDlXGfCviSUSoWG3oCUc50JJ+nFMPBlYXt+EthGSapKczEqFINQ0bYo
         UHqyCl0FZZAK/Co6oO6bGTagQflcCg49doB1oc91iBMSY89W+glVd2NPcIaj/d5q5LobudpEmz16WPmh
         2+T7L/ABrQOEhamPvcgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAgregarTelefono.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAKZJREFUSEvl
+        lMENgCAMRVlA4giOwiiMwiaO4iiOUkOpCARTC17En/yDlD5KQZQaSzAvYrOCySrQ0OhdgV5L5KUw4Zwo
+        NS0ymxJLrSBwi3zVmD/ZMsTDQ2/NbX/74PE86n39ERyBp2Pylo/T7RDB8fDwm7ML8+Vwn0D2FVM8G2+p
+        vNTrPU/1YTjGXT25F87pMTy7DY9NL2MN7hVXbzaza9xB+gcKPIwOgKyOq6AOlZ0AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

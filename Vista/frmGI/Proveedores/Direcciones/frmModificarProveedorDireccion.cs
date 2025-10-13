@@ -49,7 +49,7 @@ namespace Vista.frmGI.Proveedores.Direcciones
             }
         }
 
-        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        private void btnModificar_Click_1(object sender, EventArgs e)
         {
             string direccion = txtDireccion.Text.Trim();
             string localidad = txtLocalidad.Text.Trim();
