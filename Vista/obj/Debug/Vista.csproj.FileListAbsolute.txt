@@ -328,3 +328,11 @@ C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Proveedores
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Proveedores.Direcciones.frmModificarProveedorDireccion.resources
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Proveedores.Productos.frmAgregarProveedorProducto.resources
 C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Proveedores.Productos.frmModificarProveedorProducto.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmDetalleCliente.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmInsertarCliente.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmListadoClientes.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmModificarCliente.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Telefonos.frmModificarClienteTelefono.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Telefonos.frmAgregarClienteTelefono.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Direcciones.frmAgregarClienteDireccion.resources
+C:\Users\User\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Direcciones.frmModificarClienteDireccion.resources

@@ -57,5 +57,9 @@ namespace Vista.frmGI.Marcas
             }
         }
 
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarMarcas();
+        }
     }
 }

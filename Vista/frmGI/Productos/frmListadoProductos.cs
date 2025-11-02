@@ -63,5 +63,10 @@ namespace Vista.frmGI.Productos
 
             CargarProductos();
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
     }
 }

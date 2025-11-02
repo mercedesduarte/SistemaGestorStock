@@ -118,14 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRefrescar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAQpJREFUSEvF
+        VcENgzAMzChdAsqTURiFTTpKR+EBqGO0MsaJcyYlrlr1JEslxOfz1Qkh/A3d4xLadQzNcg/t+txj2uK6
+        3kI395hSByJNhOWgwiSiCrQxV6qDVOOarI+cP/fbs+mKX2DimG2k4rzPdkZWyW9Djt6aDYB3XWa5uZJJ
+        c5xCKzbkaMeZYg3MNRzNMsRFUuGBWIMRJ0j75lFdhUTu87oKchK/oXob1dpD5UGauB84oE9wVM8V8/C2
+        xtamUYzAGf1kJPXEZblI7PUM7xl4ieRcvcYaJDYTpxVjB3KVIo4uLXo20C9QiS5E3SChRPE/wvaPVJXj
+        /Go24AJDQe20rx1b5oZ8gRx4AaRcmuydTjC0AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADwSURBVEhL3ZTrDcIwDIQ9QssEjMIoHYVNOkpHYZSgi+LquDwaiz+IkyxBcv38SFOzv9OS7K6h
-        nrCWZI812bEmSxq3ZE/xIuk2lbiAHfbSwL57kYi9mrhSgaDCXfdY2Kduzt+cvJKbdJ2l4LKWu+gWhbl5
-        i7rnYjB36WeE+eszWVdwbb/4cwJ/rnuwI7iCfZ3eqo/DrtSDfw2GWnB+3WbAoZlHwN5hswuF04U63NMD
-        QwSvqx/A8+0bgaEo3P9zNMFQCO5rMKPyq2/HEA4BXAzN6nriLkcXaaM577NBYzsPvxKyyqc0En0wy2cd
-        iNAYf19vfrmGHcsQJh8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAPBJREFUSEvd
+        lOsNwjAMhD1CywSMwigdhU06SkdhlKCL4uq4PBqLP4iTLEFy/fxIU7O/05LsrqGesJZkjzXZsSZLGrdk
+        T/Ei6TaVuIAd9tLAvnuRiL2auFKBoMJd91jYp27O35y8kpt0naXgspa76BaFuXmLuudiMHfpZ4T56zNZ
+        V3Btv/hzAn+ue7AjuIJ9nd6qj8Ou1IN/DYZacH7dZsChmUfA3mGzC4XThTrc0wNDBK+rH8Dz7RuBoSjc
+        /3M0wVAI7mswo/Krb8cQDgFcDM3qeuIuRxdpoznvs0FjOw+/ErLKpzQSfTDLZx2I0Bh/X29+uYYdyxAm
+        HwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

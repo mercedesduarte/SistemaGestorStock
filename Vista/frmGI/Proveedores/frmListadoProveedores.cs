@@ -76,5 +76,10 @@ namespace Vista.frmGI.Proveedores
 
             this.Close(); // cierro el listado si es necesario
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarProveedores();
+        }
     }
 }

@@ -88,6 +88,54 @@
     <Compile Include="frmGI\Categorias\frmModificarCategoria.Designer.cs">
       <DependentUpon>frmModificarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\Clientes\Direcciones\frmAgregarClienteDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Direcciones\frmAgregarClienteDireccion.Designer.cs">
+      <DependentUpon>frmAgregarClienteDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Direcciones\frmModificarClienteDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Direcciones\frmModificarClienteDireccion.Designer.cs">
+      <DependentUpon>frmModificarClienteDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmDetalleCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmDetalleCliente.Designer.cs">
+      <DependentUpon>frmDetalleCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmInsertarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmInsertarCliente.Designer.cs">
+      <DependentUpon>frmInsertarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmListadoClientes.Designer.cs">
+      <DependentUpon>frmListadoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\frmModificarCliente.Designer.cs">
+      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Telefonos\frmAgregarClienteTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Telefonos\frmAgregarClienteTelefono.Designer.cs">
+      <DependentUpon>frmAgregarClienteTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Telefonos\frmModificarClienteTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Clientes\Telefonos\frmModificarClienteTelefono.Designer.cs">
+      <DependentUpon>frmModificarClienteTelefono.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGI\Marcas\frmModificarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +347,30 @@
     <EmbeddedResource Include="frmGI\Categorias\frmModificarCategoria.resx">
       <DependentUpon>frmModificarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\Direcciones\frmAgregarClienteDireccion.resx">
+      <DependentUpon>frmAgregarClienteDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\Direcciones\frmModificarClienteDireccion.resx">
+      <DependentUpon>frmModificarClienteDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\frmDetalleCliente.resx">
+      <DependentUpon>frmDetalleCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\frmInsertarCliente.resx">
+      <DependentUpon>frmInsertarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\frmListadoClientes.resx">
+      <DependentUpon>frmListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\frmModificarCliente.resx">
+      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\Telefonos\frmAgregarClienteTelefono.resx">
+      <DependentUpon>frmAgregarClienteTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Clientes\Telefonos\frmModificarClienteTelefono.resx">
+      <DependentUpon>frmModificarClienteTelefono.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Marcas\frmListadoMarcas.resx">
       <DependentUpon>frmListadoMarcas.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +518,7 @@
     <None Include="Resources\imgs\layers.png" />
     <None Include="Resources\imgs\cart-plus.png" />
     <None Include="Resources\imgs\garage.png" />
+    <None Include="Resources\imgs\user-regular-24.png" />
     <Content Include="Resources\imgs\userCircleBlue.png" />
     <None Include="Resources\lupita.png" />
   </ItemGroup>

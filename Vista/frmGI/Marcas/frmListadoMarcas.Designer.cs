@@ -34,9 +34,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoMarcas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnRefrescar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.dgvMarcas);
@@ -68,6 +70,23 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.Location = new System.Drawing.Point(7, 295);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnModificar.Size = new System.Drawing.Size(171, 45);
+            this.btnModificar.TabIndex = 16;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
@@ -76,7 +95,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(294, 295);
+            this.btnCerrar.Location = new System.Drawing.Point(207, 295);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCerrar.Size = new System.Drawing.Size(141, 45);
@@ -125,22 +144,20 @@
             this.dgvMarcas.Size = new System.Drawing.Size(429, 258);
             this.dgvMarcas.TabIndex = 7;
             // 
-            // btnModificar
+            // btnRefrescar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.Location = new System.Drawing.Point(7, 295);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnModificar.Size = new System.Drawing.Size(171, 45);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnRefrescar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.Location = new System.Drawing.Point(381, 295);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(54, 45);
+            this.btnRefrescar.TabIndex = 18;
+            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // frmListadoMarcas
             // 
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Button btnCerrar;
         internal System.Windows.Forms.DataGridView dgvMarcas;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoCategorias));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoCategorias));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnRefrescar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.dgvCategorias);
@@ -79,7 +81,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(456, 310);
+            this.btnCerrar.Location = new System.Drawing.Point(246, 310);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCerrar.Size = new System.Drawing.Size(141, 45);
@@ -142,6 +144,21 @@
             this.label1.Text = "LISTADO DE CATEGORIAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnRefrescar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.Location = new System.Drawing.Point(543, 310);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(54, 45);
+            this.btnRefrescar.TabIndex = 18;
+            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // frmListadoCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Button btnCerrar;
         internal System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }

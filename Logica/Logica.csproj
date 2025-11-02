@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="L_BuscarUsuario.cs" />
     <Compile Include="L_Categoria.cs" />
+    <Compile Include="L_Cliente.cs" />
+    <Compile Include="L_ClienteDireccion.cs" />
+    <Compile Include="L_ClienteTelefono.cs" />
     <Compile Include="L_CrearCodigo2FA.cs" />
     <Compile Include="L_ListarPersonas.cs" />
     <Compile Include="L_Log.cs" />

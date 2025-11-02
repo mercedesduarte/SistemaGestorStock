@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.frmGI.Clientes;
 using Vista.frmGI.Marcas;
 using Vista.frmGI.Categorias;
 using Vista.frmGI.Productos;
@@ -526,6 +527,44 @@ namespace Vista
                 }
             }
             frmListadoProveedores formularioListado = new frmListadoProveedores();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+
+        }
+
+        private void InsertarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmInsertarCliente)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmInsertarCliente formularioCliente = new frmInsertarCliente();
+            formularioCliente.MdiParent = this;
+            formularioCliente.WindowState = FormWindowState.Maximized;
+            formularioCliente.Show();
+
+        }
+
+        private void ListarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoClientes)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmListadoClientes formularioListado = new frmListadoClientes();
             formularioListado.MdiParent = this;
             formularioListado.WindowState = FormWindowState.Maximized;
             formularioListado.Show();
