@@ -220,6 +220,12 @@
     <Compile Include="frmGI\Proveedores\Telefonos\frmModificarProveedorTelefono.Designer.cs">
       <DependentUpon>frmModificarProveedorTelefono.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\ReporteStock\frmControlStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\ReporteStock\frmControlStock.Designer.cs">
+      <DependentUpon>frmControlStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGU\frm2FA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Proveedores\Telefonos\frmModificarProveedorTelefono.resx">
       <DependentUpon>frmModificarProveedorTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\ReporteStock\frmControlStock.resx">
+      <DependentUpon>frmControlStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGU\frm2FA.resx">
       <DependentUpon>frm2FA.cs</DependentUpon>

@@ -37,6 +37,7 @@ namespace Vista.frmGI.Clientes
 
             CargarDatosCliente();
             CargarTelefonos();
+            CargarDirecciones();
 
         }
 

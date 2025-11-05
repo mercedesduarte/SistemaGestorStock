@@ -98,3 +98,14 @@ C:\Users\User\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.csproj.CoreCompil
 C:\Users\User\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\User\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.dll
 C:\Users\User\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.pdb
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\Datos.dll
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\Datos.pdb
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\Sesion.dll
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\Sesion.pdb
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.dll
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Datos\obj\Debug\Datos.pdb

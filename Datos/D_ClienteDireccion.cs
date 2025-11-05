@@ -11,7 +11,7 @@ namespace Datos
 {
     public class D_ClienteDireccion
     {
-        // 🔹 INSERTAR dirección
+        
         public static bool InsertarClienteDireccion(int idCliente, string direccion, string localidad, string provincia, bool activo)
         {
             using (SqlConnection cn = ConnectionBD.ObtenerConexion())
@@ -52,7 +52,7 @@ namespace Datos
             return dt;
         }
 
-        // 🔹 MODIFICAR dirección
+        
         public static bool ModificarClienteDireccion(int idClienteDireccion, string direccion, string localidad, string provincia, bool activo)
         {
             using (SqlConnection cn = ConnectionBD.ObtenerConexion())
@@ -74,7 +74,7 @@ namespace Datos
             }
         }
 
-        // 🔹 OBTENER una dirección por ID
+        
         public static DataRow ObtenerPorId(int idClienteDireccion)
         {
             using (SqlConnection cn = ConnectionBD.ObtenerConexion())

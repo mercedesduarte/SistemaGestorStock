@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vista.frmGI.Clientes;
 using Vista.frmGI.Marcas;
 using Vista.frmGI.Categorias;
 using Vista.frmGI.Productos;
 using Vista.frmGI.Proveedores;
+using Vista.frmGI.ReporteStock;
 
 namespace Vista
 {
@@ -55,15 +55,15 @@ namespace Vista
                 return;
             }
 
-                switch (rol.ToLower())
+            switch (rol.ToLower())
             {
                 case "administrador":
-            
+
                     break;
 
                 case "usuario normal":
 
-                 //------------ SISTEMA GESTOR USUARIOS START ------------------
+                    //------------ SISTEMA GESTOR USUARIOS START ------------------
 
                     //GestionUsuariosToolStripMenuItem.Enabled = false;
                     //GestionUsuariosToolStripMenuItem.Visible = false;
@@ -86,10 +86,10 @@ namespace Vista
                     CrearPreguntasSeguridadToolStripMenuItem.Enabled = false;
                     CrearPreguntasSeguridadToolStripMenuItem.Visible = false;
 
-                 //------------ SISTEMA GESTOR USUARIOS END --------------------
+                    //------------ SISTEMA GESTOR USUARIOS END --------------------
 
 
-                 //------------ SISTEMA GESTOR INVENTARIO START ----------------
+                    //------------ SISTEMA GESTOR INVENTARIO START ----------------
 
                     //GestionInventarioToolStripMenuItem.Enabled = false;
                     //GestionInventarioToolStripMenuItem.Visible = false;
@@ -106,13 +106,13 @@ namespace Vista
                     InsertarProveedoresToolStripMenuItem.Enabled = false;
                     InsertarProveedoresToolStripMenuItem.Visible = false;
 
-                 //------------ SISTEMA GESTOR INVENTARIO END ----------------
+                    //------------ SISTEMA GESTOR INVENTARIO END ----------------
 
 
-                    break;               
+                    break;
 
                 default:
-               
+
                     menuStrip.Enabled = false;
                     break;
             }
@@ -134,24 +134,24 @@ namespace Vista
 
         }
 
-        private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form is frmLogs)
-                {
-                    form.WindowState = FormWindowState.Maximized;
-                    form.BringToFront();
-                    form.Focus();
-                    return;
-                }
-            }
+        //private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    foreach (Form form in this.MdiChildren)
+        //    {
+        //        if (form is frmLogs)
+        //        {
+        //            form.WindowState = FormWindowState.Maximized;
+        //            form.BringToFront();
+        //            form.Focus();
+        //            return;
+        //        }
+        //    }
 
-            frmLogs formularioListado = new frmLogs();
-            formularioListado.MdiParent = this;
-            formularioListado.WindowState = FormWindowState.Maximized;
-            formularioListado.Show();
-        }
+        //    frmLogs formularioListado = new frmLogs();
+        //    formularioListado.MdiParent = this;
+        //    formularioListado.WindowState = FormWindowState.Maximized;
+        //    formularioListado.Show();
+        //}
 
         private void MensajesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -533,11 +533,11 @@ namespace Vista
 
         }
 
-        private void InsertarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form is frmInsertarCliente)
+                if (form is frmControlStock)
                 {
                     form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
@@ -545,18 +545,18 @@ namespace Vista
                     return;
                 }
             }
-            frmInsertarCliente formularioCliente = new frmInsertarCliente();
-            formularioCliente.MdiParent = this;
-            formularioCliente.WindowState = FormWindowState.Maximized;
-            formularioCliente.Show();
-
+            frmControlStock formulariostock = new frmControlStock();
+            formulariostock.MdiParent = this;
+            formulariostock.WindowState = FormWindowState.Maximized;
+            formulariostock.Show();
         }
 
-        private void ListarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             foreach (Form form in this.MdiChildren)
             {
-                if (form is frmListadoClientes)
+                if (form is frmLogs)
                 {
                     form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
@@ -564,12 +564,13 @@ namespace Vista
                     return;
                 }
             }
-            frmListadoClientes formularioListado = new frmListadoClientes();
-            formularioListado.MdiParent = this;
-            formularioListado.WindowState = FormWindowState.Maximized;
-            formularioListado.Show();
+            frmLogs formulariologs= new frmLogs();
+            formulariologs.MdiParent = this;
+            formulariologs.WindowState = FormWindowState.Maximized;
+            formulariologs.Show();
 
         }
     }
 }
+
 
