@@ -1,19 +1,13 @@
-﻿using Logica;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace Vista.frmGI.ReporteStock
 {
     public partial class frmControlStock : Form
     {
-        private L_Producto logicaProducto = new L_Producto();
         private L_Control logicaControl = new L_Control();
 
         public frmControlStock()
@@ -21,208 +15,139 @@ namespace Vista.frmGI.ReporteStock
             InitializeComponent();
         }
 
-        private void CargarControlStock()
-        {
-            try
-            {
-                DataTable productos = logicaProducto.Listar();
-
-                if (productos != null && productos.Rows.Count > 0)
-                {
-                    DataTable controlStock = logicaControl.ObtenerControlStock(productos);
-                    dvgStock.DataSource = controlStock;
-                    AplicarFormatoGrid();
-                    Console.WriteLine($"Datos cargados: {controlStock.Rows.Count} productos");
-
-                    // Actualizar el label después de cargar los datos
-                    ActualizarLabelResumen();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron productos para mostrar", "Información",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    label3.Text = "No hay productos disponibles";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar control de stock: " + ex.Message, "Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
-                label3.Text = "Error al cargar datos";
-            }
-        }
-
-        private void AplicarFormatoGrid()
-        {
-            if (dvgStock.Columns.Count > 0)
-            {
-                dvgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                // Ocultar columnas que no se necesitan mostrar
-                if (dvgStock.Columns.Contains("Nivel"))
-                    dvgStock.Columns["Nivel"].Visible = false;
-
-                if (dvgStock.Columns.Contains("ID"))
-                    dvgStock.Columns["ID"].Visible = false;
-
-                // Formato de números alineados a la derecha
-                if (dvgStock.Columns.Contains("Stock Actual"))
-                    dvgStock.Columns["Stock Actual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                if (dvgStock.Columns.Contains("Stock Mínimo"))
-                    dvgStock.Columns["Stock Mínimo"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                if (dvgStock.Columns.Contains("Stock Ideal"))
-                    dvgStock.Columns["Stock Ideal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                if (dvgStock.Columns.Contains("Stock Máximo"))
-                    dvgStock.Columns["Stock Máximo"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                if (dvgStock.Columns.Contains("Punto Reposición"))
-                    dvgStock.Columns["Punto Reposición"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                // Hacer que el DataGrid sea más presentable
-                dvgStock.EnableHeadersVisualStyles = false;
-                dvgStock.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
-                dvgStock.ColumnHeadersDefaultCellStyle.Font = new Font(dvgStock.Font, FontStyle.Bold);
-            }
-        }
-
-        private void ActualizarLabelResumen()
-        {
-            try
-            {
-                if (dvgStock.DataSource != null)
-                {
-                    DataTable controlStock = (DataTable)dvgStock.DataSource;
-
-                    int totalProductos = controlStock.Rows.Count;
-
-                    // Contar por nivel usando la columna "Nivel" que ya existe
-                    int criticos = controlStock.AsEnumerable()
-                        .Count(row => row.Field<string>("Nivel") == "CRITICO");
-                    int alertas = controlStock.AsEnumerable()
-                        .Count(row => row.Field<string>("Nivel") == "ALERTA");
-                    int normales = controlStock.AsEnumerable()
-                        .Count(row => row.Field<string>("Nivel") == "NORMAL");
-                    int optimos = controlStock.AsEnumerable()
-                        .Count(row => row.Field<string>("Nivel") == "OPTIMO");
-                    int excedidos = controlStock.AsEnumerable()
-                        .Count(row => row.Field<string>("Nivel") == "EXCEDIDO");
-
-                    // Actualizar el label con la información
-                    label3.Text = $"📊 Total: {totalProductos} | 🚨 Críticos: {criticos} | ⚠ Alertas: {alertas} | ✅ Normales: {normales} | 👍 Óptimos: {optimos} | 📦 Excedidos: {excedidos}";
-
-                    // Cambiar color del label según la situación
-                    if (criticos > 0)
-                    {
-                        label3.BackColor = Color.LightCoral;
-                        label3.ForeColor = Color.DarkRed;
-                        label3.Font = new Font(label3.Font, FontStyle.Bold);
-                    }
-                    else if (alertas > 0)
-                    {
-                        label3.BackColor = Color.LightYellow;
-                        label3.ForeColor = Color.OrangeRed;
-                    }
-                    else
-                    {
-                        label3.BackColor = Color.LightGreen;
-                        label3.ForeColor = Color.DarkGreen;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                label3.Text = "Error al calcular resumen";
-                label3.BackColor = Color.LightGray;
-            }
-        }
-
-        private void MostrarResumenCompleto()
-        {
-            try
-            {
-                if (dvgStock.DataSource != null)
-                {
-                    DataTable controlStock = (DataTable)dvgStock.DataSource;
-
-                    int totalProductos = controlStock.Rows.Count;
-                    int criticos = controlStock.AsEnumerable().Count(row => row["Nivel"].ToString() == "CRITICO");
-                    int alertas = controlStock.AsEnumerable().Count(row => row["Nivel"].ToString() == "ALERTA");
-                    int normales = controlStock.AsEnumerable().Count(row => row["Nivel"].ToString() == "NORMAL");
-                    int optimos = controlStock.AsEnumerable().Count(row => row["Nivel"].ToString() == "OPTIMO");
-                    int excedidos = controlStock.AsEnumerable().Count(row => row["Nivel"].ToString() == "EXCEDIDO");
-
-                    string mensaje = $"📊 RESUMEN COMPLETO DE STOCK\n\n" +
-                                   $"Total de productos: {totalProductos}\n" +
-                                   $"🚨 Críticos: {criticos}\n" +
-                                   $"⚠ En alerta: {alertas}\n" +
-                                   $"✅ Normales: {normales}\n" +
-                                   $"👍 Óptimos: {optimos}\n" +
-                                   $"📦 Excedidos: {excedidos}";
-
-                    MessageBox.Show(mensaje, "Resumen de Stock",
-                                  MessageBoxButtons.OK,
-                                  criticos > 0 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al generar resumen", "Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void frmControlStock_Load(object sender, EventArgs e)
         {
-            CargarControlStock();
-            // Ya no llamamos a MostrarResumenStock() aquí
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                // Cargar cada pestaña individualmente
+                CargarPestañaStockMinimo();
+                CargarPestañaPuntoReposicion();
+                CargarPestañaPorVencer();
+                CargarPestañaVencidos();
+                CargarPestañaReporteCompleto();
+                CargarPestañaProductosCriticos();
+
+                ActualizarContadoresPestanas();
+                VerificarAlertasCriticas();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void CargarPestañaStockMinimo()
+        {
+            DataTable datos = logicaControl.ObtenerProductosStockMinimo();
+            dgvStockMinimo.DataSource = datos;
+            ConfigurarDataGridView(dgvStockMinimo, Color.LightCoral);
+            lblCantStockMinimo.Text = $"{datos.Rows.Count} productos";
+        }
+
+        private void CargarPestañaPuntoReposicion()
+        {
+            DataTable datos = logicaControl.ObtenerProductosPuntoReposicion();
+            dgvPuntoReposicion.DataSource = datos;
+            ConfigurarDataGridView(dgvPuntoReposicion, Color.LightGoldenrodYellow);
+            lblCantReposicion.Text = $"{datos.Rows.Count} productos";
+        }
+
+        private void CargarPestañaPorVencer()
+        {
+            DataTable datos = logicaControl.ObtenerProductosPorVencer();
+            dgvPorVencer.DataSource = datos;
+            ConfigurarDataGridView(dgvPorVencer, Color.LightBlue);
+            lblCountPorVencer.Text = $"{datos.Rows.Count} productos";
+        }
+
+        private void CargarPestañaVencidos()
+        {
+            DataTable datos = logicaControl.ObtenerProductosVencidos();
+            dgvVencidos.DataSource = datos;
+            ConfigurarDataGridView(dgvVencidos, Color.LightCoral);
+            lblCountVencidos.Text = $"{datos.Rows.Count} productos";
+        }
+
+
+        private void ConfigurarDataGridView(DataGridView dgv, Color backColor)
+        {
+            dgv.BackgroundColor = backColor;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.ReadOnly = true;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.RowHeadersVisible = false;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+
+            // Ajustar columnas específicas si existen
+            if (dgv.Columns.Count > 0)
+            {
+                if (dgv.Columns.Contains("Producto"))
+                    dgv.Columns["Producto"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                if (dgv.Columns.Contains("Código"))
+                    dgv.Columns["Código"].Width = 80;
+
+                if (dgv.Columns.Contains("Stock Actual"))
+                    dgv.Columns["Stock Actual"].Width = 80;
+
+                if (dgv.Columns.Contains("Estado"))
+                    dgv.Columns["Estado"].Width = 150;
+            }
+        }
+
+        private void ActualizarContadoresPestanas()
+        {
+            // Actualizar textos de las pestañas con contadores
+            tabMinim.Text = $"Stock Mínimo ({dgvStockMinimo.RowCount})";
+            TabPuntoReposicion.Text = $"Punto Reposición ({dgvPuntoReposicion.RowCount})";
+            TabPorVencer.Text = $"Por Vencer ({dgvPorVencer.RowCount})";
+            TabVencidos.Text = $"Vencidos ({dgvVencidos.RowCount})";
+
+        }
+
+        private void VerificarAlertasCriticas()
+        {
+            int stockMinimo = dgvStockMinimo.RowCount;
+            int vencidos = dgvVencidos.RowCount;
+
+            if (stockMinimo > 0 || vencidos > 0)
+            {
+                string mensaje = "";
+
+                if (stockMinimo > 0 && vencidos > 0)
+                {
+                    mensaje = $"ALERTA CRÍTICA:\n\n• {stockMinimo} productos con STOCK MÍNIMO\n• {vencidos} productos VENCIDOS\n\nRequieren atención inmediata.";
+                }
+                else if (stockMinimo > 0)
+                {
+                    mensaje = $"ALERTA:\n\n• {stockMinimo} productos con STOCK MÍNIMO\n\nRequieren reposición urgente.";
+                }
+                else if (vencidos > 0)
+                {
+                    mensaje = $"ALERTA:\n\n• {vencidos} productos VENCIDOS\n\nDeben ser retirados del inventario.";
+                }
+
+                MessageBox.Show(mensaje, "Alertas de Inventario",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            CargarControlStock();
-            MessageBox.Show("Stock actualizado correctamente", "Información",
-                          MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnMostrarResumen_Click(object sender, EventArgs e)
-        {
-            MostrarResumenCompleto();
-        }
-
-        private void dvgStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && dvgStock.Rows[e.RowIndex].Cells["Nivel"].Value != null)
-            {
-                string nivel = dvgStock.Rows[e.RowIndex].Cells["Nivel"].Value.ToString();
-
-                switch (nivel)
-                {
-                    case "CRITICO":
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.DarkRed;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(dvgStock.Font, FontStyle.Bold);
-                        break;
-                    case "ALERTA":
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightYellow;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.OrangeRed;
-                        break;
-                    case "NORMAL":
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.DarkGreen;
-                        break;
-                    case "OPTIMO":
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightBlue;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.DarkBlue;
-                        break;
-                    case "EXCEDIDO":
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Lavender;
-                        dvgStock.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Purple;
-                        break;
-                }
-            }
+            CargarDatos();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -230,6 +155,68 @@ namespace Vista.frmGI.ReporteStock
             this.Close();
         }
 
-        
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            ExportarPestañaActual();
+        }
+
+        private void ExportarPestañaActual()
+        {
+            try
+            {
+                DataGridView dgvActual = ObtenerDataGridViewActual();
+
+                if (dgvActual != null && dgvActual.RowCount > 0)
+                {
+                    MessageBox.Show($"Exportando {dgvActual.RowCount} registros de la pestaña actual...",
+                                  "Exportar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos para exportar en esta pestaña.", "Exportar",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al exportar: {ex.Message}", "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private DataGridView ObtenerDataGridViewActual()
+        {
+            switch (tabControl1.SelectedTab.Name)
+            {
+                case "tabStockMinimo": return dgvStockMinimo;
+                case "tabPuntoReposicion": return dgvPuntoReposicion;
+                case "tabPorVencer": return dgvPorVencer;
+                case "tabVencidos": return dgvVencidos;
+                default: return null;
+            }
+        }
+
+        private void dgvStockMinimo_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            AplicarFormatoCeldas((DataGridView)sender, e.RowIndex);
+        }
+
+        private void dgvVencidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            AplicarFormatoCeldas((DataGridView)sender, e.RowIndex);
+        }
+
+        private void AplicarFormatoCeldas(DataGridView dgv, int rowIndex)
+        {
+            if (rowIndex >= 0)
+            {
+                // Resaltar filas críticas
+                if (dgv.Name == "dgvStockMinimo" || dgv.Name == "dgvVencidos")
+                {
+                    dgv.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                    dgv.Rows[rowIndex].DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
+        }
     }
 }

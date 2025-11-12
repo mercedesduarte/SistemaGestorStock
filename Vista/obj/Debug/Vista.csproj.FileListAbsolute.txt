@@ -402,3 +402,4 @@ C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.csproj.Up2Dat
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.exe
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.pdb
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.ReporteStock.frmControlStock.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Emision.frmEmision.resources

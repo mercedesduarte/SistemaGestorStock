@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_ReporteControlStockVencimientos
+CREATE OR ALTER PROCEDURE sp_ReporteControlStockVencimientos
 AS
 BEGIN
     SET NOCOUNT ON;

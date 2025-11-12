@@ -142,6 +142,54 @@
     <Compile Include="frmGI\Marcas\frmModificarMarca.Designer.cs">
       <DependentUpon>frmModificarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\NotaCredito\frmEmisionNotaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaCredito\frmEmisionNotaCredito.Designer.cs">
+      <DependentUpon>frmEmisionNotaCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\NotaCredito\frmRegistroNotaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaCredito\frmRegistroNotaCredito.Designer.cs">
+      <DependentUpon>frmRegistroNotaCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\NotaDebito\frmEmisionNotaDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaDebito\frmEmisionNotaDebito.Designer.cs">
+      <DependentUpon>frmEmisionNotaDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\NotaDebito\frmRegistroNotaDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaDebito\frmRegistroNotaDebito.Designer.cs">
+      <DependentUpon>frmRegistroNotaDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\NotaPedido\frmEmisionNP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaPedido\frmEmisionNP.Designer.cs">
+      <DependentUpon>frmEmisionNP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\NotaPedido\frmRegistroNotaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\NotaPedido\frmRegistroNotaPedido.Designer.cs">
+      <DependentUpon>frmRegistroNotaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Presupuesto\frmEmisionPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Presupuesto\frmEmisionPresupuesto.Designer.cs">
+      <DependentUpon>frmEmisionPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGI\Presupuesto\frmRegistroPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\Presupuesto\frmRegistroPresupuesto.Designer.cs">
+      <DependentUpon>frmRegistroPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGI\Productos\frmInsertarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +430,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Marcas\frmModificarMarca.resx">
       <DependentUpon>frmModificarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaCredito\frmEmisionNotaCredito.resx">
+      <DependentUpon>frmEmisionNotaCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaCredito\frmRegistroNotaCredito.resx">
+      <DependentUpon>frmRegistroNotaCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaDebito\frmEmisionNotaDebito.resx">
+      <DependentUpon>frmEmisionNotaDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaDebito\frmRegistroNotaDebito.resx">
+      <DependentUpon>frmRegistroNotaDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaPedido\frmEmisionNP.resx">
+      <DependentUpon>frmEmisionNP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\NotaPedido\frmRegistroNotaPedido.resx">
+      <DependentUpon>frmRegistroNotaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Presupuesto\frmEmisionPresupuesto.resx">
+      <DependentUpon>frmEmisionPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\Presupuesto\frmRegistroPresupuesto.resx">
+      <DependentUpon>frmRegistroPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Productos\frmInsertarProducto.resx">
       <DependentUpon>frmInsertarProducto.cs</DependentUpon>

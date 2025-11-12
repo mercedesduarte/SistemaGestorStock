@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_ReporteProductosCriticos
+CREATE OR ALTER PROCEDURE sp_ReporteProductosCriticos
 AS
 BEGIN
     SET NOCOUNT ON;

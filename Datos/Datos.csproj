@@ -59,6 +59,7 @@
     <Compile Include="D_Cliente.cs" />
     <Compile Include="D_ClienteDireccion.cs" />
     <Compile Include="D_ClienteTelefono.cs" />
+    <Compile Include="D_Control.cs" />
     <Compile Include="D_CrearCodigo2Autenticacion.cs" />
     <Compile Include="D_CrearRespuesta.cs" />
     <Compile Include="D_HistorialContras.cs" />

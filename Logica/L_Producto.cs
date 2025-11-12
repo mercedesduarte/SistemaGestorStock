@@ -129,5 +129,54 @@ namespace Logica
             return D_Producto.ObtenerPorId(idProducto, out mensaje);
         }
 
+        // Métodos corregidos - usar D_Producto directamente para mantener consistencia
+        public DataTable ListarProductosActivos()
+        {
+            try
+            {
+                return D_Producto.ListarProductosActivos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al listar productos activos: " + ex.Message);
+            }
+        }
+
+        public DataTable ListarProductosCriticos()
+        {
+            try
+            {
+                return D_Producto.ListarProductosCriticos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al listar productos críticos: " + ex.Message);
+            }
+        }
+
+        // Agregar los métodos nuevos que necesitas para el control de stock
+        public DataTable ListarControlStockVencimientos()
+        {
+            try
+            {
+                return D_Producto.ListarControlStockVencimientos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener control de stock: " + ex.Message);
+            }
+        }
+
+        public DataTable ObtenerProductosPorEstado(string estado)
+        {
+            try
+            {
+                return D_Producto.ObtenerProductosPorEstado(estado);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al obtener productos {estado}: " + ex.Message);
+            }
+        }
     }
 }
