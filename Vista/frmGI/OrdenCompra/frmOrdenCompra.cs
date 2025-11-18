@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista.frmGI.NotaCredito
+namespace Vista.frmGI.OrdenCompra
 {
-    public partial class frmEmisionNotaCredito : Form
+    public partial class frmOrdenCompra : Form
     {
-        public frmEmisionNotaCredito()
+        public frmOrdenCompra()
         {
             InitializeComponent();
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
+        private void frmOrdenCompra_Load(object sender, EventArgs e)
         {
 
         }

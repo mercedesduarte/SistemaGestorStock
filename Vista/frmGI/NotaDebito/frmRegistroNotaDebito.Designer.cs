@@ -17,28 +17,6 @@
 
         private void InitializeComponent()
         {
-            this.pnlCabecera = new System.Windows.Forms.Panel();
-            this.gbComprobanteOrigen = new System.Windows.Forms.GroupBox();
-            this.txtIDFacturaOrigen = new System.Windows.Forms.TextBox();
-            this.lblIDFacturaOrigen = new System.Windows.Forms.Label();
-            this.txtNumeroFacturaOrigen = new System.Windows.Forms.TextBox();
-            this.lblNumeroFacturaOrigen = new System.Windows.Forms.Label();
-            this.txtFechaFacturaOrigen = new System.Windows.Forms.TextBox();
-            this.lblFechaFacturaOrigen = new System.Windows.Forms.Label();
-            this.gbDatosCliente = new System.Windows.Forms.GroupBox();
-            this.txtIDCliente = new System.Windows.Forms.TextBox();
-            this.lblIDCliente = new System.Windows.Forms.Label();
-            this.txtCategoriaCliente = new System.Windows.Forms.TextBox();
-            this.lblCategoriaCliente = new System.Windows.Forms.Label();
-            this.txtSaldoCliente = new System.Windows.Forms.TextBox();
-            this.lblSaldoCliente = new System.Windows.Forms.Label();
-            this.gbDatosSistema = new System.Windows.Forms.GroupBox();
-            this.txtVendedor = new System.Windows.Forms.TextBox();
-            this.lblVendedor = new System.Windows.Forms.Label();
-            this.cmbMotivo = new System.Windows.Forms.ComboBox();
-            this.lblMotivo = new System.Windows.Forms.Label();
-            this.txtCanalVenta = new System.Windows.Forms.TextBox();
-            this.lblCanalVenta = new System.Windows.Forms.Label();
             this.gbControlInterno = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -48,6 +26,29 @@
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.txtIDNotaDebito = new System.Windows.Forms.TextBox();
             this.lblIDNotaDebito = new System.Windows.Forms.Label();
+            this.gbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.gbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
+            this.lblIDCliente = new System.Windows.Forms.Label();
+            this.txtCategoriaCliente = new System.Windows.Forms.TextBox();
+            this.lblCategoriaCliente = new System.Windows.Forms.Label();
+            this.txtSaldoCliente = new System.Windows.Forms.TextBox();
+            this.lblSaldoCliente = new System.Windows.Forms.Label();
+            this.gbComprobanteOrigen = new System.Windows.Forms.GroupBox();
+            this.txtIDFacturaOrigen = new System.Windows.Forms.TextBox();
+            this.lblIDFacturaOrigen = new System.Windows.Forms.Label();
+            this.txtNumeroFacturaOrigen = new System.Windows.Forms.TextBox();
+            this.lblNumeroFacturaOrigen = new System.Windows.Forms.Label();
+            this.txtFechaFacturaOrigen = new System.Windows.Forms.TextBox();
+            this.lblFechaFacturaOrigen = new System.Windows.Forms.Label();
             this.pnlDetalle = new System.Windows.Forms.Panel();
             this.dgvDetalleRegistro = new System.Windows.Forms.DataGridView();
             this.colIDConcepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,262 +61,20 @@
             this.colMargen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAfectaStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlAuditoria = new System.Windows.Forms.Panel();
-            this.gbAuditoria = new System.Windows.Forms.GroupBox();
-            this.txtUsuarioModificacion = new System.Windows.Forms.TextBox();
-            this.lblUsuarioModificacion = new System.Windows.Forms.Label();
-            this.txtFechaHoraModificacion = new System.Windows.Forms.TextBox();
-            this.lblFechaHoraModificacion = new System.Windows.Forms.Label();
-            this.pnlResumen = new System.Windows.Forms.Panel();
-            this.gbResumen = new System.Windows.Forms.GroupBox();
-            this.txtTotalDebito = new System.Windows.Forms.TextBox();
-            this.lblTotalDebito = new System.Windows.Forms.Label();
-            this.txtMargenTotal = new System.Windows.Forms.TextBox();
-            this.lblMargenTotal = new System.Windows.Forms.Label();
-            this.txtCostoTotal = new System.Windows.Forms.TextBox();
-            this.lblCostoTotal = new System.Windows.Forms.Label();
-            this.txtCantidadItems = new System.Windows.Forms.TextBox();
-            this.lblCantidadItems = new System.Windows.Forms.Label();
             this.pnlBotones = new System.Windows.Forms.Panel();
-            this.btnAuditoriaCompleta = new System.Windows.Forms.Button();
             this.btnVerMovimientos = new System.Windows.Forms.Button();
             this.btnAplicarCobro = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.pnlCabecera.SuspendLayout();
-            this.gbComprobanteOrigen.SuspendLayout();
-            this.gbDatosCliente.SuspendLayout();
-            this.gbDatosSistema.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbControlInterno.SuspendLayout();
+            this.gbDatosProducto.SuspendLayout();
+            this.gbDatosCliente.SuspendLayout();
+            this.gbComprobanteOrigen.SuspendLayout();
             this.pnlDetalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleRegistro)).BeginInit();
-            this.pnlAuditoria.SuspendLayout();
-            this.gbAuditoria.SuspendLayout();
-            this.pnlResumen.SuspendLayout();
-            this.gbResumen.SuspendLayout();
             this.pnlBotones.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlCabecera
-            // 
-            this.pnlCabecera.Controls.Add(this.gbComprobanteOrigen);
-            this.pnlCabecera.Controls.Add(this.gbDatosCliente);
-            this.pnlCabecera.Controls.Add(this.gbDatosSistema);
-            this.pnlCabecera.Controls.Add(this.gbControlInterno);
-            this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnlCabecera.Name = "pnlCabecera";
-            this.pnlCabecera.Size = new System.Drawing.Size(984, 180);
-            this.pnlCabecera.TabIndex = 0;
-            // 
-            // gbComprobanteOrigen
-            // 
-            this.gbComprobanteOrigen.Controls.Add(this.txtIDFacturaOrigen);
-            this.gbComprobanteOrigen.Controls.Add(this.lblIDFacturaOrigen);
-            this.gbComprobanteOrigen.Controls.Add(this.txtNumeroFacturaOrigen);
-            this.gbComprobanteOrigen.Controls.Add(this.lblNumeroFacturaOrigen);
-            this.gbComprobanteOrigen.Controls.Add(this.txtFechaFacturaOrigen);
-            this.gbComprobanteOrigen.Controls.Add(this.lblFechaFacturaOrigen);
-            this.gbComprobanteOrigen.Location = new System.Drawing.Point(780, 12);
-            this.gbComprobanteOrigen.Name = "gbComprobanteOrigen";
-            this.gbComprobanteOrigen.Size = new System.Drawing.Size(192, 155);
-            this.gbComprobanteOrigen.TabIndex = 3;
-            this.gbComprobanteOrigen.TabStop = false;
-            this.gbComprobanteOrigen.Text = "Comprobante Origen";
-            // 
-            // txtIDFacturaOrigen
-            // 
-            this.txtIDFacturaOrigen.Location = new System.Drawing.Point(120, 25);
-            this.txtIDFacturaOrigen.Name = "txtIDFacturaOrigen";
-            this.txtIDFacturaOrigen.ReadOnly = true;
-            this.txtIDFacturaOrigen.Size = new System.Drawing.Size(60, 20);
-            this.txtIDFacturaOrigen.TabIndex = 5;
-            // 
-            // lblIDFacturaOrigen
-            // 
-            this.lblIDFacturaOrigen.AutoSize = true;
-            this.lblIDFacturaOrigen.Location = new System.Drawing.Point(16, 28);
-            this.lblIDFacturaOrigen.Name = "lblIDFacturaOrigen";
-            this.lblIDFacturaOrigen.Size = new System.Drawing.Size(21, 13);
-            this.lblIDFacturaOrigen.TabIndex = 4;
-            this.lblIDFacturaOrigen.Text = "ID:";
-            // 
-            // txtNumeroFacturaOrigen
-            // 
-            this.txtNumeroFacturaOrigen.Location = new System.Drawing.Point(120, 75);
-            this.txtNumeroFacturaOrigen.Name = "txtNumeroFacturaOrigen";
-            this.txtNumeroFacturaOrigen.ReadOnly = true;
-            this.txtNumeroFacturaOrigen.Size = new System.Drawing.Size(60, 20);
-            this.txtNumeroFacturaOrigen.TabIndex = 3;
-            this.txtNumeroFacturaOrigen.Text = "FAC-00000001";
-            // 
-            // lblNumeroFacturaOrigen
-            // 
-            this.lblNumeroFacturaOrigen.AutoSize = true;
-            this.lblNumeroFacturaOrigen.Location = new System.Drawing.Point(16, 78);
-            this.lblNumeroFacturaOrigen.Name = "lblNumeroFacturaOrigen";
-            this.lblNumeroFacturaOrigen.Size = new System.Drawing.Size(47, 13);
-            this.lblNumeroFacturaOrigen.TabIndex = 2;
-            this.lblNumeroFacturaOrigen.Text = "Número:";
-            // 
-            // txtFechaFacturaOrigen
-            // 
-            this.txtFechaFacturaOrigen.Location = new System.Drawing.Point(120, 50);
-            this.txtFechaFacturaOrigen.Name = "txtFechaFacturaOrigen";
-            this.txtFechaFacturaOrigen.ReadOnly = true;
-            this.txtFechaFacturaOrigen.Size = new System.Drawing.Size(60, 20);
-            this.txtFechaFacturaOrigen.TabIndex = 1;
-            // 
-            // lblFechaFacturaOrigen
-            // 
-            this.lblFechaFacturaOrigen.AutoSize = true;
-            this.lblFechaFacturaOrigen.Location = new System.Drawing.Point(16, 53);
-            this.lblFechaFacturaOrigen.Name = "lblFechaFacturaOrigen";
-            this.lblFechaFacturaOrigen.Size = new System.Drawing.Size(40, 13);
-            this.lblFechaFacturaOrigen.TabIndex = 0;
-            this.lblFechaFacturaOrigen.Text = "Fecha:";
-            // 
-            // gbDatosCliente
-            // 
-            this.gbDatosCliente.Controls.Add(this.txtIDCliente);
-            this.gbDatosCliente.Controls.Add(this.lblIDCliente);
-            this.gbDatosCliente.Controls.Add(this.txtCategoriaCliente);
-            this.gbDatosCliente.Controls.Add(this.lblCategoriaCliente);
-            this.gbDatosCliente.Controls.Add(this.txtSaldoCliente);
-            this.gbDatosCliente.Controls.Add(this.lblSaldoCliente);
-            this.gbDatosCliente.Location = new System.Drawing.Point(524, 12);
-            this.gbDatosCliente.Name = "gbDatosCliente";
-            this.gbDatosCliente.Size = new System.Drawing.Size(250, 155);
-            this.gbDatosCliente.TabIndex = 2;
-            this.gbDatosCliente.TabStop = false;
-            this.gbDatosCliente.Text = "Datos del Cliente (Sistema)";
-            // 
-            // txtIDCliente
-            // 
-            this.txtIDCliente.Location = new System.Drawing.Point(120, 25);
-            this.txtIDCliente.Name = "txtIDCliente";
-            this.txtIDCliente.ReadOnly = true;
-            this.txtIDCliente.Size = new System.Drawing.Size(120, 20);
-            this.txtIDCliente.TabIndex = 5;
-            // 
-            // lblIDCliente
-            // 
-            this.lblIDCliente.AutoSize = true;
-            this.lblIDCliente.Location = new System.Drawing.Point(16, 28);
-            this.lblIDCliente.Name = "lblIDCliente";
-            this.lblIDCliente.Size = new System.Drawing.Size(56, 13);
-            this.lblIDCliente.TabIndex = 4;
-            this.lblIDCliente.Text = "ID Cliente:";
-            // 
-            // txtCategoriaCliente
-            // 
-            this.txtCategoriaCliente.Location = new System.Drawing.Point(120, 50);
-            this.txtCategoriaCliente.Name = "txtCategoriaCliente";
-            this.txtCategoriaCliente.ReadOnly = true;
-            this.txtCategoriaCliente.Size = new System.Drawing.Size(120, 20);
-            this.txtCategoriaCliente.TabIndex = 3;
-            // 
-            // lblCategoriaCliente
-            // 
-            this.lblCategoriaCliente.AutoSize = true;
-            this.lblCategoriaCliente.Location = new System.Drawing.Point(16, 53);
-            this.lblCategoriaCliente.Name = "lblCategoriaCliente";
-            this.lblCategoriaCliente.Size = new System.Drawing.Size(57, 13);
-            this.lblCategoriaCliente.TabIndex = 2;
-            this.lblCategoriaCliente.Text = "Categoría:";
-            // 
-            // txtSaldoCliente
-            // 
-            this.txtSaldoCliente.Location = new System.Drawing.Point(120, 75);
-            this.txtSaldoCliente.Name = "txtSaldoCliente";
-            this.txtSaldoCliente.ReadOnly = true;
-            this.txtSaldoCliente.Size = new System.Drawing.Size(120, 20);
-            this.txtSaldoCliente.TabIndex = 1;
-            this.txtSaldoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblSaldoCliente
-            // 
-            this.lblSaldoCliente.AutoSize = true;
-            this.lblSaldoCliente.Location = new System.Drawing.Point(16, 78);
-            this.lblSaldoCliente.Name = "lblSaldoCliente";
-            this.lblSaldoCliente.Size = new System.Drawing.Size(37, 13);
-            this.lblSaldoCliente.TabIndex = 0;
-            this.lblSaldoCliente.Text = "Saldo:";
-            // 
-            // gbDatosSistema
-            // 
-            this.gbDatosSistema.Controls.Add(this.txtVendedor);
-            this.gbDatosSistema.Controls.Add(this.lblVendedor);
-            this.gbDatosSistema.Controls.Add(this.cmbMotivo);
-            this.gbDatosSistema.Controls.Add(this.lblMotivo);
-            this.gbDatosSistema.Controls.Add(this.txtCanalVenta);
-            this.gbDatosSistema.Controls.Add(this.lblCanalVenta);
-            this.gbDatosSistema.Location = new System.Drawing.Point(268, 12);
-            this.gbDatosSistema.Name = "gbDatosSistema";
-            this.gbDatosSistema.Size = new System.Drawing.Size(250, 155);
-            this.gbDatosSistema.TabIndex = 1;
-            this.gbDatosSistema.TabStop = false;
-            this.gbDatosSistema.Text = "Datos del Sistema";
-            // 
-            // txtVendedor
-            // 
-            this.txtVendedor.Location = new System.Drawing.Point(120, 75);
-            this.txtVendedor.Name = "txtVendedor";
-            this.txtVendedor.ReadOnly = true;
-            this.txtVendedor.Size = new System.Drawing.Size(120, 20);
-            this.txtVendedor.TabIndex = 5;
-            // 
-            // lblVendedor
-            // 
-            this.lblVendedor.AutoSize = true;
-            this.lblVendedor.Location = new System.Drawing.Point(16, 78);
-            this.lblVendedor.Name = "lblVendedor";
-            this.lblVendedor.Size = new System.Drawing.Size(56, 13);
-            this.lblVendedor.TabIndex = 4;
-            this.lblVendedor.Text = "Vendedor:";
-            // 
-            // cmbMotivo
-            // 
-            this.cmbMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMotivo.FormattingEnabled = true;
-            this.cmbMotivo.Items.AddRange(new object[] {
-            "Intereses por mora",
-            "Gastos administrativos",
-            "Ajustes de precios",
-            "Servicios adicionales",
-            "Diferencias de cambio",
-            "Otros conceptos"});
-            this.cmbMotivo.Location = new System.Drawing.Point(120, 50);
-            this.cmbMotivo.Name = "cmbMotivo";
-            this.cmbMotivo.Size = new System.Drawing.Size(120, 21);
-            this.cmbMotivo.TabIndex = 3;
-            // 
-            // lblMotivo
-            // 
-            this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Location = new System.Drawing.Point(16, 53);
-            this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(42, 13);
-            this.lblMotivo.TabIndex = 2;
-            this.lblMotivo.Text = "Motivo:";
-            // 
-            // txtCanalVenta
-            // 
-            this.txtCanalVenta.Location = new System.Drawing.Point(120, 25);
-            this.txtCanalVenta.Name = "txtCanalVenta";
-            this.txtCanalVenta.ReadOnly = true;
-            this.txtCanalVenta.Size = new System.Drawing.Size(120, 20);
-            this.txtCanalVenta.TabIndex = 1;
-            this.txtCanalVenta.Text = "Mostrador";
-            // 
-            // lblCanalVenta
-            // 
-            this.lblCanalVenta.AutoSize = true;
-            this.lblCanalVenta.Location = new System.Drawing.Point(16, 28);
-            this.lblCanalVenta.Name = "lblCanalVenta";
-            this.lblCanalVenta.Size = new System.Drawing.Size(68, 13);
-            this.lblCanalVenta.TabIndex = 0;
-            this.lblCanalVenta.Text = "Canal Venta:";
             // 
             // gbControlInterno
             // 
@@ -327,16 +86,18 @@
             this.gbControlInterno.Controls.Add(this.lblFechaHoraCreacion);
             this.gbControlInterno.Controls.Add(this.txtIDNotaDebito);
             this.gbControlInterno.Controls.Add(this.lblIDNotaDebito);
-            this.gbControlInterno.Location = new System.Drawing.Point(12, 12);
+            this.gbControlInterno.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbControlInterno.Location = new System.Drawing.Point(20, 80);
             this.gbControlInterno.Name = "gbControlInterno";
-            this.gbControlInterno.Size = new System.Drawing.Size(250, 155);
-            this.gbControlInterno.TabIndex = 0;
+            this.gbControlInterno.Size = new System.Drawing.Size(450, 200);
+            this.gbControlInterno.TabIndex = 1;
             this.gbControlInterno.TabStop = false;
-            this.gbControlInterno.Text = "Control Interno";
+            this.gbControlInterno.Text = "CONTROL INTERNO";
             // 
             // cmbEstado
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "Pendiente",
@@ -345,79 +106,330 @@
             "Cobrada",
             "Anulada",
             "Contabilizada"});
-            this.cmbEstado.Location = new System.Drawing.Point(120, 100);
+            this.cmbEstado.Location = new System.Drawing.Point(140, 140);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(120, 21);
+            this.cmbEstado.Size = new System.Drawing.Size(280, 27);
             this.cmbEstado.TabIndex = 7;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(16, 103);
+            this.lblEstado.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(20, 143);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(43, 13);
+            this.lblEstado.Size = new System.Drawing.Size(72, 19);
             this.lblEstado.TabIndex = 6;
             this.lblEstado.Text = "Estado:";
             // 
             // txtUsuarioCreacion
             // 
-            this.txtUsuarioCreacion.Location = new System.Drawing.Point(120, 75);
+            this.txtUsuarioCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioCreacion.Location = new System.Drawing.Point(140, 105);
             this.txtUsuarioCreacion.Name = "txtUsuarioCreacion";
             this.txtUsuarioCreacion.ReadOnly = true;
-            this.txtUsuarioCreacion.Size = new System.Drawing.Size(120, 20);
+            this.txtUsuarioCreacion.Size = new System.Drawing.Size(280, 26);
             this.txtUsuarioCreacion.TabIndex = 5;
             // 
             // lblUsuarioCreacion
             // 
             this.lblUsuarioCreacion.AutoSize = true;
-            this.lblUsuarioCreacion.Location = new System.Drawing.Point(16, 78);
+            this.lblUsuarioCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioCreacion.Location = new System.Drawing.Point(20, 108);
             this.lblUsuarioCreacion.Name = "lblUsuarioCreacion";
-            this.lblUsuarioCreacion.Size = new System.Drawing.Size(90, 13);
+            this.lblUsuarioCreacion.Size = new System.Drawing.Size(126, 19);
             this.lblUsuarioCreacion.TabIndex = 4;
-            this.lblUsuarioCreacion.Text = "Usuario creación:";
+            this.lblUsuarioCreacion.Text = "Usuario Crea:";
             // 
             // txtFechaHoraCreacion
             // 
-            this.txtFechaHoraCreacion.Location = new System.Drawing.Point(120, 50);
+            this.txtFechaHoraCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaHoraCreacion.Location = new System.Drawing.Point(140, 70);
             this.txtFechaHoraCreacion.Name = "txtFechaHoraCreacion";
             this.txtFechaHoraCreacion.ReadOnly = true;
-            this.txtFechaHoraCreacion.Size = new System.Drawing.Size(120, 20);
+            this.txtFechaHoraCreacion.Size = new System.Drawing.Size(280, 26);
             this.txtFechaHoraCreacion.TabIndex = 3;
             // 
             // lblFechaHoraCreacion
             // 
             this.lblFechaHoraCreacion.AutoSize = true;
-            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(16, 53);
+            this.lblFechaHoraCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(20, 73);
             this.lblFechaHoraCreacion.Name = "lblFechaHoraCreacion";
-            this.lblFechaHoraCreacion.Size = new System.Drawing.Size(110, 13);
+            this.lblFechaHoraCreacion.Size = new System.Drawing.Size(108, 19);
             this.lblFechaHoraCreacion.TabIndex = 2;
-            this.lblFechaHoraCreacion.Text = "Fecha/hora creación:";
+            this.lblFechaHoraCreacion.Text = "Fecha Crea:";
             // 
             // txtIDNotaDebito
             // 
-            this.txtIDNotaDebito.Location = new System.Drawing.Point(120, 25);
+            this.txtIDNotaDebito.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDNotaDebito.Location = new System.Drawing.Point(140, 35);
             this.txtIDNotaDebito.Name = "txtIDNotaDebito";
             this.txtIDNotaDebito.ReadOnly = true;
-            this.txtIDNotaDebito.Size = new System.Drawing.Size(120, 20);
+            this.txtIDNotaDebito.Size = new System.Drawing.Size(200, 26);
             this.txtIDNotaDebito.TabIndex = 1;
             // 
             // lblIDNotaDebito
             // 
             this.lblIDNotaDebito.AutoSize = true;
-            this.lblIDNotaDebito.Location = new System.Drawing.Point(16, 28);
+            this.lblIDNotaDebito.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDNotaDebito.Location = new System.Drawing.Point(20, 38);
             this.lblIDNotaDebito.Name = "lblIDNotaDebito";
-            this.lblIDNotaDebito.Size = new System.Drawing.Size(21, 13);
+            this.lblIDNotaDebito.Size = new System.Drawing.Size(36, 19);
             this.lblIDNotaDebito.TabIndex = 0;
             this.lblIDNotaDebito.Text = "ID:";
             // 
+            // gbDatosProducto
+            // 
+            this.gbDatosProducto.Controls.Add(this.txtCategoria);
+            this.gbDatosProducto.Controls.Add(this.lblCategoria);
+            this.gbDatosProducto.Controls.Add(this.txtMarca);
+            this.gbDatosProducto.Controls.Add(this.lblMarca);
+            this.gbDatosProducto.Controls.Add(this.txtProveedor);
+            this.gbDatosProducto.Controls.Add(this.lblProveedor);
+            this.gbDatosProducto.Controls.Add(this.txtProducto);
+            this.gbDatosProducto.Controls.Add(this.lblProducto);
+            this.gbDatosProducto.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosProducto.Location = new System.Drawing.Point(500, 80);
+            this.gbDatosProducto.Name = "gbDatosProducto";
+            this.gbDatosProducto.Size = new System.Drawing.Size(450, 200);
+            this.gbDatosProducto.TabIndex = 2;
+            this.gbDatosProducto.TabStop = false;
+            this.gbDatosProducto.Text = "DATOS DEL PRODUCTO";
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(140, 140);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.ReadOnly = true;
+            this.txtCategoria.Size = new System.Drawing.Size(280, 26);
+            this.txtCategoria.TabIndex = 7;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(20, 143);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(99, 19);
+            this.lblCategoria.TabIndex = 6;
+            this.lblCategoria.Text = "Categoría:";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.Location = new System.Drawing.Point(140, 105);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.ReadOnly = true;
+            this.txtMarca.Size = new System.Drawing.Size(280, 26);
+            this.txtMarca.TabIndex = 5;
+            // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(20, 108);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(63, 19);
+            this.lblMarca.TabIndex = 4;
+            this.lblMarca.Text = "Marca:";
+            // 
+            // txtProveedor
+            // 
+            this.txtProveedor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProveedor.Location = new System.Drawing.Point(140, 70);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.ReadOnly = true;
+            this.txtProveedor.Size = new System.Drawing.Size(280, 26);
+            this.txtProveedor.TabIndex = 3;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Location = new System.Drawing.Point(20, 73);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(99, 19);
+            this.lblProveedor.TabIndex = 2;
+            this.lblProveedor.Text = "Proveedor:";
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(140, 35);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
+            this.txtProducto.Size = new System.Drawing.Size(280, 26);
+            this.txtProducto.TabIndex = 1;
+            // 
+            // lblProducto
+            // 
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(20, 38);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(90, 19);
+            this.lblProducto.TabIndex = 0;
+            this.lblProducto.Text = "Producto:";
+            // 
+            // gbDatosCliente
+            // 
+            this.gbDatosCliente.Controls.Add(this.txtIDCliente);
+            this.gbDatosCliente.Controls.Add(this.lblIDCliente);
+            this.gbDatosCliente.Controls.Add(this.txtCategoriaCliente);
+            this.gbDatosCliente.Controls.Add(this.lblCategoriaCliente);
+            this.gbDatosCliente.Controls.Add(this.txtSaldoCliente);
+            this.gbDatosCliente.Controls.Add(this.lblSaldoCliente);
+            this.gbDatosCliente.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosCliente.Location = new System.Drawing.Point(20, 300);
+            this.gbDatosCliente.Name = "gbDatosCliente";
+            this.gbDatosCliente.Size = new System.Drawing.Size(450, 180);
+            this.gbDatosCliente.TabIndex = 3;
+            this.gbDatosCliente.TabStop = false;
+            this.gbDatosCliente.Text = "DATOS DEL CLIENTE (SISTEMA)";
+            // 
+            // txtIDCliente
+            // 
+            this.txtIDCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDCliente.Location = new System.Drawing.Point(140, 40);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.ReadOnly = true;
+            this.txtIDCliente.Size = new System.Drawing.Size(280, 26);
+            this.txtIDCliente.TabIndex = 5;
+            // 
+            // lblIDCliente
+            // 
+            this.lblIDCliente.AutoSize = true;
+            this.lblIDCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDCliente.Location = new System.Drawing.Point(20, 43);
+            this.lblIDCliente.Name = "lblIDCliente";
+            this.lblIDCliente.Size = new System.Drawing.Size(108, 19);
+            this.lblIDCliente.TabIndex = 4;
+            this.lblIDCliente.Text = "ID Cliente:";
+            // 
+            // txtCategoriaCliente
+            // 
+            this.txtCategoriaCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoriaCliente.Location = new System.Drawing.Point(140, 80);
+            this.txtCategoriaCliente.Name = "txtCategoriaCliente";
+            this.txtCategoriaCliente.ReadOnly = true;
+            this.txtCategoriaCliente.Size = new System.Drawing.Size(280, 26);
+            this.txtCategoriaCliente.TabIndex = 3;
+            // 
+            // lblCategoriaCliente
+            // 
+            this.lblCategoriaCliente.AutoSize = true;
+            this.lblCategoriaCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoriaCliente.Location = new System.Drawing.Point(20, 83);
+            this.lblCategoriaCliente.Name = "lblCategoriaCliente";
+            this.lblCategoriaCliente.Size = new System.Drawing.Size(99, 19);
+            this.lblCategoriaCliente.TabIndex = 2;
+            this.lblCategoriaCliente.Text = "Categoría:";
+            // 
+            // txtSaldoCliente
+            // 
+            this.txtSaldoCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSaldoCliente.Location = new System.Drawing.Point(140, 120);
+            this.txtSaldoCliente.Name = "txtSaldoCliente";
+            this.txtSaldoCliente.ReadOnly = true;
+            this.txtSaldoCliente.Size = new System.Drawing.Size(200, 26);
+            this.txtSaldoCliente.TabIndex = 1;
+            this.txtSaldoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblSaldoCliente
+            // 
+            this.lblSaldoCliente.AutoSize = true;
+            this.lblSaldoCliente.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoCliente.Location = new System.Drawing.Point(20, 123);
+            this.lblSaldoCliente.Name = "lblSaldoCliente";
+            this.lblSaldoCliente.Size = new System.Drawing.Size(63, 19);
+            this.lblSaldoCliente.TabIndex = 0;
+            this.lblSaldoCliente.Text = "Saldo:";
+            // 
+            // gbComprobanteOrigen
+            // 
+            this.gbComprobanteOrigen.Controls.Add(this.txtIDFacturaOrigen);
+            this.gbComprobanteOrigen.Controls.Add(this.lblIDFacturaOrigen);
+            this.gbComprobanteOrigen.Controls.Add(this.txtNumeroFacturaOrigen);
+            this.gbComprobanteOrigen.Controls.Add(this.lblNumeroFacturaOrigen);
+            this.gbComprobanteOrigen.Controls.Add(this.txtFechaFacturaOrigen);
+            this.gbComprobanteOrigen.Controls.Add(this.lblFechaFacturaOrigen);
+            this.gbComprobanteOrigen.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbComprobanteOrigen.Location = new System.Drawing.Point(500, 300);
+            this.gbComprobanteOrigen.Name = "gbComprobanteOrigen";
+            this.gbComprobanteOrigen.Size = new System.Drawing.Size(450, 180);
+            this.gbComprobanteOrigen.TabIndex = 4;
+            this.gbComprobanteOrigen.TabStop = false;
+            this.gbComprobanteOrigen.Text = "COMPROBANTE ORIGEN";
+            // 
+            // txtIDFacturaOrigen
+            // 
+            this.txtIDFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDFacturaOrigen.Location = new System.Drawing.Point(140, 40);
+            this.txtIDFacturaOrigen.Name = "txtIDFacturaOrigen";
+            this.txtIDFacturaOrigen.ReadOnly = true;
+            this.txtIDFacturaOrigen.Size = new System.Drawing.Size(120, 26);
+            this.txtIDFacturaOrigen.TabIndex = 5;
+            // 
+            // lblIDFacturaOrigen
+            // 
+            this.lblIDFacturaOrigen.AutoSize = true;
+            this.lblIDFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDFacturaOrigen.Location = new System.Drawing.Point(20, 43);
+            this.lblIDFacturaOrigen.Name = "lblIDFacturaOrigen";
+            this.lblIDFacturaOrigen.Size = new System.Drawing.Size(36, 19);
+            this.lblIDFacturaOrigen.TabIndex = 4;
+            this.lblIDFacturaOrigen.Text = "ID:";
+            // 
+            // txtNumeroFacturaOrigen
+            // 
+            this.txtNumeroFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroFacturaOrigen.Location = new System.Drawing.Point(140, 120);
+            this.txtNumeroFacturaOrigen.Name = "txtNumeroFacturaOrigen";
+            this.txtNumeroFacturaOrigen.ReadOnly = true;
+            this.txtNumeroFacturaOrigen.Size = new System.Drawing.Size(280, 26);
+            this.txtNumeroFacturaOrigen.TabIndex = 3;
+            this.txtNumeroFacturaOrigen.Text = "FAC-00000001";
+            // 
+            // lblNumeroFacturaOrigen
+            // 
+            this.lblNumeroFacturaOrigen.AutoSize = true;
+            this.lblNumeroFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroFacturaOrigen.Location = new System.Drawing.Point(20, 123);
+            this.lblNumeroFacturaOrigen.Name = "lblNumeroFacturaOrigen";
+            this.lblNumeroFacturaOrigen.Size = new System.Drawing.Size(72, 19);
+            this.lblNumeroFacturaOrigen.TabIndex = 2;
+            this.lblNumeroFacturaOrigen.Text = "Número:";
+            // 
+            // txtFechaFacturaOrigen
+            // 
+            this.txtFechaFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaFacturaOrigen.Location = new System.Drawing.Point(140, 80);
+            this.txtFechaFacturaOrigen.Name = "txtFechaFacturaOrigen";
+            this.txtFechaFacturaOrigen.ReadOnly = true;
+            this.txtFechaFacturaOrigen.Size = new System.Drawing.Size(200, 26);
+            this.txtFechaFacturaOrigen.TabIndex = 1;
+            // 
+            // lblFechaFacturaOrigen
+            // 
+            this.lblFechaFacturaOrigen.AutoSize = true;
+            this.lblFechaFacturaOrigen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFacturaOrigen.Location = new System.Drawing.Point(20, 83);
+            this.lblFechaFacturaOrigen.Name = "lblFechaFacturaOrigen";
+            this.lblFechaFacturaOrigen.Size = new System.Drawing.Size(63, 19);
+            this.lblFechaFacturaOrigen.TabIndex = 0;
+            this.lblFechaFacturaOrigen.Text = "Fecha:";
+            // 
             // pnlDetalle
             // 
+            this.pnlDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDetalle.Controls.Add(this.dgvDetalleRegistro);
-            this.pnlDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDetalle.Location = new System.Drawing.Point(0, 180);
+            this.pnlDetalle.Location = new System.Drawing.Point(20, 500);
             this.pnlDetalle.Name = "pnlDetalle";
-            this.pnlDetalle.Size = new System.Drawing.Size(984, 301);
-            this.pnlDetalle.TabIndex = 1;
+            this.pnlDetalle.Size = new System.Drawing.Size(930, 138);
+            this.pnlDetalle.TabIndex = 5;
             // 
             // dgvDetalleRegistro
             // 
@@ -436,333 +448,185 @@
             this.colTipoMovimiento,
             this.colAfectaStock});
             this.dgvDetalleRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDetalleRegistro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDetalleRegistro.Location = new System.Drawing.Point(0, 0);
             this.dgvDetalleRegistro.Name = "dgvDetalleRegistro";
             this.dgvDetalleRegistro.ReadOnly = true;
-            this.dgvDetalleRegistro.Size = new System.Drawing.Size(984, 301);
+            this.dgvDetalleRegistro.Size = new System.Drawing.Size(930, 138);
             this.dgvDetalleRegistro.TabIndex = 0;
             // 
             // colIDConcepto
             // 
-            this.colIDConcepto.HeaderText = "ID Concepto";
+            this.colIDConcepto.HeaderText = "ID CONCEPTO";
             this.colIDConcepto.Name = "colIDConcepto";
             this.colIDConcepto.ReadOnly = true;
             this.colIDConcepto.Visible = false;
             // 
             // colConcepto
             // 
-            this.colConcepto.HeaderText = "Concepto";
+            this.colConcepto.HeaderText = "CONCEPTO";
             this.colConcepto.Name = "colConcepto";
             this.colConcepto.ReadOnly = true;
             this.colConcepto.Width = 150;
             // 
             // colDescripcion
             // 
-            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.HeaderText = "DESCRIPCIÓN";
             this.colDescripcion.Name = "colDescripcion";
             this.colDescripcion.ReadOnly = true;
             this.colDescripcion.Width = 200;
             // 
             // colCantidad
             // 
-            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.HeaderText = "CANTIDAD";
             this.colCantidad.Name = "colCantidad";
             this.colCantidad.ReadOnly = true;
-            this.colCantidad.Width = 70;
+            this.colCantidad.Width = 80;
             // 
             // colUnidad
             // 
-            this.colUnidad.HeaderText = "Unidad";
+            this.colUnidad.HeaderText = "UNIDAD";
             this.colUnidad.Name = "colUnidad";
             this.colUnidad.ReadOnly = true;
-            this.colUnidad.Width = 60;
+            this.colUnidad.Width = 70;
             // 
             // colPrecioUnitario
             // 
-            this.colPrecioUnitario.HeaderText = "Precio Unitario";
+            this.colPrecioUnitario.HeaderText = "PRECIO UNIT.";
             this.colPrecioUnitario.Name = "colPrecioUnitario";
             this.colPrecioUnitario.ReadOnly = true;
+            this.colPrecioUnitario.Width = 120;
             // 
             // colCostoUnitario
             // 
-            this.colCostoUnitario.HeaderText = "Costo Unitario";
+            this.colCostoUnitario.HeaderText = "COSTO UNIT.";
             this.colCostoUnitario.Name = "colCostoUnitario";
             this.colCostoUnitario.ReadOnly = true;
+            this.colCostoUnitario.Width = 120;
             // 
             // colMargen
             // 
-            this.colMargen.HeaderText = "Margen %";
+            this.colMargen.HeaderText = "MARGEN %";
             this.colMargen.Name = "colMargen";
             this.colMargen.ReadOnly = true;
-            this.colMargen.Width = 80;
+            this.colMargen.Width = 90;
             // 
             // colTipoMovimiento
             // 
-            this.colTipoMovimiento.HeaderText = "Tipo Movimiento";
+            this.colTipoMovimiento.HeaderText = "TIPO MOVIMIENTO";
             this.colTipoMovimiento.Name = "colTipoMovimiento";
             this.colTipoMovimiento.ReadOnly = true;
-            this.colTipoMovimiento.Width = 120;
+            this.colTipoMovimiento.Width = 150;
             // 
             // colAfectaStock
             // 
-            this.colAfectaStock.HeaderText = "Afecta Stock";
+            this.colAfectaStock.HeaderText = "AFECTA STOCK";
             this.colAfectaStock.Name = "colAfectaStock";
             this.colAfectaStock.ReadOnly = true;
-            this.colAfectaStock.Width = 90;
-            // 
-            // pnlAuditoria
-            // 
-            this.pnlAuditoria.Controls.Add(this.gbAuditoria);
-            this.pnlAuditoria.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAuditoria.Location = new System.Drawing.Point(0, 481);
-            this.pnlAuditoria.Name = "pnlAuditoria";
-            this.pnlAuditoria.Size = new System.Drawing.Size(984, 60);
-            this.pnlAuditoria.TabIndex = 2;
-            // 
-            // gbAuditoria
-            // 
-            this.gbAuditoria.Controls.Add(this.txtUsuarioModificacion);
-            this.gbAuditoria.Controls.Add(this.lblUsuarioModificacion);
-            this.gbAuditoria.Controls.Add(this.txtFechaHoraModificacion);
-            this.gbAuditoria.Controls.Add(this.lblFechaHoraModificacion);
-            this.gbAuditoria.Location = new System.Drawing.Point(12, 10);
-            this.gbAuditoria.Name = "gbAuditoria";
-            this.gbAuditoria.Size = new System.Drawing.Size(400, 40);
-            this.gbAuditoria.TabIndex = 0;
-            this.gbAuditoria.TabStop = false;
-            this.gbAuditoria.Text = "Auditoría";
-            // 
-            // txtUsuarioModificacion
-            // 
-            this.txtUsuarioModificacion.Location = new System.Drawing.Point(280, 15);
-            this.txtUsuarioModificacion.Name = "txtUsuarioModificacion";
-            this.txtUsuarioModificacion.ReadOnly = true;
-            this.txtUsuarioModificacion.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuarioModificacion.TabIndex = 3;
-            // 
-            // lblUsuarioModificacion
-            // 
-            this.lblUsuarioModificacion.AutoSize = true;
-            this.lblUsuarioModificacion.Location = new System.Drawing.Point(200, 18);
-            this.lblUsuarioModificacion.Name = "lblUsuarioModificacion";
-            this.lblUsuarioModificacion.Size = new System.Drawing.Size(76, 13);
-            this.lblUsuarioModificacion.TabIndex = 2;
-            this.lblUsuarioModificacion.Text = "Último usuario:";
-            // 
-            // txtFechaHoraModificacion
-            // 
-            this.txtFechaHoraModificacion.Location = new System.Drawing.Point(90, 15);
-            this.txtFechaHoraModificacion.Name = "txtFechaHoraModificacion";
-            this.txtFechaHoraModificacion.ReadOnly = true;
-            this.txtFechaHoraModificacion.Size = new System.Drawing.Size(100, 20);
-            this.txtFechaHoraModificacion.TabIndex = 1;
-            // 
-            // lblFechaHoraModificacion
-            // 
-            this.lblFechaHoraModificacion.AutoSize = true;
-            this.lblFechaHoraModificacion.Location = new System.Drawing.Point(16, 18);
-            this.lblFechaHoraModificacion.Name = "lblFechaHoraModificacion";
-            this.lblFechaHoraModificacion.Size = new System.Drawing.Size(67, 13);
-            this.lblFechaHoraModificacion.TabIndex = 0;
-            this.lblFechaHoraModificacion.Text = "Última modif:";
-            // 
-            // pnlResumen
-            // 
-            this.pnlResumen.Controls.Add(this.gbResumen);
-            this.pnlResumen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlResumen.Location = new System.Drawing.Point(0, 541);
-            this.pnlResumen.Name = "pnlResumen";
-            this.pnlResumen.Size = new System.Drawing.Size(984, 70);
-            this.pnlResumen.TabIndex = 3;
-            // 
-            // gbResumen
-            // 
-            this.gbResumen.Controls.Add(this.txtTotalDebito);
-            this.gbResumen.Controls.Add(this.lblTotalDebito);
-            this.gbResumen.Controls.Add(this.txtMargenTotal);
-            this.gbResumen.Controls.Add(this.lblMargenTotal);
-            this.gbResumen.Controls.Add(this.txtCostoTotal);
-            this.gbResumen.Controls.Add(this.lblCostoTotal);
-            this.gbResumen.Controls.Add(this.txtCantidadItems);
-            this.gbResumen.Controls.Add(this.lblCantidadItems);
-            this.gbResumen.Location = new System.Drawing.Point(500, 10);
-            this.gbResumen.Name = "gbResumen";
-            this.gbResumen.Size = new System.Drawing.Size(472, 50);
-            this.gbResumen.TabIndex = 0;
-            this.gbResumen.TabStop = false;
-            this.gbResumen.Text = "Resumen Interno";
-            // 
-            // txtTotalDebito
-            // 
-            this.txtTotalDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDebito.Location = new System.Drawing.Point(470, 20);
-            this.txtTotalDebito.Name = "txtTotalDebito";
-            this.txtTotalDebito.ReadOnly = true;
-            this.txtTotalDebito.Size = new System.Drawing.Size(90, 21);
-            this.txtTotalDebito.TabIndex = 7;
-            this.txtTotalDebito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblTotalDebito
-            // 
-            this.lblTotalDebito.AutoSize = true;
-            this.lblTotalDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDebito.Location = new System.Drawing.Point(460, 23);
-            this.lblTotalDebito.Name = "lblTotalDebito";
-            this.lblTotalDebito.Size = new System.Drawing.Size(11, 15);
-            this.lblTotalDebito.TabIndex = 6;
-            this.lblTotalDebito.Text = ".";
-            // 
-            // txtMargenTotal
-            // 
-            this.txtMargenTotal.Location = new System.Drawing.Point(370, 20);
-            this.txtMargenTotal.Name = "txtMargenTotal";
-            this.txtMargenTotal.ReadOnly = true;
-            this.txtMargenTotal.Size = new System.Drawing.Size(80, 20);
-            this.txtMargenTotal.TabIndex = 5;
-            this.txtMargenTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblMargenTotal
-            // 
-            this.lblMargenTotal.AutoSize = true;
-            this.lblMargenTotal.Location = new System.Drawing.Point(320, 23);
-            this.lblMargenTotal.Name = "lblMargenTotal";
-            this.lblMargenTotal.Size = new System.Drawing.Size(46, 13);
-            this.lblMargenTotal.TabIndex = 4;
-            this.lblMargenTotal.Text = "Margen:";
-            // 
-            // txtCostoTotal
-            // 
-            this.txtCostoTotal.Location = new System.Drawing.Point(220, 20);
-            this.txtCostoTotal.Name = "txtCostoTotal";
-            this.txtCostoTotal.ReadOnly = true;
-            this.txtCostoTotal.Size = new System.Drawing.Size(80, 20);
-            this.txtCostoTotal.TabIndex = 3;
-            this.txtCostoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblCostoTotal
-            // 
-            this.lblCostoTotal.AutoSize = true;
-            this.lblCostoTotal.Location = new System.Drawing.Point(180, 23);
-            this.lblCostoTotal.Name = "lblCostoTotal";
-            this.lblCostoTotal.Size = new System.Drawing.Size(37, 13);
-            this.lblCostoTotal.TabIndex = 2;
-            this.lblCostoTotal.Text = "Costo:";
-            // 
-            // txtCantidadItems
-            // 
-            this.txtCantidadItems.Location = new System.Drawing.Point(80, 20);
-            this.txtCantidadItems.Name = "txtCantidadItems";
-            this.txtCantidadItems.ReadOnly = true;
-            this.txtCantidadItems.Size = new System.Drawing.Size(80, 20);
-            this.txtCantidadItems.TabIndex = 1;
-            this.txtCantidadItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblCantidadItems
-            // 
-            this.lblCantidadItems.AutoSize = true;
-            this.lblCantidadItems.Location = new System.Drawing.Point(20, 23);
-            this.lblCantidadItems.Name = "lblCantidadItems";
-            this.lblCantidadItems.Size = new System.Drawing.Size(35, 13);
-            this.lblCantidadItems.TabIndex = 0;
-            this.lblCantidadItems.Text = "Items:";
+            this.colAfectaStock.Width = 120;
             // 
             // pnlBotones
             // 
-            this.pnlBotones.Controls.Add(this.btnAuditoriaCompleta);
+            this.pnlBotones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBotones.Controls.Add(this.btnVerMovimientos);
             this.pnlBotones.Controls.Add(this.btnAplicarCobro);
             this.pnlBotones.Controls.Add(this.btnCancelar);
             this.pnlBotones.Controls.Add(this.btnConfirmar);
-            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBotones.Location = new System.Drawing.Point(0, 611);
+            this.pnlBotones.Location = new System.Drawing.Point(20, 658);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(984, 50);
-            this.pnlBotones.TabIndex = 4;
-            // 
-            // btnAuditoriaCompleta
-            // 
-            this.btnAuditoriaCompleta.Location = new System.Drawing.Point(32, 15);
-            this.btnAuditoriaCompleta.Name = "btnAuditoriaCompleta";
-            this.btnAuditoriaCompleta.Size = new System.Drawing.Size(100, 23);
-            this.btnAuditoriaCompleta.TabIndex = 4;
-            this.btnAuditoriaCompleta.Text = "Auditoría Completa";
-            this.btnAuditoriaCompleta.UseVisualStyleBackColor = true;
+            this.pnlBotones.Size = new System.Drawing.Size(930, 60);
+            this.pnlBotones.TabIndex = 6;
             // 
             // btnVerMovimientos
             // 
-            this.btnVerMovimientos.Location = new System.Drawing.Point(138, 15);
+            this.btnVerMovimientos.BackColor = System.Drawing.Color.LightYellow;
+            this.btnVerMovimientos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMovimientos.Location = new System.Drawing.Point(20, 15);
             this.btnVerMovimientos.Name = "btnVerMovimientos";
-            this.btnVerMovimientos.Size = new System.Drawing.Size(120, 23);
+            this.btnVerMovimientos.Size = new System.Drawing.Size(180, 35);
             this.btnVerMovimientos.TabIndex = 3;
-            this.btnVerMovimientos.Text = "Ver Movimientos";
-            this.btnVerMovimientos.UseVisualStyleBackColor = true;
+            this.btnVerMovimientos.Text = "VER MOVIMIENTOS";
+            this.btnVerMovimientos.UseVisualStyleBackColor = false;
             // 
             // btnAplicarCobro
             // 
             this.btnAplicarCobro.BackColor = System.Drawing.Color.LightCoral;
-            this.btnAplicarCobro.Location = new System.Drawing.Point(264, 15);
+            this.btnAplicarCobro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAplicarCobro.Location = new System.Drawing.Point(210, 15);
             this.btnAplicarCobro.Name = "btnAplicarCobro";
-            this.btnAplicarCobro.Size = new System.Drawing.Size(120, 23);
+            this.btnAplicarCobro.Size = new System.Drawing.Size(150, 35);
             this.btnAplicarCobro.TabIndex = 2;
-            this.btnAplicarCobro.Text = "Aplicar a Cobro";
+            this.btnAplicarCobro.Text = "APLICAR COBRO";
             this.btnAplicarCobro.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(885, 15);
+            this.btnCancelar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnCancelar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(830, 15);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(90, 35);
             this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cerrar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Text = "CERRAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(804, 15);
+            this.btnConfirmar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnConfirmar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(730, 15);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(90, 35);
             this.btnConfirmar.TabIndex = 0;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Text = "CONFIRMAR";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(48, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(872, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Registro Nota Debit";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRegistroNotaDebito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.pnlDetalle);
-            this.Controls.Add(this.pnlAuditoria);
-            this.Controls.Add(this.pnlResumen);
+            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlBotones);
-            this.Controls.Add(this.pnlCabecera);
+            this.Controls.Add(this.pnlDetalle);
+            this.Controls.Add(this.gbComprobanteOrigen);
+            this.Controls.Add(this.gbDatosCliente);
+            this.Controls.Add(this.gbDatosProducto);
+            this.Controls.Add(this.gbControlInterno);
+            this.MinimumSize = new System.Drawing.Size(1000, 726);
             this.Name = "frmRegistroNotaDebito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro - Nota de Débito ";
-            this.pnlCabecera.ResumeLayout(false);
-            this.gbComprobanteOrigen.ResumeLayout(false);
-            this.gbComprobanteOrigen.PerformLayout();
-            this.gbDatosCliente.ResumeLayout(false);
-            this.gbDatosCliente.PerformLayout();
-            this.gbDatosSistema.ResumeLayout(false);
-            this.gbDatosSistema.PerformLayout();
+            this.Text = "Registro - Nota de Débito";
             this.gbControlInterno.ResumeLayout(false);
             this.gbControlInterno.PerformLayout();
+            this.gbDatosProducto.ResumeLayout(false);
+            this.gbDatosProducto.PerformLayout();
+            this.gbDatosCliente.ResumeLayout(false);
+            this.gbDatosCliente.PerformLayout();
+            this.gbComprobanteOrigen.ResumeLayout(false);
+            this.gbComprobanteOrigen.PerformLayout();
             this.pnlDetalle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleRegistro)).EndInit();
-            this.pnlAuditoria.ResumeLayout(false);
-            this.gbAuditoria.ResumeLayout(false);
-            this.gbAuditoria.PerformLayout();
-            this.pnlResumen.ResumeLayout(false);
-            this.gbResumen.ResumeLayout(false);
-            this.gbResumen.PerformLayout();
             this.pnlBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlCabecera;
         private System.Windows.Forms.GroupBox gbControlInterno;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lblEstado;
@@ -772,13 +636,15 @@
         private System.Windows.Forms.Label lblFechaHoraCreacion;
         private System.Windows.Forms.TextBox txtIDNotaDebito;
         private System.Windows.Forms.Label lblIDNotaDebito;
-        private System.Windows.Forms.GroupBox gbDatosSistema;
-        private System.Windows.Forms.TextBox txtVendedor;
-        private System.Windows.Forms.Label lblVendedor;
-        private System.Windows.Forms.ComboBox cmbMotivo;
-        private System.Windows.Forms.Label lblMotivo;
-        private System.Windows.Forms.TextBox txtCanalVenta;
-        private System.Windows.Forms.Label lblCanalVenta;
+        private System.Windows.Forms.GroupBox gbDatosProducto;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.TextBox txtProveedor;
+        private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.GroupBox gbDatosCliente;
         private System.Windows.Forms.TextBox txtIDCliente;
         private System.Windows.Forms.Label lblIDCliente;
@@ -805,27 +671,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMargen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoMovimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAfectaStock;
-        private System.Windows.Forms.Panel pnlAuditoria;
-        private System.Windows.Forms.GroupBox gbAuditoria;
-        private System.Windows.Forms.TextBox txtUsuarioModificacion;
-        private System.Windows.Forms.Label lblUsuarioModificacion;
-        private System.Windows.Forms.TextBox txtFechaHoraModificacion;
-        private System.Windows.Forms.Label lblFechaHoraModificacion;
-        private System.Windows.Forms.Panel pnlResumen;
-        private System.Windows.Forms.GroupBox gbResumen;
-        private System.Windows.Forms.TextBox txtTotalDebito;
-        private System.Windows.Forms.Label lblTotalDebito;
-        private System.Windows.Forms.TextBox txtMargenTotal;
-        private System.Windows.Forms.Label lblMargenTotal;
-        private System.Windows.Forms.TextBox txtCostoTotal;
-        private System.Windows.Forms.Label lblCostoTotal;
-        private System.Windows.Forms.TextBox txtCantidadItems;
-        private System.Windows.Forms.Label lblCantidadItems;
         private System.Windows.Forms.Panel pnlBotones;
-        private System.Windows.Forms.Button btnAuditoriaCompleta;
         private System.Windows.Forms.Button btnVerMovimientos;
         private System.Windows.Forms.Button btnAplicarCobro;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label label1;
     }
 }

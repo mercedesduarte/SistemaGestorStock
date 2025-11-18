@@ -178,6 +178,12 @@
     <Compile Include="frmGI\NotaPedido\frmRegistroNotaPedido.Designer.cs">
       <DependentUpon>frmRegistroNotaPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGI\OrdenCompra\frmOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGI\OrdenCompra\frmOrdenCompra.Designer.cs">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGI\Presupuesto\frmEmisionPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\NotaPedido\frmRegistroNotaPedido.resx">
       <DependentUpon>frmRegistroNotaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGI\OrdenCompra\frmOrdenCompra.resx">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Presupuesto\frmEmisionPresupuesto.resx">
       <DependentUpon>frmEmisionPresupuesto.cs</DependentUpon>

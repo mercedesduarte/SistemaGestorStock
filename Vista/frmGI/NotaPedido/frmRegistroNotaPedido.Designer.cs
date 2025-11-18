@@ -17,21 +17,6 @@
 
         private void InitializeComponent()
         {
-            this.pnlCabecera = new System.Windows.Forms.Panel();
-            this.gbControlStock = new System.Windows.Forms.GroupBox();
-            this.txtEstadoReserva = new System.Windows.Forms.TextBox();
-            this.lblEstadoReserva = new System.Windows.Forms.Label();
-            this.txtUsuarioReserva = new System.Windows.Forms.TextBox();
-            this.lblUsuarioReserva = new System.Windows.Forms.Label();
-            this.txtFechaHoraReserva = new System.Windows.Forms.TextBox();
-            this.lblFechaHoraReserva = new System.Windows.Forms.Label();
-            this.gbDatosSistema = new System.Windows.Forms.GroupBox();
-            this.txtVendedor = new System.Windows.Forms.TextBox();
-            this.lblVendedor = new System.Windows.Forms.Label();
-            this.cmbListaPrecios = new System.Windows.Forms.ComboBox();
-            this.lblListaPrecios = new System.Windows.Forms.Label();
-            this.txtCanalVenta = new System.Windows.Forms.TextBox();
-            this.lblCanalVenta = new System.Windows.Forms.Label();
             this.gbControlInterno = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -41,6 +26,20 @@
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.txtIDPedido = new System.Windows.Forms.TextBox();
             this.lblIDPedido = new System.Windows.Forms.Label();
+            this.gbDatosSistema = new System.Windows.Forms.GroupBox();
+            this.txtVendedor = new System.Windows.Forms.TextBox();
+            this.lblVendedor = new System.Windows.Forms.Label();
+            this.cmbListaPrecios = new System.Windows.Forms.ComboBox();
+            this.lblListaPrecios = new System.Windows.Forms.Label();
+            this.txtCanalVenta = new System.Windows.Forms.TextBox();
+            this.lblCanalVenta = new System.Windows.Forms.Label();
+            this.gbControlStock = new System.Windows.Forms.GroupBox();
+            this.txtEstadoReserva = new System.Windows.Forms.TextBox();
+            this.lblEstadoReserva = new System.Windows.Forms.Label();
+            this.txtUsuarioReserva = new System.Windows.Forms.TextBox();
+            this.lblUsuarioReserva = new System.Windows.Forms.Label();
+            this.txtFechaHoraReserva = new System.Windows.Forms.TextBox();
+            this.lblFechaHoraReserva = new System.Windows.Forms.Label();
             this.pnlDetalle = new System.Windows.Forms.Panel();
             this.dgvDetalleRegistro = new System.Windows.Forms.DataGridView();
             this.colIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,12 +84,12 @@
             this.btnVerMovimientosStock = new System.Windows.Forms.Button();
             this.btnLiberarReserva = new System.Windows.Forms.Button();
             this.btnReservarStock = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.pnlCabecera.SuspendLayout();
-            this.gbControlStock.SuspendLayout();
-            this.gbDatosSistema.SuspendLayout();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbControlInterno.SuspendLayout();
+            this.gbDatosSistema.SuspendLayout();
+            this.gbControlStock.SuspendLayout();
             this.pnlDetalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleRegistro)).BeginInit();
             this.pnlResumenStock.SuspendLayout();
@@ -102,160 +101,6 @@
             this.pnlBotones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlCabecera
-            // 
-            this.pnlCabecera.Controls.Add(this.gbControlStock);
-            this.pnlCabecera.Controls.Add(this.gbDatosSistema);
-            this.pnlCabecera.Controls.Add(this.gbControlInterno);
-            this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnlCabecera.Name = "pnlCabecera";
-            this.pnlCabecera.Size = new System.Drawing.Size(984, 150);
-            this.pnlCabecera.TabIndex = 0;
-            // 
-            // gbControlStock
-            // 
-            this.gbControlStock.Controls.Add(this.txtEstadoReserva);
-            this.gbControlStock.Controls.Add(this.lblEstadoReserva);
-            this.gbControlStock.Controls.Add(this.txtUsuarioReserva);
-            this.gbControlStock.Controls.Add(this.lblUsuarioReserva);
-            this.gbControlStock.Controls.Add(this.txtFechaHoraReserva);
-            this.gbControlStock.Controls.Add(this.lblFechaHoraReserva);
-            this.gbControlStock.Location = new System.Drawing.Point(624, 12);
-            this.gbControlStock.Name = "gbControlStock";
-            this.gbControlStock.Size = new System.Drawing.Size(348, 125);
-            this.gbControlStock.TabIndex = 2;
-            this.gbControlStock.TabStop = false;
-            this.gbControlStock.Text = "Control de Stock";
-            // 
-            // txtEstadoReserva
-            // 
-            this.txtEstadoReserva.BackColor = System.Drawing.Color.LightYellow;
-            this.txtEstadoReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoReserva.Location = new System.Drawing.Point(120, 25);
-            this.txtEstadoReserva.Name = "txtEstadoReserva";
-            this.txtEstadoReserva.ReadOnly = true;
-            this.txtEstadoReserva.Size = new System.Drawing.Size(120, 20);
-            this.txtEstadoReserva.TabIndex = 5;
-            this.txtEstadoReserva.Text = "PENDIENTE";
-            this.txtEstadoReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblEstadoReserva
-            // 
-            this.lblEstadoReserva.AutoSize = true;
-            this.lblEstadoReserva.Location = new System.Drawing.Point(16, 28);
-            this.lblEstadoReserva.Name = "lblEstadoReserva";
-            this.lblEstadoReserva.Size = new System.Drawing.Size(86, 13);
-            this.lblEstadoReserva.TabIndex = 4;
-            this.lblEstadoReserva.Text = "Estado Reserva:";
-            // 
-            // txtUsuarioReserva
-            // 
-            this.txtUsuarioReserva.Location = new System.Drawing.Point(120, 75);
-            this.txtUsuarioReserva.Name = "txtUsuarioReserva";
-            this.txtUsuarioReserva.ReadOnly = true;
-            this.txtUsuarioReserva.Size = new System.Drawing.Size(120, 20);
-            this.txtUsuarioReserva.TabIndex = 3;
-            // 
-            // lblUsuarioReserva
-            // 
-            this.lblUsuarioReserva.AutoSize = true;
-            this.lblUsuarioReserva.Location = new System.Drawing.Point(16, 78);
-            this.lblUsuarioReserva.Name = "lblUsuarioReserva";
-            this.lblUsuarioReserva.Size = new System.Drawing.Size(89, 13);
-            this.lblUsuarioReserva.TabIndex = 2;
-            this.lblUsuarioReserva.Text = "Usuario Reserva:";
-            // 
-            // txtFechaHoraReserva
-            // 
-            this.txtFechaHoraReserva.Location = new System.Drawing.Point(120, 50);
-            this.txtFechaHoraReserva.Name = "txtFechaHoraReserva";
-            this.txtFechaHoraReserva.ReadOnly = true;
-            this.txtFechaHoraReserva.Size = new System.Drawing.Size(120, 20);
-            this.txtFechaHoraReserva.TabIndex = 1;
-            // 
-            // lblFechaHoraReserva
-            // 
-            this.lblFechaHoraReserva.AutoSize = true;
-            this.lblFechaHoraReserva.Location = new System.Drawing.Point(16, 53);
-            this.lblFechaHoraReserva.Name = "lblFechaHoraReserva";
-            this.lblFechaHoraReserva.Size = new System.Drawing.Size(109, 13);
-            this.lblFechaHoraReserva.TabIndex = 0;
-            this.lblFechaHoraReserva.Text = "Fecha/hora Reserva:";
-            // 
-            // gbDatosSistema
-            // 
-            this.gbDatosSistema.Controls.Add(this.txtVendedor);
-            this.gbDatosSistema.Controls.Add(this.lblVendedor);
-            this.gbDatosSistema.Controls.Add(this.cmbListaPrecios);
-            this.gbDatosSistema.Controls.Add(this.lblListaPrecios);
-            this.gbDatosSistema.Controls.Add(this.txtCanalVenta);
-            this.gbDatosSistema.Controls.Add(this.lblCanalVenta);
-            this.gbDatosSistema.Location = new System.Drawing.Point(318, 12);
-            this.gbDatosSistema.Name = "gbDatosSistema";
-            this.gbDatosSistema.Size = new System.Drawing.Size(300, 125);
-            this.gbDatosSistema.TabIndex = 1;
-            this.gbDatosSistema.TabStop = false;
-            this.gbDatosSistema.Text = "Datos del Sistema";
-            // 
-            // txtVendedor
-            // 
-            this.txtVendedor.Location = new System.Drawing.Point(120, 75);
-            this.txtVendedor.Name = "txtVendedor";
-            this.txtVendedor.ReadOnly = true;
-            this.txtVendedor.Size = new System.Drawing.Size(120, 20);
-            this.txtVendedor.TabIndex = 5;
-            // 
-            // lblVendedor
-            // 
-            this.lblVendedor.AutoSize = true;
-            this.lblVendedor.Location = new System.Drawing.Point(16, 78);
-            this.lblVendedor.Name = "lblVendedor";
-            this.lblVendedor.Size = new System.Drawing.Size(56, 13);
-            this.lblVendedor.TabIndex = 4;
-            this.lblVendedor.Text = "Vendedor:";
-            // 
-            // cmbListaPrecios
-            // 
-            this.cmbListaPrecios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbListaPrecios.FormattingEnabled = true;
-            this.cmbListaPrecios.Items.AddRange(new object[] {
-            "Lista General",
-            "Lista Mayorista",
-            "Lista Minorista",
-            "Lista Promocional"});
-            this.cmbListaPrecios.Location = new System.Drawing.Point(120, 50);
-            this.cmbListaPrecios.Name = "cmbListaPrecios";
-            this.cmbListaPrecios.Size = new System.Drawing.Size(120, 21);
-            this.cmbListaPrecios.TabIndex = 3;
-            // 
-            // lblListaPrecios
-            // 
-            this.lblListaPrecios.AutoSize = true;
-            this.lblListaPrecios.Location = new System.Drawing.Point(16, 53);
-            this.lblListaPrecios.Name = "lblListaPrecios";
-            this.lblListaPrecios.Size = new System.Drawing.Size(70, 13);
-            this.lblListaPrecios.TabIndex = 2;
-            this.lblListaPrecios.Text = "Lista Precios:";
-            // 
-            // txtCanalVenta
-            // 
-            this.txtCanalVenta.Location = new System.Drawing.Point(120, 25);
-            this.txtCanalVenta.Name = "txtCanalVenta";
-            this.txtCanalVenta.ReadOnly = true;
-            this.txtCanalVenta.Size = new System.Drawing.Size(120, 20);
-            this.txtCanalVenta.TabIndex = 1;
-            this.txtCanalVenta.Text = "Mostrador";
-            // 
-            // lblCanalVenta
-            // 
-            this.lblCanalVenta.AutoSize = true;
-            this.lblCanalVenta.Location = new System.Drawing.Point(16, 28);
-            this.lblCanalVenta.Name = "lblCanalVenta";
-            this.lblCanalVenta.Size = new System.Drawing.Size(68, 13);
-            this.lblCanalVenta.TabIndex = 0;
-            this.lblCanalVenta.Text = "Canal Venta:";
-            // 
             // gbControlInterno
             // 
             this.gbControlInterno.Controls.Add(this.cmbEstado);
@@ -266,16 +111,17 @@
             this.gbControlInterno.Controls.Add(this.lblFechaHoraCreacion);
             this.gbControlInterno.Controls.Add(this.txtIDPedido);
             this.gbControlInterno.Controls.Add(this.lblIDPedido);
-            this.gbControlInterno.Location = new System.Drawing.Point(12, 12);
+            this.gbControlInterno.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbControlInterno.Location = new System.Drawing.Point(20, 80);
             this.gbControlInterno.Name = "gbControlInterno";
-            this.gbControlInterno.Size = new System.Drawing.Size(300, 125);
-            this.gbControlInterno.TabIndex = 0;
+            this.gbControlInterno.Size = new System.Drawing.Size(450, 180);
+            this.gbControlInterno.TabIndex = 1;
             this.gbControlInterno.TabStop = false;
-            this.gbControlInterno.Text = "Control Interno";
+            this.gbControlInterno.Text = "CONTROL INTERNO";
             // 
             // cmbEstado
             // 
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "Pendiente",
@@ -285,79 +131,243 @@
             "Entregado",
             "Facturado",
             "Cancelado"});
-            this.cmbEstado.Location = new System.Drawing.Point(120, 100);
+            this.cmbEstado.Location = new System.Drawing.Point(140, 120);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(120, 21);
+            this.cmbEstado.Size = new System.Drawing.Size(200, 27);
             this.cmbEstado.TabIndex = 7;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(16, 103);
+            this.lblEstado.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(20, 123);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(43, 13);
+            this.lblEstado.Size = new System.Drawing.Size(72, 19);
             this.lblEstado.TabIndex = 6;
             this.lblEstado.Text = "Estado:";
             // 
             // txtUsuarioCreacion
             // 
-            this.txtUsuarioCreacion.Location = new System.Drawing.Point(120, 75);
+            this.txtUsuarioCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioCreacion.Location = new System.Drawing.Point(140, 90);
             this.txtUsuarioCreacion.Name = "txtUsuarioCreacion";
             this.txtUsuarioCreacion.ReadOnly = true;
-            this.txtUsuarioCreacion.Size = new System.Drawing.Size(120, 20);
+            this.txtUsuarioCreacion.Size = new System.Drawing.Size(200, 26);
             this.txtUsuarioCreacion.TabIndex = 5;
             // 
             // lblUsuarioCreacion
             // 
             this.lblUsuarioCreacion.AutoSize = true;
-            this.lblUsuarioCreacion.Location = new System.Drawing.Point(16, 78);
+            this.lblUsuarioCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioCreacion.Location = new System.Drawing.Point(20, 93);
             this.lblUsuarioCreacion.Name = "lblUsuarioCreacion";
-            this.lblUsuarioCreacion.Size = new System.Drawing.Size(90, 13);
+            this.lblUsuarioCreacion.Size = new System.Drawing.Size(117, 19);
             this.lblUsuarioCreacion.TabIndex = 4;
-            this.lblUsuarioCreacion.Text = "Usuario creación:";
+            this.lblUsuarioCreacion.Text = "Usuario Crea:";
             // 
             // txtFechaHoraCreacion
             // 
-            this.txtFechaHoraCreacion.Location = new System.Drawing.Point(120, 50);
+            this.txtFechaHoraCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaHoraCreacion.Location = new System.Drawing.Point(140, 60);
             this.txtFechaHoraCreacion.Name = "txtFechaHoraCreacion";
             this.txtFechaHoraCreacion.ReadOnly = true;
-            this.txtFechaHoraCreacion.Size = new System.Drawing.Size(120, 20);
+            this.txtFechaHoraCreacion.Size = new System.Drawing.Size(200, 26);
             this.txtFechaHoraCreacion.TabIndex = 3;
             // 
             // lblFechaHoraCreacion
             // 
             this.lblFechaHoraCreacion.AutoSize = true;
-            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(16, 53);
+            this.lblFechaHoraCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(20, 63);
             this.lblFechaHoraCreacion.Name = "lblFechaHoraCreacion";
-            this.lblFechaHoraCreacion.Size = new System.Drawing.Size(110, 13);
+            this.lblFechaHoraCreacion.Size = new System.Drawing.Size(108, 19);
             this.lblFechaHoraCreacion.TabIndex = 2;
-            this.lblFechaHoraCreacion.Text = "Fecha/hora creación:";
+            this.lblFechaHoraCreacion.Text = "Fecha/Hora:";
             // 
             // txtIDPedido
             // 
-            this.txtIDPedido.Location = new System.Drawing.Point(120, 25);
+            this.txtIDPedido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPedido.Location = new System.Drawing.Point(140, 30);
             this.txtIDPedido.Name = "txtIDPedido";
             this.txtIDPedido.ReadOnly = true;
-            this.txtIDPedido.Size = new System.Drawing.Size(120, 20);
+            this.txtIDPedido.Size = new System.Drawing.Size(200, 26);
             this.txtIDPedido.TabIndex = 1;
             // 
             // lblIDPedido
             // 
             this.lblIDPedido.AutoSize = true;
-            this.lblIDPedido.Location = new System.Drawing.Point(16, 28);
+            this.lblIDPedido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDPedido.Location = new System.Drawing.Point(20, 33);
             this.lblIDPedido.Name = "lblIDPedido";
-            this.lblIDPedido.Size = new System.Drawing.Size(21, 13);
+            this.lblIDPedido.Size = new System.Drawing.Size(36, 19);
             this.lblIDPedido.TabIndex = 0;
             this.lblIDPedido.Text = "ID:";
             // 
+            // gbDatosSistema
+            // 
+            this.gbDatosSistema.Controls.Add(this.txtVendedor);
+            this.gbDatosSistema.Controls.Add(this.lblVendedor);
+            this.gbDatosSistema.Controls.Add(this.cmbListaPrecios);
+            this.gbDatosSistema.Controls.Add(this.lblListaPrecios);
+            this.gbDatosSistema.Controls.Add(this.txtCanalVenta);
+            this.gbDatosSistema.Controls.Add(this.lblCanalVenta);
+            this.gbDatosSistema.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosSistema.Location = new System.Drawing.Point(500, 80);
+            this.gbDatosSistema.Name = "gbDatosSistema";
+            this.gbDatosSistema.Size = new System.Drawing.Size(450, 180);
+            this.gbDatosSistema.TabIndex = 2;
+            this.gbDatosSistema.TabStop = false;
+            this.gbDatosSistema.Text = "DATOS DEL SISTEMA";
+            // 
+            // txtVendedor
+            // 
+            this.txtVendedor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVendedor.Location = new System.Drawing.Point(140, 90);
+            this.txtVendedor.Name = "txtVendedor";
+            this.txtVendedor.ReadOnly = true;
+            this.txtVendedor.Size = new System.Drawing.Size(280, 26);
+            this.txtVendedor.TabIndex = 5;
+            // 
+            // lblVendedor
+            // 
+            this.lblVendedor.AutoSize = true;
+            this.lblVendedor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVendedor.Location = new System.Drawing.Point(20, 93);
+            this.lblVendedor.Name = "lblVendedor";
+            this.lblVendedor.Size = new System.Drawing.Size(90, 19);
+            this.lblVendedor.TabIndex = 4;
+            this.lblVendedor.Text = "Vendedor:";
+            // 
+            // cmbListaPrecios
+            // 
+            this.cmbListaPrecios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbListaPrecios.FormattingEnabled = true;
+            this.cmbListaPrecios.Items.AddRange(new object[] {
+            "Lista General",
+            "Lista Mayorista",
+            "Lista Minorista",
+            "Lista Promocional"});
+            this.cmbListaPrecios.Location = new System.Drawing.Point(140, 60);
+            this.cmbListaPrecios.Name = "cmbListaPrecios";
+            this.cmbListaPrecios.Size = new System.Drawing.Size(200, 27);
+            this.cmbListaPrecios.TabIndex = 3;
+            // 
+            // lblListaPrecios
+            // 
+            this.lblListaPrecios.AutoSize = true;
+            this.lblListaPrecios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaPrecios.Location = new System.Drawing.Point(20, 63);
+            this.lblListaPrecios.Name = "lblListaPrecios";
+            this.lblListaPrecios.Size = new System.Drawing.Size(99, 19);
+            this.lblListaPrecios.TabIndex = 2;
+            this.lblListaPrecios.Text = "Lista Precio:";
+            // 
+            // txtCanalVenta
+            // 
+            this.txtCanalVenta.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCanalVenta.Location = new System.Drawing.Point(140, 30);
+            this.txtCanalVenta.Name = "txtCanalVenta";
+            this.txtCanalVenta.ReadOnly = true;
+            this.txtCanalVenta.Size = new System.Drawing.Size(200, 26);
+            this.txtCanalVenta.TabIndex = 1;
+            this.txtCanalVenta.Text = "Mostrador";
+            // 
+            // lblCanalVenta
+            // 
+            this.lblCanalVenta.AutoSize = true;
+            this.lblCanalVenta.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCanalVenta.Location = new System.Drawing.Point(20, 33);
+            this.lblCanalVenta.Name = "lblCanalVenta";
+            this.lblCanalVenta.Size = new System.Drawing.Size(108, 19);
+            this.lblCanalVenta.TabIndex = 0;
+            this.lblCanalVenta.Text = "Canal Venta:";
+            // 
+            // gbControlStock
+            // 
+            this.gbControlStock.Controls.Add(this.txtEstadoReserva);
+            this.gbControlStock.Controls.Add(this.lblEstadoReserva);
+            this.gbControlStock.Controls.Add(this.txtUsuarioReserva);
+            this.gbControlStock.Controls.Add(this.lblUsuarioReserva);
+            this.gbControlStock.Controls.Add(this.txtFechaHoraReserva);
+            this.gbControlStock.Controls.Add(this.lblFechaHoraReserva);
+            this.gbControlStock.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbControlStock.Location = new System.Drawing.Point(20, 280);
+            this.gbControlStock.Name = "gbControlStock";
+            this.gbControlStock.Size = new System.Drawing.Size(450, 180);
+            this.gbControlStock.TabIndex = 3;
+            this.gbControlStock.TabStop = false;
+            this.gbControlStock.Text = "CONTROL DE STOCK";
+            // 
+            // txtEstadoReserva
+            // 
+            this.txtEstadoReserva.BackColor = System.Drawing.Color.LightYellow;
+            this.txtEstadoReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoReserva.Location = new System.Drawing.Point(140, 30);
+            this.txtEstadoReserva.Name = "txtEstadoReserva";
+            this.txtEstadoReserva.ReadOnly = true;
+            this.txtEstadoReserva.Size = new System.Drawing.Size(200, 26);
+            this.txtEstadoReserva.TabIndex = 5;
+            this.txtEstadoReserva.Text = "PENDIENTE";
+            this.txtEstadoReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblEstadoReserva
+            // 
+            this.lblEstadoReserva.AutoSize = true;
+            this.lblEstadoReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoReserva.Location = new System.Drawing.Point(20, 33);
+            this.lblEstadoReserva.Name = "lblEstadoReserva";
+            this.lblEstadoReserva.Size = new System.Drawing.Size(117, 19);
+            this.lblEstadoReserva.TabIndex = 4;
+            this.lblEstadoReserva.Text = "Estado Reserva:";
+            // 
+            // txtUsuarioReserva
+            // 
+            this.txtUsuarioReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioReserva.Location = new System.Drawing.Point(140, 90);
+            this.txtUsuarioReserva.Name = "txtUsuarioReserva";
+            this.txtUsuarioReserva.ReadOnly = true;
+            this.txtUsuarioReserva.Size = new System.Drawing.Size(200, 26);
+            this.txtUsuarioReserva.TabIndex = 3;
+            // 
+            // lblUsuarioReserva
+            // 
+            this.lblUsuarioReserva.AutoSize = true;
+            this.lblUsuarioReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioReserva.Location = new System.Drawing.Point(20, 93);
+            this.lblUsuarioReserva.Name = "lblUsuarioReserva";
+            this.lblUsuarioReserva.Size = new System.Drawing.Size(126, 19);
+            this.lblUsuarioReserva.TabIndex = 2;
+            this.lblUsuarioReserva.Text = "Usuario Reserva:";
+            // 
+            // txtFechaHoraReserva
+            // 
+            this.txtFechaHoraReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaHoraReserva.Location = new System.Drawing.Point(140, 60);
+            this.txtFechaHoraReserva.Name = "txtFechaHoraReserva";
+            this.txtFechaHoraReserva.ReadOnly = true;
+            this.txtFechaHoraReserva.Size = new System.Drawing.Size(200, 26);
+            this.txtFechaHoraReserva.TabIndex = 1;
+            // 
+            // lblFechaHoraReserva
+            // 
+            this.lblFechaHoraReserva.AutoSize = true;
+            this.lblFechaHoraReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHoraReserva.Location = new System.Drawing.Point(20, 63);
+            this.lblFechaHoraReserva.Name = "lblFechaHoraReserva";
+            this.lblFechaHoraReserva.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaHoraReserva.TabIndex = 0;
+            this.lblFechaHoraReserva.Text = "Fecha/Hora:";
+            // 
             // pnlDetalle
             // 
+            this.pnlDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDetalle.Controls.Add(this.dgvDetalleRegistro);
-            this.pnlDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDetalle.Location = new System.Drawing.Point(0, 150);
+            this.pnlDetalle.Location = new System.Drawing.Point(500, 280);
             this.pnlDetalle.Name = "pnlDetalle";
-            this.pnlDetalle.Size = new System.Drawing.Size(984, 301);
-            this.pnlDetalle.TabIndex = 1;
+            this.pnlDetalle.Size = new System.Drawing.Size(450, 238);
+            this.pnlDetalle.TabIndex = 4;
             // 
             // dgvDetalleRegistro
             // 
@@ -379,108 +389,112 @@
             this.colDeposito,
             this.colEstadoItem});
             this.dgvDetalleRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDetalleRegistro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDetalleRegistro.Location = new System.Drawing.Point(0, 0);
             this.dgvDetalleRegistro.Name = "dgvDetalleRegistro";
             this.dgvDetalleRegistro.ReadOnly = true;
-            this.dgvDetalleRegistro.Size = new System.Drawing.Size(984, 301);
+            this.dgvDetalleRegistro.Size = new System.Drawing.Size(450, 238);
             this.dgvDetalleRegistro.TabIndex = 0;
             // 
             // colIDProducto
             // 
-            this.colIDProducto.HeaderText = "ID Producto";
+            this.colIDProducto.HeaderText = "ID PRODUCTO";
             this.colIDProducto.Name = "colIDProducto";
             this.colIDProducto.ReadOnly = true;
             this.colIDProducto.Visible = false;
             // 
             // colCodigo
             // 
-            this.colCodigo.HeaderText = "Código";
+            this.colCodigo.HeaderText = "CÓDIGO";
             this.colCodigo.Name = "colCodigo";
             this.colCodigo.ReadOnly = true;
             this.colCodigo.Width = 80;
             // 
             // colDescripcion
             // 
-            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.HeaderText = "DESCRIPCIÓN";
             this.colDescripcion.Name = "colDescripcion";
             this.colDescripcion.ReadOnly = true;
             this.colDescripcion.Width = 150;
             // 
             // colCantidad
             // 
-            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.HeaderText = "CANTIDAD";
             this.colCantidad.Name = "colCantidad";
             this.colCantidad.ReadOnly = true;
             this.colCantidad.Width = 70;
             // 
             // colUnidad
             // 
-            this.colUnidad.HeaderText = "Unidad";
+            this.colUnidad.HeaderText = "UNIDAD";
             this.colUnidad.Name = "colUnidad";
             this.colUnidad.ReadOnly = true;
             this.colUnidad.Width = 60;
             // 
             // colPrecioUnitario
             // 
-            this.colPrecioUnitario.HeaderText = "Precio Unitario";
+            this.colPrecioUnitario.HeaderText = "PRECIO UNIT.";
             this.colPrecioUnitario.Name = "colPrecioUnitario";
             this.colPrecioUnitario.ReadOnly = true;
+            this.colPrecioUnitario.Width = 120;
             // 
             // colCostoUnitario
             // 
-            this.colCostoUnitario.HeaderText = "Costo Unitario";
+            this.colCostoUnitario.HeaderText = "COSTO UNIT.";
             this.colCostoUnitario.Name = "colCostoUnitario";
             this.colCostoUnitario.ReadOnly = true;
+            this.colCostoUnitario.Width = 120;
             // 
             // colMargen
             // 
-            this.colMargen.HeaderText = "Margen %";
+            this.colMargen.HeaderText = "MARGEN %";
             this.colMargen.Name = "colMargen";
             this.colMargen.ReadOnly = true;
             this.colMargen.Width = 80;
             // 
             // colStockActual
             // 
-            this.colStockActual.HeaderText = "Stock Actual";
+            this.colStockActual.HeaderText = "STOCK ACT.";
             this.colStockActual.Name = "colStockActual";
             this.colStockActual.ReadOnly = true;
             this.colStockActual.Width = 80;
             // 
             // colStockReservado
             // 
-            this.colStockReservado.HeaderText = "Stock Reservado";
+            this.colStockReservado.HeaderText = "STOCK RES.";
             this.colStockReservado.Name = "colStockReservado";
             this.colStockReservado.ReadOnly = true;
             this.colStockReservado.Width = 80;
             // 
             // colTipoStock
             // 
-            this.colTipoStock.HeaderText = "Tipo Stock";
+            this.colTipoStock.HeaderText = "TIPO STOCK";
             this.colTipoStock.Name = "colTipoStock";
             this.colTipoStock.ReadOnly = true;
             this.colTipoStock.Width = 80;
             // 
             // colDeposito
             // 
-            this.colDeposito.HeaderText = "Depósito";
+            this.colDeposito.HeaderText = "DEPÓSITO";
             this.colDeposito.Name = "colDeposito";
             this.colDeposito.ReadOnly = true;
             this.colDeposito.Width = 80;
             // 
             // colEstadoItem
             // 
-            this.colEstadoItem.HeaderText = "Estado Item";
+            this.colEstadoItem.HeaderText = "ESTADO ITEM";
             this.colEstadoItem.Name = "colEstadoItem";
             this.colEstadoItem.ReadOnly = true;
             // 
             // pnlResumenStock
             // 
+            this.pnlResumenStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlResumenStock.Controls.Add(this.gbResumenStock);
-            this.pnlResumenStock.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlResumenStock.Location = new System.Drawing.Point(0, 451);
+            this.pnlResumenStock.Location = new System.Drawing.Point(20, 538);
             this.pnlResumenStock.Name = "pnlResumenStock";
-            this.pnlResumenStock.Size = new System.Drawing.Size(984, 80);
-            this.pnlResumenStock.TabIndex = 2;
+            this.pnlResumenStock.Size = new System.Drawing.Size(450, 100);
+            this.pnlResumenStock.TabIndex = 5;
             // 
             // gbResumenStock
             // 
@@ -492,22 +506,22 @@
             this.gbResumenStock.Controls.Add(this.lblProductosReservados);
             this.gbResumenStock.Controls.Add(this.txtProductosConStock);
             this.gbResumenStock.Controls.Add(this.lblProductosConStock);
-            this.gbResumenStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbResumenStock.Location = new System.Drawing.Point(0, 0);
+            this.gbResumenStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbResumenStock.Location = new System.Drawing.Point(0, 10);
             this.gbResumenStock.Name = "gbResumenStock";
-            this.gbResumenStock.Size = new System.Drawing.Size(984, 80);
+            this.gbResumenStock.Size = new System.Drawing.Size(450, 80);
             this.gbResumenStock.TabIndex = 0;
             this.gbResumenStock.TabStop = false;
-            this.gbResumenStock.Text = "Resumen de Stock";
+            this.gbResumenStock.Text = "RESUMEN DE STOCK";
             // 
             // txtProductosJIT
             // 
             this.txtProductosJIT.BackColor = System.Drawing.Color.Khaki;
-            this.txtProductosJIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductosJIT.Location = new System.Drawing.Point(400, 40);
+            this.txtProductosJIT.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductosJIT.Location = new System.Drawing.Point(340, 45);
             this.txtProductosJIT.Name = "txtProductosJIT";
             this.txtProductosJIT.ReadOnly = true;
-            this.txtProductosJIT.Size = new System.Drawing.Size(50, 21);
+            this.txtProductosJIT.Size = new System.Drawing.Size(50, 26);
             this.txtProductosJIT.TabIndex = 7;
             this.txtProductosJIT.Text = "0";
             this.txtProductosJIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -515,20 +529,21 @@
             // lblProductosJIT
             // 
             this.lblProductosJIT.AutoSize = true;
-            this.lblProductosJIT.Location = new System.Drawing.Point(400, 20);
+            this.lblProductosJIT.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosJIT.Location = new System.Drawing.Point(340, 25);
             this.lblProductosJIT.Name = "lblProductosJIT";
-            this.lblProductosJIT.Size = new System.Drawing.Size(53, 13);
+            this.lblProductosJIT.Size = new System.Drawing.Size(81, 19);
             this.lblProductosJIT.TabIndex = 6;
-            this.lblProductosJIT.Text = "Stock JIT";
+            this.lblProductosJIT.Text = "STOCK JIT";
             // 
             // txtProductosSinStock
             // 
             this.txtProductosSinStock.BackColor = System.Drawing.Color.LightCoral;
-            this.txtProductosSinStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductosSinStock.Location = new System.Drawing.Point(300, 40);
+            this.txtProductosSinStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductosSinStock.Location = new System.Drawing.Point(230, 45);
             this.txtProductosSinStock.Name = "txtProductosSinStock";
             this.txtProductosSinStock.ReadOnly = true;
-            this.txtProductosSinStock.Size = new System.Drawing.Size(50, 21);
+            this.txtProductosSinStock.Size = new System.Drawing.Size(50, 26);
             this.txtProductosSinStock.TabIndex = 5;
             this.txtProductosSinStock.Text = "0";
             this.txtProductosSinStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -536,20 +551,21 @@
             // lblProductosSinStock
             // 
             this.lblProductosSinStock.AutoSize = true;
-            this.lblProductosSinStock.Location = new System.Drawing.Point(300, 20);
+            this.lblProductosSinStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosSinStock.Location = new System.Drawing.Point(230, 25);
             this.lblProductosSinStock.Name = "lblProductosSinStock";
-            this.lblProductosSinStock.Size = new System.Drawing.Size(53, 13);
+            this.lblProductosSinStock.Size = new System.Drawing.Size(90, 19);
             this.lblProductosSinStock.TabIndex = 4;
-            this.lblProductosSinStock.Text = "Sin Stock";
+            this.lblProductosSinStock.Text = "SIN STOCK";
             // 
             // txtProductosReservados
             // 
             this.txtProductosReservados.BackColor = System.Drawing.Color.LightGreen;
-            this.txtProductosReservados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductosReservados.Location = new System.Drawing.Point(200, 40);
+            this.txtProductosReservados.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductosReservados.Location = new System.Drawing.Point(120, 45);
             this.txtProductosReservados.Name = "txtProductosReservados";
             this.txtProductosReservados.ReadOnly = true;
-            this.txtProductosReservados.Size = new System.Drawing.Size(50, 21);
+            this.txtProductosReservados.Size = new System.Drawing.Size(50, 26);
             this.txtProductosReservados.TabIndex = 3;
             this.txtProductosReservados.Text = "0";
             this.txtProductosReservados.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -557,20 +573,21 @@
             // lblProductosReservados
             // 
             this.lblProductosReservados.AutoSize = true;
-            this.lblProductosReservados.Location = new System.Drawing.Point(200, 20);
+            this.lblProductosReservados.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosReservados.Location = new System.Drawing.Point(120, 25);
             this.lblProductosReservados.Name = "lblProductosReservados";
-            this.lblProductosReservados.Size = new System.Drawing.Size(64, 13);
+            this.lblProductosReservados.Size = new System.Drawing.Size(108, 19);
             this.lblProductosReservados.TabIndex = 2;
-            this.lblProductosReservados.Text = "Reservados";
+            this.lblProductosReservados.Text = "RESERVADOS";
             // 
             // txtProductosConStock
             // 
             this.txtProductosConStock.BackColor = System.Drawing.Color.LightBlue;
-            this.txtProductosConStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductosConStock.Location = new System.Drawing.Point(100, 40);
+            this.txtProductosConStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductosConStock.Location = new System.Drawing.Point(10, 45);
             this.txtProductosConStock.Name = "txtProductosConStock";
             this.txtProductosConStock.ReadOnly = true;
-            this.txtProductosConStock.Size = new System.Drawing.Size(50, 21);
+            this.txtProductosConStock.Size = new System.Drawing.Size(50, 26);
             this.txtProductosConStock.TabIndex = 1;
             this.txtProductosConStock.Text = "0";
             this.txtProductosConStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -578,20 +595,22 @@
             // lblProductosConStock
             // 
             this.lblProductosConStock.AutoSize = true;
-            this.lblProductosConStock.Location = new System.Drawing.Point(100, 20);
+            this.lblProductosConStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosConStock.Location = new System.Drawing.Point(10, 25);
             this.lblProductosConStock.Name = "lblProductosConStock";
-            this.lblProductosConStock.Size = new System.Drawing.Size(57, 13);
+            this.lblProductosConStock.Size = new System.Drawing.Size(99, 19);
             this.lblProductosConStock.TabIndex = 0;
-            this.lblProductosConStock.Text = "Con Stock";
+            this.lblProductosConStock.Text = "CON STOCK";
             // 
             // pnlAuditoria
             // 
+            this.pnlAuditoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAuditoria.Controls.Add(this.gbAuditoria);
-            this.pnlAuditoria.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAuditoria.Location = new System.Drawing.Point(0, 531);
+            this.pnlAuditoria.Location = new System.Drawing.Point(500, 538);
             this.pnlAuditoria.Name = "pnlAuditoria";
-            this.pnlAuditoria.Size = new System.Drawing.Size(984, 60);
-            this.pnlAuditoria.TabIndex = 3;
+            this.pnlAuditoria.Size = new System.Drawing.Size(450, 100);
+            this.pnlAuditoria.TabIndex = 6;
             // 
             // gbAuditoria
             // 
@@ -599,55 +618,61 @@
             this.gbAuditoria.Controls.Add(this.lblUsuarioModificacion);
             this.gbAuditoria.Controls.Add(this.txtFechaHoraModificacion);
             this.gbAuditoria.Controls.Add(this.lblFechaHoraModificacion);
-            this.gbAuditoria.Location = new System.Drawing.Point(12, 10);
+            this.gbAuditoria.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbAuditoria.Location = new System.Drawing.Point(0, 10);
             this.gbAuditoria.Name = "gbAuditoria";
-            this.gbAuditoria.Size = new System.Drawing.Size(400, 40);
+            this.gbAuditoria.Size = new System.Drawing.Size(450, 80);
             this.gbAuditoria.TabIndex = 0;
             this.gbAuditoria.TabStop = false;
-            this.gbAuditoria.Text = "Auditoría";
+            this.gbAuditoria.Text = "AUDITORÍA";
             // 
             // txtUsuarioModificacion
             // 
-            this.txtUsuarioModificacion.Location = new System.Drawing.Point(280, 15);
+            this.txtUsuarioModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioModificacion.Location = new System.Drawing.Point(280, 45);
             this.txtUsuarioModificacion.Name = "txtUsuarioModificacion";
             this.txtUsuarioModificacion.ReadOnly = true;
-            this.txtUsuarioModificacion.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuarioModificacion.Size = new System.Drawing.Size(150, 26);
             this.txtUsuarioModificacion.TabIndex = 3;
             // 
             // lblUsuarioModificacion
             // 
             this.lblUsuarioModificacion.AutoSize = true;
-            this.lblUsuarioModificacion.Location = new System.Drawing.Point(200, 18);
+            this.lblUsuarioModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioModificacion.Location = new System.Drawing.Point(280, 25);
             this.lblUsuarioModificacion.Name = "lblUsuarioModificacion";
-            this.lblUsuarioModificacion.Size = new System.Drawing.Size(76, 13);
+            this.lblUsuarioModificacion.Size = new System.Drawing.Size(144, 19);
             this.lblUsuarioModificacion.TabIndex = 2;
-            this.lblUsuarioModificacion.Text = "Último usuario:";
+            this.lblUsuarioModificacion.Text = "ÚLTIMO USUARIO";
             // 
             // txtFechaHoraModificacion
             // 
-            this.txtFechaHoraModificacion.Location = new System.Drawing.Point(90, 15);
+            this.txtFechaHoraModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaHoraModificacion.Location = new System.Drawing.Point(20, 45);
             this.txtFechaHoraModificacion.Name = "txtFechaHoraModificacion";
             this.txtFechaHoraModificacion.ReadOnly = true;
-            this.txtFechaHoraModificacion.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaHoraModificacion.Size = new System.Drawing.Size(240, 26);
             this.txtFechaHoraModificacion.TabIndex = 1;
             // 
             // lblFechaHoraModificacion
             // 
             this.lblFechaHoraModificacion.AutoSize = true;
-            this.lblFechaHoraModificacion.Location = new System.Drawing.Point(16, 18);
+            this.lblFechaHoraModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHoraModificacion.Location = new System.Drawing.Point(20, 25);
             this.lblFechaHoraModificacion.Name = "lblFechaHoraModificacion";
-            this.lblFechaHoraModificacion.Size = new System.Drawing.Size(67, 13);
+            this.lblFechaHoraModificacion.Size = new System.Drawing.Size(225, 19);
             this.lblFechaHoraModificacion.TabIndex = 0;
-            this.lblFechaHoraModificacion.Text = "Última modif:";
+            this.lblFechaHoraModificacion.Text = "ÚLTIMA MODIFICACIÓN";
             // 
             // pnlResumen
             // 
+            this.pnlResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlResumen.Controls.Add(this.gbResumen);
-            this.pnlResumen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlResumen.Location = new System.Drawing.Point(0, 591);
+            this.pnlResumen.Location = new System.Drawing.Point(20, 658);
             this.pnlResumen.Name = "pnlResumen";
-            this.pnlResumen.Size = new System.Drawing.Size(984, 70);
-            this.pnlResumen.TabIndex = 4;
+            this.pnlResumen.Size = new System.Drawing.Size(450, 70);
+            this.pnlResumen.TabIndex = 7;
             // 
             // gbResumen
             // 
@@ -657,159 +682,192 @@
             this.gbResumen.Controls.Add(this.lblCostoTotal);
             this.gbResumen.Controls.Add(this.txtCantidadItems);
             this.gbResumen.Controls.Add(this.lblCantidadItems);
-            this.gbResumen.Location = new System.Drawing.Point(500, 10);
+            this.gbResumen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbResumen.Location = new System.Drawing.Point(0, 10);
             this.gbResumen.Name = "gbResumen";
-            this.gbResumen.Size = new System.Drawing.Size(472, 50);
+            this.gbResumen.Size = new System.Drawing.Size(450, 50);
             this.gbResumen.TabIndex = 0;
             this.gbResumen.TabStop = false;
-            this.gbResumen.Text = "Resumen Interno";
+            this.gbResumen.Text = "RESUMEN INTERNO";
             // 
             // txtMargenTotal
             // 
-            this.txtMargenTotal.Location = new System.Drawing.Point(370, 20);
+            this.txtMargenTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMargenTotal.Location = new System.Drawing.Point(320, 20);
             this.txtMargenTotal.Name = "txtMargenTotal";
             this.txtMargenTotal.ReadOnly = true;
-            this.txtMargenTotal.Size = new System.Drawing.Size(80, 20);
+            this.txtMargenTotal.Size = new System.Drawing.Size(120, 26);
             this.txtMargenTotal.TabIndex = 5;
             this.txtMargenTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblMargenTotal
             // 
             this.lblMargenTotal.AutoSize = true;
-            this.lblMargenTotal.Location = new System.Drawing.Point(320, 23);
+            this.lblMargenTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMargenTotal.Location = new System.Drawing.Point(320, 0);
             this.lblMargenTotal.Name = "lblMargenTotal";
-            this.lblMargenTotal.Size = new System.Drawing.Size(46, 13);
+            this.lblMargenTotal.Size = new System.Drawing.Size(81, 19);
             this.lblMargenTotal.TabIndex = 4;
-            this.lblMargenTotal.Text = "Margen:";
+            this.lblMargenTotal.Text = "MARGEN";
             // 
             // txtCostoTotal
             // 
-            this.txtCostoTotal.Location = new System.Drawing.Point(220, 20);
+            this.txtCostoTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCostoTotal.Location = new System.Drawing.Point(170, 20);
             this.txtCostoTotal.Name = "txtCostoTotal";
             this.txtCostoTotal.ReadOnly = true;
-            this.txtCostoTotal.Size = new System.Drawing.Size(80, 20);
+            this.txtCostoTotal.Size = new System.Drawing.Size(120, 26);
             this.txtCostoTotal.TabIndex = 3;
             this.txtCostoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblCostoTotal
             // 
             this.lblCostoTotal.AutoSize = true;
-            this.lblCostoTotal.Location = new System.Drawing.Point(180, 23);
+            this.lblCostoTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCostoTotal.Location = new System.Drawing.Point(170, 0);
             this.lblCostoTotal.Name = "lblCostoTotal";
-            this.lblCostoTotal.Size = new System.Drawing.Size(37, 13);
+            this.lblCostoTotal.Size = new System.Drawing.Size(63, 19);
             this.lblCostoTotal.TabIndex = 2;
-            this.lblCostoTotal.Text = "Costo:";
+            this.lblCostoTotal.Text = "COSTO";
             // 
             // txtCantidadItems
             // 
-            this.txtCantidadItems.Location = new System.Drawing.Point(80, 20);
+            this.txtCantidadItems.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadItems.Location = new System.Drawing.Point(20, 20);
             this.txtCantidadItems.Name = "txtCantidadItems";
             this.txtCantidadItems.ReadOnly = true;
-            this.txtCantidadItems.Size = new System.Drawing.Size(80, 20);
+            this.txtCantidadItems.Size = new System.Drawing.Size(120, 26);
             this.txtCantidadItems.TabIndex = 1;
             this.txtCantidadItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblCantidadItems
             // 
             this.lblCantidadItems.AutoSize = true;
-            this.lblCantidadItems.Location = new System.Drawing.Point(20, 23);
+            this.lblCantidadItems.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadItems.Location = new System.Drawing.Point(20, 0);
             this.lblCantidadItems.Name = "lblCantidadItems";
-            this.lblCantidadItems.Size = new System.Drawing.Size(35, 13);
+            this.lblCantidadItems.Size = new System.Drawing.Size(63, 19);
             this.lblCantidadItems.TabIndex = 0;
-            this.lblCantidadItems.Text = "Items:";
+            this.lblCantidadItems.Text = "ITEMS";
             // 
             // pnlBotones
             // 
+            this.pnlBotones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBotones.Controls.Add(this.btnAuditoriaCompleta);
             this.pnlBotones.Controls.Add(this.btnVerMovimientosStock);
             this.pnlBotones.Controls.Add(this.btnLiberarReserva);
             this.pnlBotones.Controls.Add(this.btnReservarStock);
-            this.pnlBotones.Controls.Add(this.btnCancelar);
             this.pnlBotones.Controls.Add(this.btnConfirmar);
-            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBotones.Location = new System.Drawing.Point(0, 661);
+            this.pnlBotones.Controls.Add(this.btnCancelar);
+            this.pnlBotones.Location = new System.Drawing.Point(500, 658);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(984, 50);
-            this.pnlBotones.TabIndex = 5;
+            this.pnlBotones.Size = new System.Drawing.Size(450, 70);
+            this.pnlBotones.TabIndex = 8;
             // 
             // btnAuditoriaCompleta
             // 
-            this.btnAuditoriaCompleta.Location = new System.Drawing.Point(32, 15);
+            this.btnAuditoriaCompleta.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAuditoriaCompleta.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditoriaCompleta.Location = new System.Drawing.Point(20, 20);
             this.btnAuditoriaCompleta.Name = "btnAuditoriaCompleta";
-            this.btnAuditoriaCompleta.Size = new System.Drawing.Size(100, 23);
+            this.btnAuditoriaCompleta.Size = new System.Drawing.Size(100, 35);
             this.btnAuditoriaCompleta.TabIndex = 5;
-            this.btnAuditoriaCompleta.Text = "Auditoría Completa";
-            this.btnAuditoriaCompleta.UseVisualStyleBackColor = true;
+            this.btnAuditoriaCompleta.Text = "AUDITORÍA";
+            this.btnAuditoriaCompleta.UseVisualStyleBackColor = false;
             // 
             // btnVerMovimientosStock
             // 
-            this.btnVerMovimientosStock.Location = new System.Drawing.Point(138, 15);
+            this.btnVerMovimientosStock.BackColor = System.Drawing.Color.LightBlue;
+            this.btnVerMovimientosStock.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMovimientosStock.Location = new System.Drawing.Point(130, 20);
             this.btnVerMovimientosStock.Name = "btnVerMovimientosStock";
-            this.btnVerMovimientosStock.Size = new System.Drawing.Size(140, 23);
+            this.btnVerMovimientosStock.Size = new System.Drawing.Size(100, 35);
             this.btnVerMovimientosStock.TabIndex = 4;
-            this.btnVerMovimientosStock.Text = "Ver Movimientos Stock";
-            this.btnVerMovimientosStock.UseVisualStyleBackColor = true;
+            this.btnVerMovimientosStock.Text = "MOVIMIENTOS";
+            this.btnVerMovimientosStock.UseVisualStyleBackColor = false;
             // 
             // btnLiberarReserva
             // 
             this.btnLiberarReserva.BackColor = System.Drawing.Color.LightCoral;
-            this.btnLiberarReserva.Location = new System.Drawing.Point(284, 15);
+            this.btnLiberarReserva.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiberarReserva.Location = new System.Drawing.Point(240, 20);
             this.btnLiberarReserva.Name = "btnLiberarReserva";
-            this.btnLiberarReserva.Size = new System.Drawing.Size(120, 23);
+            this.btnLiberarReserva.Size = new System.Drawing.Size(100, 35);
             this.btnLiberarReserva.TabIndex = 3;
-            this.btnLiberarReserva.Text = "Liberar Reserva";
+            this.btnLiberarReserva.Text = "LIBERAR RESERVA";
             this.btnLiberarReserva.UseVisualStyleBackColor = false;
             // 
             // btnReservarStock
             // 
             this.btnReservarStock.BackColor = System.Drawing.Color.LightGreen;
-            this.btnReservarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservarStock.Location = new System.Drawing.Point(410, 15);
+            this.btnReservarStock.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservarStock.Location = new System.Drawing.Point(350, 20);
             this.btnReservarStock.Name = "btnReservarStock";
-            this.btnReservarStock.Size = new System.Drawing.Size(120, 23);
+            this.btnReservarStock.Size = new System.Drawing.Size(90, 35);
             this.btnReservarStock.TabIndex = 2;
-            this.btnReservarStock.Text = "Reservar Stock";
+            this.btnReservarStock.Text = "RESERVAR STOCK";
             this.btnReservarStock.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(885, 15);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cerrar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(804, 15);
+            this.btnConfirmar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnConfirmar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(260, 20);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 0;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Size = new System.Drawing.Size(90, 35);
+            this.btnConfirmar.TabIndex = 1;
+            this.btnConfirmar.Text = "CONFIRMAR";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnCancelar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(350, 20);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 35);
+            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.Text = "CERRAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(133, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(754, 49);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Registro Nota de Pedido";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRegistroNotaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 711);
-            this.Controls.Add(this.pnlDetalle);
-            this.Controls.Add(this.pnlResumenStock);
-            this.Controls.Add(this.pnlAuditoria);
-            this.Controls.Add(this.pnlResumen);
+            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlBotones);
-            this.Controls.Add(this.pnlCabecera);
+            this.Controls.Add(this.pnlResumen);
+            this.Controls.Add(this.pnlAuditoria);
+            this.Controls.Add(this.pnlResumenStock);
+            this.Controls.Add(this.pnlDetalle);
+            this.Controls.Add(this.gbControlStock);
+            this.Controls.Add(this.gbDatosSistema);
+            this.Controls.Add(this.gbControlInterno);
+            this.MinimumSize = new System.Drawing.Size(1000, 726);
             this.Name = "frmRegistroNotaPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro - Nota de Pedido";
-            this.pnlCabecera.ResumeLayout(false);
-            this.gbControlStock.ResumeLayout(false);
-            this.gbControlStock.PerformLayout();
-            this.gbDatosSistema.ResumeLayout(false);
-            this.gbDatosSistema.PerformLayout();
+            this.Text = "Registro de Nota de Pedido";
             this.gbControlInterno.ResumeLayout(false);
             this.gbControlInterno.PerformLayout();
+            this.gbDatosSistema.ResumeLayout(false);
+            this.gbDatosSistema.PerformLayout();
+            this.gbControlStock.ResumeLayout(false);
+            this.gbControlStock.PerformLayout();
             this.pnlDetalle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleRegistro)).EndInit();
             this.pnlResumenStock.ResumeLayout(false);
@@ -827,8 +885,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlCabecera;
         private System.Windows.Forms.GroupBox gbControlInterno;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lblEstado;
@@ -896,7 +952,8 @@
         private System.Windows.Forms.Button btnVerMovimientosStock;
         private System.Windows.Forms.Button btnLiberarReserva;
         private System.Windows.Forms.Button btnReservarStock;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label1;
     }
 }
