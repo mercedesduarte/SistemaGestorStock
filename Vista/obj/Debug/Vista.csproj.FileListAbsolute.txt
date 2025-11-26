@@ -402,4 +402,12 @@ C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.csproj.Up2Dat
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.exe
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.pdb
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.ReporteStock.frmControlStock.resources
-C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Emision.frmEmision.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaCredito.frmEmisionNotaCredito.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaCredito.frmRegistroNotaCredito.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaDebito.frmEmisionNotaDebito.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaDebito.frmRegistroNotaDebito.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaPedido.frmEmisionNP.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.NotaPedido.frmRegistroNotaPedido.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.OrdenCompra.frmOrdenCompra.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Presupuesto.frmEmisionPresupuesto.resources
+C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Presupuesto.frmRegistroPresupuesto.resources

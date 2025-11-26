@@ -62,6 +62,7 @@
     <Compile Include="D_Control.cs" />
     <Compile Include="D_CrearCodigo2Autenticacion.cs" />
     <Compile Include="D_CrearRespuesta.cs" />
+    <Compile Include="D_EmisionPresupuesto.cs" />
     <Compile Include="D_HistorialContras.cs" />
     <Compile Include="D_CrearPregunta.cs" />
     <Compile Include="D_Lista.cs" />

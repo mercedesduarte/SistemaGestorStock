@@ -8,8 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vista.frmGI.Marcas;
 using Vista.frmGI.Categorias;
+using Vista.frmGI.Marcas;
+using Vista.frmGI.Presupuesto;
 using Vista.frmGI.Productos;
 using Vista.frmGI.Proveedores;
 using Vista.frmGI.ReporteStock;
@@ -569,6 +570,24 @@ namespace Vista
             formulariologs.WindowState = FormWindowState.Maximized;
             formulariologs.Show();
 
+        }
+
+        private void pRESUPUESTOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmLogs)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmEmisionPresupuesto formularioemisionP = new frmEmisionPresupuesto();
+            formularioemisionP.MdiParent = this;
+            formularioemisionP.WindowState = FormWindowState.Maximized;
+            formularioemisionP.Show();
         }
     }
 }

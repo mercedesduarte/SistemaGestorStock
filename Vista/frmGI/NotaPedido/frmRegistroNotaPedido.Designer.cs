@@ -161,7 +161,7 @@
             this.lblUsuarioCreacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioCreacion.Location = new System.Drawing.Point(20, 93);
             this.lblUsuarioCreacion.Name = "lblUsuarioCreacion";
-            this.lblUsuarioCreacion.Size = new System.Drawing.Size(117, 19);
+            this.lblUsuarioCreacion.Size = new System.Drawing.Size(126, 19);
             this.lblUsuarioCreacion.TabIndex = 4;
             this.lblUsuarioCreacion.Text = "Usuario Crea:";
             // 
@@ -258,7 +258,7 @@
             this.lblListaPrecios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaPrecios.Location = new System.Drawing.Point(20, 63);
             this.lblListaPrecios.Name = "lblListaPrecios";
-            this.lblListaPrecios.Size = new System.Drawing.Size(99, 19);
+            this.lblListaPrecios.Size = new System.Drawing.Size(126, 19);
             this.lblListaPrecios.TabIndex = 2;
             this.lblListaPrecios.Text = "Lista Precio:";
             // 
@@ -278,7 +278,7 @@
             this.lblCanalVenta.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCanalVenta.Location = new System.Drawing.Point(20, 33);
             this.lblCanalVenta.Name = "lblCanalVenta";
-            this.lblCanalVenta.Size = new System.Drawing.Size(108, 19);
+            this.lblCanalVenta.Size = new System.Drawing.Size(117, 19);
             this.lblCanalVenta.TabIndex = 0;
             this.lblCanalVenta.Text = "Canal Venta:";
             // 
@@ -302,7 +302,7 @@
             // 
             this.txtEstadoReserva.BackColor = System.Drawing.Color.LightYellow;
             this.txtEstadoReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoReserva.Location = new System.Drawing.Point(140, 30);
+            this.txtEstadoReserva.Location = new System.Drawing.Point(179, 33);
             this.txtEstadoReserva.Name = "txtEstadoReserva";
             this.txtEstadoReserva.ReadOnly = true;
             this.txtEstadoReserva.Size = new System.Drawing.Size(200, 26);
@@ -316,14 +316,14 @@
             this.lblEstadoReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoReserva.Location = new System.Drawing.Point(20, 33);
             this.lblEstadoReserva.Name = "lblEstadoReserva";
-            this.lblEstadoReserva.Size = new System.Drawing.Size(117, 19);
+            this.lblEstadoReserva.Size = new System.Drawing.Size(144, 19);
             this.lblEstadoReserva.TabIndex = 4;
             this.lblEstadoReserva.Text = "Estado Reserva:";
             // 
             // txtUsuarioReserva
             // 
             this.txtUsuarioReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioReserva.Location = new System.Drawing.Point(140, 90);
+            this.txtUsuarioReserva.Location = new System.Drawing.Point(179, 93);
             this.txtUsuarioReserva.Name = "txtUsuarioReserva";
             this.txtUsuarioReserva.ReadOnly = true;
             this.txtUsuarioReserva.Size = new System.Drawing.Size(200, 26);
@@ -335,14 +335,14 @@
             this.lblUsuarioReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioReserva.Location = new System.Drawing.Point(20, 93);
             this.lblUsuarioReserva.Name = "lblUsuarioReserva";
-            this.lblUsuarioReserva.Size = new System.Drawing.Size(126, 19);
+            this.lblUsuarioReserva.Size = new System.Drawing.Size(153, 19);
             this.lblUsuarioReserva.TabIndex = 2;
             this.lblUsuarioReserva.Text = "Usuario Reserva:";
             // 
             // txtFechaHoraReserva
             // 
             this.txtFechaHoraReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaHoraReserva.Location = new System.Drawing.Point(140, 60);
+            this.txtFechaHoraReserva.Location = new System.Drawing.Point(179, 63);
             this.txtFechaHoraReserva.Name = "txtFechaHoraReserva";
             this.txtFechaHoraReserva.ReadOnly = true;
             this.txtFechaHoraReserva.Size = new System.Drawing.Size(200, 26);
@@ -360,8 +360,8 @@
             // 
             // pnlDetalle
             // 
-            this.pnlDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDetalle.Controls.Add(this.dgvDetalleRegistro);
             this.pnlDetalle.Location = new System.Drawing.Point(500, 280);
@@ -488,7 +488,7 @@
             // 
             // pnlResumenStock
             // 
-            this.pnlResumenStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlResumenStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlResumenStock.Controls.Add(this.gbResumenStock);
             this.pnlResumenStock.Location = new System.Drawing.Point(20, 538);
@@ -532,7 +532,7 @@
             this.lblProductosJIT.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductosJIT.Location = new System.Drawing.Point(340, 25);
             this.lblProductosJIT.Name = "lblProductosJIT";
-            this.lblProductosJIT.Size = new System.Drawing.Size(81, 19);
+            this.lblProductosJIT.Size = new System.Drawing.Size(90, 19);
             this.lblProductosJIT.TabIndex = 6;
             this.lblProductosJIT.Text = "STOCK JIT";
             // 
@@ -576,7 +576,7 @@
             this.lblProductosReservados.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductosReservados.Location = new System.Drawing.Point(120, 25);
             this.lblProductosReservados.Name = "lblProductosReservados";
-            this.lblProductosReservados.Size = new System.Drawing.Size(108, 19);
+            this.lblProductosReservados.Size = new System.Drawing.Size(99, 19);
             this.lblProductosReservados.TabIndex = 2;
             this.lblProductosReservados.Text = "RESERVADOS";
             // 
@@ -598,13 +598,13 @@
             this.lblProductosConStock.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductosConStock.Location = new System.Drawing.Point(10, 25);
             this.lblProductosConStock.Name = "lblProductosConStock";
-            this.lblProductosConStock.Size = new System.Drawing.Size(99, 19);
+            this.lblProductosConStock.Size = new System.Drawing.Size(90, 19);
             this.lblProductosConStock.TabIndex = 0;
             this.lblProductosConStock.Text = "CON STOCK";
             // 
             // pnlAuditoria
             // 
-            this.pnlAuditoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlAuditoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAuditoria.Controls.Add(this.gbAuditoria);
             this.pnlAuditoria.Location = new System.Drawing.Point(500, 538);
@@ -641,7 +641,7 @@
             this.lblUsuarioModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioModificacion.Location = new System.Drawing.Point(280, 25);
             this.lblUsuarioModificacion.Name = "lblUsuarioModificacion";
-            this.lblUsuarioModificacion.Size = new System.Drawing.Size(144, 19);
+            this.lblUsuarioModificacion.Size = new System.Drawing.Size(135, 19);
             this.lblUsuarioModificacion.TabIndex = 2;
             this.lblUsuarioModificacion.Text = "ÚLTIMO USUARIO";
             // 
@@ -660,13 +660,13 @@
             this.lblFechaHoraModificacion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaHoraModificacion.Location = new System.Drawing.Point(20, 25);
             this.lblFechaHoraModificacion.Name = "lblFechaHoraModificacion";
-            this.lblFechaHoraModificacion.Size = new System.Drawing.Size(225, 19);
+            this.lblFechaHoraModificacion.Size = new System.Drawing.Size(180, 19);
             this.lblFechaHoraModificacion.TabIndex = 0;
             this.lblFechaHoraModificacion.Text = "ÚLTIMA MODIFICACIÓN";
             // 
             // pnlResumen
             // 
-            this.pnlResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlResumen.Controls.Add(this.gbResumen);
             this.pnlResumen.Location = new System.Drawing.Point(20, 658);
@@ -706,7 +706,7 @@
             this.lblMargenTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMargenTotal.Location = new System.Drawing.Point(320, 0);
             this.lblMargenTotal.Name = "lblMargenTotal";
-            this.lblMargenTotal.Size = new System.Drawing.Size(81, 19);
+            this.lblMargenTotal.Size = new System.Drawing.Size(63, 19);
             this.lblMargenTotal.TabIndex = 4;
             this.lblMargenTotal.Text = "MARGEN";
             // 
@@ -726,7 +726,7 @@
             this.lblCostoTotal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostoTotal.Location = new System.Drawing.Point(170, 0);
             this.lblCostoTotal.Name = "lblCostoTotal";
-            this.lblCostoTotal.Size = new System.Drawing.Size(63, 19);
+            this.lblCostoTotal.Size = new System.Drawing.Size(54, 19);
             this.lblCostoTotal.TabIndex = 2;
             this.lblCostoTotal.Text = "COSTO";
             // 
@@ -746,13 +746,13 @@
             this.lblCantidadItems.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadItems.Location = new System.Drawing.Point(20, 0);
             this.lblCantidadItems.Name = "lblCantidadItems";
-            this.lblCantidadItems.Size = new System.Drawing.Size(63, 19);
+            this.lblCantidadItems.Size = new System.Drawing.Size(54, 19);
             this.lblCantidadItems.TabIndex = 0;
             this.lblCantidadItems.Text = "ITEMS";
             // 
             // pnlBotones
             // 
-            this.pnlBotones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlBotones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBotones.Controls.Add(this.btnAuditoriaCompleta);
             this.pnlBotones.Controls.Add(this.btnVerMovimientosStock);
