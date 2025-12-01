@@ -33,6 +33,24 @@ namespace Datos
             }
         }
 
+        // Overload that uses existing connection and transaction
+        public static bool InsertarClienteDireccion(SqlConnection cn, SqlTransaction tran, int idCliente, string direccion, string localidad, string provincia, bool activo)
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_InsertarClienteDireccion", cn, tran))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                cmd.Parameters.AddWithValue("@Direccion", direccion);
+                cmd.Parameters.AddWithValue("@Localidad", string.IsNullOrEmpty(localidad) ? (object)DBNull.Value : localidad);
+                cmd.Parameters.AddWithValue("@Provincia", string.IsNullOrEmpty(provincia) ? (object)DBNull.Value : provincia);
+                cmd.Parameters.AddWithValue("@Activo", activo);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+        }
+
         // 🔹 LISTAR direcciones por cliente
         public static DataTable ListarClienteDirecciones(int idCliente)
         {

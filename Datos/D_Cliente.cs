@@ -18,69 +18,100 @@ namespace Datos
             try
             {
                 using (SqlConnection cn = ConnectionBD.ObtenerConexion())
-                using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // CLIENTE
-                    cmd.Parameters.AddWithValue("@Codigo", codigo);
-                    cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
-                    cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
-                    cmd.Parameters.AddWithValue("@FormaPago", formaPago);
-                    cmd.Parameters.AddWithValue("@Descuento", descuento);
-                    cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
-
-                    // DIRECCIÓN
-                    cmd.Parameters.AddWithValue("@Direccion", string.IsNullOrEmpty(direccion) ? (object)DBNull.Value : direccion);
-                    cmd.Parameters.AddWithValue("@Localidad", string.IsNullOrEmpty(localidad) ? (object)DBNull.Value : localidad);
-                    cmd.Parameters.AddWithValue("@Provincia", string.IsNullOrEmpty(provincia) ? (object)DBNull.Value : provincia);
-
-                    // TELÉFONO
-                    cmd.Parameters.AddWithValue("@Telefono", string.IsNullOrEmpty(telefono) ? (object)DBNull.Value : telefono);
-                    cmd.Parameters.AddWithValue("@Contacto", string.IsNullOrEmpty(contacto) ? (object)DBNull.Value : contacto);
-                    cmd.Parameters.AddWithValue("@Sector", string.IsNullOrEmpty(sector) ? (object)DBNull.Value : sector);
-                    cmd.Parameters.AddWithValue("@Horario", string.IsNullOrEmpty(horario) ? (object)DBNull.Value : horario);
-                    cmd.Parameters.AddWithValue("@EmailContacto", string.IsNullOrEmpty(emailContacto) ? (object)DBNull.Value : emailContacto);
-
-                    SqlParameter pId = new SqlParameter("@IdCliente", SqlDbType.Int)
-                    {
-                        Direction = ParameterDirection.Output
-                    };
-                    cmd.Parameters.Add(pId);
-
                     cn.Open();
-                    int filasAfectadas = cmd.ExecuteNonQuery();
 
-                    // esto verifica si se inserto
-                    if (pId.Value != DBNull.Value && Convert.ToInt32(pId.Value) > 0)
+                    using (SqlTransaction tran = cn.BeginTransaction())
                     {
-                        mensaje = "Cliente insertado correctamente en la base de datos";
-                        return true;
+                        try
+                        {
+                            // Ejecuta el SP que inserta el cliente
+                            using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn, tran))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.CommandTimeout = 120; // segundos
+                                cmd.Parameters.AddWithValue("@Codigo", codigo);
+                                cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
+                                cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                                cmd.Parameters.AddWithValue("@FormaPago", formaPago);
+                                cmd.Parameters.AddWithValue("@Descuento", descuento);
+                                cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Obtener el IdCliente recién insertado usando SCOPE_IDENTITY() en la misma conexión/transacción
+                            int idCliente = 0;
+                            using (SqlCommand cmdGetId = new SqlCommand("SELECT CAST(SCOPE_IDENTITY() AS INT)", cn, tran))
+                            {
+                                cmdGetId.CommandType = CommandType.Text;
+                                cmdGetId.CommandTimeout = 30;
+                                object res = cmdGetId.ExecuteScalar();
+                                if (res != null && res != DBNull.Value)
+                                    idCliente = Convert.ToInt32(res);
+                            }
+
+                            if (idCliente <= 0)
+                            {
+                                tran.Rollback();
+                                mensaje = "No se pudo obtener el Id del cliente insertado.";
+                                return false;
+                            }
+
+                            // Insertar dirección (si existe) usando la misma conexión y transacción
+                            if (!string.IsNullOrWhiteSpace(direccion))
+                            {
+                                bool dirOk = D_ClienteDireccion.InsertarClienteDireccion(cn, tran, idCliente, direccion, localidad, provincia, true);
+                                if (!dirOk)
+                                {
+                                    tran.Rollback();
+                                    mensaje = "No se pudo insertar la dirección del cliente.";
+                                    return false;
+                                }
+                            }
+
+                            // Insertar teléfono (si existe) usando la misma conexión y transacción
+                            if (!string.IsNullOrWhiteSpace(telefono))
+                            {
+                                bool telOk = D_ClienteTelefono.InsertarClienteTelefono(cn, tran, idCliente, telefono, contacto, sector, horario, emailContacto, true);
+                                if (!telOk)
+                                {
+                                    tran.Rollback();
+                                    mensaje = "No se pudo insertar el teléfono del cliente.";
+                                    return false;
+                                }
+                            }
+
+                            tran.Commit();
+                            mensaje = "Cliente insertado correctamente en la base de datos";
+                            return true;
+                        }
+                        catch (SqlException sqlEx)
+                        {
+                            try { tran.Rollback(); } catch { }
+                            mensaje = $"Error de base de datos: {sqlEx.Message}";
+                            if (sqlEx.Number == 2627) // Violación de unique key
+                            {
+                                mensaje = "Ya existe un cliente con ese código";
+                            }
+                            else if (sqlEx.Number == 547) // Violación de FK
+                            {
+                                mensaje = "Error de integridad referencial";
+                            }
+                            return false;
+                        }
+                        catch (Exception ex)
+                        {
+                            try { tran.Rollback(); } catch { }
+                            mensaje = $"Error general al insertar cliente: {ex.Message}";
+                            return false;
+                        }
                     }
-                    else
-                    {
-                        mensaje = "No se pudo insertar el cliente - No se generó ID";
-                        return false;
-                    }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                // esto ve errores específicos de SQL
-                mensaje = $"Error de base de datos: {sqlEx.Message}";
-                if (sqlEx.Number == 2627) // Violación de unique key
-                {
-                    mensaje = "Ya existe un cliente con ese código";
-                }
-                else if (sqlEx.Number == 547) // Violación de FK
-                {
-                    mensaje = "Error de integridad referencial";
-                }
-                return false;
             }
             catch (Exception ex)
             {
-                mensaje = $"Error general al insertar cliente: {ex.Message}";
+                mensaje = $"Error de conexión al insertar cliente: {ex.Message}";
                 return false;
             }
         }

@@ -22,6 +22,7 @@ namespace Datos
                     using (SqlCommand cmd = new SqlCommand("sp_InsertarClienteTelefono", cn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandTimeout = 60;
 
                         cmd.Parameters.AddWithValue("@IdCliente", idCliente);
                         cmd.Parameters.AddWithValue("@Telefono", telefono);
@@ -43,6 +44,28 @@ namespace Datos
             {
                 mensaje = ex.Message;
                 return false;
+            }
+        }
+
+        // Overload that uses existing connection and transaction
+        public static bool InsertarClienteTelefono(SqlConnection cn, SqlTransaction tran, int idCliente, string telefono, string contacto, string sector,
+                                                   string horario, string emailContacto, bool activo)
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_InsertarClienteTelefono", cn, tran))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandTimeout = 60;
+
+                cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                cmd.Parameters.AddWithValue("@Telefono", telefono);
+                cmd.Parameters.AddWithValue("@Contacto", contacto);
+                cmd.Parameters.AddWithValue("@Sector", sector);
+                cmd.Parameters.AddWithValue("@Horario", horario);
+                cmd.Parameters.AddWithValue("@EmailContacto", emailContacto);
+                cmd.Parameters.AddWithValue("@Activo", activo);
+
+                cmd.ExecuteNonQuery();
+                return true;
             }
         }
 

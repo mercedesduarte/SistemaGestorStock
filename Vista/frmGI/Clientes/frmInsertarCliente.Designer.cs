@@ -16,6 +16,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
+            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,15 +42,13 @@
             this.lblSector = new System.Windows.Forms.Label();
             this.txtSector = new System.Windows.Forms.TextBox();
             this.lblHorario = new System.Windows.Forms.Label();
-            this.txtHorario = new System.Windows.Forms.TextBox();
+            this.txtHorario = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmailContacto = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtProvincia = new System.Windows.Forms.TextBox();
             this.btnInsertarCliente = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -58,6 +58,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbProvincia);
+            this.groupBox2.Controls.Add(this.cmbLocalidad);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Controls.Add(this.label5);
@@ -88,9 +90,7 @@
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.txtDireccion);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txtLocalidad);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.txtProvincia);
             this.groupBox2.Controls.Add(this.btnInsertarCliente);
             this.groupBox2.Controls.Add(this.btnCerrar);
             this.groupBox2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
@@ -100,6 +100,23 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INGRESE LOS DATOS DEL CLIENTE";
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(705, 265);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(173, 32);
+            this.cmbProvincia.TabIndex = 36;
+            this.cmbProvincia.SelectedIndexChanged += new System.EventHandler(this.cmbProvincia_SelectedIndexChanged);
+            // 
+            // cmbLocalidad
+            // 
+            this.cmbLocalidad.FormattingEnabled = true;
+            this.cmbLocalidad.Location = new System.Drawing.Point(910, 265);
+            this.cmbLocalidad.Name = "cmbLocalidad";
+            this.cmbLocalidad.Size = new System.Drawing.Size(175, 32);
+            this.cmbLocalidad.TabIndex = 35;
             // 
             // label8
             // 
@@ -117,6 +134,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(190, 27);
             this.txtCodigo.TabIndex = 34;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label5
             // 
@@ -315,9 +333,11 @@
             // 
             this.txtHorario.Font = new System.Drawing.Font("Consolas", 12.75F, System.Drawing.FontStyle.Bold);
             this.txtHorario.Location = new System.Drawing.Point(17, 488);
+            this.txtHorario.Mask = "00:00";
             this.txtHorario.Name = "txtHorario";
             this.txtHorario.Size = new System.Drawing.Size(173, 27);
             this.txtHorario.TabIndex = 22;
+            this.txtHorario.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
@@ -356,36 +376,20 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Consolas", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(705, 235);
+            this.label15.Location = new System.Drawing.Point(910, 235);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(129, 23);
             this.label15.TabIndex = 27;
             this.label15.Text = "LOCALIDAD:";
             // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.Font = new System.Drawing.Font("Consolas", 12.75F, System.Drawing.FontStyle.Bold);
-            this.txtLocalidad.Location = new System.Drawing.Point(705, 265);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(155, 27);
-            this.txtLocalidad.TabIndex = 28;
-            // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Consolas", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(925, 235);
+            this.label14.Location = new System.Drawing.Point(701, 235);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(132, 23);
             this.label14.TabIndex = 29;
             this.label14.Text = "PROVINCIA:";
-            // 
-            // txtProvincia
-            // 
-            this.txtProvincia.Font = new System.Drawing.Font("Consolas", 12.75F, System.Drawing.FontStyle.Bold);
-            this.txtProvincia.Location = new System.Drawing.Point(925, 265);
-            this.txtProvincia.Name = "txtProvincia";
-            this.txtProvincia.Size = new System.Drawing.Size(151, 27);
-            this.txtProvincia.TabIndex = 30;
             // 
             // btnInsertarCliente
             // 
@@ -421,6 +425,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmInsertarCliente";
             this.Text = "frmInsertarCliente";
+            this.Load += new System.EventHandler(this.frmInsertarCliente_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDescuento)).EndInit();
@@ -438,11 +443,14 @@
         private System.Windows.Forms.NumericUpDown nudLimiteCredito, nudDescuento;
         private System.Windows.Forms.ComboBox cmbFormaPago;
         private System.Windows.Forms.Label lblTelefono, lblContacto, lblSector, lblHorario, label2;
-        private System.Windows.Forms.TextBox txtTelefono, txtContacto, txtSector, txtHorario, txtEmailContacto;
+        private System.Windows.Forms.TextBox txtTelefono, txtContacto, txtSector, txtEmailContacto;
+        private System.Windows.Forms.MaskedTextBox txtHorario;
         private System.Windows.Forms.Label label16, label15, label14;
-        private System.Windows.Forms.TextBox txtDireccion, txtLocalidad, txtProvincia;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button btnInsertarCliente, btnCerrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.ComboBox cmbProvincia;
+        private System.Windows.Forms.ComboBox cmbLocalidad;
     }
 }
