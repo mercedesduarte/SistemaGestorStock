@@ -359,7 +359,6 @@ C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Cliente
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmDetalleCliente.resources
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmInsertarCliente.resources
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmListadoClientes.resources
-C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.frmModificarCliente.resources
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Telefonos.frmAgregarClienteTelefono.resources
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Clientes.Telefonos.frmModificarClienteTelefono.resources
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Vista\obj\Debug\Vista.frmGI.Marcas.frmListadoMarcas.resources

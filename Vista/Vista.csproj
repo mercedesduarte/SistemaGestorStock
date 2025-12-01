@@ -118,12 +118,6 @@
     <Compile Include="frmGI\Clientes\frmListadoClientes.Designer.cs">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGI\Clientes\frmModificarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGI\Clientes\frmModificarCliente.Designer.cs">
-      <DependentUpon>frmModificarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGI\Clientes\Telefonos\frmAgregarClienteTelefono.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,9 +415,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Clientes\frmListadoClientes.resx">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGI\Clientes\frmModificarCliente.resx">
-      <DependentUpon>frmModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGI\Clientes\Telefonos\frmAgregarClienteTelefono.resx">
       <DependentUpon>frmAgregarClienteTelefono.cs</DependentUpon>

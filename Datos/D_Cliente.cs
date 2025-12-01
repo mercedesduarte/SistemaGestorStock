@@ -12,30 +12,60 @@ namespace Datos
 {
     public class D_Cliente
     {
-        // 🔹 Insertar cliente
+
         public static bool InsertarCliente(
-            string codigo, string razonSocial, string email, string formaPago,
-            decimal descuento, decimal limiteCredito)
+   
+            string codigo, string razonSocial, string email, string formaPago, decimal descuento, decimal limiteCredito,
+            string direccion, string localidad, string provincia,
+            string telefono, string contacto, string sector, string horario, string emailContacto
+)
         {
-            using (SqlConnection cn = ConnectionBD.ObtenerConexion())
+            try
             {
+                using (SqlConnection cn = ConnectionBD.ObtenerConexion())
                 using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    // CLIENTE
                     cmd.Parameters.AddWithValue("@Codigo", codigo);
                     cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
                     cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
-                    cmd.Parameters.AddWithValue("@FormaPago", string.IsNullOrEmpty(formaPago) ? (object)DBNull.Value : formaPago);
+                    cmd.Parameters.AddWithValue("@FormaPago", formaPago);
                     cmd.Parameters.AddWithValue("@Descuento", descuento);
                     cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
 
+                    // DIRECCIÓN
+                    cmd.Parameters.AddWithValue("@Direccion", string.IsNullOrEmpty(direccion) ? (object)DBNull.Value : direccion);
+                    cmd.Parameters.AddWithValue("@Localidad", string.IsNullOrEmpty(localidad) ? (object)DBNull.Value : localidad);
+                    cmd.Parameters.AddWithValue("@Provincia", string.IsNullOrEmpty(provincia) ? (object)DBNull.Value : provincia);
+
+                    // TELÉFONO
+                    cmd.Parameters.AddWithValue("@Telefono", string.IsNullOrEmpty(telefono) ? (object)DBNull.Value : telefono);
+                    cmd.Parameters.AddWithValue("@Contacto", string.IsNullOrEmpty(contacto) ? (object)DBNull.Value : contacto);
+                    cmd.Parameters.AddWithValue("@Sector", string.IsNullOrEmpty(sector) ? (object)DBNull.Value : sector);
+                    cmd.Parameters.AddWithValue("@Horario", string.IsNullOrEmpty(horario) ? (object)DBNull.Value : horario);
+                    cmd.Parameters.AddWithValue("@EmailContacto", string.IsNullOrEmpty(emailContacto) ? (object)DBNull.Value : emailContacto);
+
+                    // OUTPUT
+                    SqlParameter pId = new SqlParameter("@IdCliente", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(pId);
+
                     cn.Open();
                     cmd.ExecuteNonQuery();
+
                     return true;
                 }
             }
+            catch
+            {
+                return false;
+            }
         }
+
 
         // 🔹 Modificar cliente
         public static bool ModificarCliente(

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.frmGI.Categorias;
+using Vista.frmGI.Clientes;
 using Vista.frmGI.Marcas;
 using Vista.frmGI.Presupuesto;
 using Vista.frmGI.Productos;
@@ -576,7 +577,7 @@ namespace Vista
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form is frmLogs)
+                if (form is frmEmisionPresupuesto)
                 {
                     form.WindowState = FormWindowState.Maximized;
                     form.BringToFront();
@@ -588,6 +589,26 @@ namespace Vista
             formularioemisionP.MdiParent = this;
             formularioemisionP.WindowState = FormWindowState.Maximized;
             formularioemisionP.Show();
+        }
+
+        private void InsertarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmInsertarCliente)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+            frmInsertarCliente formularioinsertarcliente = new frmInsertarCliente();
+            formularioinsertarcliente.MdiParent = this;
+            formularioinsertarcliente.WindowState = FormWindowState.Maximized;
+            formularioinsertarcliente.Show();
+
         }
     }
 }

@@ -55,27 +55,27 @@ namespace Vista.frmGI.Clientes
         //    CargarClientes();
         //}
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (dgvClientes.CurrentRow == null)
-            {
-                MessageBox.Show("Debe seleccionar un cliente para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //private void btnModificar_Click(object sender, EventArgs e)
+        //{
+        //    if (dgvClientes.CurrentRow == null)
+        //    {
+        //        MessageBox.Show("Debe seleccionar un cliente para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            // Obtener el IdCliente de la fila seleccionada
-            int idCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
+        //    // Obtener el IdCliente de la fila seleccionada
+        //    int idCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
 
-            // Abrir el formulario de modificación de cliente
-            using (var frm = new frmModificarCliente(idCliente))
-            {
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    // Refrescar la grilla después de modificar
-                    CargarClientes();
-                }
-            }
-        }
+        //    // Abrir el formulario de modificación de cliente
+        //    using (var frm = new frmModificarCliente(idCliente))
+        //    {
+        //        if (frm.ShowDialog() == DialogResult.OK)
+        //        {
+        //            // Refrescar la grilla después de modificar
+        //            CargarClientes();
+        //        }
+        //    }
+        //}
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
