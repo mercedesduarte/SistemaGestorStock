@@ -8,14 +8,21 @@ namespace Logica
     {
         public bool Insertar(string codigo, string razonSocial, string email,
                              string formaPago, decimal descuento,
-                             decimal limiteCredito, string direccion, string localidad, 
-                             string provincia, string telefono,string contacto,
+                             decimal limiteCredito, string direccion, string localidad,
+                             string provincia, string telefono, string contacto,
                              string sector, string horario, string emailContacto, out string mensaje)
         {
             mensaje = "";
 
             try
             {
+               
+                if (string.IsNullOrWhiteSpace(codigo))
+                {
+                    mensaje = "El código del cliente es obligatorio.";
+                    return false;
+                }
+
                 if (string.IsNullOrWhiteSpace(razonSocial))
                 {
                     mensaje = "La razón social es obligatoria.";
@@ -34,18 +41,38 @@ namespace Logica
                     return false;
                 }
 
-                return D_Cliente.InsertarCliente(
+               
+                if (codigo.Length > 50)
+                {
+                    mensaje = "El código no puede tener más de 50 caracteres.";
+                    return false;
+                }
+
+                
+                if (razonSocial.Length > 150)
+                {
+                    mensaje = "La razón social no puede tener más de 150 caracteres.";
+                    return false;
+                }
+
+                
+                bool resultado = D_Cliente.InsertarCliente(
                     codigo, razonSocial, email, formaPago, descuento, limiteCredito,
                     direccion, localidad, provincia,
-                    telefono, contacto, sector, horario, emailContacto
+                    telefono, contacto, sector, horario, emailContacto, out string mensajeBD
                 );
+
+                
+                mensaje = mensajeBD;
+                return resultado;
             }
             catch (Exception ex)
             {
-                mensaje = ex.Message;
+                mensaje = $"Error en la lógica de negocio: {ex.Message}";
                 return false;
             }
         }
+
         public bool Modificar(int idCliente, string codigo, string razonSocial,
                               string email, string formaPago,
                               decimal descuento, decimal limiteCredito,

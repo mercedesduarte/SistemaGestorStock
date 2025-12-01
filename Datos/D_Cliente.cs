@@ -1,25 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using Datos.Conecction;
-
 
 namespace Datos
 {
     public class D_Cliente
     {
-
         public static bool InsertarCliente(
-   
-            string codigo, string razonSocial, string email, string formaPago, decimal descuento, decimal limiteCredito,
-            string direccion, string localidad, string provincia,
-            string telefono, string contacto, string sector, string horario, string emailContacto
-)
+            string codigo, string razonSocial, string email, string formaPago,
+            decimal descuento, decimal limiteCredito, string direccion, string localidad,
+            string provincia, string telefono, string contacto, string sector,
+            string horario, string emailContacto, out string mensaje)
         {
+            mensaje = "";
+
             try
             {
                 using (SqlConnection cn = ConnectionBD.ObtenerConexion())
@@ -47,7 +42,6 @@ namespace Datos
                     cmd.Parameters.AddWithValue("@Horario", string.IsNullOrEmpty(horario) ? (object)DBNull.Value : horario);
                     cmd.Parameters.AddWithValue("@EmailContacto", string.IsNullOrEmpty(emailContacto) ? (object)DBNull.Value : emailContacto);
 
-                    // OUTPUT
                     SqlParameter pId = new SqlParameter("@IdCliente", SqlDbType.Int)
                     {
                         Direction = ParameterDirection.Output
@@ -55,19 +49,42 @@ namespace Datos
                     cmd.Parameters.Add(pId);
 
                     cn.Open();
-                    cmd.ExecuteNonQuery();
+                    int filasAfectadas = cmd.ExecuteNonQuery();
 
-                    return true;
+                    // esto verifica si se inserto
+                    if (pId.Value != DBNull.Value && Convert.ToInt32(pId.Value) > 0)
+                    {
+                        mensaje = "Cliente insertado correctamente en la base de datos";
+                        return true;
+                    }
+                    else
+                    {
+                        mensaje = "No se pudo insertar el cliente - No se generó ID";
+                        return false;
+                    }
                 }
             }
-            catch
+            catch (SqlException sqlEx)
             {
+                // esto ve errores específicos de SQL
+                mensaje = $"Error de base de datos: {sqlEx.Message}";
+                if (sqlEx.Number == 2627) // Violación de unique key
+                {
+                    mensaje = "Ya existe un cliente con ese código";
+                }
+                else if (sqlEx.Number == 547) // Violación de FK
+                {
+                    mensaje = "Error de integridad referencial";
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                mensaje = $"Error general al insertar cliente: {ex.Message}";
                 return false;
             }
         }
 
-
-        // 🔹 Modificar cliente
         public static bool ModificarCliente(
             int idCliente, string codigo, string razonSocial, string email,
             string formaPago, decimal descuento, decimal limiteCredito, bool activo)
@@ -94,7 +111,6 @@ namespace Datos
             }
         }
 
-        // 🔹 Listar clientes
         public static DataTable ListarClientes()
         {
             DataTable tabla = new DataTable();
@@ -111,7 +127,6 @@ namespace Datos
             return tabla;
         }
 
-        // 🔹 Obtener cliente por Id
         public static DataRow ObtenerPorId(int idCliente)
         {
             using (SqlConnection cn = ConnectionBD.ObtenerConexion())
@@ -130,7 +145,6 @@ namespace Datos
             }
         }
 
-        // 🔹 Buscar cliente por Nombre/Razón Social o Código
         public static DataTable BuscarClientePorNombreOCodigo(string busqueda)
         {
             DataTable tabla = new DataTable();
@@ -150,4 +164,3 @@ namespace Datos
         }
     }
 }
-

@@ -398,7 +398,7 @@
             this.btnInsertarCliente.TabIndex = 31;
             this.btnInsertarCliente.Text = "AGREGAR";
             this.btnInsertarCliente.UseVisualStyleBackColor = false;
-            this.btnInsertarCliente.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
+            this.btnInsertarCliente.Click += new System.EventHandler(this.btnInsertarCliente_Click);
             // 
             // btnCerrar
             // 
@@ -411,7 +411,7 @@
             this.btnCerrar.TabIndex = 32;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmInsertarCliente
             // 
