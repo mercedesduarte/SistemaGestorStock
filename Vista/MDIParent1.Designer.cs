@@ -439,7 +439,7 @@
             this.nOTAPEDIDOToolStripMenuItem1});
             this.rEGISTROToolStripMenuItem.Name = "rEGISTROToolStripMenuItem";
             this.rEGISTROToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
-            this.rEGISTROToolStripMenuItem.Text = "REGISTRO";
+            this.rEGISTROToolStripMenuItem.Text = "FACTURAS";
             // 
             // pRESUPUESTOToolStripMenuItem1
             // 
