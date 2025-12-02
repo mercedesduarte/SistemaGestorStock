@@ -30,6 +30,8 @@
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.gbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblStockActual = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
@@ -40,25 +42,21 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.pnlTotales = new System.Windows.Forms.Panel();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.pnlBotones = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnConvertirPedido = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.dvgProductos = new System.Windows.Forms.DataGridView();
             this.gbDatosCliente.SuspendLayout();
             this.gbDatosProducto.SuspendLayout();
             this.pnlTotales.SuspendLayout();
             this.pnlBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosCliente
@@ -187,6 +185,7 @@
             this.btnBuscarCliente.TabIndex = 0;
             this.btnBuscarCliente.Text = "BUSCAR";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // gbDatosProducto
             // 
@@ -208,6 +207,25 @@
             this.gbDatosProducto.TabIndex = 3;
             this.gbDatosProducto.TabStop = false;
             this.gbDatosProducto.Text = "DATOS DEL PRODUCTO";
+            // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(137, 170);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.ReadOnly = true;
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(100, 26);
+            this.txtPrecioUnitario.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Precio U.";
             // 
             // txtCantidad
             // 
@@ -295,6 +313,7 @@
             this.btnBuscarProducto.TabIndex = 0;
             this.btnBuscarProducto.Text = "BUSCAR";
             this.btnBuscarProducto.UseVisualStyleBackColor = false;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // pnlTotales
             // 
@@ -307,10 +326,41 @@
             this.pnlTotales.Controls.Add(this.lblObservaciones);
             this.pnlTotales.Controls.Add(this.txtTotal);
             this.pnlTotales.Controls.Add(this.lblTotal);
-            this.pnlTotales.Location = new System.Drawing.Point(20, 508);
+            this.pnlTotales.Location = new System.Drawing.Point(20, 443);
             this.pnlTotales.Name = "pnlTotales";
             this.pnlTotales.Size = new System.Drawing.Size(920, 145);
             this.pnlTotales.TabIndex = 5;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.LightGreen;
+            this.btnCalcular.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(687, 92);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(180, 35);
+            this.btnCalcular.TabIndex = 5;
+            this.btnCalcular.Text = "CALCULAR";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal.Location = new System.Drawing.Point(747, 7);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
+            this.txtSubtotal.Size = new System.Drawing.Size(120, 30);
+            this.txtSubtotal.TabIndex = 9;
+            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(641, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "SubTotal:";
             // 
             // txtObservaciones
             // 
@@ -357,10 +407,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBotones.Controls.Add(this.btnSalir);
             this.pnlBotones.Controls.Add(this.btnConvertirPedido);
-            this.pnlBotones.Location = new System.Drawing.Point(20, 677);
+            this.pnlBotones.Location = new System.Drawing.Point(20, 607);
             this.pnlBotones.Name = "pnlBotones";
             this.pnlBotones.Size = new System.Drawing.Size(930, 60);
             this.pnlBotones.TabIndex = 6;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSalir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(817, 15);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(90, 35);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnConvertirPedido
             // 
@@ -372,7 +434,7 @@
             this.btnConvertirPedido.TabIndex = 3;
             this.btnConvertirPedido.Text = "CONVERTIR A PEDIDO";
             this.btnConvertirPedido.UseVisualStyleBackColor = false;
-            
+            this.btnConvertirPedido.Click += new System.EventHandler(this.btnConvertirPedido_Click_1);
             // 
             // label1
             // 
@@ -387,82 +449,11 @@
             this.label1.Text = "Emisión Presupuesto";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubtotal.Location = new System.Drawing.Point(747, 7);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.ReadOnly = true;
-            this.txtSubtotal.Size = new System.Drawing.Size(120, 30);
-            this.txtSubtotal.TabIndex = 9;
-            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(641, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 22);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "SubTotal:";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Firebrick;
-            this.btnSalir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(817, 15);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(90, 35);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(137, 170);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.ReadOnly = true;
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(100, 26);
-            this.txtPrecioUnitario.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Precio U.";
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.BackColor = System.Drawing.Color.LightGreen;
-            this.btnCalcular.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(687, 92);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(180, 35);
-            this.btnCalcular.TabIndex = 5;
-            this.btnCalcular.Text = "CALCULAR";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            // 
-            // dvgProductos
-            // 
-            this.dvgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgProductos.Location = new System.Drawing.Point(20, 381);
-            this.dvgProductos.Name = "dvgProductos";
-            this.dvgProductos.Size = new System.Drawing.Size(920, 97);
-            this.dvgProductos.TabIndex = 15;
-            // 
             // frmEmisionPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 749);
-            this.Controls.Add(this.dvgProductos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlBotones);
             this.Controls.Add(this.pnlTotales);
@@ -479,7 +470,6 @@
             this.pnlTotales.ResumeLayout(false);
             this.pnlTotales.PerformLayout();
             this.pnlBotones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,6 +511,5 @@
         private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.DataGridView dvgProductos;
     }
 }

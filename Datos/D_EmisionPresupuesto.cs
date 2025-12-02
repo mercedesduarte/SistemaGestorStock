@@ -7,6 +7,54 @@ namespace Datos
 {
     public class D_EmisionPresupuesto
     {
+
+
+        public static DataTable EjecutarSP_CalcularTotales(DataTable productos, int idCliente)
+        {
+            DataTable resultados = new DataTable();
+
+            try
+            {
+                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                {
+                    conexion.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("sp_CalcularTotalesPresupuesto", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        
+                        SqlParameter paramProductos = new SqlParameter("@Productos", SqlDbType.Structured);
+                        paramProductos.Value = productos;
+                        paramProductos.TypeName = "dbo.ProductosPresupuestoTVP";
+                        cmd.Parameters.Add(paramProductos);
+
+                        if (idCliente > 0)
+                        {
+                            cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@IdCliente", DBNull.Value);
+                        }
+
+                        
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(resultados);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en EjecutarSP_CalcularTotales: " + ex.ToString());
+                throw;
+            }
+
+            return resultados;
+        }
+
         public static DataTable BuscarClientes(string busqueda)
         {
             DataTable dt = new DataTable();
@@ -63,7 +111,64 @@ namespace Datos
             return dt;
         }
 
-        public static string ObtenerUltimoNumeroPresupuesto()
+       
+        public static DataTable ObtenerClientePorId(int idCliente)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                {
+                    conexion.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerClientePorId", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en ObtenerClientePorId: " + ex.ToString());
+            }
+            return dt;
+        }
+
+        public static DataTable ObtenerProductoPorId(int idProducto)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                {
+                    conexion.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerProductoPorId", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdProducto", idProducto);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en ObtenerProductoPorId: " + ex.ToString());
+            }
+            return dt;
+        }
+
+        public static string ObtenerNombreCategoria(int idCategoria)
         {
             try
             {
@@ -71,21 +176,47 @@ namespace Datos
                 {
                     conexion.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerUltimoNumeroPresupuesto", conexion))
+                    using (SqlCommand cmd = new SqlCommand(
+                        "SELECT Nombre FROM Categorias WHERE IdCategoria = @IdCategoria", conexion))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdCategoria", idCategoria);
                         var result = cmd.ExecuteScalar();
-                        return result?.ToString();
+                        return result?.ToString() ?? "";
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error en ObtenerUltimoNumeroPresupuesto: " + ex.ToString());
-                return null;
+                Console.WriteLine("Error en ObtenerNombreCategoria: " + ex.ToString());
+                return "";
             }
         }
 
+        public static string ObtenerNombreMarca(int idMarca)
+        {
+            try
+            {
+                using (SqlConnection conexion = ConnectionBD.ObtenerConexion())
+                {
+                    conexion.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(
+                        "SELECT Nombre FROM Marcas WHERE IdMarca = @IdMarca", conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@IdMarca", idMarca);
+                        var result = cmd.ExecuteScalar();
+                        return result?.ToString() ?? "";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en ObtenerNombreMarca: " + ex.ToString());
+                return "";
+            }
+        }
+
+        
         public static int InsertarPresupuesto(
             string numeroPresupuesto,
             DateTime fecha,
@@ -94,8 +225,7 @@ namespace Datos
             decimal descuento,
             decimal total,
             int validez,
-            string usuario
-        )
+            string usuario)
         {
             try
             {
@@ -137,8 +267,7 @@ namespace Datos
             int idProducto,
             decimal cantidad,
             decimal precioUnitario,
-            decimal subTotal
-        )
+            decimal subTotal)
         {
             try
             {
@@ -167,5 +296,8 @@ namespace Datos
                 return false;
             }
         }
+
+
+
     }
 }

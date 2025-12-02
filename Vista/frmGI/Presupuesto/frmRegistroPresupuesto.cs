@@ -17,6 +17,6 @@ namespace Vista.frmGI.Presupuesto
             InitializeComponent();
         }
 
-        
+       
     }
 }

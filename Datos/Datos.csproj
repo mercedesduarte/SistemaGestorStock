@@ -82,6 +82,7 @@
     <Compile Include="D_ProveedorTelefono.cs" />
     <Compile Include="D_RegistrarUsuario.cs" />
     <Compile Include="D_Registro.cs" />
+    <Compile Include="D_RegistroPresupuesto.cs" />
     <Compile Include="D_ResponderRespuestas.cs" />
     <Compile Include="D_Restriccion.cs" />
     <Compile Include="D_Verificacion2FA.cs" />
