@@ -18,72 +18,52 @@ namespace Datos
             try
             {
                 using (SqlConnection cn = ConnectionBD.ObtenerConexion())
-                using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // CLIENTE
-                    cmd.Parameters.AddWithValue("@Codigo", codigo);
-                    cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
-                    cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
-                    cmd.Parameters.AddWithValue("@FormaPago", formaPago);
-                    cmd.Parameters.AddWithValue("@Descuento", descuento);
-                    cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
-
-                    // DIRECCIÓN
-                    cmd.Parameters.AddWithValue("@Direccion", string.IsNullOrEmpty(direccion) ? (object)DBNull.Value : direccion);
-                    cmd.Parameters.AddWithValue("@Localidad", string.IsNullOrEmpty(localidad) ? (object)DBNull.Value : localidad);
-                    cmd.Parameters.AddWithValue("@Provincia", string.IsNullOrEmpty(provincia) ? (object)DBNull.Value : provincia);
-
-                    // TELÉFONO
-                    cmd.Parameters.AddWithValue("@Telefono", string.IsNullOrEmpty(telefono) ? (object)DBNull.Value : telefono);
-                    cmd.Parameters.AddWithValue("@Contacto", string.IsNullOrEmpty(contacto) ? (object)DBNull.Value : contacto);
-                    cmd.Parameters.AddWithValue("@Sector", string.IsNullOrEmpty(sector) ? (object)DBNull.Value : sector);
-                    cmd.Parameters.AddWithValue("@Horario", string.IsNullOrEmpty(horario) ? (object)DBNull.Value : horario);
-                    cmd.Parameters.AddWithValue("@EmailContacto", string.IsNullOrEmpty(emailContacto) ? (object)DBNull.Value : emailContacto);
-
-                    SqlParameter pId = new SqlParameter("@IdCliente", SqlDbType.Int)
+                    using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
                     {
-                        Direction = ParameterDirection.Output
-                    };
-                    cmd.Parameters.Add(pId);
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    cn.Open();
-                    int filasAfectadas = cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@Codigo", codigo);
+                        cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
+                        cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                        cmd.Parameters.AddWithValue("@FormaPago", formaPago);
+                        cmd.Parameters.AddWithValue("@Descuento", descuento);
+                        cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
 
-                    // esto verifica si se inserto
-                    if (pId.Value != DBNull.Value && Convert.ToInt32(pId.Value) > 0)
-                    {
-                        mensaje = "Cliente insertado correctamente en la base de datos";
+                        cmd.Parameters.AddWithValue("@Direccion", direccion);
+                        cmd.Parameters.AddWithValue("@Localidad", localidad);
+                        cmd.Parameters.AddWithValue("@Provincia", provincia);
+
+                        cmd.Parameters.AddWithValue("@Telefono", telefono);
+                        cmd.Parameters.AddWithValue("@Contacto", contacto);
+                        cmd.Parameters.AddWithValue("@Sector", sector);
+                        cmd.Parameters.AddWithValue("@Horario", horario);
+                        cmd.Parameters.AddWithValue("@EmailContacto", emailContacto);
+
+                        SqlParameter pIdCliente = new SqlParameter("@IdCliente", SqlDbType.Int);
+                        pIdCliente.Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(pIdCliente);
+
+                        cn.Open();
+                        cmd.ExecuteNonQuery();
+
+                        mensaje = "Cliente insertado correctamente";
                         return true;
                     }
-                    else
-                    {
-                        mensaje = "No se pudo insertar el cliente - No se generó ID";
-                        return false;
-                    }
                 }
             }
-            catch (SqlException sqlEx)
+            catch (SqlException ex)
             {
-                // esto ve errores específicos de SQL
-                mensaje = $"Error de base de datos: {sqlEx.Message}";
-                if (sqlEx.Number == 2627) // Violación de unique key
-                {
+                if (ex.Number == 2627)
                     mensaje = "Ya existe un cliente con ese código";
-                }
-                else if (sqlEx.Number == 547) // Violación de FK
-                {
-                    mensaje = "Error de integridad referencial";
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                mensaje = $"Error general al insertar cliente: {ex.Message}";
+                else
+                    mensaje = ex.Message;
+
                 return false;
             }
         }
+
+        // ===== RESTO DEL CÓDIGO ORIGINAL =====
 
         public static bool ModificarCliente(
             int idCliente, string codigo, string razonSocial, string email,

@@ -73,3 +73,12 @@ C:\Users\Mercedes\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.csproj.Core
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.csproj.Up2Date
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.dll
 C:\Users\Mercedes\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\bin\Debug\Sesion.dll
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.dll
+C:\Users\Lorenzo\Desktop\SistemaGestorStock\Sesion\obj\Debug\Sesion.pdb
