@@ -11,59 +11,77 @@ namespace Datos
             string codigo, string razonSocial, string email, string formaPago,
             decimal descuento, decimal limiteCredito, string direccion, string localidad,
             string provincia, string telefono, string contacto, string sector,
-            string horario, string emailContacto, out string mensaje)
+            string horario, string emailContacto, out string mensaje, out int idCliente)
         {
             mensaje = "";
+            idCliente = 0;
 
             try
             {
                 using (SqlConnection cn = ConnectionBD.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_InsertarClienteCompleto", cn))
                 {
-                    using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandTimeout = 60;
+
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+                    cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
+                    cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                    cmd.Parameters.AddWithValue("@FormaPago", string.IsNullOrEmpty(formaPago) ? (object)DBNull.Value : formaPago);
+                    cmd.Parameters.AddWithValue("@Descuento", descuento);
+                    cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
+
+                    // Dirección
+                    cmd.Parameters.AddWithValue("@Direccion", string.IsNullOrEmpty(direccion) ? (object)DBNull.Value : direccion);
+                    cmd.Parameters.AddWithValue("@Localidad", string.IsNullOrEmpty(localidad) ? (object)DBNull.Value : localidad);
+                    cmd.Parameters.AddWithValue("@Provincia", string.IsNullOrEmpty(provincia) ? (object)DBNull.Value : provincia);
+                    cmd.Parameters.AddWithValue("@ActivoDireccion", 1);
+
+                    // Teléfono
+                    cmd.Parameters.AddWithValue("@Telefono", string.IsNullOrEmpty(telefono) ? (object)DBNull.Value : telefono);
+                    cmd.Parameters.AddWithValue("@Contacto", string.IsNullOrEmpty(contacto) ? (object)DBNull.Value : contacto);
+                    cmd.Parameters.AddWithValue("@Sector", string.IsNullOrEmpty(sector) ? (object)DBNull.Value : sector);
+                    cmd.Parameters.AddWithValue("@Horario", string.IsNullOrEmpty(horario) ? (object)DBNull.Value : horario);
+                    cmd.Parameters.AddWithValue("@EmailContacto", string.IsNullOrEmpty(emailContacto) ? (object)DBNull.Value : emailContacto);
+                    cmd.Parameters.AddWithValue("@ActivoTelefono", 1);
+
+                    SqlParameter pId = new SqlParameter("@IdCliente", SqlDbType.Int)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(pId);
 
-                        cmd.Parameters.AddWithValue("@Codigo", codigo);
-                        cmd.Parameters.AddWithValue("@RazonSocial", razonSocial);
-                        cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
-                        cmd.Parameters.AddWithValue("@FormaPago", formaPago);
-                        cmd.Parameters.AddWithValue("@Descuento", descuento);
-                        cmd.Parameters.AddWithValue("@LimiteCredito", limiteCredito);
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
 
-                        cmd.Parameters.AddWithValue("@Direccion", direccion);
-                        cmd.Parameters.AddWithValue("@Localidad", localidad);
-                        cmd.Parameters.AddWithValue("@Provincia", provincia);
+                    idCliente = pId.Value != DBNull.Value ? Convert.ToInt32(pId.Value) : 0;
 
-                        cmd.Parameters.AddWithValue("@Telefono", telefono);
-                        cmd.Parameters.AddWithValue("@Contacto", contacto);
-                        cmd.Parameters.AddWithValue("@Sector", sector);
-                        cmd.Parameters.AddWithValue("@Horario", horario);
-                        cmd.Parameters.AddWithValue("@EmailContacto", emailContacto);
-
-                        SqlParameter pIdCliente = new SqlParameter("@IdCliente", SqlDbType.Int);
-                        pIdCliente.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(pIdCliente);
-
-                        cn.Open();
-                        cmd.ExecuteNonQuery();
-
-                        mensaje = "Cliente insertado correctamente";
+                    if (idCliente > 0)
+                    {
+                        mensaje = $"Cliente insertado correctamente. Id: {idCliente}";
                         return true;
+                    }
+                    else
+                    {
+                        mensaje = "No se generó IdCliente al insertar.";
+                        return false;
                     }
                 }
             }
-            catch (SqlException ex)
+            catch (SqlException sqlEx)
             {
-                if (ex.Number == 2627)
+                if (sqlEx.Number == 2627)
                     mensaje = "Ya existe un cliente con ese código";
                 else
-                    mensaje = ex.Message;
-
+                    mensaje = "Error de base de datos: " + sqlEx.Message;
+                return false;
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error general al insertar cliente: " + ex.Message;
                 return false;
             }
         }
-
-        // ===== RESTO DEL CÓDIGO ORIGINAL =====
 
         public static bool ModificarCliente(
             int idCliente, string codigo, string razonSocial, string email,

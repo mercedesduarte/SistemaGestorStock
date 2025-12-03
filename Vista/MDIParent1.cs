@@ -96,17 +96,12 @@ namespace Vista
                     //GestionInventarioToolStripMenuItem.Enabled = false;
                     //GestionInventarioToolStripMenuItem.Visible = false;
 
-                    InsertarMarcaToolStripMenuItem.Enabled = false;
-                    InsertarMarcaToolStripMenuItem.Visible = false;
 
-                    InsertarCategoriaToolStripMenuItem.Enabled = false;
-                    InsertarCategoriaToolStripMenuItem.Visible = false;
+                    //InsertarProductoToolStripMenuItem.Enabled = false;
+                    //InsertarProductoToolStripMenuItem.Visible = false;
 
-                    InsertarProductoToolStripMenuItem.Enabled = false;
-                    InsertarProductoToolStripMenuItem.Visible = false;
-
-                    InsertarProveedoresToolStripMenuItem.Enabled = false;
-                    InsertarProveedoresToolStripMenuItem.Visible = false;
+                    //InsertarProveedoresToolStripMenuItem.Enabled = false;
+                    //InsertarProveedoresToolStripMenuItem.Visible = false;
 
                     //------------ SISTEMA GESTOR INVENTARIO END ----------------
 
@@ -609,6 +604,49 @@ namespace Vista
             formularioinsertarcliente.WindowState = FormWindowState.Maximized;
             formularioinsertarcliente.Show();
 
+        }
+
+        private void vENTASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lISTARPROVEEDORESToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is frmListadoProveedores)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            frmListadoProveedores formularioListado = new frmListadoProveedores();
+            formularioListado.MdiParent = this;
+            formularioListado.WindowState = FormWindowState.Maximized;
+            formularioListado.Show();
+        }
+
+        private void oRDENCOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is Vista.frmGI.OrdenCompra.frmOrdenCompra)
+                {
+                    form.WindowState = FormWindowState.Maximized;
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
+
+            var frm = new Vista.frmGI.OrdenCompra.frmOrdenCompra();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }

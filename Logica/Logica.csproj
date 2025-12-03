@@ -66,6 +66,7 @@
     <Compile Include="L_ListarPreguntas.cs" />
     <Compile Include="L_ListarUsuarios.cs" />
     <Compile Include="L_Login.cs" />
+    <Compile Include="L_OrdenCompra.cs" />
     <Compile Include="L_Producto.cs" />
     <Compile Include="L_Proveedor.cs" />
     <Compile Include="L_ProveedorDireccion.cs" />

@@ -11,7 +11,7 @@ namespace Datos.Conecction
     public class ConnectionBD
     {
         // En esta variable van a indicar el nombre del servidor que les arroja el SQL Server
-        private static string host_name = "DESKTOP-NR4DPTK";
+        private static string host_name = "DESKTOP-D3J9OC0";
 
         private static string cadenaConexion = "Data Source=" + host_name + ";Initial Catalog=BD_GESTION;Integrated Security=True;";
         /* NOMBRE DE LA BASE DE DATOS ES BD_GESTION */

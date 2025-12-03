@@ -14,6 +14,8 @@ namespace Vista.frmGI.Proveedores
     public partial class frmListadoProveedores : Form
     {
         private L_Proveedor logicaProveedor = new L_Proveedor();
+        // When opened for selection, this property will contain the chosen provider id after DialogResult.OK
+        public int SelectedProveedorId { get; private set; } = 0;
 
         public frmListadoProveedores()
         {
@@ -35,6 +37,43 @@ namespace Vista.frmGI.Proveedores
 
             // Ajustar ancho
             //dgvProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Setup selection behavior for selection scenarios
+            dgvProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProveedores.MultiSelect = false;
+            dgvProveedores.CellDoubleClick -= DgvProveedores_CellDoubleClick;
+            dgvProveedores.CellDoubleClick += DgvProveedores_CellDoubleClick;
+            dgvProveedores.KeyDown -= DgvProveedores_KeyDown;
+            dgvProveedores.KeyDown += DgvProveedores_KeyDown;
+        }
+
+        private void DgvProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            try
+            {
+                if (dgvProveedores.Rows[e.RowIndex].Cells["IdProveedor"].Value != null)
+                {
+                    SelectedProveedorId = Convert.ToInt32(dgvProveedores.Rows[e.RowIndex].Cells["IdProveedor"].Value);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
+            catch { }
+        }
+
+        private void DgvProveedores_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                if (dgvProveedores.CurrentRow != null && dgvProveedores.CurrentRow.Cells["IdProveedor"].Value != null)
+                {
+                    SelectedProveedorId = Convert.ToInt32(dgvProveedores.CurrentRow.Cells["IdProveedor"].Value);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

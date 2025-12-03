@@ -37,7 +37,7 @@ namespace Logica
                 return false;
 
             // remove non-digits
-            var digits = Regex.Replace(phone, @"\D", "");
+            var digits = Regex.Replace(phone, @"\D", string.Empty);
             if (digits.Length < minDigits)
                 return false;
 
@@ -89,6 +89,59 @@ namespace Logica
         {
             if (text == null) return true;
             return text.Length <= max;
+        }
+
+        // ----------------- New helpers for UI delegation -----------------
+
+        public static bool IsAllowedDniChar(char c)
+        {
+            return char.IsControl(c) || char.IsDigit(c);
+        }
+
+        public static string CleanDni(string input, int maxLength = 8)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+            string cleaned = Regex.Replace(input, @"[^0-9]", string.Empty);
+            if (cleaned.Length > maxLength) cleaned = cleaned.Substring(0, maxLength);
+            return cleaned;
+        }
+
+        public static bool IsAllowedNameChar(char c)
+        {
+            // allow letters (including accented), control chars, space, hyphen, apostrophe
+            return char.IsControl(c) || char.IsWhiteSpace(c) || char.IsLetter(c) || c == '-' || c == '\'';
+        }
+
+        public static string CleanName(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+            string pattern = @"[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s\-']";
+            return Regex.Replace(input, pattern, string.Empty);
+        }
+
+        public static bool IsAllowedPhoneChar(char c)
+        {
+            return char.IsControl(c) || char.IsDigit(c) || c == '+' || c == '-' || c == '(' || c == ')' || char.IsWhiteSpace(c);
+        }
+
+        public static string CleanPhone(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+            string cleaned = Regex.Replace(input, @"[^0-9\+\-\(\)\s]", string.Empty);
+            return cleaned;
+        }
+
+        public static bool IsAllowedHorarioChar(char c)
+        {
+            return char.IsControl(c) || char.IsDigit(c);
+        }
+
+        public static string CleanHorario(string input, int maxLength = 5)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+            string cleaned = Regex.Replace(input, @"[^0-9]", string.Empty);
+            if (cleaned.Length > maxLength) cleaned = cleaned.Substring(0, maxLength);
+            return cleaned;
         }
     }
 }

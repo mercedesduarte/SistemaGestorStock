@@ -75,6 +75,7 @@
     <Compile Include="D_Marca.cs" />
     <Compile Include="D_Mensajes.cs" />
     <Compile Include="D_ModificarUsuario.cs" />
+    <Compile Include="D_OrdenCompra.cs" />
     <Compile Include="D_Producto.cs" />
     <Compile Include="D_Proveedor.cs" />
     <Compile Include="D_ProveedorDireccion.cs" />

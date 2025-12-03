@@ -12,9 +12,10 @@ namespace Logica
             decimal limiteCredito, string direccion, string localidad,
             string provincia, string telefono, string contacto,
             string sector, string horario, string emailContacto,
-            out string mensaje)
+            out string mensaje, out int idCliente)
         {
             mensaje = "";
+            idCliente = 0;
 
             if (string.IsNullOrWhiteSpace(codigo))
             {
@@ -32,7 +33,7 @@ namespace Logica
                 codigo, razonSocial, email, formaPago,
                 descuento, limiteCredito, direccion, localidad,
                 provincia, telefono, contacto, sector,
-                horario, emailContacto, out mensaje);
+                horario, emailContacto, out mensaje, out idCliente);
         }
 
         // ===== RESTO SIN CAMBIOS =====

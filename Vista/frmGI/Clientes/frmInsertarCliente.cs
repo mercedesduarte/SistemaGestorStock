@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace Vista.frmGI.Clientes
 {
@@ -71,6 +72,10 @@ namespace Vista.frmGI.Clientes
             txtTelefono.KeyPress += TxtTelefono_KeyPress;
             txtTelefono.TextChanged += TxtTelefono_TextChanged;
 
+            // Email real-time validation
+            txtEmail.TextChanged += TxtEmail_TextChanged;
+            txtEmailContacto.TextChanged += TxtEmailContacto_TextChanged;
+
             // Note: no KeyPress/TextChanged subscription for txtHorario because it's a MaskedTextBox
 
             await CargarProvincias();
@@ -80,19 +85,15 @@ namespace Vista.frmGI.Clientes
         // DNI handlers
         private void TxtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Allow control keys and digits only
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
+            if (!ValidationHelper.IsAllowedDniChar(e.KeyChar))
                 e.Handled = true;
-            }
         }
 
         private void TxtDni_TextChanged(object sender, EventArgs e)
         {
             var tb = sender as TextBox;
             if (tb == null) return;
-            string cleaned = Regex.Replace(tb.Text, "[^0-9]", "");
-            if (cleaned.Length > 8) cleaned = cleaned.Substring(0, 8);
+            string cleaned = ValidationHelper.CleanDni(tb.Text, 8);
             if (cleaned != tb.Text)
             {
                 int sel = tb.SelectionStart - (tb.Text.Length - cleaned.Length);
@@ -104,24 +105,15 @@ namespace Vista.frmGI.Clientes
         // Nombre handlers
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Allow letters, control, spaces, hyphen and apostrophe
-            char c = e.KeyChar;
-            if (char.IsControl(c) || char.IsWhiteSpace(c) || char.IsLetter(c) || c == '-' || c == '\'')
-            {
-                // allow
-            }
-            else
-            {
+            if (!ValidationHelper.IsAllowedNameChar(e.KeyChar))
                 e.Handled = true;
-            }
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
             var tb = sender as TextBox;
             if (tb == null) return;
-            string pattern = @"[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s\-']";
-            string cleaned = Regex.Replace(tb.Text, pattern, "");
+            string cleaned = ValidationHelper.CleanName(tb.Text);
             if (cleaned != tb.Text)
             {
                 int sel = tb.SelectionStart - (tb.Text.Length - cleaned.Length);
@@ -133,28 +125,44 @@ namespace Vista.frmGI.Clientes
         // Telefono handlers
         private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char c = e.KeyChar;
-            if (char.IsControl(c) || char.IsDigit(c) || c == '+' || c == '-' || c == '(' || c == ')' || char.IsWhiteSpace(c))
-            {
-                // allow
-            }
-            else
-            {
+            if (!ValidationHelper.IsAllowedPhoneChar(e.KeyChar))
                 e.Handled = true;
-            }
         }
 
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
         {
             var tb = sender as TextBox;
             if (tb == null) return;
-            string cleaned = Regex.Replace(tb.Text, @"[^0-9\+\-\(\)\s]", "");
+            string cleaned = ValidationHelper.CleanPhone(tb.Text);
             if (cleaned != tb.Text)
             {
                 int sel = tb.SelectionStart - (tb.Text.Length - cleaned.Length);
                 tb.Text = cleaned;
                 tb.SelectionStart = Math.Max(0, sel);
             }
+        }
+
+        // Email handlers - real time validation
+        private void TxtEmail_TextChanged(object sender, EventArgs e)
+        {
+            var tb = sender as TextBox;
+            if (tb == null) return;
+
+            // empty -> neutral
+            if (string.IsNullOrWhiteSpace(tb.Text))
+            {
+                tb.BackColor = Color.White;
+                return;
+            }
+
+            // use ValidationHelper for robust check; fallback to simple contains
+            bool ok = ValidationHelper.IsValidEmail(tb.Text) || (tb.Text.Contains("@") && tb.Text.Contains("."));
+            tb.BackColor = ok ? Color.White : Color.LightPink;
+        }
+
+        private void TxtEmailContacto_TextChanged(object sender, EventArgs e)
+        {
+            TxtEmail_TextChanged(sender, e);
         }
 
         private List<Provincia> ParseProvincias(string json)
@@ -354,12 +362,13 @@ namespace Vista.frmGI.Clientes
                     txtSector.Text.Trim(),
                     txtHorario.Text.Trim(),
                     txtEmailContacto.Text.Trim(),
-                    out string mensaje
+                    out string mensaje,
+                    out int idCliente
                 );
 
                 if (resultado)
                 {
-                    MessageBox.Show($"Éxito: {mensaje}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Éxito: {mensaje}. ID Cliente: {idCliente}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
                 }
                 else
@@ -376,6 +385,21 @@ namespace Vista.frmGI.Clientes
         private bool ValidarCamposObligatorios()
         {
             // ... (todas las validaciones que ya tenías) ...
+
+            // Email validation before submit
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text) && !ValidationHelper.IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("El correo electrónico principal no es válido. Verifique que contenga '@' y un dominio (ej: usuario@dominio.com)", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtEmailContacto.Text) && !ValidationHelper.IsValidEmail(txtEmailContacto.Text))
+            {
+                MessageBox.Show("El correo de contacto no es válido. Verifique que contenga '@' y un dominio (ej: contacto@dominio.com)", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmailContacto.Focus();
+                return false;
+            }
 
             // Eliminamos las validaciones de txtLocalidad y txtProvincia
             // y agregamos que al menos haya seleccionado provincia (opcional o obligatorio según tu regla)
